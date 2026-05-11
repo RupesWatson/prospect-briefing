@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prospect Briefing Builder</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <style>
+    /* ─── RESET & BASE ──────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 14px; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f0f2f5;
+      color: #374151;
+      min-height: 100vh;
+    }
+    a { color: #185FA5; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    button { cursor: pointer; font-family: inherit; }
+    input, select, textarea {
+      font-family: inherit;
+      font-size: 13px;
+      color: #374151;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      padding: 8px 10px;
+      width: 100%;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    input:focus, select:focus, textarea:focus { border-color: #185FA5; }
+    textarea { resize: vertical; }
+
+    /* ─── PAGE HEADER ───────────────────────────────────────────── */
+    #page-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 10px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 52px;
+    }
+    #page-header .brand { display: flex; align-items: center; gap: 12px; }
+    #page-header .brand-name {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+      color: #185FA5; text-transform: uppercase;
+    }
+    #page-header .brand-divider { width: 1px; height: 18px; background: #e5e7eb; }
+    #page-header .brand-title { font-size: 13px; color: #6B7280; }
+    #page-header .header-actions { display: flex; align-items: center; gap: 12px; }
+    #btn-library-header {
+      font-size: 12px; color: #6B7280; background: none; border: none; padding: 4px 8px;
+      border-radius: 4px; display: flex; align-items: center; gap: 4px;
+    }
+    #btn-library-header:hover { background: #f0f2f5; color: #374151; }
+    #btn-change-key {
+      font-size: 12px; color: #6B7280; background: none; border: none; padding: 4px 8px;
+      border-radius: 4px;
+    }
+    #btn-change-key:hover { background: #f0f2f5; color: #374151; }
+
+    /* ─── SCREEN WRAPPER ─────────────────────────────────────────── */
+    .screen { display: none; }
+    .screen.active { display: block; }
+    .screen-pad { padding-top: 52px; }
+
+    /* ─── SETUP SCREEN ───────────────────────────────────────────── */
+    #setup-screen {
+      min-height: 100vh;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    #setup-screen.active { display: flex; }
+    .setup-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 40px;
+      width: 100%;
+      max-width: 440px;
+    }
+    .setup-card h1 { font-size: 18px; font-weight: 500; margin-bottom: 8px; }
+    .setup-card p { font-size: 13px; color: #6B7280; margin-bottom: 24px; line-height: 1.6; }
+    .setup-card label { font-size: 12px; color: #374151; font-weight: 500; display: block; margin-bottom: 6px; }
+    .setup-card .note {
+      font-size: 11px; color: #6B7280; margin-top: 12px; line-height: 1.6;
+      display: flex; align-items: flex-start; gap: 6px;
+    }
+    .setup-card .note i { color: #9CA3AF; flex-shrink: 0; margin-top: 1px; }
+
+    /* ─── INPUT SCREEN ───────────────────────────────────────────── */
+    #input-screen { min-height: 100vh; }
+    .input-screen-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+    }
+    .form-header { margin-bottom: 28px; }
+    .form-header .brand-tag {
+      font-size: 11px; font-weight: 600; color: #185FA5;
+      letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px;
+    }
+    .form-header h1 { font-size: 22px; font-weight: 500; color: #111827; margin-bottom: 6px; }
+    .form-header p { font-size: 13px; color: #6B7280; }
+
+    .form-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 16px;
+    }
+    .section-label {
+      font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em;
+      color: #6B7280; font-weight: 600;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #f3f4f6;
+      margin-bottom: 18px;
+    }
+    .collapsible-header {
+      display: flex; align-items: center; justify-content: space-between;
+      cursor: pointer; user-select: none;
+    }
+    .collapsible-header .toggle-icon { color: #9CA3AF; font-size: 16px; transition: transform 0.2s; }
+    .collapsible-header.collapsed .toggle-icon { transform: rotate(-90deg); }
+    .collapsible-body { margin-top: 18px; }
+    .collapsible-body.hidden { display: none; }
+
+    .field-group { margin-bottom: 14px; }
+    .field-group label {
+      display: block; font-size: 12px; font-weight: 500; color: #374151; margin-bottom: 5px;
+    }
+    .field-row { display: grid; gap: 12px; }
+    .field-row.col2 { grid-template-columns: 1fr 1fr; }
+    .field-row.col3 { grid-template-columns: 1fr 1fr 1fr; }
+
+    .radio-group { display: flex; gap: 0; }
+    .radio-group label {
+      flex: 1; text-align: center;
+      padding: 8px 12px;
+      border: 1px solid #e5e7eb;
+      font-size: 12px; color: #6B7280; font-weight: 400;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .radio-group label:first-child { border-radius: 6px 0 0 6px; }
+    .radio-group label:last-child { border-radius: 0 6px 6px 0; }
+    .radio-group label:not(:first-child) { border-left: none; }
+    .radio-group input[type=radio] { display: none; }
+    .radio-group input[type=radio]:checked + span { /* handled via JS */ }
+    .radio-group label.selected {
+      background: #185FA5; color: #fff; border-color: #185FA5; z-index: 1;
+    }
+
+    .checkbox-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .checkbox-item {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 12px; color: #374151; cursor: pointer;
+    }
+    .checkbox-item input[type=checkbox] {
+      width: 14px; height: 14px; flex-shrink: 0; accent-color: #185FA5; cursor: pointer;
+    }
+
+    .btn-primary {
+      width: 100%; padding: 13px;
+      background: #185FA5; color: #fff;
+      border: none; border-radius: 8px;
+      font-size: 14px; font-weight: 500;
+      transition: background 0.15s;
+      margin-top: 4px;
+    }
+    .btn-primary:hover { background: #1557a0; }
+    .btn-primary:disabled { background: #9CA3AF; cursor: not-allowed; }
+    .btn-hint { font-size: 11px; color: #9CA3AF; text-align: center; margin-top: 8px; }
+
+    /* ─── PROGRESS SCREEN ────────────────────────────────────────── */
+    #progress-screen {
+      min-height: 100vh;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+    #progress-screen.active { display: flex; }
+    .progress-inner {
+      width: 100%;
+      max-width: 560px;
+      padding: 24px;
+    }
+    .progress-prospect { font-size: 18px; font-weight: 500; color: #111827; margin-bottom: 4px; }
+    .progress-sub { font-size: 13px; color: #6B7280; margin-bottom: 20px; }
+
+    .progress-bar-wrap {
+      background: #e5e7eb;
+      border-radius: 8px;
+      height: 4px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      border-radius: 8px;
+      background: #185FA5;
+      animation: progressShimmer 1.8s ease-in-out infinite;
+      width: 100%;
+    }
+    @keyframes progressShimmer {
+      0%   { opacity: 1; transform: translateX(-60%) scaleX(0.3); }
+      50%  { opacity: 1; transform: translateX(0%) scaleX(0.7); }
+      100% { opacity: 1; transform: translateX(60%) scaleX(0.3); }
+    }
+
+    .research-log {
+      background: #0f172a;
+      border-radius: 8px;
+      padding: 16px;
+      height: 300px;
+      overflow-y: auto;
+      font-family: 'Consolas', 'Menlo', monospace;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    .log-line {
+      padding: 2px 0;
+      opacity: 0;
+      animation: fadeInLine 0.4s ease forwards;
+    }
+    .log-line.complete { color: #4ade80; }
+    @keyframes fadeInLine {
+      from { opacity: 0; transform: translateY(4px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .log-prompt { color: #475569; margin-right: 6px; }
+
+    .progress-cancel {
+      text-align: center; margin-top: 16px;
+      font-size: 12px; color: #9CA3AF;
+    }
+    .progress-cancel a { color: #9CA3AF; }
+    .progress-cancel a:hover { color: #6B7280; }
+
+    /* ─── OUTPUT SCREEN ──────────────────────────────────────────── */
+    #output-screen {
+      display: none;
+      min-height: calc(100vh - 52px);
+    }
+    #output-screen.active { display: flex; }
+    .output-layout { display: flex; width: 100%; min-height: calc(100vh - 52px); }
+
+    /* Sidebar */
+    #sidebar {
+      width: 240px;
+      flex-shrink: 0;
+      background: #fff;
+      border-right: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0;
+      position: sticky;
+      top: 52px;
+      height: calc(100vh - 52px);
+      overflow-y: auto;
+    }
+    .sidebar-prospect-name { font-size: 14px; font-weight: 500; color: #111827; padding: 0 16px; }
+    .sidebar-prospect-org { font-size: 12px; color: #6B7280; padding: 2px 16px 10px; }
+    .sidebar-meta { padding: 0 16px 12px; border-bottom: 1px solid #f3f4f6; }
+    .sidebar-meta-row { font-size: 11px; color: #9CA3AF; margin-bottom: 2px; }
+    .confidence-badge {
+      display: inline-block;
+      font-size: 10px; font-weight: 600; letter-spacing: 0.04em;
+      padding: 2px 8px; border-radius: 20px; margin-top: 6px;
+    }
+    .confidence-high { background: #d1fae5; color: #065f46; }
+    .confidence-medium { background: #fef3c7; color: #92400e; }
+    .confidence-low { background: #fee2e2; color: #991b1b; }
+
+    .sidebar-nav { padding: 12px 0; border-bottom: 1px solid #f3f4f6; }
+    .sidebar-nav-title { font-size: 10px; text-transform: uppercase; letter-spacing: 0.07em; color: #9CA3AF; padding: 0 16px 8px; }
+    .sidebar-nav a {
+      display: block; font-size: 12px; color: #6B7280; padding: 5px 16px;
+      text-decoration: none; transition: all 0.12s;
+    }
+    .sidebar-nav a:hover { color: #185FA5; background: #f0f7ff; }
+
+    .sidebar-actions { padding: 12px 0; border-bottom: 1px solid #f3f4f6; }
+    .sidebar-btn {
+      display: flex; align-items: center; gap: 8px;
+      width: 100%; padding: 8px 16px;
+      background: none; border: none;
+      font-size: 12px; color: #374151;
+      text-align: left; transition: background 0.12s;
+    }
+    .sidebar-btn:hover { background: #f0f2f5; }
+    .sidebar-btn i { color: #9CA3AF; font-size: 15px; }
+
+    .sidebar-library { padding: 12px 0; }
+    .sidebar-library-title { font-size: 10px; text-transform: uppercase; letter-spacing: 0.07em; color: #9CA3AF; padding: 0 16px 8px; }
+    .library-row {
+      display: flex; align-items: center; gap: 8px;
+      padding: 6px 16px; cursor: pointer; transition: background 0.12s;
+    }
+    .library-row:hover { background: #f0f2f5; }
+    .library-row-name { font-size: 12px; color: #374151; flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .library-row-date { font-size: 10px; color: #9CA3AF; flex-shrink: 0; }
+
+    /* Document area */
+    #document-area {
+      flex: 1;
+      padding: 40px 48px 80px;
+      max-width: 860px;
+      min-width: 0;
+    }
+
+    .doc-header { margin-bottom: 28px; }
+    .doc-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+      color: #185FA5; text-transform: uppercase; margin-bottom: 8px;
+    }
+    .doc-name { font-size: 28px; font-weight: 500; color: #111827; margin-bottom: 4px; line-height: 1.2; }
+    .doc-role { font-size: 15px; color: #6B7280; margin-bottom: 16px; }
+    .doc-meta-row {
+      display: flex; align-items: center; gap: 20px;
+      font-size: 12px; color: #6B7280; margin-bottom: 16px; flex-wrap: wrap;
+    }
+    .doc-meta-item { display: flex; align-items: center; gap: 5px; }
+    .doc-hr { border: none; border-top: 1px solid #e5e7eb; margin-bottom: 32px; }
+
+    /* Briefing sections */
+    .brief-section { margin-bottom: 32px; page-break-inside: avoid; }
+    .section-head {
+      font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em;
+      color: #185FA5; font-weight: 600;
+      border-left: 3px solid #185FA5;
+      padding-left: 8px;
+      margin-bottom: 10px;
+    }
+    .section-head.flag-head { color: #B45309; border-left-color: #B45309; }
+    .section-body { font-size: 14px; line-height: 1.8; color: #374151; }
+    .section-body.muted { color: #9CA3AF; font-style: italic; }
+    .section-body.insufficient { color: #9CA3AF; font-style: italic; }
+
+    /* Snapshot box */
+    .snapshot-box {
+      background: #F0F7FF;
+      border-radius: 12px;
+      padding: 18px 20px;
+      font-size: 14px; line-height: 1.8; color: #1e3a5f;
+    }
+
+    /* Conversation angle cards */
+    .angles-list { display: flex; flex-direction: column; gap: 10px; }
+    .angle-card {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 13px 16px;
+    }
+    .angle-num {
+      width: 24px; height: 24px; flex-shrink: 0;
+      background: #185FA5; color: #fff;
+      border-radius: 50%;
+      font-size: 11px; font-weight: 600;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 2px;
+    }
+    .angle-text { font-size: 13px; line-height: 1.7; color: #374151; }
+
+    /* Flags section override */
+    .flag-section .section-body { border-left: 3px solid #B45309; padding-left: 12px; }
+
+    /* Gaps section */
+    .gaps-section .section-body { font-size: 13px; color: #9CA3AF; font-style: italic; line-height: 1.7; }
+
+    /* Error card */
+    .error-card {
+      background: #fef2f2; border: 1px solid #fca5a5;
+      border-radius: 8px; padding: 16px 20px;
+      margin: 24px 0; display: flex; align-items: flex-start; gap: 12px;
+    }
+    .error-card i { color: #dc2626; font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+    .error-card-body { flex: 1; }
+    .error-card-title { font-size: 13px; font-weight: 500; color: #991b1b; margin-bottom: 4px; }
+    .error-card-msg { font-size: 12px; color: #b91c1c; line-height: 1.5; }
+    .error-retry {
+      margin-top: 10px; padding: 6px 14px;
+      background: #dc2626; color: #fff;
+      border: none; border-radius: 6px;
+      font-size: 12px; cursor: pointer;
+    }
+    .error-retry:hover { background: #b91c1c; }
+
+    /* Raw fallback */
+    .raw-output {
+      background: #f9fafb; border: 1px solid #e5e7eb;
+      border-radius: 8px; padding: 20px;
+      font-size: 12px; line-height: 1.7;
+      white-space: pre-wrap; word-break: break-word;
+      color: #374151;
+    }
+
+    /* Library modal */
+    .modal-backdrop {
+      display: none; position: fixed; inset: 0; z-index: 200;
+      background: rgba(0,0,0,0.35);
+      align-items: center; justify-content: center;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal {
+      background: #fff; border-radius: 12px;
+      width: 100%; max-width: 560px;
+      max-height: 80vh; display: flex; flex-direction: column;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    .modal-header {
+      padding: 20px 24px 16px;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .modal-header h2 { font-size: 16px; font-weight: 500; }
+    .modal-close { background: none; border: none; font-size: 20px; color: #9CA3AF; line-height: 1; }
+    .modal-close:hover { color: #374151; }
+    .modal-body { padding: 16px 24px; overflow-y: auto; flex: 1; }
+    .modal-library-row {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 0; border-bottom: 1px solid #f3f4f6;
+    }
+    .modal-library-row:last-child { border-bottom: none; }
+    .modal-lib-info { flex: 1; min-width: 0; }
+    .modal-lib-name { font-size: 13px; font-weight: 500; color: #111827; }
+    .modal-lib-org { font-size: 12px; color: #6B7280; }
+    .modal-lib-date { font-size: 11px; color: #9CA3AF; }
+    .modal-lib-view {
+      padding: 5px 12px; background: #f0f7ff; color: #185FA5;
+      border: 1px solid #bfdbfe; border-radius: 5px;
+      font-size: 12px; cursor: pointer; white-space: nowrap;
+    }
+    .modal-lib-view:hover { background: #dbeafe; }
+    .modal-empty { font-size: 13px; color: #9CA3AF; text-align: center; padding: 32px 0; }
+
+    /* Toast notification */
+    .toast {
+      position: fixed; bottom: 24px; right: 24px; z-index: 300;
+      background: #111827; color: #fff;
+      padding: 10px 18px; border-radius: 8px;
+      font-size: 13px;
+      opacity: 0; transform: translateY(8px);
+      transition: all 0.25s;
+      pointer-events: none;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+
+    /* ─── PRINT STYLES ───────────────────────────────────────────── */
+    @media print {
+      #page-header, #sidebar, .modal-backdrop, .toast { display: none !important; }
+      body { background: #fff; }
+      #output-screen { display: block !important; }
+      .output-layout { display: block; }
+      #document-area {
+        padding: 0;
+        max-width: 100%;
+        font-family: Georgia, serif;
+      }
+      .doc-name { font-size: 22pt; }
+      .doc-role { font-size: 11pt; }
+      .section-body, .snapshot-box, .angle-text { font-size: 11pt; color: #000; }
+      .snapshot-box { background: none; border: 1px solid #ccc; }
+      .angle-card { border: 1px solid #ccc; break-inside: avoid; }
+      .section-head { font-size: 8pt; break-after: avoid; }
+      .brief-section { break-inside: avoid; margin-bottom: 18pt; }
+      @page { margin: 20mm; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── PAGE HEADER ─────────────────────────────────────────────── -->
+<div id="page-header">
+  <div class="brand">
+    <span class="brand-title">Prospect Briefing Builder</span>
+  </div>
+  <div class="header-actions">
+    <button id="btn-library-header" onclick="openLibraryModal()">
+      <i class="ti ti-books"></i> Library
+    </button>
+    <button id="btn-change-key" onclick="changeKey()">
+      <i class="ti ti-key"></i> API key
+    </button>
+  </div>
+</div>
+
+<!-- ─── SETUP SCREEN ────────────────────────────────────────────── -->
+<div id="setup-screen" class="screen">
+  <div class="setup-card">
+    <h1>Set up your API key</h1>
+    <p>This tool uses the Anthropic Claude API to research your prospect and build the briefing.</p>
+    <label for="setup-key-input">Anthropic API key</label>
+    <input type="password" id="setup-key-input" placeholder="sk-ant-..." autocomplete="off" />
+    <button class="btn-primary" style="margin-top: 16px;" onclick="saveKey()">Save and continue</button>
+    <p class="note">
+      <i class="ti ti-lock"></i>
+      Your key is stored locally in your browser and is only ever sent to api.anthropic.com
+    </p>
+  </div>
+</div>
+
+<!-- ─── INPUT SCREEN ────────────────────────────────────────────── -->
+<div id="input-screen" class="screen screen-pad">
+  <div class="input-screen-inner">
+    <div class="form-header">
+      <div class="brand-tag">Private Bank</div>
+      <h1>Prospect briefing builder</h1>
+      <p>Enter what you know. We'll research the rest.</p>
+    </div>
+
+    <!-- SECTION 1: About the prospect -->
+    <div class="form-card">
+      <div class="section-label">About the prospect</div>
+      <div class="field-group">
+        <label for="f-name">Full name <span style="color:#dc2626">*</span></label>
+        <input type="text" id="f-name" placeholder="e.g. James Hartley" required />
+      </div>
+      <div class="field-row col2" style="margin-bottom:14px">
+        <div class="field-group" style="margin-bottom:0">
+          <label for="f-role">Current role / title</label>
+          <input type="text" id="f-role" placeholder="e.g. Managing Partner" />
+        </div>
+        <div class="field-group" style="margin-bottom:0">
+          <label for="f-org">Organisation / firm</label>
+          <input type="text" id="f-org" placeholder="e.g. Hartley Capital Partners" />
+        </div>
+      </div>
+      <div class="field-row col2">
+        <div class="field-group" style="margin-bottom:0">
+          <label for="f-sector">Sector</label>
+          <select id="f-sector">
+            <option value="Private equity">Private equity</option>
+            <option value="Hedge fund">Hedge fund</option>
+            <option value="Venture capital">Venture capital</option>
+            <option value="Tech founder">Tech founder</option>
+            <option value="Real estate">Real estate</option>
+            <option value="Family office">Family office</option>
+            <option value="Corporate executive">Corporate executive</option>
+            <option value="Legal">Legal</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="field-group" style="margin-bottom:0">
+          <label for="f-location">Approximate location</label>
+          <input type="text" id="f-location" placeholder="e.g. London, UK" />
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: Context you have (collapsible) -->
+    <div class="form-card">
+      <div class="section-label collapsible-header" id="context-header" onclick="toggleCollapse('context-body', 'context-header')">
+        <span>Context you have</span>
+        <i class="ti ti-chevron-down toggle-icon"></i>
+      </div>
+      <div class="collapsible-body" id="context-body">
+        <div class="field-group">
+          <label for="f-referral">How you heard about them</label>
+          <input type="text" id="f-referral" placeholder="e.g. Referred by Robert Okafor at Okafor & Partners" />
+        </div>
+        <div class="field-group">
+          <label for="f-trigger">Known wealth trigger or event</label>
+          <input type="text" id="f-trigger" placeholder="e.g. Recently closed Fund IV, rumoured business sale" />
+        </div>
+        <div class="field-group">
+          <label for="f-aum">Estimated wealth / AUM</label>
+          <input type="text" id="f-aum" placeholder="e.g. >£50m" />
+        </div>
+        <div class="field-group">
+          <label for="f-purpose">Meeting purpose</label>
+          <textarea id="f-purpose" rows="2" placeholder="e.g. Initial introduction — exploring whether we can service their personal wealth alongside their fund"></textarea>
+        </div>
+        <div class="field-group">
+          <label for="f-other">Any other known context</label>
+          <textarea id="f-other" rows="2" placeholder="Other things you know: family situation, other bank relationships, adviser names, personal interests..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3: Briefing preferences -->
+    <div class="form-card">
+      <div class="section-label">Briefing preferences</div>
+      <div class="field-row col2" style="margin-bottom:18px">
+        <div class="field-group" style="margin-bottom:0">
+          <label for="f-date">Meeting date</label>
+          <input type="date" id="f-date" />
+        </div>
+        <div class="field-group" style="margin-bottom:0">
+          <label>Depth</label>
+          <div class="radio-group" id="depth-group">
+            <label class="selected" data-val="Essential — key facts only">
+              <input type="radio" name="depth" value="Essential — key facts only" checked />Essential
+            </label>
+            <label data-val="Standard — full briefing">
+              <input type="radio" name="depth" value="Standard — full briefing" />Standard
+            </label>
+            <label data-val="Deep dive — maximum detail">
+              <input type="radio" name="depth" value="Deep dive — maximum detail" />Deep dive
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Focus areas</label>
+        <div class="checkbox-grid" id="focus-checkboxes">
+          <label class="checkbox-item"><input type="checkbox" value="Career & background" checked />&nbsp;Career &amp; background</label>
+          <label class="checkbox-item"><input type="checkbox" value="Wealth triggers & liquidity events" checked />&nbsp;Wealth triggers</label>
+          <label class="checkbox-item"><input type="checkbox" value="Known business interests" checked />&nbsp;Business interests</label>
+          <label class="checkbox-item"><input type="checkbox" value="Family & personal" checked />&nbsp;Family &amp; personal</label>
+          <label class="checkbox-item"><input type="checkbox" value="Public statements & views" checked />&nbsp;Public statements</label>
+          <label class="checkbox-item"><input type="checkbox" value="Known adviser relationships" checked />&nbsp;Adviser relationships</label>
+          <label class="checkbox-item"><input type="checkbox" value="News & recent activity" checked />&nbsp;News &amp; recent activity</label>
+          <label class="checkbox-item"><input type="checkbox" value="Connection to our clients or network" checked />&nbsp;Network connections</label>
+          <label class="checkbox-item"><input type="checkbox" value="Conversation angles & talking points" checked />&nbsp;Conversation angles</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card" style="padding: 24px 32px;">
+      <div id="form-error" style="display:none; margin-bottom:16px;"></div>
+      <button class="btn-primary" id="btn-build" onclick="buildBriefing()">
+        <i class="ti ti-file-text" style="font-size:16px; vertical-align:-2px; margin-right:6px;"></i>
+        Build briefing
+      </button>
+      <p class="btn-hint">Research typically takes 30–60 seconds</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── PROGRESS SCREEN ──────────────────────────────────────────── -->
+<div id="progress-screen" class="screen">
+  <div class="progress-inner">
+    <div class="progress-prospect" id="prog-name">—</div>
+    <div class="progress-sub">Building your briefing...</div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill"></div>
+    </div>
+    <div class="research-log" id="research-log"></div>
+    <div class="progress-cancel">
+      <a href="#" onclick="cancelBriefing(); return false;">Cancel</a>
+    </div>
+  </div>
+</div>
+
+<!-- ─── OUTPUT SCREEN ────────────────────────────────────────────── -->
+<div id="output-screen" class="screen screen-pad">
+  <div class="output-layout">
+    <!-- LEFT SIDEBAR -->
+    <div id="sidebar">
+      <div style="padding: 0 16px 12px; border-bottom: 1px solid #f3f4f6;">
+        <div class="sidebar-prospect-name" id="sb-name">—</div>
+        <div class="sidebar-prospect-org" id="sb-org">—</div>
+        <div class="sidebar-meta">
+          <div class="sidebar-meta-row" id="sb-meeting-date">—</div>
+          <div class="sidebar-meta-row" id="sb-compiled">—</div>
+          <div id="sb-confidence"></div>
+        </div>
+      </div>
+      <div class="sidebar-nav">
+        <div class="sidebar-nav-title">Jump to section</div>
+        <div id="sidebar-nav-links"></div>
+      </div>
+      <div class="sidebar-actions">
+        <button class="sidebar-btn" onclick="window.print()">
+          <i class="ti ti-printer"></i> Print / save as PDF
+        </button>
+        <button class="sidebar-btn" onclick="copyBriefing()">
+          <i class="ti ti-copy"></i> Copy full briefing
+        </button>
+        <button class="sidebar-btn" onclick="confirmNewBriefing()">
+          <i class="ti ti-plus"></i> New briefing
+        </button>
+        <button class="sidebar-btn" onclick="saveBriefingToLibrary()">
+          <i class="ti ti-bookmark"></i> Save to library
+        </button>
+      </div>
+      <div class="sidebar-library">
+        <div class="sidebar-library-title">Recent briefings</div>
+        <div id="sidebar-library-list"></div>
+      </div>
+    </div>
+
+    <!-- DOCUMENT AREA -->
+    <div id="document-area">
+      <div id="doc-content"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── LIBRARY MODAL ─────────────────────────────────────────────── -->
+<div class="modal-backdrop" id="library-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>Briefing library</h2>
+      <button class="modal-close" onclick="closeLibraryModal()">&times;</button>
+    </div>
+    <div class="modal-body" id="library-modal-body"></div>
+  </div>
+</div>
+
+<!-- ─── TOAST ─────────────────────────────────────────────────────── -->
+<div class="toast" id="toast"></div>
+
+<!-- ─── JAVASCRIPT ─────────────────────────────────────────────────── -->
+<script>
+/* ════════════════════════════════════════════════════════════════
+   CONSTANTS & STATE
+════════════════════════════════════════════════════════════════ */
+const LS_KEY       = 'pb-briefing-apikey';
+const LS_LIBRARY   = 'pb-briefing-library';
+const LS_FORM      = 'pb-briefing-form';
+const API_ENDPOINT = 'https://api.anthropic.com/v1/messages';
+
+let currentRawText   = '';   // raw API response text for current briefing
+let currentInputData = {};   // form data for current briefing
+let cancelRequested  = false;
+let progressTimer    = null;
+
+/* ════════════════════════════════════════════════════════════════
+   STORAGE HELPERS
+════════════════════════════════════════════════════════════════ */
+function getApiKey()       { return localStorage.getItem(LS_KEY) || ''; }
+function storeApiKey(k)    { localStorage.setItem(LS_KEY, k); }
+function clearApiKey()     { localStorage.removeItem(LS_KEY); }
+
+function getLibrary() {
+  try { return JSON.parse(localStorage.getItem(LS_LIBRARY)) || { briefings: [] }; }
+  catch { return { briefings: [] }; }
+}
+function storeLibrary(lib) { localStorage.setItem(LS_LIBRARY, JSON.stringify(lib)); }
+
+function getFormState() {
+  try { return JSON.parse(localStorage.getItem(LS_FORM)) || {}; }
+  catch { return {}; }
+}
+function storeFormState(obj) { localStorage.setItem(LS_FORM, JSON.stringify(obj)); }
+
+/* ════════════════════════════════════════════════════════════════
+   SCREEN MANAGEMENT
+════════════════════════════════════════════════════════════════ */
+function showScreen(id) {
+  ['setup-screen','input-screen','progress-screen','output-screen'].forEach(s => {
+    const el = document.getElementById(s);
+    el.classList.remove('active');
+  });
+  document.getElementById(id).classList.add('active');
+}
+
+function init() {
+  // Setup depth radio visual state
+  document.querySelectorAll('#depth-group label').forEach(lbl => {
+    lbl.querySelector('input').addEventListener('change', () => {
+      document.querySelectorAll('#depth-group label').forEach(l => l.classList.remove('selected'));
+      lbl.classList.add('selected');
+      saveFormToStorage();
+    });
+  });
+
+  // Attach form change listeners for persistence
+  document.querySelectorAll('#input-screen input, #input-screen select, #input-screen textarea')
+    .forEach(el => el.addEventListener('change', saveFormToStorage));
+
+  restoreFormFromStorage();
+
+  if (!getApiKey()) {
+    showScreen('setup-screen');
+  } else {
+    showScreen('input-screen');
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   SETUP SCREEN
+════════════════════════════════════════════════════════════════ */
+function saveKey() {
+  const key = document.getElementById('setup-key-input').value.trim();
+  if (!key) { alert('Please enter your API key.'); return; }
+  storeApiKey(key);
+  showScreen('input-screen');
+}
+
+function changeKey() {
+  document.getElementById('setup-key-input').value = getApiKey();
+  showScreen('setup-screen');
+}
+
+/* ════════════════════════════════════════════════════════════════
+   COLLAPSIBLE SECTIONS
+════════════════════════════════════════════════════════════════ */
+function toggleCollapse(bodyId, headerId) {
+  const body = document.getElementById(bodyId);
+  const header = document.getElementById(headerId);
+  body.classList.toggle('hidden');
+  header.classList.toggle('collapsed');
+}
+
+/* ════════════════════════════════════════════════════════════════
+   FORM STATE PERSISTENCE
+════════════════════════════════════════════════════════════════ */
+function readFormData() {
+  const focusAreas = [];
+  document.querySelectorAll('#focus-checkboxes input:checked').forEach(cb => focusAreas.push(cb.value));
+  const depth = document.querySelector('#depth-group input:checked')?.value || 'Standard — full briefing';
+  return {
+    name:      document.getElementById('f-name').value.trim(),
+    role:      document.getElementById('f-role').value.trim(),
+    org:       document.getElementById('f-org').value.trim(),
+    sector:    document.getElementById('f-sector').value,
+    location:  document.getElementById('f-location').value.trim(),
+    referral:  document.getElementById('f-referral').value.trim(),
+    trigger:   document.getElementById('f-trigger').value.trim(),
+    aum:       document.getElementById('f-aum').value.trim(),
+    purpose:   document.getElementById('f-purpose').value.trim(),
+    other:     document.getElementById('f-other').value.trim(),
+    date:      document.getElementById('f-date').value,
+    depth,
+    focusAreas
+  };
+}
+
+function saveFormToStorage() {
+  storeFormState(readFormData());
+}
+
+function restoreFormFromStorage() {
+  const s = getFormState();
+  if (!s || !s.name) return;
+
+  const setVal = (id, v) => { const el = document.getElementById(id); if (el && v !== undefined) el.value = v; };
+  setVal('f-name', s.name);
+  setVal('f-role', s.role);
+  setVal('f-org', s.org);
+  setVal('f-sector', s.sector);
+  setVal('f-location', s.location);
+  setVal('f-referral', s.referral);
+  setVal('f-trigger', s.trigger);
+  setVal('f-aum', s.aum);
+  setVal('f-purpose', s.purpose);
+  setVal('f-other', s.other);
+  setVal('f-date', s.date);
+
+  if (s.depth) {
+    document.querySelectorAll('#depth-group label').forEach(lbl => {
+      const radio = lbl.querySelector('input');
+      const match = radio.value === s.depth;
+      lbl.classList.toggle('selected', match);
+      radio.checked = match;
+    });
+  }
+
+  if (s.focusAreas && s.focusAreas.length) {
+    document.querySelectorAll('#focus-checkboxes input').forEach(cb => {
+      cb.checked = s.focusAreas.includes(cb.value);
+    });
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   PROMPT BUILDER
+════════════════════════════════════════════════════════════════ */
+function buildMessages(fd) {
+  const today = new Date().toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' });
+  const meetingDate = fd.date
+    ? new Date(fd.date).toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' })
+    : 'Not specified';
+  const focusList = fd.focusAreas.length ? fd.focusAreas.join(', ') : 'All areas';
+
+  const system = `You are an expert private banking research analyst. Your job is to produce a structured pre-meeting intelligence briefing for a senior private banker. The briefing must be factual, precise, and based on publicly available information gathered through web search. Do not invent or fabricate any information — if something cannot be verified, say so clearly. Write in a professional, analytical tone — not conversational. The output must follow the exact structured format specified by the user. Use web search extensively to gather current, accurate information before writing the briefing.`;
+
+  const user = `Please research and produce a structured prospect briefing for the following individual. Use web search to gather as much relevant information as possible before writing. Run multiple targeted searches — search for their name + company, their name + news, their name + career history, their company + recent news, any mentioned events or transactions, and any other searches you judge relevant.
+
+PROSPECT DETAILS:
+Name: ${fd.name || 'Not provided'}
+Role: ${fd.role || 'Not provided'}
+Organisation: ${fd.org || 'Not provided'}
+Sector: ${fd.sector || 'Not provided'}
+Location: ${fd.location || 'Not provided'}
+
+CONTEXT FROM THE BANKER:
+How identified: ${fd.referral || 'Not provided'}
+Known trigger/event: ${fd.trigger || 'Not provided'}
+Estimated wealth: ${fd.aum || 'Not provided'}
+Meeting purpose: ${fd.purpose || 'Not provided'}
+Additional context: ${fd.other || 'Not provided'}
+
+BRIEFING DEPTH: ${fd.depth}
+FOCUS AREAS REQUESTED: ${focusList}
+MEETING DATE: ${meetingDate}
+
+Please produce the briefing in exactly this format, using these exact section headers. If a section cannot be researched (insufficient public information), include the header and write 'Insufficient public information available' — never omit a section entirely.
+
+---
+
+PROSPECT BRIEFING
+Prepared for: ${meetingDate} | Compiled: ${today}
+Confidence: [High / Medium / Low — your assessment of how much reliable public info was available]
+
+━━━ SNAPSHOT ━━━
+[3–4 sentence executive summary: who they are, what they do, why they are a relevant private banking prospect, and the single most important thing to know going into this meeting.]
+
+━━━ CAREER & BACKGROUND ━━━
+[Career history in reverse chronological order. Current role first. Education if found. Key career milestones. Any board positions or public directorships.]
+
+━━━ WEALTH TRIGGERS & LIQUIDITY EVENTS ━━━
+[Any known or likely wealth events: fund closings, business sales, IPOs, exits, property transactions, inheritance, divorce settlements. Include dates where known. Flag if a major event appears imminent.]
+
+━━━ BUSINESS INTERESTS ━━━
+[Known companies, investments, fund history, portfolio companies, real estate, other significant assets. Be specific about sizes and dates where available.]
+
+━━━ FAMILY & PERSONAL ━━━
+[Family situation if publicly known — spouse, children, known personal interests, philanthropy, charitable foundations, club memberships, publicly mentioned lifestyle details. Do not speculate.]
+
+━━━ PUBLIC STATEMENTS & VIEWS ━━━
+[Any interviews, articles, conference talks, LinkedIn posts, or public quotes that reveal how this person thinks about investment, risk, wealth, or business. Direct quotes where possible.]
+
+━━━ RECENT NEWS & ACTIVITY ━━━
+[Anything in the last 12 months: press mentions, transactions, appointments, awards, events attended, companies joined or left.]
+
+━━━ KNOWN ADVISER RELATIONSHIPS ━━━
+[Any publicly known lawyers, accountants, tax advisers, family offices, or other private banks this person works with. Note source of information.]
+
+━━━ NETWORK CONNECTIONS ━━━
+[Any known mutual contacts (based on context provided), LinkedIn connections in common with known public figures, industry associations, and other relevant network links.]
+
+━━━ CONVERSATION ANGLES ━━━
+[4–6 specific, actionable talking points for the banker. Each one should be grounded in something researched — a specific event, statement, or situation that creates a natural opening. Format as numbered list. Be specific — not generic.]
+
+━━━ FLAGS & SENSITIVITIES ━━━
+[Anything the banker should be aware of: legal matters, public controversies, known relationship challenges, competitor relationships, anything that requires careful handling.]
+
+━━━ GAPS IN INTELLIGENCE ━━━
+[Be explicit about what could not be found or verified. This is important for the banker to know so they do not make assumptions.]
+
+---
+
+End of briefing format.`;
+
+  return { system, user };
+}
+
+/* ════════════════════════════════════════════════════════════════
+   API CALL
+════════════════════════════════════════════════════════════════ */
+async function callAPI(fd) {
+  const key = getApiKey();
+  const { system, user } = buildMessages(fd);
+
+  const response = await fetch(API_ENDPOINT, {
+    method: 'POST',
+    headers: {
+      'Content-Type':    'application/json',
+      'x-api-key':       key,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true'
+    },
+    body: JSON.stringify({
+      model:      'claude-sonnet-4-6',
+      max_tokens: 8000,
+      stream:     false,
+      tools: [{
+        type: 'web_search_20250305',
+        name: 'web_search'
+      }],
+      system,
+      messages: [{ role: 'user', content: user }]
+    })
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    const msg = data?.error?.message || `HTTP ${response.status}`;
+    throw new Error(msg);
+  }
+
+  // Assemble text from all text-type content blocks
+  const textBlocks = (data.content || [])
+    .filter(b => b.type === 'text')
+    .map(b => b.text)
+    .join('\n');
+
+  return textBlocks;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   PROGRESS SCREEN
+════════════════════════════════════════════════════════════════ */
+const LOG_MESSAGES = [
+  'Searching public records...',
+  'Reviewing career history and directorships...',
+  'Scanning for recent news and announcements...',
+  'Identifying known business interests...',
+  'Checking for wealth events and liquidity triggers...',
+  'Reviewing public statements and interviews...',
+  'Analysing network connections...',
+  'Identifying potential conversation angles...',
+  'Compiling and structuring briefing...'
+];
+
+function appendLogLine(text, isComplete) {
+  const log = document.getElementById('research-log');
+  const line = document.createElement('div');
+  line.className = 'log-line' + (isComplete ? ' complete' : '');
+  line.innerHTML = `<span class="log-prompt">›</span>${escHtml(text)}`;
+  log.appendChild(line);
+  log.scrollTop = log.scrollHeight;
+}
+
+function startProgressLog(name) {
+  document.getElementById('prog-name').textContent = name;
+  document.getElementById('research-log').innerHTML = '';
+  let idx = 0;
+
+  appendLogLine(LOG_MESSAGES[idx], false);
+  idx++;
+
+  progressTimer = setInterval(() => {
+    if (cancelRequested) { clearInterval(progressTimer); return; }
+    if (idx < LOG_MESSAGES.length) {
+      appendLogLine(LOG_MESSAGES[idx], false);
+      idx++;
+    }
+  }, 3500);
+}
+
+function stopProgressLog() {
+  if (progressTimer) { clearInterval(progressTimer); progressTimer = null; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   BUILD BRIEFING (main flow)
+════════════════════════════════════════════════════════════════ */
+async function buildBriefing() {
+  // Validate required field
+  const fd = readFormData();
+  if (!fd.name) {
+    showFormError('Please enter the prospect\'s full name before building the briefing.');
+    return;
+  }
+  hideFormError();
+  saveFormToStorage();
+
+  cancelRequested = false;
+  currentInputData = fd;
+
+  showScreen('progress-screen');
+  startProgressLog(fd.name);
+
+  try {
+    const rawText = await callAPI(fd);
+    stopProgressLog();
+
+    if (cancelRequested) { showScreen('input-screen'); return; }
+
+    appendLogLine('Briefing complete. Loading...', true);
+    await delay(600);
+
+    currentRawText = rawText;
+    renderOutput(rawText, fd);
+    showScreen('output-screen');
+
+  } catch (err) {
+    stopProgressLog();
+    if (cancelRequested) { showScreen('input-screen'); return; }
+    showScreen('input-screen');
+    showFormError(`API error: ${err.message}`, true);
+  }
+}
+
+function cancelBriefing() {
+  cancelRequested = true;
+  stopProgressLog();
+  showScreen('input-screen');
+}
+
+function showFormError(msg, isRetryable) {
+  const el = document.getElementById('form-error');
+  el.style.display = 'block';
+  el.innerHTML = `
+    <div class="error-card">
+      <i class="ti ti-alert-circle"></i>
+      <div class="error-card-body">
+        <div class="error-card-title">Unable to build briefing</div>
+        <div class="error-card-msg">${escHtml(msg)}</div>
+        ${isRetryable ? '<button class="error-retry" onclick="buildBriefing()">Try again</button>' : ''}
+      </div>
+    </div>`;
+}
+
+function hideFormError() {
+  const el = document.getElementById('form-error');
+  el.style.display = 'none';
+  el.innerHTML = '';
+}
+
+/* ════════════════════════════════════════════════════════════════
+   BRIEFING PARSER
+════════════════════════════════════════════════════════════════ */
+function parseBriefing(text) {
+  // Match ━━━ SECTION ━━━ pattern
+  const re = /━━━\s*([^━\n]+?)\s*━━━/g;
+  const sections = [];
+  const matches = [...text.matchAll(re)];
+
+  if (matches.length < 3) return null; // fallback to raw
+
+  matches.forEach((m, i) => {
+    const label = m[1].trim();
+    const start = m.index + m[0].length;
+    const end   = i + 1 < matches.length ? matches[i + 1].index : text.length;
+    const content = text.slice(start, end).trim();
+    sections.push({ label, content });
+  });
+
+  return sections;
+}
+
+function extractConfidence(text) {
+  const m = text.match(/Confidence:\s*(High|Medium|Low)/i);
+  return m ? m[1] : null;
+}
+
+function extractHeaderMeta(text) {
+  // Extract "Prepared for: X | Compiled: Y" line
+  const prepMatch = text.match(/Prepared for:\s*([^\|]+)/i);
+  const compMatch = text.match(/Compiled:\s*([^\n]+)/i);
+  return {
+    preparedFor: prepMatch ? prepMatch[1].trim() : '',
+    compiled:    compMatch ? compMatch[1].trim() : ''
+  };
+}
+
+/* ════════════════════════════════════════════════════════════════
+   BRIEFING RENDERER
+════════════════════════════════════════════════════════════════ */
+function renderOutput(rawText, fd) {
+  const confidence = extractConfidence(rawText);
+  const meta       = extractHeaderMeta(rawText);
+  const sections   = parseBriefing(rawText);
+
+  // Update sidebar top info
+  document.getElementById('sb-name').textContent = fd.name;
+  document.getElementById('sb-org').textContent  = [fd.role, fd.org].filter(Boolean).join(', ') || '—';
+  document.getElementById('sb-meeting-date').textContent = meta.preparedFor ? `Meeting: ${meta.preparedFor}` : '';
+  document.getElementById('sb-compiled').textContent     = meta.compiled ? `Compiled: ${meta.compiled}` : '';
+
+  // Confidence badge
+  const confEl = document.getElementById('sb-confidence');
+  if (confidence) {
+    const cls = confidence.toLowerCase();
+    confEl.innerHTML = `<span class="confidence-badge confidence-${cls}">${confidence} confidence</span>`;
+  } else {
+    confEl.innerHTML = '';
+  }
+
+  // Document content
+  const docEl = document.getElementById('doc-content');
+  const navEl = document.getElementById('sidebar-nav-links');
+  navEl.innerHTML = '';
+
+  // Build document header
+  let html = `
+    <div class="doc-header">
+      <div class="doc-label">Prospect Briefing</div>
+      <div class="doc-name">${escHtml(fd.name)}</div>
+      <div class="doc-role">${escHtml([fd.role, fd.org].filter(Boolean).join(' · ') || '')}</div>
+      <div class="doc-meta-row">
+        ${meta.preparedFor ? `<span class="doc-meta-item"><i class="ti ti-calendar" style="font-size:13px; color:#9CA3AF"></i>&nbsp;Meeting: ${escHtml(meta.preparedFor)}</span>` : ''}
+        ${meta.compiled ? `<span class="doc-meta-item"><i class="ti ti-clock" style="font-size:13px; color:#9CA3AF"></i>&nbsp;Compiled: ${escHtml(meta.compiled)}</span>` : ''}
+        ${confidence ? `<span class="confidence-badge confidence-${confidence.toLowerCase()}">${escHtml(confidence)} confidence</span>` : ''}
+      </div>
+    </div>
+    <hr class="doc-hr" />
+  `;
+
+  if (!sections) {
+    // Fallback: raw text display
+    html += `
+      <div style="margin-bottom:16px; font-size:13px; color:#9CA3AF; font-style:italic;">
+        Could not parse structured format — raw output shown below.
+      </div>
+      <pre class="raw-output">${escHtml(rawText)}</pre>`;
+    docEl.innerHTML = html;
+    navEl.innerHTML = '';
+    return;
+  }
+
+  // Render each section
+  sections.forEach((sec, idx) => {
+    const sectionId = 'section-' + idx;
+    const labelKey  = sec.label.toUpperCase().replace(/[^A-Z0-9 &]/g, '');
+    const isSnapshot    = labelKey.includes('SNAPSHOT');
+    const isAngles      = labelKey.includes('CONVERSATION');
+    const isFlags       = labelKey.includes('FLAGS');
+    const isGaps        = labelKey.includes('GAPS');
+    const isInsufficient = sec.content.toLowerCase().startsWith('insufficient public information');
+
+    // Nav link
+    const navLink = document.createElement('a');
+    navLink.href = '#' + sectionId;
+    navLink.textContent = titleCase(sec.label);
+    navLink.addEventListener('click', e => {
+      e.preventDefault();
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    navEl.appendChild(navLink);
+
+    const headClass = isFlags ? 'section-head flag-head' : 'section-head';
+    const wrapClass = ['brief-section', isFlags ? 'flag-section' : '', isGaps ? 'gaps-section' : ''].filter(Boolean).join(' ');
+
+    let contentHtml = '';
+    if (isSnapshot) {
+      contentHtml = `<div class="snapshot-box">${formatContent(sec.content)}</div>`;
+    } else if (isAngles) {
+      contentHtml = renderAngles(sec.content);
+    } else {
+      const bodyClass = ['section-body', isInsufficient ? 'insufficient' : '', isGaps ? 'muted' : ''].filter(Boolean).join(' ');
+      contentHtml = `<div class="${bodyClass}">${formatContent(sec.content)}</div>`;
+    }
+
+    html += `
+      <div class="${wrapClass}" id="${sectionId}">
+        <div class="${headClass}">${escHtml(sec.label.toUpperCase())}</div>
+        ${contentHtml}
+      </div>`;
+  });
+
+  docEl.innerHTML = html;
+  renderSidebarLibrary();
+}
+
+function renderAngles(content) {
+  // Try to split numbered items: "1. ...", "2. ..."
+  const lines = content.split(/\n/).map(l => l.trim()).filter(Boolean);
+  const items = [];
+  let cur = '';
+  lines.forEach(line => {
+    if (/^\d+[\.\)]\s/.test(line)) {
+      if (cur) items.push(cur);
+      cur = line.replace(/^\d+[\.\)]\s/, '');
+    } else {
+      cur += (cur ? ' ' : '') + line;
+    }
+  });
+  if (cur) items.push(cur);
+
+  if (items.length === 0) {
+    return `<div class="section-body">${formatContent(content)}</div>`;
+  }
+
+  const cards = items.map((item, i) => `
+    <div class="angle-card">
+      <div class="angle-num">${i + 1}</div>
+      <div class="angle-text">${escHtml(item)}</div>
+    </div>`).join('');
+  return `<div class="angles-list">${cards}</div>`;
+}
+
+function formatContent(text) {
+  // Convert newlines to <br>, preserve paragraphs
+  return text
+    .split(/\n\n+/)
+    .map(para => `<p style="margin-bottom:0.8em">${escHtml(para.trim()).replace(/\n/g, '<br />')}</p>`)
+    .join('');
+}
+
+/* ════════════════════════════════════════════════════════════════
+   BRIEFING LIBRARY
+════════════════════════════════════════════════════════════════ */
+function saveBriefingToLibrary() {
+  if (!currentRawText) { showToast('No briefing to save.'); return; }
+  const lib = getLibrary();
+  const entry = {
+    id:         Date.now().toString(),
+    name:       currentInputData.name || 'Unknown',
+    organisation: currentInputData.org || '',
+    date:       currentInputData.date || '',
+    createdAt:  new Date().toISOString(),
+    rawText:    currentRawText,
+    inputData:  currentInputData
+  };
+  lib.briefings.unshift(entry);
+  if (lib.briefings.length > 20) lib.briefings = lib.briefings.slice(0, 20);
+  storeLibrary(lib);
+  renderSidebarLibrary();
+  showToast('Briefing saved to library.');
+}
+
+function renderSidebarLibrary() {
+  const lib = getLibrary();
+  const el  = document.getElementById('sidebar-library-list');
+  if (!el) return;
+  const recent = lib.briefings.slice(0, 5);
+  if (!recent.length) { el.innerHTML = '<div style="padding:4px 16px; font-size:11px; color:#9CA3AF">No saved briefings</div>'; return; }
+  el.innerHTML = recent.map(b => `
+    <div class="library-row" onclick="loadBriefingFromLibrary('${escAttr(b.id)}')">
+      <div class="library-row-name" title="${escAttr(b.name)}">${escHtml(b.name)}</div>
+      <div class="library-row-date">${fmtDate(b.createdAt)}</div>
+    </div>`).join('');
+}
+
+function loadBriefingFromLibrary(id) {
+  const lib = getLibrary();
+  const entry = lib.briefings.find(b => b.id === id);
+  if (!entry) { showToast('Briefing not found.'); return; }
+  currentRawText   = entry.rawText;
+  currentInputData = entry.inputData || {};
+  renderOutput(entry.rawText, entry.inputData || { name: entry.name, org: entry.organisation });
+  showScreen('output-screen');
+  closeLibraryModal();
+}
+
+function openLibraryModal() {
+  const lib = getLibrary();
+  const body = document.getElementById('library-modal-body');
+  if (!lib.briefings.length) {
+    body.innerHTML = '<div class="modal-empty">No saved briefings yet.</div>';
+  } else {
+    body.innerHTML = lib.briefings.map(b => `
+      <div class="modal-library-row">
+        <div class="modal-lib-info">
+          <div class="modal-lib-name">${escHtml(b.name)}</div>
+          <div class="modal-lib-org">${escHtml(b.organisation || '')}</div>
+          <div class="modal-lib-date">${fmtDate(b.createdAt)}</div>
+        </div>
+        <button class="modal-lib-view" onclick="loadBriefingFromLibrary('${escAttr(b.id)}')">View</button>
+      </div>`).join('');
+  }
+  document.getElementById('library-modal').classList.add('open');
+}
+
+function closeLibraryModal() {
+  document.getElementById('library-modal').classList.remove('open');
+}
+
+/* ════════════════════════════════════════════════════════════════
+   ACTIONS
+════════════════════════════════════════════════════════════════ */
+async function copyBriefing() {
+  if (!currentRawText) { showToast('Nothing to copy.'); return; }
+  try {
+    await navigator.clipboard.writeText(currentRawText);
+    showToast('Briefing copied to clipboard.');
+  } catch {
+    showToast('Copy failed — please select and copy manually.');
+  }
+}
+
+function confirmNewBriefing() {
+  if (currentRawText) {
+    if (!confirm('Start a new briefing? Your current briefing will be lost unless you have saved it to the library.')) return;
+  }
+  currentRawText = '';
+  currentInputData = {};
+  showScreen('input-screen');
+}
+
+/* ════════════════════════════════════════════════════════════════
+   UTILITIES
+════════════════════════════════════════════════════════════════ */
+function escHtml(str) {
+  return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function escAttr(str) { return escHtml(str); }
+
+function titleCase(str) {
+  return str.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function fmtDate(iso) {
+  try {
+    return new Date(iso).toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'2-digit' });
+  } catch { return ''; }
+}
+
+function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+function showToast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2800);
+}
+
+// Close modal on backdrop click
+document.getElementById('library-modal').addEventListener('click', e => {
+  if (e.target === document.getElementById('library-modal')) closeLibraryModal();
+});
+
+/* ════════════════════════════════════════════════════════════════
+   BOOT
+════════════════════════════════════════════════════════════════ */
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
