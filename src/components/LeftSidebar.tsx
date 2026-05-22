@@ -138,7 +138,7 @@ export default function LeftSidebar() {
   const nodesArr = Array.from(appState.simulation.nodes.values()).sort((a, b) => a.name.localeCompare(b.name));
 
   function getTypeBadgeLabel(type: string) {
-    if (type === 'jpmorgan') return 'JP Morgan';
+    if (type === 'jpmorgan') return 'JPM';
     if (type === 'organisation') return 'Organisation';
     return type.charAt(0).toUpperCase() + type.slice(1);
   }
@@ -160,7 +160,7 @@ export default function LeftSidebar() {
               <option value="prospect">Prospect</option>
               <option value="referrer">Referrer</option>
               <option value="adviser">Adviser</option>
-              <option value="jpmorgan">JP Morgan Contact</option>
+              <option value="jpmorgan">JPM Contact</option>
               <option value="organisation">Organisation / Firm</option>
             </select>
           </div>
@@ -207,7 +207,7 @@ export default function LeftSidebar() {
 
           {/* JP Morgan fields */}
           <div className={`jpmorgan-fields${selectedType === 'jpmorgan' ? ' visible' : ''}`} id="jpmorganFields">
-            <div className="conditional-section-label">JP Morgan Details</div>
+            <div className="conditional-section-label">JPM Details</div>
             <div className="form-group">
               <label>Role / Title</label>
               <input type="text" name="jpmTitle" placeholder="e.g. Managing Director" />
@@ -313,7 +313,7 @@ export default function LeftSidebar() {
                 {node.type === 'organisation'
                   ? (node.industry || node.website || 'Firm')
                   : node.type === 'jpmorgan'
-                    ? (node.areaOfFocus || node.jpmTitle || 'JP Morgan')
+                    ? (node.areaOfFocus || node.jpmTitle || 'JPM')
                     : (node.organisation || node.sector || '')}
               </div>
               <div className={`person-type type-${node.type}`}>{getTypeBadgeLabel(node.type)}</div>

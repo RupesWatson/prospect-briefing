@@ -167,7 +167,7 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
   }
 
   function getTypeBadgeLabel(type: string) {
-    if (type === 'jpmorgan') return 'JP Morgan';
+    if (type === 'jpmorgan') return 'JPM';
     if (type === 'organisation') return 'Organisation';
     return type.charAt(0).toUpperCase() + type.slice(1);
   }

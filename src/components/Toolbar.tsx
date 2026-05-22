@@ -15,7 +15,7 @@ export default function Toolbar() {
     { label: 'Prospects', value: 'prospect' },
     { label: 'Referrers', value: 'referrer' },
     { label: 'Advisers', value: 'adviser' },
-    { label: 'JP Morgan', value: 'jpmorgan' },
+    { label: 'JPM', value: 'jpmorgan' },
     { label: 'Orgs', value: 'organisation' },
   ];
 
@@ -50,7 +50,7 @@ export default function Toolbar() {
           <option value="by-type">By Type</option>
           <option value="clients-prospects">Clients → Prospects</option>
           <option value="referrers-hub">Referrers Hub</option>
-          <option value="jpmorgan-view">JP Morgan View</option>
+          <option value="jpmorgan-view">JPM View</option>
         </select>
         <button
           className={`toolbar-button${labelsOn ? ' labels-on' : ''}`}
