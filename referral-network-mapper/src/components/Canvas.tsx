@@ -700,13 +700,13 @@ export default function Canvas() {
       subEl.textContent  = node.type === 'organisation'
         ? (node.industry || node.website || '')
         : node.type === 'jpmorgan'
-          ? (node.jpmTitle || node.areaOfFocus || 'JP Morgan')
+          ? (node.jpmTitle || node.areaOfFocus || 'JPM')
           : [node.organisation, node.sector].filter(Boolean).join(' · ');
 
       // Type badge
       const typeLabel: Record<string, string> = {
         client: 'Client', prospect: 'Prospect', referrer: 'Referrer',
-        adviser: 'Adviser', jpmorgan: 'JP Morgan', organisation: 'Organisation',
+        adviser: 'Adviser', jpmorgan: 'JPM', organisation: 'Organisation',
       };
       typeEl.textContent = typeLabel[node.type] || node.type;
       typeEl.className = `nt-type type-${node.type}`;
@@ -1277,7 +1277,7 @@ export default function Canvas() {
           <div className="legend-item"><span className="legend-dot legend-hex" style={{ background: '#065f46' }}></span> Prospect ⬡</div>
           <div className="legend-item"><span className="legend-dot legend-diamond" style={{ background: '#991b1b' }}></span> Referrer ◆</div>
           <div className="legend-item"><span className="legend-dot legend-penta" style={{ background: '#4c1d95' }}></span> Adviser ⬠</div>
-          <div className="legend-item"><span className="legend-dot" style={{ background: '#1e3a8a' }}></span> JP Morgan ●</div>
+          <div className="legend-item"><span className="legend-dot" style={{ background: '#1e3a8a' }}></span> JPM ●</div>
           <div className="legend-item"><span className="legend-rect" style={{ background: '#374151' }}></span> Organisation</div>
         </div>
       </div>

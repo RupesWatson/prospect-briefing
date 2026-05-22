@@ -44,8 +44,8 @@ export function downloadImportTemplate() {
     ['INSTRUCTIONS'],
     ['1. Fill in the Contacts sheet. Each row = one contact or organisation.'],
     ['2. Required fields: Name, Type.'],
-    ['3. Valid Types: Client, Prospect, Referrer, Adviser, JP Morgan Contact, Organisation'],
-    ['4. Engagement Score / Referral Likelihood: enter 1–5. Leave blank or 0 for JP Morgan Contact and Organisation.'],
+    ['3. Valid Types: Client, Prospect, Referrer, Adviser, JPM Contact, Organisation'],
+    ['4. Engagement Score / Referral Likelihood: enter 1–5. Leave blank or 0 for JPM Contact and Organisation.'],
     ['5. Introduced By: enter the exact name of a contact who introduced this person (must exist in the network or the same import file).'],
     ['6. Organisation: if this matches an existing Org node by name, a connection is created automatically.'],
     [''],
@@ -292,7 +292,7 @@ export function exportAsSummary() {
   const { nodes, edges } = appState.simulation;
   const b = getTypeBreakdown(nodes);
   let s = `REFERRAL NETWORK SUMMARY\nGenerated: ${new Date().toLocaleString()}\n\nOVERVIEW\nTotal Contacts: ${nodes.size}\nTotal Relationships: ${edges.size}\n\n`;
-  s += `BREAKDOWN\nClients: ${b.client} | Prospects: ${b.prospect} | Referrers: ${b.referrer} | Advisers: ${b.adviser} | JP Morgan: ${b.jpmorgan} | Organisations: ${b.organisation}\n\n`;
+  s += `BREAKDOWN\nClients: ${b.client} | Prospects: ${b.prospect} | Referrers: ${b.referrer} | Advisers: ${b.adviser} | JPM: ${b.jpmorgan} | Organisations: ${b.organisation}\n\n`;
   s += 'TOP REFERRERS\n';
   const rc = new Map<string, number>();
   for (const [, e] of edges) {
