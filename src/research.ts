@@ -63,7 +63,7 @@ export function checkJPMorganCoverage(jpmNode: GraphNode, silent = false) {
     const newOrgs: GraphNode[] = [];
     for (const firmName of toCreate) {
       const org: GraphNode = {
-        id: generateUUID(), name: firmName, type: 'organisation',
+        id: generateUUID(), name: firmName, type: 'organisation', priority: 'medium',
         organisation: '', sector: '', estimatedAUM: '', engagementScore: 0, referralLikelihood: 0,
         notes: '', introducedBy: null,
         areaOfFocus: '', firmsCovered: '', jpmTitle: '', jpmEngagement: '',

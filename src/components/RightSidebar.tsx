@@ -4,7 +4,7 @@ import { markDirty } from '../persistence';
 import { researchFirm, checkJPMorganCoverage } from '../research';
 import { generateUUID, getTypeColor, getInitials, getEdgeStaleInfo } from '../utils';
 import { exportAsJSON, exportAsSummary } from '../importExport';
-import type { GraphNode, GraphEdge } from '../types';
+import type { GraphNode, GraphEdge, PriorityLevel } from '../types';
 
 export default function RightSidebar() {
   const { graphVersion, detailKey, setModal } = useStore();
@@ -140,11 +140,13 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
   const [editIndustry, setEditIndustry] = useStateString(node.industry || '');
   const [editWebsite, setEditWebsite] = useStateString(node.website || '');
   const [editKeyContacts, setEditKeyContacts] = useStateString(node.keyContacts || '');
+  const [editPriority, setEditPriority] = useState<PriorityLevel>(node.priority || 'medium');
 
   function handleSave() {
     node.name = editName;
     node.organisation = editOrg;
     node.notes = editNotes;
+    node.priority = editPriority;
     if (node.type === 'jpmorgan') {
       node.jpmTitle = editJpmTitle;
       node.areaOfFocus = editFocus;
@@ -224,6 +226,16 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
               <div className="form-group"><label>Net Worth</label><input type="text" value={editAUM} onChange={(e) => setEditAUM(e.target.value)} /></div>
             )}
           </>}
+          <div className="form-group">
+            <label>Priority</label>
+            <select value={editPriority} onChange={(e) => setEditPriority(e.target.value as PriorityLevel)}>
+              <option value="critical">🔴 Critical</option>
+              <option value="high">🟠 High</option>
+              <option value="medium">🟡 Medium</option>
+              <option value="low">⚫ Low</option>
+              <option value="background">🔵 Background</option>
+            </select>
+          </div>
           <div className="form-group"><label>Notes</label><textarea value={editNotes} onChange={(e) => setEditNotes(e.target.value)} /></div>
           <div className="detail-actions">
             <button id="saveNodeBtn" style={{ flex: 1, padding: '8px', fontSize: '12px', fontWeight: '600', border: '1px solid #185fa5', borderRadius: '6px', cursor: 'pointer', background: '#185fa5', color: 'white' }} onClick={handleSave}>Save</button>
@@ -281,6 +293,10 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
           </div>
           {(node.type === 'client' || node.type === 'prospect') && node.estimatedAUM && <><div className="detail-section-title">Net Worth</div><div className="detail-row">{node.estimatedAUM}</div></>}
         </>}
+        <div className="detail-section-title">Priority</div>
+        <div className="detail-row">
+          <PriorityBadge priority={node.priority || 'medium'} />
+        </div>
         {node.notes && <><div className="detail-section-title">Notes</div><div className="detail-row">{node.notes}</div></>}
         {connEdges.length > 0 && <>
           <div className="detail-section-title">Connections</div>
@@ -387,6 +403,29 @@ function EdgeDetail({ edge, onDelete }: { edge: GraphEdge; onDelete: () => void 
         </div>
       </div>
     </div>
+  );
+}
+
+// ── Priority badge ──
+const PRIORITY_STYLES: Record<string, { color: string; label: string; desc: string }> = {
+  critical:   { color: '#ef4444', label: '🔴 Critical',   desc: 'Innermost orbit' },
+  high:       { color: '#f97316', label: '🟠 High',       desc: '2nd orbit' },
+  medium:     { color: '#eab308', label: '🟡 Medium',     desc: '3rd orbit' },
+  low:        { color: '#6b7280', label: '⚫ Low',        desc: '4th orbit' },
+  background: { color: '#3b82f6', label: '🔵 Background', desc: 'Outermost orbit' },
+};
+function PriorityBadge({ priority }: { priority: string }) {
+  const s = PRIORITY_STYLES[priority] ?? PRIORITY_STYLES.medium;
+  return (
+    <span style={{
+      display: 'inline-flex', alignItems: 'center', gap: 5,
+      padding: '2px 8px', borderRadius: 12,
+      background: s.color + '22', color: s.color,
+      border: `1px solid ${s.color}55`, fontSize: 12, fontWeight: 600,
+    }}>
+      {s.label}
+      <span style={{ fontWeight: 400, opacity: 0.7, fontSize: 10 }}>({s.desc})</span>
+    </span>
   );
 }
 

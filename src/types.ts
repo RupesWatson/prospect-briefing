@@ -8,6 +8,7 @@ export type FilterType = 'all' | NodeType;
 export type LayoutType = 'free' | 'by-type' | 'clients-prospects' | 'referrers-hub' | 'jpmorgan-view';
 export type DetailMode = 'node' | 'edge' | null;
 export type ModalType = 'connection' | 'apikey' | 'import' | 'orgDuplicate' | null;
+export type PriorityLevel = 'critical' | 'high' | 'medium' | 'low' | 'background';
 
 export interface GraphNode {
   id: string;
@@ -37,6 +38,8 @@ export interface GraphNode {
   fx: number;
   fy: number;
   fixed: boolean;
+  // Priority / orbital position
+  priority: PriorityLevel;
   // Research state
   researching?: boolean;
   researchedAt?: string;

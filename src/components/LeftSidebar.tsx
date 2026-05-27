@@ -5,7 +5,7 @@ import { markDirty, clearAllData } from '../persistence';
 import { checkJPMorganCoverage } from '../research';
 import { generateUUID, getTypeColor, getInitials } from '../utils';
 import { gentleRestart } from '../simulation';
-import type { GraphNode } from '../types';
+import type { GraphNode, PriorityLevel } from '../types';
 
 export default function LeftSidebar() {
   const { graphVersion, bumpGraph, bumpDetail, setModal } = useStore();
@@ -14,6 +14,7 @@ export default function LeftSidebar() {
   const [selectedType, setSelectedType] = useState('');
   const [engagementScore, setEngagementScore] = useState(3);
   const [referralLikelihood, setReferralLikelihood] = useState(3);
+  const [priority, setPriority] = useState<PriorityLevel>('medium');
 
   // Suppress unused warning
   void graphVersion;
@@ -39,6 +40,7 @@ export default function LeftSidebar() {
       if (existing) {
         const pendingNode: GraphNode = {
           id: generateUUID(), name, type: 'organisation',
+          priority,
           organisation: '', sector: '',
           estimatedAUM: (fd.get('estimatedAUM') as string) || '',
           engagementScore: 0, referralLikelihood: 0,
@@ -63,6 +65,7 @@ export default function LeftSidebar() {
 
     const person: GraphNode = {
       id: generateUUID(), name, type: type as GraphNode['type'],
+      priority,
       organisation: (fd.get('organisation') as string) || '',
       sector: (fd.get('sector') as string) || '',
       estimatedAUM: (fd.get('estimatedAUM') as string) || '',
@@ -111,6 +114,7 @@ export default function LeftSidebar() {
     setSelectedType('');
     setEngagementScore(3);
     setReferralLikelihood(3);
+    setPriority('medium');
     markDirty();
     gentleRestart();
     bumpGraph();
@@ -261,6 +265,17 @@ export default function LeftSidebar() {
               <label>Key Contacts</label>
               <textarea name="keyContacts" placeholder="e.g. James Hartley, Sarah Chen" />
             </div>
+          </div>
+
+          <div className="form-group">
+            <label>Priority</label>
+            <select name="priority" value={priority} onChange={(e) => setPriority(e.target.value as PriorityLevel)}>
+              <option value="critical">🔴 Critical — innermost orbit</option>
+              <option value="high">🟠 High</option>
+              <option value="medium">🟡 Medium</option>
+              <option value="low">⚫ Low</option>
+              <option value="background">🔵 Background — outermost orbit</option>
+            </select>
           </div>
 
           <div className="form-group">

@@ -756,3 +756,45 @@ svg { width: 100%; height: 100%; display: block; }
     cursor: pointer; transition: all 0.15s;
 }
 .tv-add-btn:hover { background: #1e3a5f; border-color: #3b82f6; }
+
+/* ============================================================================
+   3D VIEW
+   ============================================================================ */
+
+/* 3D toggle button */
+.btn-3d-toggle {
+  background: linear-gradient(135deg, #1e1b4b, #312e81);
+  color: #a5b4fc;
+  border: 1px solid #4338ca;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.btn-3d-toggle:hover {
+  background: linear-gradient(135deg, #312e81, #4338ca);
+  color: #e0e7ff;
+}
+.btn-3d-toggle.active-3d {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #60a5fa;
+  border-color: #3b82f6;
+  box-shadow: 0 0 12px rgba(59,130,246,0.4);
+}
+
+/* In 3D mode, hide the left sidebar's graph section and clean up toolbar */
+.view-3d .canvas-area {
+  background: #04060f;
+}
+
+/* Priority glow rings in 2D SVG — driven by data-priority on node circles */
+/* These are painted directly in Canvas.tsx drawNode, no extra CSS needed */
+
+/* Priority badge in right sidebar */
+.priority-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}

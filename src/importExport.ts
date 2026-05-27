@@ -155,6 +155,7 @@ export function importFromXLSX(file: File, onDone: () => void) {
 
         const node: GraphNode = {
           id: generateUUID(), name, type: typeRaw as GraphNode['type'],
+          priority: 'medium',
           organisation:       col(row, 'Organisation'),
           sector:             col(row, 'Sector'),
           estimatedAUM:       col(row, 'Estimated AUM', 'AUM'),
@@ -212,7 +213,7 @@ export function importFromXLSX(file: File, onDone: () => void) {
             }
             if (!existingNode) {
               const org: GraphNode = {
-                id: generateUUID(), name: firmName, type: 'organisation',
+                id: generateUUID(), name: firmName, type: 'organisation', priority: 'medium',
                 organisation: '', sector: '', estimatedAUM: '', engagementScore: 0, referralLikelihood: 0,
                 notes: '', introducedBy: null,
                 areaOfFocus: '', firmsCovered: '', jpmTitle: '', jpmEngagement: '',
