@@ -434,7 +434,183 @@ export function renderCanvas(svg: SVGSVGElement) {
     g.appendChild(handleEl);
   }
 
-  // ── Nodes ──
+  // ── Hub & Spoke node rendering (Kumu-style) ──────────────────────────────
+  if (currentLayout === 'hub-spoke') {
+    // Determine hubs (org nodes + ≥3 connections)
+    const hubIds = new Set<string>();
+    for (const [id, n] of nodes) {
+      if (n.type === 'organisation' || (connCount.get(id) || 0) >= 3) hubIds.add(id);
+    }
+    if (hubIds.size === 0) {
+      const sorted = Array.from(nodes.keys()).sort((a, b) => (connCount.get(b) || 0) - (connCount.get(a) || 0));
+      sorted.slice(0, 5).forEach((id) => hubIds.add(id));
+    }
+
+    for (const [id, node] of nodes) {
+      if (appState.filter !== 'all' && node.type !== appState.filter) continue;
+      const isSel = appState.selectedNodeId === id;
+      const isHov = appState.hoveredNodeId === id;
+      const isLinkSrc = appState.linkSourceNodeId === id;
+      const cc = connCount.get(id) || 0;
+      const isHub = hubIds.has(id);
+      const nodeCol = NODE_COLORS[node.type] || '#374151';
+      const strokeCol = isLinkSrc ? '#fbbf24' : isSel ? '#ffd700' : isHov ? '#e2e8f0' : 'rgba(255,255,255,0.15)';
+      const strokeW = isSel || isLinkSrc ? '3' : isHub ? '2.5' : '2';
+
+      // Hub radius scales with connection count; min 36, max 62
+      const hubR = isHub ? Math.min(62, Math.max(36, 36 + cc * 2.5)) : 0;
+      const spokeR = 22;
+      const r = isHub ? hubR : spokeR;
+
+      // Selection pulse
+      if (isSel) {
+        const pulse = (now % 2000) / 2000;
+        const pr = document.createElementNS(SVG_NS, 'circle');
+        pr.setAttribute('cx', String(node.x)); pr.setAttribute('cy', String(node.y));
+        pr.setAttribute('r', String(r + 10 + pulse * 24));
+        pr.setAttribute('fill', 'none'); pr.setAttribute('stroke', '#ffd700');
+        pr.setAttribute('stroke-width', '2'); pr.setAttribute('opacity', String(0.7 * (1 - pulse)));
+        pr.setAttribute('pointer-events', 'none');
+        g.appendChild(pr);
+        appState.animationRunning = true;
+      }
+
+      // Hover halo
+      if (isHov && !isSel) {
+        const hl = document.createElementNS(SVG_NS, 'circle');
+        hl.setAttribute('cx', String(node.x)); hl.setAttribute('cy', String(node.y));
+        hl.setAttribute('r', String(r + 8));
+        hl.setAttribute('fill', nodeCol); hl.setAttribute('opacity', '0.15');
+        hl.setAttribute('pointer-events', 'none');
+        g.appendChild(hl);
+      }
+
+      // Priority glow ring
+      const pgMap: Record<string, string> = { critical: '#ef4444', high: '#f97316' };
+      const pg = pgMap[node.priority];
+      if (pg) {
+        const pRing = document.createElementNS(SVG_NS, 'circle');
+        pRing.setAttribute('cx', String(node.x)); pRing.setAttribute('cy', String(node.y));
+        pRing.setAttribute('r', String(r + (isHub ? 8 : 6)));
+        pRing.setAttribute('fill', 'none'); pRing.setAttribute('stroke', pg);
+        pRing.setAttribute('stroke-width', '2.5'); pRing.setAttribute('opacity', '0.5');
+        pRing.setAttribute('pointer-events', 'none');
+        g.appendChild(pRing);
+      }
+
+      if (isHub) {
+        // ── Large hub circle ──
+        // Outer glow ring
+        const glow = document.createElementNS(SVG_NS, 'circle');
+        glow.setAttribute('cx', String(node.x)); glow.setAttribute('cy', String(node.y));
+        glow.setAttribute('r', String(r + 6));
+        glow.setAttribute('fill', nodeCol); glow.setAttribute('opacity', '0.12');
+        glow.setAttribute('pointer-events', 'none');
+        g.appendChild(glow);
+
+        const circ = document.createElementNS(SVG_NS, 'circle');
+        circ.setAttribute('cx', String(node.x)); circ.setAttribute('cy', String(node.y));
+        circ.setAttribute('r', String(r));
+        circ.setAttribute('fill', nodeCol);
+        circ.setAttribute('stroke', strokeCol); circ.setAttribute('stroke-width', strokeW);
+        circ.setAttribute('class', 'node'); circ.setAttribute('data-node-id', id);
+        if (isSel) circ.setAttribute('filter', 'url(#nodeSelect)');
+        else if (isHov) circ.setAttribute('filter', 'url(#nodeGlow)');
+        g.appendChild(circ);
+
+        // Hub name inside (two lines if needed)
+        const words = node.name.split(' ');
+        const line1 = words.slice(0, Math.ceil(words.length / 2)).join(' ');
+        const line2 = words.slice(Math.ceil(words.length / 2)).join(' ');
+        const tl1 = document.createElementNS(SVG_NS, 'text');
+        tl1.setAttribute('x', String(node.x)); tl1.setAttribute('y', String(node.y + (line2 ? -7 : 0)));
+        tl1.setAttribute('text-anchor', 'middle'); tl1.setAttribute('dy', '0.35em');
+        tl1.setAttribute('font-size', String(Math.max(9, Math.min(13, r * 0.28))));
+        tl1.setAttribute('font-weight', '700');
+        tl1.setAttribute('fill', '#fff'); tl1.setAttribute('pointer-events', 'none');
+        tl1.textContent = line1.length > 16 ? line1.slice(0, 14) + '…' : line1;
+        g.appendChild(tl1);
+        if (line2) {
+          const tl2 = document.createElementNS(SVG_NS, 'text');
+          tl2.setAttribute('x', String(node.x)); tl2.setAttribute('y', String(node.y + 9));
+          tl2.setAttribute('text-anchor', 'middle'); tl2.setAttribute('dy', '0.35em');
+          tl2.setAttribute('font-size', String(Math.max(9, Math.min(13, r * 0.28))));
+          tl2.setAttribute('font-weight', '700');
+          tl2.setAttribute('fill', '#fff'); tl2.setAttribute('pointer-events', 'none');
+          tl2.textContent = line2.length > 16 ? line2.slice(0, 14) + '…' : line2;
+          g.appendChild(tl2);
+        }
+
+        // Connection count badge
+        if (cc > 0) {
+          const bx = node.x + r * 0.75, by = node.y - r * 0.75;
+          const bdg = document.createElementNS(SVG_NS, 'circle');
+          bdg.setAttribute('cx', String(bx)); bdg.setAttribute('cy', String(by));
+          bdg.setAttribute('r', '11'); bdg.setAttribute('fill', '#0f172a');
+          bdg.setAttribute('stroke', '#60a5fa'); bdg.setAttribute('stroke-width', '2');
+          bdg.setAttribute('pointer-events', 'none'); g.appendChild(bdg);
+          const bTx = document.createElementNS(SVG_NS, 'text');
+          bTx.setAttribute('x', String(bx)); bTx.setAttribute('y', String(by));
+          bTx.setAttribute('text-anchor', 'middle'); bTx.setAttribute('dy', '0.35em');
+          bTx.setAttribute('font-size', '9'); bTx.setAttribute('font-weight', '700');
+          bTx.setAttribute('fill', '#93c5fd'); bTx.setAttribute('pointer-events', 'none');
+          bTx.textContent = String(cc); g.appendChild(bTx);
+        }
+
+      } else {
+        // ── Spoke circle (person avatar) ──
+        const circ = document.createElementNS(SVG_NS, 'circle');
+        circ.setAttribute('cx', String(node.x)); circ.setAttribute('cy', String(node.y));
+        circ.setAttribute('r', String(spokeR));
+        circ.setAttribute('fill', nodeCol);
+        circ.setAttribute('stroke', strokeCol); circ.setAttribute('stroke-width', strokeW);
+        circ.setAttribute('class', 'node'); circ.setAttribute('data-node-id', id);
+        if (isSel) circ.setAttribute('filter', 'url(#nodeSelect)');
+        else if (isHov) circ.setAttribute('filter', 'url(#nodeGlow)');
+        g.appendChild(circ);
+
+        // Initials
+        const initTx = document.createElementNS(SVG_NS, 'text');
+        initTx.setAttribute('x', String(node.x)); initTx.setAttribute('y', String(node.y));
+        initTx.setAttribute('text-anchor', 'middle'); initTx.setAttribute('dy', '0.35em');
+        initTx.setAttribute('font-size', '11'); initTx.setAttribute('font-weight', '700');
+        initTx.setAttribute('fill', '#fff'); initTx.setAttribute('pointer-events', 'none');
+        initTx.textContent = getInitials(node.name).substring(0, 2);
+        g.appendChild(initTx);
+
+        // Name below
+        const nameLbl = document.createElementNS(SVG_NS, 'text');
+        nameLbl.setAttribute('x', String(node.x));
+        nameLbl.setAttribute('y', String(node.y + spokeR + 14));
+        nameLbl.setAttribute('text-anchor', 'middle'); nameLbl.setAttribute('font-size', '11');
+        nameLbl.setAttribute('font-weight', '600');
+        nameLbl.setAttribute('fill', isSel ? '#ffd700' : '#cbd5e1');
+        nameLbl.setAttribute('pointer-events', 'none');
+        nameLbl.textContent = node.name.length > 15 ? node.name.substring(0, 12) + '…' : node.name;
+        g.appendChild(nameLbl);
+
+        // Engagement dots
+        if (node.engagementScore > 0) {
+          for (let i = 0; i < 5; i++) {
+            const d = document.createElementNS(SVG_NS, 'circle');
+            d.setAttribute('cx', String(node.x - 10 + i * 5));
+            d.setAttribute('cy', String(node.y + spokeR + 26));
+            d.setAttribute('r', '2.5');
+            d.setAttribute('fill', i < node.engagementScore ? '#60a5fa' : '#1e293b');
+            d.setAttribute('pointer-events', 'none');
+            g.appendChild(d);
+          }
+        }
+      }
+    }
+
+    svg.appendChild(g);
+    const emptyState = document.getElementById('emptyState');
+    if (emptyState) emptyState.style.display = nodes.size === 0 ? 'block' : 'none';
+    return; // skip standard node rendering
+  }
+
+  // ── Nodes (standard rendering) ─────────────────────────────────────────────
   for (const [id, node] of nodes) {
     if (appState.filter !== 'all' && node.type !== appState.filter) continue;
     const isSel = appState.selectedNodeId === id;

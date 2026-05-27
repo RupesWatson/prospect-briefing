@@ -281,9 +281,124 @@ function layoutSectorMap(nodes: Map<string, GraphNode>) {
   });
 }
 
+// ── Hub & Spoke ─────────────────────────────────────────────────────────────
+// Organisation nodes + heavily-connected nodes become large hubs.
+// Everyone else clusters around their primary hub in a circular arc.
+export function layoutHubSpoke(
+  nodes: Map<string, GraphNode>,
+  edges: Map<string, import('./types').GraphEdge>
+) {
+  // Connection count
+  const connCount = new Map<string, number>();
+  for (const e of edges.values()) {
+    connCount.set(e.sourceId, (connCount.get(e.sourceId) || 0) + 1);
+    connCount.set(e.targetId, (connCount.get(e.targetId) || 0) + 1);
+  }
+
+  // Identify hubs: organisations OR nodes with ≥3 connections
+  const hubSet = new Set<string>();
+  for (const [id, n] of nodes) {
+    if (n.type === 'organisation' || (connCount.get(id) || 0) >= 3) {
+      hubSet.add(id);
+    }
+  }
+
+  // If no explicit hubs, promote the top-5 most connected nodes
+  if (hubSet.size === 0) {
+    const sorted = Array.from(nodes.keys()).sort(
+      (a, b) => (connCount.get(b) || 0) - (connCount.get(a) || 0)
+    );
+    sorted.slice(0, Math.min(5, sorted.length)).forEach((id) => hubSet.add(id));
+  }
+
+  const hubs = Array.from(hubSet).map((id) => nodes.get(id)!).filter(Boolean);
+  const spokes = Array.from(nodes.values()).filter((n) => !hubSet.has(n.id));
+
+  // Position hubs in a circle scaled to their count
+  const HUB_RING = Math.max(220, hubs.length * 75);
+  hubs.forEach((h, i) => {
+    const a = (i / Math.max(hubs.length, 1)) * Math.PI * 2 - Math.PI / 2;
+    h.x = Math.cos(a) * HUB_RING;
+    h.y = Math.sin(a) * HUB_RING;
+    h.vx = 0; h.vy = 0;
+  });
+
+  // Build spoke→hub assignment
+  const hubById = new Map(hubs.map((h) => [h.id, h]));
+  const hubSpokes = new Map<string, GraphNode[]>();
+  hubs.forEach((h) => hubSpokes.set(h.id, []));
+  const assigned = new Set<string>();
+
+  // Pass 1: assign via edges
+  for (const e of edges.values()) {
+    const srcIsHub = hubById.has(e.sourceId);
+    const tgtIsHub = hubById.has(e.targetId);
+    const srcSpoke = !srcIsHub ? nodes.get(e.sourceId) : null;
+    const tgtSpoke = !tgtIsHub ? nodes.get(e.targetId) : null;
+    if (srcIsHub && tgtSpoke && !assigned.has(tgtSpoke.id)) {
+      hubSpokes.get(e.sourceId)?.push(tgtSpoke);
+      assigned.add(tgtSpoke.id);
+    }
+    if (tgtIsHub && srcSpoke && !assigned.has(srcSpoke.id)) {
+      hubSpokes.get(e.targetId)?.push(srcSpoke);
+      assigned.add(srcSpoke.id);
+    }
+  }
+
+  // Pass 2: assign unassigned spokes by organisation name match
+  for (const spoke of spokes) {
+    if (assigned.has(spoke.id)) continue;
+    if (spoke.organisation) {
+      const orgLower = spoke.organisation.toLowerCase();
+      for (const h of hubs) {
+        if (h.name.toLowerCase() === orgLower) {
+          hubSpokes.get(h.id)?.push(spoke);
+          assigned.add(spoke.id);
+          break;
+        }
+      }
+    }
+  }
+
+  // Pass 3: assign remaining unassigned to nearest hub by introducedBy chain
+  for (const spoke of spokes) {
+    if (assigned.has(spoke.id)) continue;
+    if (spoke.introducedBy && hubById.has(spoke.introducedBy)) {
+      hubSpokes.get(spoke.introducedBy)?.push(spoke);
+      assigned.add(spoke.id);
+    }
+  }
+
+  // Position spokes in arcs around their hub
+  const SPOKE_ORBIT = 155;
+  for (const [hubId, spokeList] of hubSpokes) {
+    const hub = hubById.get(hubId)!;
+    // Point arcs away from canvas centre so labels don't overlap hub
+    const hubAngle = Math.atan2(hub.y, hub.x);
+    const arcSpan = Math.min(Math.PI * 1.6, spokeList.length * 0.35 + 0.4);
+    const startAngle = hubAngle - arcSpan / 2;
+
+    spokeList.forEach((s, i) => {
+      const t = spokeList.length === 1 ? 0.5 : i / (spokeList.length - 1);
+      const a = startAngle + t * arcSpan;
+      s.x = hub.x + Math.cos(a) * SPOKE_ORBIT;
+      s.y = hub.y + Math.sin(a) * SPOKE_ORBIT;
+      s.vx = 0; s.vy = 0;
+    });
+  }
+
+  // Orphaned nodes — no hub connection — stack below the canvas centre
+  const orphans = spokes.filter((s) => !assigned.has(s.id));
+  orphans.forEach((n, i) => {
+    n.x = (i - (orphans.length - 1) / 2) * 120;
+    n.y = HUB_RING + 220;
+    n.vx = 0; n.vy = 0;
+  });
+}
+
 export function applyLayout(type: string) {
   if (type === 'free') { restartSimulation(); return; }
-  const { nodes } = appState.simulation;
+  const { nodes, edges } = appState.simulation;
   if (type === 'priority-rings') {
     layoutPriorityRings(nodes);
   } else if (type === 'referral-tree') {
@@ -292,6 +407,8 @@ export function applyLayout(type: string) {
     layoutPipeline(nodes);
   } else if (type === 'sector-map') {
     layoutSectorMap(nodes);
+  } else if (type === 'hub-spoke') {
+    layoutHubSpoke(nodes, edges);
   }
   appState.animationRunning = false;
 }
