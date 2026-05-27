@@ -136,7 +136,7 @@ export default function TableView() {
   function addIndividual() {
     const id = generateUUID();
     appState.simulation.nodes.set(id, {
-      id, name: '', type: 'client',
+      id, name: '', type: 'client', priority: 'medium',
       organisation: '', sector: '', estimatedAUM: '',
       engagementScore: 0, referralLikelihood: 0,
       notes: '', introducedBy: null,
@@ -151,7 +151,7 @@ export default function TableView() {
   function addFirm() {
     const id = generateUUID();
     appState.simulation.nodes.set(id, {
-      id, name: '', type: 'organisation',
+      id, name: '', type: 'organisation', priority: 'medium',
       organisation: '', sector: '', estimatedAUM: '',
       engagementScore: 0, referralLikelihood: 0,
       notes: '', introducedBy: null,

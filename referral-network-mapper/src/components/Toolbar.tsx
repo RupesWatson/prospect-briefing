@@ -4,7 +4,7 @@ import { applyLayout } from '../simulation';
 import type { FilterType } from '../types';
 
 export default function Toolbar() {
-  const { graphVersion, setModal } = useStore();
+  const { graphVersion, setModal, view3D, setView3D } = useStore();
 
   // Keep labels button state in sync
   const labelsOn = appState.showEdgeLabels;
@@ -99,8 +99,17 @@ export default function Toolbar() {
         >
           + Add connection
         </button>
-        <button className="toolbar-button" id="fitToScreenBtn">
-          Fit to screen
+        {!view3D && (
+          <button className="toolbar-button" id="fitToScreenBtn">
+            Fit to screen
+          </button>
+        )}
+        <button
+          className={`toolbar-button btn-3d-toggle${view3D ? ' active-3d' : ''}`}
+          title={view3D ? 'Switch to 2D map' : 'Switch to 3D solar system view'}
+          onClick={() => setView3D(!view3D)}
+        >
+          {view3D ? '🗺 2D Map' : '🌐 3D View'}
         </button>
       </div>
     </div>

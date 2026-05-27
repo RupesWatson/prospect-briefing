@@ -35,7 +35,7 @@ export function loadFromLocalStorage() {
     appState.simulation.nodes = new Map(
       nodes.map((n: Record<string, unknown>) => [n.id, {
         areaOfFocus: '', firmsCovered: '', jpmTitle: '', jpmEngagement: '',
-        industry: '', website: '', keyContacts: '', ...n,
+        industry: '', website: '', keyContacts: '', priority: 'medium', ...n,
       }])
     );
     appState.simulation.edges = new Map(

@@ -362,6 +362,27 @@ export function renderCanvas(svg: SVGSVGElement) {
     const strokeW = isSel || isLinkSrc ? '2.5' : '1.5';
     const filterAttr = isSel ? 'url(#nodeSelect)' : isHov ? 'url(#nodeGlow)' : '';
 
+    // Priority glow ring in 2D
+    const PRIORITY_GLOW_2D: Record<string, { color: string; r: number }> = {
+      critical:   { color: '#ef4444', r: 22 },
+      high:       { color: '#f97316', r: 20 },
+      medium:     { color: 'transparent', r: 0 },
+      low:        { color: 'transparent', r: 0 },
+      background: { color: 'transparent', r: 0 },
+    };
+    const pg = PRIORITY_GLOW_2D[node.priority || 'medium'];
+    if (pg && pg.r > 0) {
+      const pRing = document.createElementNS(SVG_NS, 'circle');
+      pRing.setAttribute('cx', String(node.x)); pRing.setAttribute('cy', String(node.y));
+      pRing.setAttribute('r', String(pg.r));
+      pRing.setAttribute('fill', 'none');
+      pRing.setAttribute('stroke', pg.color);
+      pRing.setAttribute('stroke-width', '2');
+      pRing.setAttribute('opacity', '0.45');
+      pRing.setAttribute('pointer-events', 'none');
+      g.appendChild(pRing);
+    }
+
     if (node.type === 'organisation') {
       const lbl = node.name.length > 22 ? node.name.substring(0, 19) + '…' : node.name;
       const w = Math.max(90, lbl.length * 7 + 24), h = 38;
