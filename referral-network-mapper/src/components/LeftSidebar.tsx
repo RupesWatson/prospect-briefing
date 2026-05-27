@@ -88,6 +88,33 @@ export default function LeftSidebar() {
 
     if (type === 'jpmorgan') checkJPMorganCoverage(person);
 
+    // Auto-connect JPM contacts (or anyone whose organisation is JPM) to the JPM org node — silent, no prompt
+    const isJPMRelated = type === 'jpmorgan' ||
+      ['jp morgan', 'jpmorgan', 'jpm'].some((kw) => person.organisation.toLowerCase().includes(kw));
+    if (isJPMRelated) {
+      const jpmOrg = Array.from(appState.simulation.nodes.values()).find(
+        (n) => n.id !== person.id && n.type === 'organisation' && (
+          n.name.toLowerCase().includes('jp morgan') ||
+          n.name.toLowerCase().includes('jpmorgan') ||
+          n.name.toLowerCase() === 'jpm'
+        )
+      );
+      if (jpmOrg) {
+        const alreadyLinked = Array.from(appState.simulation.edges.values()).some(
+          (e) => (e.sourceId === person.id && e.targetId === jpmOrg.id) ||
+                  (e.sourceId === jpmOrg.id && e.targetId === person.id)
+        );
+        if (!alreadyLinked) {
+          const eid = generateUUID();
+          appState.simulation.edges.set(eid, {
+            id: eid, sourceId: person.id, targetId: jpmOrg.id,
+            relationshipType: 'works-at' as const, strength: 2,
+            notes: 'Works at JPM', bendOffset: 0, lastContact: '',
+          });
+        }
+      }
+    }
+
     if (person.organisation && type !== 'organisation') {
       const matchedOrg = findExistingOrg(person.organisation);
       if (matchedOrg) {

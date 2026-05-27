@@ -203,6 +203,33 @@ export function importFromXLSX(file: File, onDone: () => void) {
           }
         }
 
+        // Auto-connect JPM contacts (or anyone whose organisation is JPM) to the JPM org node — silent
+        const isJPMRelated = node.type === 'jpmorgan' ||
+          ['jp morgan', 'jpmorgan', 'jpm'].some((kw) => node.organisation.toLowerCase().includes(kw));
+        if (isJPMRelated) {
+          const jpmOrg = Array.from(appState.simulation.nodes.values()).find(
+            (n) => n.id !== node.id && n.type === 'organisation' && (
+              n.name.toLowerCase().includes('jp morgan') ||
+              n.name.toLowerCase().includes('jpmorgan') ||
+              n.name.toLowerCase() === 'jpm'
+            )
+          );
+          if (jpmOrg) {
+            const alreadyLinked = Array.from(appState.simulation.edges.values()).some(
+              (e) => (e.sourceId === node.id && e.targetId === jpmOrg.id) ||
+                      (e.sourceId === jpmOrg.id && e.targetId === node.id)
+            );
+            if (!alreadyLinked) {
+              const eid = generateUUID();
+              appState.simulation.edges.set(eid, {
+                id: eid, sourceId: node.id, targetId: jpmOrg.id,
+                relationshipType: 'works-at', strength: 2,
+                notes: 'Works at JPM', bendOffset: 0, lastContact: '',
+              });
+            }
+          }
+        }
+
         if (node.type === 'jpmorgan' && node.firmsCovered) {
           const firms = node.firmsCovered.split(/[,;\n]+/).map((s) => s.trim()).filter((s) => s.length > 0);
           for (const firmName of firms) {
