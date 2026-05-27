@@ -15,6 +15,8 @@ const CANVAS_EDGE_COLORS: Record<string, string> = {
   'adviser-to': '#a78bfa',
   family:       '#f87171',
   covers:       '#38bdf8',
+  'works-at':   '#fb923c',  // orange — employment link
+  'client-of':  '#e879f9',  // purple-pink — firm-to-firm client relationship
 };
 
 // Flat node fill colours
@@ -1553,6 +1555,8 @@ export default function Canvas() {
           <div className="legend-item"><span className="legend-line adviser-to"></span> Adviser to</div>
           <div className="legend-item"><span className="legend-line family"></span> Family</div>
           <div className="legend-item"><span className="legend-line covers"></span> JPM Covers</div>
+          <div className="legend-item"><span className="legend-line works-at"></span> Works at</div>
+          <div className="legend-item"><span className="legend-line client-of"></span> Client of</div>
           <div className="legend-section-title">Node Types</div>
           <div className="legend-item"><span className="legend-dot" style={{ background: '#1e40af' }}></span> Client ●</div>
           <div className="legend-item"><span className="legend-dot legend-hex" style={{ background: '#065f46' }}></span> Prospect ⬡</div>

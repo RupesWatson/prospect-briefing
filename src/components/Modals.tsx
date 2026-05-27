@@ -155,6 +155,8 @@ function ConnectionModal({ active, onClose, onAdd }: { active: boolean; onClose:
               <option value="">Select type</option>
               <option value="referred">Referred</option>
               <option value="knows">Knows</option>
+              <option value="works-at">Works at</option>
+              <option value="client-of">Client of</option>
               <option value="colleague">Colleague</option>
               <option value="adviser-to">Adviser to</option>
               <option value="family">Family</option>

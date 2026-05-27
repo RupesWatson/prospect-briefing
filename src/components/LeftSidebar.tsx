@@ -98,7 +98,7 @@ export default function LeftSidebar() {
         if (!alreadyLinked && confirm(`"${matchedOrg.name}" exists as an organisation in your network. Connect ${person.name} to it?`)) {
           const edge = {
             id: generateUUID(), sourceId: person.id, targetId: matchedOrg.id,
-            relationshipType: 'colleague' as const, strength: 2,
+            relationshipType: 'works-at' as const, strength: 2,
             notes: 'Works at / associated with', bendOffset: 0, lastContact: '',
           };
           appState.simulation.edges.set(edge.id, edge);

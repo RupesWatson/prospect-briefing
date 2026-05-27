@@ -375,7 +375,7 @@ function EdgeDetail({ edge, onDelete }: { edge: GraphEdge; onDelete: () => void 
           <div className="form-group" style={{ marginTop: '8px' }}>
             <label>Relationship type</label>
             <select id="eeType" value={edgeType} onChange={(e) => setEdgeType(e.target.value)}>
-              {['referred','knows','colleague','adviser-to','family','covers'].map((t) => (
+              {['referred','knows','works-at','client-of','colleague','adviser-to','family','covers'].map((t) => (
                 <option key={t} value={t}>{t}</option>
               ))}
             </select>
