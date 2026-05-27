@@ -103,6 +103,8 @@ export interface AppStateType {
   hoveredEdgeId: string | null;
   hoveredNodeId: string | null;
   draggingEdgeHandle: DraggingEdgeHandle | null;
+  // When true, the force simulation never runs — positions are held by a layout
+  layoutLocked: boolean;
 }
 
 export interface StaleInfo {

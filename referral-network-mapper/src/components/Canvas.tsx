@@ -1467,7 +1467,7 @@ export default function Canvas() {
     // ── Animation loop ──
     let animId: number;
     function loop() {
-      if (appState.animationRunning) stepSimulation();
+      if (appState.animationRunning && !appState.layoutLocked) stepSimulation();
 
       if (appState.panTargetX !== null && appState.panTargetY !== null && !appState.isPanning) {
         const dx = appState.panTargetX - appState.panX;
