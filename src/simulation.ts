@@ -397,7 +397,11 @@ export function layoutHubSpoke(
 }
 
 export function applyLayout(type: string) {
-  if (type === 'free') { restartSimulation(); return; }
+  if (type === 'free') {
+    appState.layoutLocked = false;
+    restartSimulation();
+    return;
+  }
   const { nodes, edges } = appState.simulation;
   if (type === 'priority-rings') {
     layoutPriorityRings(nodes);
@@ -410,7 +414,9 @@ export function applyLayout(type: string) {
   } else if (type === 'hub-spoke') {
     layoutHubSpoke(nodes, edges);
   }
-  appState.animationRunning = false;
+  // Lock out physics so pulse animations can't re-trigger stepSimulation
+  appState.layoutLocked = true;
+  appState.animationRunning = true; // keep RAF ticking for visual effects
 }
 
 // ============================================================================

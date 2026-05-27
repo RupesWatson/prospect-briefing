@@ -42,4 +42,5 @@ export const appState: AppStateType = {
   hoveredEdgeId: null,
   hoveredNodeId: null,
   draggingEdgeHandle: null,
+  layoutLocked: false,
 };
