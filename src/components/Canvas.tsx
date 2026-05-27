@@ -195,6 +195,90 @@ export function renderCanvas(svg: SVGSVGElement) {
   bgRect.setAttribute('pointer-events', 'none');
   svg.appendChild(bgRect);
 
+  // ── Layout annotations (ghost guides drawn behind everything) ──────────────
+  const currentLayout = (document.getElementById('layoutSelect') as HTMLSelectElement | null)?.value ?? 'free';
+  {
+    const annotG = document.createElementNS(SVG_NS, 'g');
+    annotG.setAttribute('transform', `translate(${appState.panX},${appState.panY}) scale(${appState.zoomLevel})`);
+    annotG.setAttribute('pointer-events', 'none');
+
+    if (currentLayout === 'priority-rings') {
+      const rings = [
+        { r: 130, label: 'Critical', color: '#ef4444' },
+        { r: 260, label: 'High',     color: '#f97316' },
+        { r: 420, label: 'Medium',   color: '#eab308' },
+        { r: 600, label: 'Low',      color: '#6b7280' },
+        { r: 800, label: 'Background', color: '#3b82f6' },
+      ];
+      rings.forEach(({ r, label, color }) => {
+        const circ = document.createElementNS(SVG_NS, 'circle');
+        circ.setAttribute('cx', '0'); circ.setAttribute('cy', '0');
+        circ.setAttribute('r', String(r));
+        circ.setAttribute('fill', 'none');
+        circ.setAttribute('stroke', color);
+        circ.setAttribute('stroke-width', '1');
+        circ.setAttribute('opacity', '0.18');
+        circ.setAttribute('stroke-dasharray', '6 4');
+        annotG.appendChild(circ);
+        const txt = document.createElementNS(SVG_NS, 'text');
+        txt.setAttribute('x', String(r + 8)); txt.setAttribute('y', '-6');
+        txt.setAttribute('fill', color); txt.setAttribute('font-size', '11');
+        txt.setAttribute('opacity', '0.5'); txt.setAttribute('font-family', 'Inter,system-ui,sans-serif');
+        txt.textContent = label;
+        annotG.appendChild(txt);
+      });
+    } else if (currentLayout === 'pipeline') {
+      const cols = [
+        { x: -440, label: 'Cold Prospects', color: '#64748b' },
+        { x: -220, label: 'Warm Prospects', color: '#f59e0b' },
+        { x:    0, label: 'Hot Prospects',  color: '#f97316' },
+        { x:  220, label: 'Clients',        color: '#3b82f6' },
+      ];
+      cols.forEach(({ x, label, color }) => {
+        const line = document.createElementNS(SVG_NS, 'line');
+        line.setAttribute('x1', String(x - 95)); line.setAttribute('y1', '-1500');
+        line.setAttribute('x2', String(x - 95)); line.setAttribute('y2', '1500');
+        line.setAttribute('stroke', color); line.setAttribute('stroke-width', '1');
+        line.setAttribute('opacity', '0.1'); line.setAttribute('stroke-dasharray', '4 6');
+        annotG.appendChild(line);
+        const txt = document.createElementNS(SVG_NS, 'text');
+        txt.setAttribute('x', String(x)); txt.setAttribute('y', '-320');
+        txt.setAttribute('text-anchor', 'middle');
+        txt.setAttribute('fill', color); txt.setAttribute('font-size', '11');
+        txt.setAttribute('opacity', '0.45'); txt.setAttribute('font-family', 'Inter,system-ui,sans-serif');
+        txt.setAttribute('font-weight', '600');
+        txt.textContent = label;
+        annotG.appendChild(txt);
+      });
+    } else if (currentLayout === 'referral-tree') {
+      const txt = document.createElementNS(SVG_NS, 'text');
+      txt.setAttribute('x', '0'); txt.setAttribute('y', '-420');
+      txt.setAttribute('text-anchor', 'middle');
+      txt.setAttribute('fill', '#94a3b8'); txt.setAttribute('font-size', '11');
+      txt.setAttribute('opacity', '0.4'); txt.setAttribute('font-family', 'Inter,system-ui,sans-serif');
+      txt.textContent = '← Original introductions — Introduced contacts →';
+      annotG.appendChild(txt);
+    } else if (currentLayout === 'sector-map') {
+      // Show cluster labels for each sector
+      const sectorMap = new Map<string, { x: number; y: number }>();
+      for (const [, n] of nodes) {
+        const key = (n.type === 'organisation' ? n.industry : n.sector) || n.sector || n.industry || 'Other';
+        if (!sectorMap.has(key)) sectorMap.set(key, { x: n.x, y: n.y });
+      }
+      for (const [sector, pos] of sectorMap) {
+        const txt = document.createElementNS(SVG_NS, 'text');
+        txt.setAttribute('x', String(pos.x)); txt.setAttribute('y', String(pos.y - 50));
+        txt.setAttribute('text-anchor', 'middle');
+        txt.setAttribute('fill', '#94a3b8'); txt.setAttribute('font-size', '11');
+        txt.setAttribute('opacity', '0.55'); txt.setAttribute('font-family', 'Inter,system-ui,sans-serif');
+        txt.setAttribute('font-weight', '600');
+        txt.textContent = sector;
+        annotG.appendChild(txt);
+      }
+    }
+    svg.appendChild(annotG);
+  }
+
   const g = document.createElementNS(SVG_NS, 'g');
   g.setAttribute('transform', `translate(${appState.panX},${appState.panY}) scale(${appState.zoomLevel})`);
 
