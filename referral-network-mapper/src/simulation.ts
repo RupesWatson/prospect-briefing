@@ -122,51 +122,176 @@ function positionColumn(nodes: GraphNode[], x: number, baseY: number, spacing: n
   });
 }
 
-function positionCircular(nodes: GraphNode[], cx: number, cy: number, radius: number) {
-  nodes.forEach((n, i) => {
-    const a = (i / Math.max(nodes.length, 1)) * Math.PI * 2;
-    n.x = cx + Math.cos(a) * radius;
-    n.y = cy + Math.sin(a) * radius;
+// ── Priority Rings ──────────────────────────────────────────────────────────
+// Concentric circles — critical contacts orbit closest to centre.
+function layoutPriorityRings(nodes: Map<string, GraphNode>) {
+  const RADII: Record<string, number> = {
+    critical: 130, high: 260, medium: 420, low: 600, background: 800,
+  };
+  // Stagger start angles per ring so labels don't overlap at 12 o'clock
+  const OFFSETS: Record<string, number> = {
+    critical: 0, high: 0.6, medium: 0.2, low: 0.9, background: 0.4,
+  };
+  const byPriority: Record<string, GraphNode[]> = {
+    critical: [], high: [], medium: [], low: [], background: [],
+  };
+  for (const [, n] of nodes) byPriority[n.priority || 'medium'].push(n);
+
+  for (const [p, group] of Object.entries(byPriority)) {
+    const r = RADII[p] ?? 420;
+    const off = OFFSETS[p] ?? 0;
+    group.forEach((n, i) => {
+      const a = off + (i / Math.max(group.length, 1)) * Math.PI * 2;
+      n.x = Math.cos(a) * r;
+      n.y = Math.sin(a) * r;
+      n.vx = 0; n.vy = 0;
+    });
+  }
+}
+
+// ── Referral Tree ───────────────────────────────────────────────────────────
+// Hierarchical tree built from introducedBy chains.
+// Root nodes (no introducer) sit at the top; each introduced generation
+// cascades one row below its introducer.
+function layoutReferralTree(nodes: Map<string, GraphNode>) {
+  const nodeArr = Array.from(nodes.values());
+
+  // Calculate depth for each node
+  const depthMap = new Map<string, number>();
+  function getDepth(id: string, visited = new Set<string>()): number {
+    if (depthMap.has(id)) return depthMap.get(id)!;
+    if (visited.has(id)) { depthMap.set(id, 0); return 0; }
+    visited.add(id);
+    const n = nodes.get(id);
+    if (!n?.introducedBy || !nodes.has(n.introducedBy)) {
+      depthMap.set(id, 0); return 0;
+    }
+    const d = getDepth(n.introducedBy, visited) + 1;
+    depthMap.set(id, d); return d;
+  }
+  for (const n of nodeArr) getDepth(n.id);
+
+  const maxDepth = Math.max(0, ...depthMap.values());
+  const levels: GraphNode[][] = Array.from({ length: maxDepth + 1 }, () => []);
+  for (const n of nodeArr) levels[depthMap.get(n.id) ?? 0].push(n);
+
+  const V_GAP = 190;
+  const H_GAP = 160;
+
+  levels.forEach((level, depth) => {
+    // Sort within level so children sit roughly under their parent
+    level.sort((a, b) => {
+      const ax = a.introducedBy ? (nodes.get(a.introducedBy)?.x ?? 0) : 0;
+      const bx = b.introducedBy ? (nodes.get(b.introducedBy)?.x ?? 0) : 0;
+      return ax - bx;
+    });
+    level.forEach((n, i) => {
+      n.x = (i - (level.length - 1) / 2) * H_GAP;
+      n.y = (depth - maxDepth / 2) * V_GAP;
+      n.vx = 0; n.vy = 0;
+    });
+  });
+}
+
+// ── Engagement Pipeline ─────────────────────────────────────────────────────
+// Left-to-right funnel: cold prospects → warm → hot → clients.
+// Referrers and support network sit in a separate row above.
+function layoutPipeline(nodes: Map<string, GraphNode>) {
+  // Columns for the main funnel
+  const cold:   GraphNode[] = []; // prospects eng 1-2
+  const warm:   GraphNode[] = []; // prospects eng 3
+  const hot:    GraphNode[] = []; // prospects eng 4-5
+  const clients: GraphNode[] = []; // all clients
+  // Support tracks
+  const referrers: GraphNode[] = [];
+  const support:   GraphNode[] = []; // adviser, jpmorgan, organisation
+
+  for (const [, n] of nodes) {
+    if (n.type === 'client') {
+      clients.push(n);
+    } else if (n.type === 'prospect') {
+      if (n.engagementScore <= 2) cold.push(n);
+      else if (n.engagementScore <= 3) warm.push(n);
+      else hot.push(n);
+    } else if (n.type === 'referrer') {
+      referrers.push(n);
+    } else {
+      support.push(n);
+    }
+  }
+
+  const COL_X = [-440, -220, 0, 220]; // cold, warm, hot, clients
+  const ROW_SP = 140;
+
+  [cold, warm, hot, clients].forEach((group, ci) => {
+    group.forEach((n, ni) => {
+      n.x = COL_X[ci] + (Math.random() - 0.5) * 50;
+      n.y = (ni - (group.length - 1) / 2) * ROW_SP;
+      n.vx = 0; n.vy = 0;
+    });
+  });
+
+  // Referrers: arc above the funnel, x spread matches their introduced contacts
+  referrers.forEach((n, i) => {
+    n.x = (i - (referrers.length - 1) / 2) * 160;
+    n.y = -Math.max(...[cold, warm, hot, clients].map((g) => g.length), 1) * ROW_SP / 2 - 200;
     n.vx = 0; n.vy = 0;
+  });
+
+  // Support: below the funnel
+  const funnelBottom = Math.max(...[cold, warm, hot, clients].map((g) => g.length), 1) * ROW_SP / 2 + 160;
+  support.forEach((n, i) => {
+    n.x = (i - (support.length - 1) / 2) * 160;
+    n.y = funnelBottom;
+    n.vx = 0; n.vy = 0;
+  });
+}
+
+// ── Sector Map ──────────────────────────────────────────────────────────────
+// Cluster contacts by industry/sector. Each cluster orbits a central point.
+// Helpful for spotting sector concentration and coverage gaps.
+function layoutSectorMap(nodes: Map<string, GraphNode>) {
+  const sectorMap = new Map<string, GraphNode[]>();
+
+  for (const [, n] of nodes) {
+    // Prefer sector, fall back to industry (organisations), then 'Other'
+    const key = (n.type === 'organisation' ? n.industry : n.sector) || n.sector || n.industry || 'Other';
+    const bucket = sectorMap.get(key) ?? [];
+    bucket.push(n);
+    sectorMap.set(key, bucket);
+  }
+
+  const sectors = Array.from(sectorMap.entries());
+  const num = sectors.length;
+  // Radius for the ring of cluster centres scales with number of sectors
+  const RING_R = Math.max(300, num * 65);
+  const NODE_R = 55; // radius within each cluster
+
+  sectors.forEach(([, group], si) => {
+    const ca = (si / num) * Math.PI * 2 - Math.PI / 2;
+    const cx = Math.cos(ca) * RING_R;
+    const cy = Math.sin(ca) * RING_R;
+    group.forEach((n, ni) => {
+      const na = (ni / Math.max(group.length, 1)) * Math.PI * 2;
+      const nr = group.length === 1 ? 0 : NODE_R;
+      n.x = cx + Math.cos(na) * nr;
+      n.y = cy + Math.sin(na) * nr;
+      n.vx = 0; n.vy = 0;
+    });
   });
 }
 
 export function applyLayout(type: string) {
   if (type === 'free') { restartSimulation(); return; }
   const { nodes } = appState.simulation;
-  const bt: Record<string, GraphNode[]> = {
-    client: [], prospect: [], referrer: [], adviser: [], jpmorgan: [], organisation: [],
-  };
-  for (const [, n] of nodes) {
-    if (!bt[n.type]) bt[n.type] = [];
-    bt[n.type].push(n);
-  }
-  const sp = 150;
-  if (type === 'by-type') {
-    ['organisation', 'referrer', 'client', 'adviser', 'prospect', 'jpmorgan'].forEach((t, i) =>
-      positionColumn(bt[t] || [], (i - 2.5) * 220, 0, sp)
-    );
-  } else if (type === 'clients-prospects') {
-    positionColumn(bt.referrer || [], -400, 0, sp);
-    positionColumn(bt.client || [], -200, 0, sp);
-    positionColumn(bt.adviser || [], 0, 0, sp);
-    positionColumn(bt.prospect || [], 200, 0, sp);
-    positionColumn(bt.jpmorgan || [], -400, -300, sp);
-    positionColumn(bt.organisation || [], 400, 0, sp);
-  } else if (type === 'referrers-hub') {
-    positionCircular(bt.referrer || [], 0, 0, 120);
-    positionCircular(
-      [...(bt.client || []), ...(bt.prospect || []), ...(bt.adviser || []), ...(bt.jpmorgan || [])],
-      0, 0, 320
-    );
-    positionColumn(bt.organisation || [], 500, 0, sp);
-  } else if (type === 'jpmorgan-view') {
-    positionColumn(bt.jpmorgan || [], -400, 0, sp);
-    positionColumn(bt.organisation || [], -150, 0, sp);
-    positionColumn(bt.client || [], 100, 0, sp);
-    positionColumn(bt.referrer || [], 300, 0, sp);
-    positionColumn(bt.prospect || [], 500, 0, sp);
-    positionColumn(bt.adviser || [], 100, -300, sp);
+  if (type === 'priority-rings') {
+    layoutPriorityRings(nodes);
+  } else if (type === 'referral-tree') {
+    layoutReferralTree(nodes);
+  } else if (type === 'pipeline') {
+    layoutPipeline(nodes);
+  } else if (type === 'sector-map') {
+    layoutSectorMap(nodes);
   }
   appState.animationRunning = false;
 }

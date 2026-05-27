@@ -46,11 +46,11 @@ export default function Toolbar() {
           defaultValue="free"
           onChange={(e) => applyLayout(e.target.value)}
         >
-          <option value="free">Layout: Free</option>
-          <option value="by-type">By Type</option>
-          <option value="clients-prospects">Clients → Prospects</option>
-          <option value="referrers-hub">Referrers Hub</option>
-          <option value="jpmorgan-view">JPM View</option>
+          <option value="free">🔀 Free (organic)</option>
+          <option value="priority-rings">🎯 Priority Rings</option>
+          <option value="referral-tree">🌳 Referral Tree</option>
+          <option value="pipeline">📊 Engagement Pipeline</option>
+          <option value="sector-map">🗂 Sector Map</option>
         </select>
         <button
           className={`toolbar-button${labelsOn ? ' labels-on' : ''}`}
