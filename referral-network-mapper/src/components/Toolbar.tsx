@@ -47,6 +47,7 @@ export default function Toolbar() {
           onChange={(e) => applyLayout(e.target.value)}
         >
           <option value="free">🔀 Free (organic)</option>
+          <option value="hub-spoke">⬤ Hub &amp; Spoke</option>
           <option value="priority-rings">🎯 Priority Rings</option>
           <option value="referral-tree">🌳 Referral Tree</option>
           <option value="pipeline">📊 Engagement Pipeline</option>
