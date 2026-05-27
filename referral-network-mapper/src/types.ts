@@ -3,7 +3,7 @@
 // ============================================================================
 
 export type NodeType = 'client' | 'prospect' | 'referrer' | 'adviser' | 'jpmorgan' | 'organisation';
-export type RelationshipType = 'referred' | 'knows' | 'colleague' | 'adviser-to' | 'family' | 'covers';
+export type RelationshipType = 'referred' | 'knows' | 'colleague' | 'adviser-to' | 'family' | 'covers' | 'works-at' | 'client-of';
 export type FilterType = 'all' | NodeType;
 export type LayoutType = 'free' | 'priority-rings' | 'referral-tree' | 'pipeline' | 'sector-map';
 export type DetailMode = 'node' | 'edge' | null;

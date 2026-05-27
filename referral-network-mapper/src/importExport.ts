@@ -196,7 +196,7 @@ export function importFromXLSX(file: File, onDone: () => void) {
               const eid = generateUUID();
               appState.simulation.edges.set(eid, {
                 id: eid, sourceId: node.id, targetId: orgNode.id,
-                relationshipType: 'colleague', strength: 2,
+                relationshipType: 'works-at', strength: 2,
                 notes: 'Works at / associated with', bendOffset: 0, lastContact: '',
               });
             }
