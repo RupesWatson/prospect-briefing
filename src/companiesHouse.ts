@@ -71,6 +71,11 @@ export async function searchOfficers(name: string): Promise<OfficerCandidate[]> 
   const res = await chFetch(`/search/officers?q=${encodeURIComponent(name)}&items_per_page=10`);
 
   if (!res.ok) {
+    if (res.status === 401) {
+      throw new Error(
+        'API key rejected (401). Please open Settings (⚙), clear the Companies House key, and re-paste it carefully — no spaces.'
+      );
+    }
     const text = await res.text().catch(() => '');
     throw new Error(`Companies House returned ${res.status}: ${text || res.statusText}`);
   }

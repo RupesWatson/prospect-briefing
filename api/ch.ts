@@ -33,12 +33,14 @@ export default async function handler(request: Request): Promise<Response> {
     });
   }
 
+  // Trim any accidental whitespace / newlines that might have been pasted
+  const cleanKey = apiKey.trim();
   const chUrl = `https://api.company-information.service.gov.uk${chPath}`;
 
   try {
     const response = await fetch(chUrl, {
       headers: {
-        Authorization: `Basic ${btoa(apiKey + ':')}`,
+        Authorization: `Basic ${btoa(cleanKey + ':')}`,
         Accept: 'application/json',
       },
     });
