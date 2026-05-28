@@ -4,6 +4,7 @@ import { markDirty } from '../persistence';
 import { researchFirm, checkJPMorganCoverage } from '../research';
 import { generateUUID, getTypeColor, getInitials, getEdgeStaleInfo } from '../utils';
 import { exportAsJSON, exportAsSummary } from '../importExport';
+import { fetchAndStoreDirectorships, getCHApiKey } from '../companiesHouse';
 import type { GraphNode, GraphEdge, PriorityLevel } from '../types';
 
 export default function RightSidebar() {
@@ -128,6 +129,7 @@ export default function RightSidebar() {
 // ── Node Detail ──
 function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete: () => void; onResearch: () => void }) {
   const [editing, setEditing] = useEditMode(false);
+  const [chSearching, setChSearching] = useState(false);
   const [editName, setEditName] = useStateString(node.name);
   const [editOrg, setEditOrg] = useStateString(node.organisation);
   const [editNotes, setEditNotes] = useStateString(node.notes || '');
@@ -193,6 +195,15 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
     setEditing(false);
     useStore.getState().bumpGraph();
     useStore.getState().bumpDetail();
+  }
+
+  function handleCHSearch() {
+    if (!getCHApiKey()) {
+      alert('No Companies House API key set.\n\nAdd your key in Settings (⚙ button in the toolbar → Companies House section).\n\nGet a free key at developer.company-information.service.gov.uk');
+      return;
+    }
+    setChSearching(true);
+    fetchAndStoreDirectorships(node.id, () => setChSearching(false));
   }
 
   function getTypeBadgeLabel(type: string) {
@@ -341,6 +352,45 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
             return r ? <div key={e.id} className="referral-pathway-item">{r.name}</div> : null;
           })}
         </>}
+
+        {/* ── Companies House Directorships ── */}
+        {node.type !== 'organisation' && (() => {
+          const active = (node.directorships ?? []).filter((d) => d.active);
+          const past   = (node.directorships ?? []).filter((d) => !d.active);
+          return (
+            <>
+              <div className="detail-section-title" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <span>🏛 Board Directorships</span>
+                {node.directorshipsUpdatedAt && (
+                  <span className="ch-updated">
+                    {new Date(node.directorshipsUpdatedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+                  </span>
+                )}
+              </div>
+              {active.length > 0 ? (
+                <div className="directorships-list">
+                  {active.map((d, i) => (
+                    <div key={i} className="directorship-card">
+                      <div className="directorship-company">{d.companyName}</div>
+                      <div className="directorship-role">
+                        {d.role}
+                        {d.appointedOn ? ` · from ${d.appointedOn}` : ''}
+                      </div>
+                      <div className="directorship-number">{d.companyNumber}</div>
+                    </div>
+                  ))}
+                  {past.length > 0 && (
+                    <div className="ch-updated">{past.length} past appointment{past.length !== 1 ? 's' : ''} not shown</div>
+                  )}
+                </div>
+              ) : node.directorships ? (
+                <div className="detail-row ch-updated">No active directorships found</div>
+              ) : (
+                <div className="detail-row ch-updated">Not yet searched — click 🏛 below</div>
+              )}
+            </>
+          );
+        })()}
       </div>
 
       <div className="detail-actions" id="detailActions">
@@ -352,6 +402,17 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
             onClick={onResearch}
           >
             {node.researching ? '⏳ Researching…' : '🔍 Research firm'}
+          </button>
+        )}
+        {node.type !== 'organisation' && (
+          <button
+            id="chSearchBtn"
+            title="Search Companies House for board directorships"
+            onClick={handleCHSearch}
+            disabled={chSearching}
+            style={{ background: chSearching ? '#e5e7eb' : '#0891b2', color: chSearching ? '#374151' : 'white', border: 'none' }}
+          >
+            {chSearching ? '⏳ Searching…' : '🏛 Companies House'}
           </button>
         )}
         <button id="deleteBtn" className="delete" onClick={onDelete}>Delete</button>
@@ -402,7 +463,7 @@ function EdgeDetail({ edge, onDelete }: { edge: GraphEdge; onDelete: () => void 
           <div className="form-group" style={{ marginTop: '8px' }}>
             <label>Relationship type</label>
             <select id="eeType" value={edgeType} onChange={(e) => setEdgeType(e.target.value)}>
-              {['referred','knows','works-at','client-of','colleague','adviser-to','family','covers'].map((t) => (
+              {['referred','knows','works-at','client-of','colleague','adviser-to','family','covers','board'].map((t) => (
                 <option key={t} value={t}>{t}</option>
               ))}
             </select>

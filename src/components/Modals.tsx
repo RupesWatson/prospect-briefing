@@ -161,6 +161,7 @@ function ConnectionModal({ active, onClose, onAdd }: { active: boolean; onClose:
               <option value="adviser-to">Adviser to</option>
               <option value="family">Family</option>
               <option value="covers">JPM Covers</option>
+              <option value="board">Board (Companies House)</option>
             </select>
           </div>
           <div className="modal-form-group">
@@ -266,48 +267,92 @@ function OrgDuplicateModal({ active, onClose, onDone }: { active: boolean; onClo
 
 // ── API Key Modal ──
 function ApiKeyModal({ active, onClose }: { active: boolean; onClose: () => void }) {
-  const existing = localStorage.getItem('anthropicApiKey') || '';
-  const [status, setStatus] = useState(
-    existing ? 'A key is currently saved. Enter a new one to replace it, or click Clear key to remove it.' : 'No key saved yet.'
-  );
+  const existingAI  = localStorage.getItem('anthropicApiKey') || '';
+  const existingCH  = localStorage.getItem('chApiKey') || '';
+  const [aiStatus,  setAiStatus]  = useState(existingAI  ? 'Key saved.' : 'No key saved yet.');
+  const [chStatus,  setChStatus]  = useState(existingCH  ? 'Key saved.' : 'No key saved yet.');
 
-  function handleSave() {
+  function handleAiSave() {
     const val = (document.getElementById('apiKeyInput') as HTMLInputElement)?.value.trim();
-    if (!val || val.startsWith('•')) { alert('Enter a valid API key.'); return; }
+    if (!val || val.startsWith('•')) { alert('Enter a valid Anthropic API key.'); return; }
     localStorage.setItem('anthropicApiKey', val);
-    setStatus('Key saved.');
-    // Refresh api key button appearance
+    setAiStatus('Key saved.');
     const btn = document.getElementById('apiKeyBtn');
-    if (btn) { btn.classList.add('api-key-set'); }
-    onClose();
+    if (btn) btn.classList.add('api-key-set');
   }
 
-  function handleClear() {
-    if (!confirm('Remove the saved API key?')) return;
+  function handleAiClear() {
+    if (!confirm('Remove the Anthropic API key?')) return;
     localStorage.removeItem('anthropicApiKey');
-    setStatus('No key saved yet.');
+    setAiStatus('No key saved yet.');
     const btn = document.getElementById('apiKeyBtn');
-    if (btn) { btn.classList.remove('api-key-set'); }
-    onClose();
+    if (btn) btn.classList.remove('api-key-set');
+  }
+
+  function handleChSave() {
+    const val = (document.getElementById('chApiKeyInput') as HTMLInputElement)?.value.trim();
+    if (!val || val.startsWith('•')) { alert('Enter a valid Companies House API key.'); return; }
+    localStorage.setItem('chApiKey', val);
+    setChStatus('Key saved. Directorship lookup is now active.');
+  }
+
+  function handleChClear() {
+    if (!confirm('Remove the Companies House API key?')) return;
+    localStorage.removeItem('chApiKey');
+    setChStatus('No key saved yet.');
   }
 
   return (
     <div className={`modal-overlay${active ? ' active' : ''}`} id="apiKeyModal">
-      <div className="modal-content" style={{ maxWidth: '440px' }}>
-        <div className="modal-title">Anthropic API Key</div>
-        <div className="modal-subtitle">
-          Your key is stored only in this browser's localStorage and is never sent anywhere except directly to <strong>api.anthropic.com</strong>.<br /><br />
-          Once set, the app will automatically search the web and populate details for any new firm nodes created from JP Morgan "Firms Covered" data. You can also click <strong>Research firm</strong> on any existing Organisation node.
+      <div className="modal-content" style={{ maxWidth: '480px' }}>
+        <div className="modal-title">API Keys</div>
+
+        {/* ── Anthropic section ── */}
+        <div className="api-keys-section">
+          <div className="api-keys-section-title">🤖 Anthropic AI Research</div>
+          <div className="modal-subtitle" style={{ marginBottom: '8px' }}>
+            Used to auto-populate firm details from JP Morgan "Firms Covered" data.
+            Key is stored locally and only sent to <strong>api.anthropic.com</strong>.
+          </div>
+          <div className="modal-form-group">
+            <label>API Key</label>
+            <input type="password" id="apiKeyInput" placeholder="sk-ant-api03-…" autoComplete="off" defaultValue={existingAI ? '••••••••••••••••' : ''} />
+          </div>
+          <div style={{ fontSize: '12px', color: '#666', marginBottom: '8px' }}>{aiStatus}</div>
+          <div className="modal-buttons" style={{ marginBottom: 0 }}>
+            <button type="button" className="btn btn-primary" style={{ width: 'auto' }} onClick={handleAiSave}>Save</button>
+            <button type="button" className="btn btn-secondary" style={{ width: 'auto' }} onClick={handleAiClear}>Clear</button>
+          </div>
         </div>
-        <div className="modal-form-group">
-          <label>API Key</label>
-          <input type="password" id="apiKeyInput" placeholder="sk-ant-api03-…" autoComplete="off" defaultValue={existing ? '••••••••••••••••' : ''} />
+
+        <div className="api-keys-divider" />
+
+        {/* ── Companies House section ── */}
+        <div className="api-keys-section">
+          <div className="api-keys-section-title">🏛 Companies House</div>
+          <div className="modal-subtitle" style={{ marginBottom: '8px' }}>
+            Automatically looks up board directorships when contacts are added or imported.
+            If two contacts sit on the same board, a <strong>Board</strong> connection is created
+            between them automatically.<br /><br />
+            Get a free key at{' '}
+            <a href="https://developer.company-information.service.gov.uk/" target="_blank" rel="noopener noreferrer">
+              developer.company-information.service.gov.uk
+            </a>
+            {' '}(register → create an application → copy the key).
+          </div>
+          <div className="modal-form-group">
+            <label>API Key</label>
+            <input type="password" id="chApiKeyInput" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" autoComplete="off" defaultValue={existingCH ? '••••••••••••••••' : ''} />
+          </div>
+          <div style={{ fontSize: '12px', color: '#666', marginBottom: '8px' }}>{chStatus}</div>
+          <div className="modal-buttons" style={{ marginBottom: 0 }}>
+            <button type="button" className="btn btn-primary" style={{ width: 'auto' }} onClick={handleChSave}>Save</button>
+            <button type="button" className="btn btn-secondary" style={{ width: 'auto' }} onClick={handleChClear}>Clear</button>
+          </div>
         </div>
-        <div id="apiKeyStatus" style={{ fontSize: '12px', color: '#666', marginBottom: '8px' }}>{status}</div>
-        <div className="modal-buttons">
-          <button type="button" className="btn btn-primary" id="saveApiKeyBtn" style={{ width: 'auto' }} onClick={handleSave}>Save key</button>
-          <button type="button" className="btn btn-secondary" id="clearApiKeyBtn" style={{ width: 'auto' }} onClick={handleClear}>Clear key</button>
-          <button type="button" className="btn btn-secondary" id="cancelApiKeyBtn" style={{ width: 'auto' }} onClick={onClose}>Cancel</button>
+
+        <div style={{ marginTop: '16px', textAlign: 'right' }}>
+          <button type="button" className="btn btn-secondary" style={{ width: 'auto' }} onClick={onClose}>Close</button>
         </div>
       </div>
     </div>
