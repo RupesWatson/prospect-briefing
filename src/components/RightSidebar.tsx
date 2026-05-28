@@ -136,6 +136,8 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
   const [chCandidates, setChCandidates] = useState<OfficerCandidate[] | null>(null);
   const [chSelecting, setChSelecting] = useState(false);
   const [chError, setChError] = useState<string | null>(null);
+  const [chStatusMsg, setChStatusMsg] = useState<string | null>(null);
+  const chSearchBoxRef = useRef<HTMLDivElement>(null);
   const [editName, setEditName] = useStateString(node.name);
   const [editOrg, setEditOrg] = useStateString(node.organisation);
   const [editNotes, setEditNotes] = useStateString(node.notes || '');
@@ -203,6 +205,13 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
     useStore.getState().bumpDetail();
   }
 
+  // Scroll the CH search panel into view whenever search mode opens
+  useEffect(() => {
+    if (chSearchMode && chSearchBoxRef.current) {
+      chSearchBoxRef.current.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }, [chSearchMode]);
+
   function handleCHSearch() {
     if (!getCHApiKey()) {
       alert('No Companies House API key set.\n\nAdd your key in Settings (⚙ button in the toolbar → Companies House section).\n\nGet a free key at developer.company-information.service.gov.uk');
@@ -212,6 +221,7 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
     setChSearchQuery(node.name);
     setChCandidates(null);
     setChError(null);
+    setChStatusMsg(null);
   }
 
   async function handleCHSearchExecute() {
@@ -219,11 +229,18 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
     setChSearching(true);
     setChCandidates(null);
     setChError(null);
+    setChStatusMsg('⏳ Contacting Companies House…');
     try {
       const candidates = await searchOfficers(chSearchQuery.trim());
       setChCandidates(candidates);
+      if (candidates.length === 0) {
+        setChStatusMsg(`ℹ️ No results for "${chSearchQuery.trim()}" — try a surname only`);
+      } else {
+        setChStatusMsg(`✅ Found ${candidates.length} match${candidates.length !== 1 ? 'es' : ''} on Companies House`);
+      }
     } catch (err) {
       setChError((err as Error).message || 'Search failed');
+      setChStatusMsg(null);
     } finally {
       setChSearching(false);
     }
@@ -232,12 +249,15 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
   async function handleCHSelect(candidate: OfficerCandidate) {
     setChSelecting(true);
     setChError(null);
+    setChStatusMsg('⏳ Loading appointments…');
     try {
       await fetchAndStoreForCandidate(node.id, candidate);
       setChCandidates(null);
       setChSearchMode(false);
+      setChStatusMsg('✅ Directorships loaded from Companies House');
     } catch (err) {
       setChError((err as Error).message || 'Failed to load appointments');
+      setChStatusMsg(null);
     } finally {
       setChSelecting(false);
     }
@@ -405,9 +425,16 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
                 )}
               </div>
 
+              {/* Status message banner */}
+              {chStatusMsg && !chSearchMode && (
+                <div className={`ch-status-msg${chStatusMsg.startsWith('✅') ? ' ch-status-ok' : ''}`}>
+                  {chStatusMsg}
+                </div>
+              )}
+
               {/* Editable search box — shown when user clicks 🏛 */}
               {chSearchMode && (
-                <div className="ch-picker">
+                <div className="ch-picker" ref={chSearchBoxRef}>
                   <div className="ch-picker-hint">Edit the search name if needed, then click Search:</div>
                   <input
                     className="ch-search-input"
@@ -436,7 +463,12 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
                     </button>
                   </div>
 
-                  {/* Error during search */}
+                  {/* Status / error during search */}
+                  {chStatusMsg && (
+                    <div className={`ch-status-msg${chStatusMsg.startsWith('✅') ? ' ch-status-ok' : ''}`} style={{ marginTop: 6 }}>
+                      {chStatusMsg}
+                    </div>
+                  )}
                   {chError && chCandidates === null && (
                     <div className="ch-error" style={{ marginTop: 6 }}>⚠ {chError}</div>
                   )}
@@ -523,11 +555,20 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
           <button
             id="chSearchBtn"
             title="Search Companies House for board directorships"
-            onClick={handleCHSearch}
-            disabled={chSearching}
-            style={{ background: chSearching ? '#e5e7eb' : '#0891b2', color: chSearching ? '#374151' : 'white', border: 'none' }}
+            onClick={chSearchMode ? () => chSearchBoxRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' }) : handleCHSearch}
+            disabled={chSearching || chSelecting}
+            style={{
+              background: chSearching || chSelecting ? '#e5e7eb'
+                        : chSearchMode ? '#0e7490'
+                        : '#0891b2',
+              color: (chSearching || chSelecting) ? '#374151' : 'white',
+              border: chSearchMode ? '2px solid #22d3ee' : 'none',
+            }}
           >
-            {chSearching ? '⏳ Searching…' : '🏛 Companies House'}
+            {chSearching ? '⏳ Searching CH…'
+             : chSelecting ? '⏳ Loading…'
+             : chSearchMode ? '🔍 Search open ↑'
+             : '🏛 Companies House'}
           </button>
         )}
         <button id="deleteBtn" className="delete" onClick={onDelete}>Delete</button>
