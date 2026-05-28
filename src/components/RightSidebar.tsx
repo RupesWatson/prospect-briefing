@@ -131,6 +131,8 @@ export default function RightSidebar() {
 function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete: () => void; onResearch: () => void }) {
   const [editing, setEditing] = useEditMode(false);
   const [chSearching, setChSearching] = useState(false);
+  const [chSearchMode, setChSearchMode] = useState(false);
+  const [chSearchQuery, setChSearchQuery] = useState('');
   const [chCandidates, setChCandidates] = useState<OfficerCandidate[] | null>(null);
   const [chSelecting, setChSelecting] = useState(false);
   const [chError, setChError] = useState<string | null>(null);
@@ -201,16 +203,24 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
     useStore.getState().bumpDetail();
   }
 
-  async function handleCHSearch() {
+  function handleCHSearch() {
     if (!getCHApiKey()) {
       alert('No Companies House API key set.\n\nAdd your key in Settings (⚙ button in the toolbar → Companies House section).\n\nGet a free key at developer.company-information.service.gov.uk');
       return;
     }
+    setChSearchMode(true);
+    setChSearchQuery(node.name);
+    setChCandidates(null);
+    setChError(null);
+  }
+
+  async function handleCHSearchExecute() {
+    if (!chSearchQuery.trim()) return;
     setChSearching(true);
     setChCandidates(null);
     setChError(null);
     try {
-      const candidates = await searchOfficers(node.name);
+      const candidates = await searchOfficers(chSearchQuery.trim());
       setChCandidates(candidates);
     } catch (err) {
       setChError((err as Error).message || 'Search failed');
@@ -225,6 +235,7 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
     try {
       await fetchAndStoreForCandidate(node.id, candidate);
       setChCandidates(null);
+      setChSearchMode(false);
     } catch (err) {
       setChError((err as Error).message || 'Failed to load appointments');
     } finally {
@@ -394,51 +405,83 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
                 )}
               </div>
 
-              {/* Error shown even before picker opens (e.g. CORS / network / bad key) */}
-              {chError && chCandidates === null && (
+              {/* Editable search box — shown when user clicks 🏛 */}
+              {chSearchMode && (
+                <div className="ch-picker">
+                  <div className="ch-picker-hint">Edit the search name if needed, then click Search:</div>
+                  <input
+                    className="ch-search-input"
+                    type="text"
+                    value={chSearchQuery}
+                    disabled={chSearching}
+                    onChange={(e) => setChSearchQuery(e.target.value)}
+                    onKeyDown={(e) => { if (e.key === 'Enter') handleCHSearchExecute(); }}
+                    autoFocus
+                  />
+                  <div style={{ display: 'flex', gap: '6px', marginTop: '6px' }}>
+                    <button
+                      className="ch-candidate-btn"
+                      disabled={chSearching || !chSearchQuery.trim()}
+                      onClick={handleCHSearchExecute}
+                      style={{ flex: 1, background: '#0891b2', color: 'white', fontWeight: 600 }}
+                    >
+                      {chSearching ? '⏳ Searching…' : '🔍 Search'}
+                    </button>
+                    <button
+                      className="ch-picker-cancel"
+                      style={{ flex: 0 }}
+                      onClick={() => { setChSearchMode(false); setChCandidates(null); setChError(null); }}
+                    >
+                      Cancel
+                    </button>
+                  </div>
+
+                  {/* Error during search */}
+                  {chError && chCandidates === null && (
+                    <div className="ch-error" style={{ marginTop: 6 }}>⚠ {chError}</div>
+                  )}
+
+                  {/* Results inside the search box */}
+                  {chCandidates !== null && (
+                    <>
+                      {chCandidates.length === 0 ? (
+                        <div className="ch-picker-empty" style={{ marginTop: 8 }}>
+                          No results found for "{chSearchQuery}".<br />
+                          Try a surname only or check the spelling.
+                        </div>
+                      ) : (
+                        <>
+                          <div className="ch-picker-hint" style={{ marginTop: 8 }}>
+                            {chCandidates.length} result{chCandidates.length !== 1 ? 's' : ''} — select the right person:
+                          </div>
+                          {chCandidates.map((c, i) => (
+                            <button
+                              key={i}
+                              className="ch-candidate-btn"
+                              disabled={chSelecting}
+                              onClick={() => handleCHSelect(c)}
+                            >
+                              <div className="ch-candidate-name">{c.name}</div>
+                              <div className="ch-candidate-meta">{formatCandidateMeta(c)}</div>
+                            </button>
+                          ))}
+                        </>
+                      )}
+                      {chError && <div className="ch-error">{chError}</div>}
+                    </>
+                  )}
+                </div>
+              )}
+
+              {/* Error shown outside picker (e.g. CORS / network before search mode was used) */}
+              {!chSearchMode && chError && chCandidates === null && (
                 <div className="ch-error" style={{ marginBottom: 8 }}>
                   ⚠ {chError}
                 </div>
               )}
 
-              {/* Candidate picker — shown after a search */}
-              {chCandidates !== null && (
-                <div className="ch-picker">
-                  {chCandidates.length === 0 ? (
-                    <div className="ch-picker-empty">
-                      No results found for "{node.name}".<br />
-                      Try editing the name to match exactly how it appears at Companies House (e.g. full legal name).
-                    </div>
-                  ) : (
-                    <>
-                      <div className="ch-picker-hint">
-                        {chCandidates.length} result{chCandidates.length !== 1 ? 's' : ''} found — select the right person:
-                      </div>
-                      {chCandidates.map((c, i) => (
-                        <button
-                          key={i}
-                          className="ch-candidate-btn"
-                          disabled={chSelecting}
-                          onClick={() => handleCHSelect(c)}
-                        >
-                          <div className="ch-candidate-name">{c.name}</div>
-                          <div className="ch-candidate-meta">{formatCandidateMeta(c)}</div>
-                        </button>
-                      ))}
-                    </>
-                  )}
-                  {chError && <div className="ch-error">{chError}</div>}
-                  <button
-                    className="ch-picker-cancel"
-                    onClick={() => { setChCandidates(null); setChError(null); }}
-                  >
-                    Cancel
-                  </button>
-                </div>
-              )}
-
-              {/* Directorship list */}
-              {chCandidates === null && (
+              {/* Directorship list — hidden while search mode / picker is open */}
+              {!chSearchMode && chCandidates === null && (
                 active.length > 0 ? (
                   <div className="directorships-list">
                     {active.map((d, i) => (
