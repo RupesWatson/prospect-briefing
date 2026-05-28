@@ -284,6 +284,27 @@ svg { width: 100%; height: 100%; display: block; }
 .legend-line.covers    { border-top: 0; background: repeating-linear-gradient(90deg,#38bdf8 0,#38bdf8 4px,transparent 4px,transparent 8px); height: 2px; }
 .legend-line.works-at  { border-top: 2px solid #fb923c; }
 .legend-line.client-of { border-top: 0; background: repeating-linear-gradient(90deg,#e879f9 0,#e879f9 6px,transparent 6px,transparent 10px); height: 2px; }
+.legend-line.board     { border-top: 0; background: repeating-linear-gradient(90deg,#0891b2 0,#0891b2 3px,transparent 3px,transparent 6px); height: 2px; }
+
+/* ── Companies House directorship cards ── */
+.directorships-list { margin: 2px 0 4px; }
+.directorship-card {
+  padding: 6px 8px;
+  background: #0d2a3a;
+  border: 1px solid #0891b255;
+  border-left: 3px solid #0891b2;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.directorship-company { font-size: 12px; font-weight: 600; color: #e2e8f0; }
+.directorship-role    { font-size: 11px; color: #94a3b8; margin-top: 2px; text-transform: capitalize; }
+.directorship-number  { font-size: 10px; color: #475569; margin-top: 1px; font-family: monospace; }
+.ch-updated           { font-size: 10px; color: #475569; margin-top: 3px; }
+
+/* ── API Keys modal sections ── */
+.api-keys-section       { margin-bottom: 4px; }
+.api-keys-section-title { font-size: 13px; font-weight: 700; color: #e2e8f0; margin-bottom: 6px; }
+.api-keys-divider       { height: 1px; background: #1e3a52; margin: 14px 0; }
 
 .legend-dot  { display: inline-block; width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
 .legend-rect { display: inline-block; width: 18px; height: 10px; border-radius: 2px; flex-shrink: 0; }

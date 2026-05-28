@@ -17,6 +17,7 @@ const CANVAS_EDGE_COLORS: Record<string, string> = {
   covers:       '#38bdf8',
   'works-at':   '#fb923c',  // orange — employment link
   'client-of':  '#e879f9',  // purple-pink — firm-to-firm client relationship
+  'board':      '#0891b2',  // cyan — shared board directorship (Companies House)
 };
 
 // Flat node fill colours
@@ -374,6 +375,8 @@ export function renderCanvas(svg: SVGSVGElement) {
         path.setAttribute('stroke-dasharray', '2,5');
       } else if (edge.relationshipType === 'covers') {
         path.setAttribute('stroke-dasharray', '4,4');
+      } else if (edge.relationshipType === 'board') {
+        path.setAttribute('stroke-dasharray', '3,3');
       }
     }
     path.setAttribute('class', 'edge');
@@ -1557,6 +1560,7 @@ export default function Canvas() {
           <div className="legend-item"><span className="legend-line covers"></span> JPM Covers</div>
           <div className="legend-item"><span className="legend-line works-at"></span> Works at</div>
           <div className="legend-item"><span className="legend-line client-of"></span> Client of</div>
+          <div className="legend-item"><span className="legend-line board"></span> Board 🏛</div>
           <div className="legend-section-title">Node Types</div>
           <div className="legend-item"><span className="legend-dot" style={{ background: '#1e40af' }}></span> Client ●</div>
           <div className="legend-item"><span className="legend-dot legend-hex" style={{ background: '#065f46' }}></span> Prospect ⬡</div>
