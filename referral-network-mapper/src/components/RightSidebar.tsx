@@ -4,7 +4,8 @@ import { markDirty } from '../persistence';
 import { researchFirm, checkJPMorganCoverage } from '../research';
 import { generateUUID, getTypeColor, getInitials, getEdgeStaleInfo } from '../utils';
 import { exportAsJSON, exportAsSummary } from '../importExport';
-import { fetchAndStoreDirectorships, getCHApiKey } from '../companiesHouse';
+import { searchOfficers, fetchAndStoreForCandidate, getCHApiKey, formatCandidateMeta } from '../companiesHouse';
+import type { OfficerCandidate } from '../companiesHouse';
 import type { GraphNode, GraphEdge, PriorityLevel } from '../types';
 
 export default function RightSidebar() {
@@ -130,6 +131,9 @@ export default function RightSidebar() {
 function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete: () => void; onResearch: () => void }) {
   const [editing, setEditing] = useEditMode(false);
   const [chSearching, setChSearching] = useState(false);
+  const [chCandidates, setChCandidates] = useState<OfficerCandidate[] | null>(null);
+  const [chSelecting, setChSelecting] = useState(false);
+  const [chError, setChError] = useState<string | null>(null);
   const [editName, setEditName] = useStateString(node.name);
   const [editOrg, setEditOrg] = useStateString(node.organisation);
   const [editNotes, setEditNotes] = useStateString(node.notes || '');
@@ -197,13 +201,35 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
     useStore.getState().bumpDetail();
   }
 
-  function handleCHSearch() {
+  async function handleCHSearch() {
     if (!getCHApiKey()) {
       alert('No Companies House API key set.\n\nAdd your key in Settings (⚙ button in the toolbar → Companies House section).\n\nGet a free key at developer.company-information.service.gov.uk');
       return;
     }
     setChSearching(true);
-    fetchAndStoreDirectorships(node.id, () => setChSearching(false));
+    setChCandidates(null);
+    setChError(null);
+    try {
+      const candidates = await searchOfficers(node.name);
+      setChCandidates(candidates);
+    } catch (err) {
+      setChError((err as Error).message || 'Search failed');
+    } finally {
+      setChSearching(false);
+    }
+  }
+
+  async function handleCHSelect(candidate: OfficerCandidate) {
+    setChSelecting(true);
+    setChError(null);
+    try {
+      await fetchAndStoreForCandidate(node.id, candidate);
+      setChCandidates(null);
+    } catch (err) {
+      setChError((err as Error).message || 'Failed to load appointments');
+    } finally {
+      setChSelecting(false);
+    }
   }
 
   function getTypeBadgeLabel(type: string) {
@@ -367,26 +393,65 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
                   </span>
                 )}
               </div>
-              {active.length > 0 ? (
-                <div className="directorships-list">
-                  {active.map((d, i) => (
-                    <div key={i} className="directorship-card">
-                      <div className="directorship-company">{d.companyName}</div>
-                      <div className="directorship-role">
-                        {d.role}
-                        {d.appointedOn ? ` · from ${d.appointedOn}` : ''}
-                      </div>
-                      <div className="directorship-number">{d.companyNumber}</div>
+
+              {/* Candidate picker — shown after a search */}
+              {chCandidates !== null && (
+                <div className="ch-picker">
+                  {chCandidates.length === 0 ? (
+                    <div className="ch-picker-empty">
+                      No results found for "{node.name}".<br />
+                      Try editing the name to match exactly how it appears at Companies House (e.g. full legal name).
                     </div>
-                  ))}
-                  {past.length > 0 && (
-                    <div className="ch-updated">{past.length} past appointment{past.length !== 1 ? 's' : ''} not shown</div>
+                  ) : (
+                    <>
+                      <div className="ch-picker-hint">
+                        {chCandidates.length} result{chCandidates.length !== 1 ? 's' : ''} found — select the right person:
+                      </div>
+                      {chCandidates.map((c, i) => (
+                        <button
+                          key={i}
+                          className="ch-candidate-btn"
+                          disabled={chSelecting}
+                          onClick={() => handleCHSelect(c)}
+                        >
+                          <div className="ch-candidate-name">{c.name}</div>
+                          <div className="ch-candidate-meta">{formatCandidateMeta(c)}</div>
+                        </button>
+                      ))}
+                    </>
                   )}
+                  {chError && <div className="ch-error">{chError}</div>}
+                  <button
+                    className="ch-picker-cancel"
+                    onClick={() => { setChCandidates(null); setChError(null); }}
+                  >
+                    Cancel
+                  </button>
                 </div>
-              ) : node.directorships ? (
-                <div className="detail-row ch-updated">No active directorships found</div>
-              ) : (
-                <div className="detail-row ch-updated">Not yet searched — click 🏛 below</div>
+              )}
+
+              {/* Directorship list */}
+              {chCandidates === null && (
+                active.length > 0 ? (
+                  <div className="directorships-list">
+                    {active.map((d, i) => (
+                      <div key={i} className="directorship-card">
+                        <div className="directorship-company">{d.companyName}</div>
+                        <div className="directorship-role">
+                          {d.role}{d.appointedOn ? ` · from ${d.appointedOn}` : ''}
+                        </div>
+                        <div className="directorship-number">{d.companyNumber}</div>
+                      </div>
+                    ))}
+                    {past.length > 0 && (
+                      <div className="ch-updated">{past.length} past appointment{past.length !== 1 ? 's' : ''} not shown</div>
+                    )}
+                  </div>
+                ) : node.directorships ? (
+                  <div className="detail-row ch-updated">No active directorships found</div>
+                ) : (
+                  <div className="detail-row ch-updated">Click 🏛 below to search</div>
+                )
               )}
             </>
           );

@@ -1,11 +1,12 @@
 // ============================================================================
 // COMPANIES HOUSE API — directorship lookup
 //
-// Register for a free API key at:
-//   https://developer.company-information.service.gov.uk/
+// Two-step flow:
+//   1. searchOfficers(name)  → returns a list of candidates for the user to pick
+//   2. fetchAndStoreForCandidate(nodeId, candidate) → loads their appointments
 //
-// Rate limit: 600 requests / 5 minutes on the free tier.
-// Each person lookup = 2 requests (search + appointments).
+// Get a free API key at developer.company-information.service.gov.uk
+// Rate limit: 600 requests / 5 minutes.
 // ============================================================================
 
 import { appState } from './appState';
@@ -16,118 +17,130 @@ import type { Directorship } from './types';
 
 const CH_BASE = 'https://api.company-information.service.gov.uk';
 
+const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
 // ── API key helpers ──────────────────────────────────────────────────────────
 
 export function getCHApiKey(): string | null {
   return localStorage.getItem('chApiKey') || null;
 }
 
-export function setCHApiKey(key: string) {
-  localStorage.setItem('chApiKey', key);
-}
-
-export function clearCHApiKey() {
-  localStorage.removeItem('chApiKey');
-}
-
 function chHeaders(): HeadersInit {
   const key = getCHApiKey();
   if (!key) return {};
-  // Basic auth: API key as username, empty password
   return { Authorization: 'Basic ' + btoa(key + ':') };
 }
 
-// ── Core API calls ────────────────────────────────────────────────────────────
+// ── Officer candidate (returned from search) ─────────────────────────────────
 
-/**
- * Search Companies House for an officer by name and return all their
- * directorship appointments (active and resigned).
- */
-export async function searchDirectorships(name: string): Promise<Directorship[]> {
-  if (!getCHApiKey()) return [];
-
-  try {
-    // 1. Search for officers by name — take top result
-    const searchRes = await fetch(
-      `${CH_BASE}/search/officers?q=${encodeURIComponent(name)}&items_per_page=5`,
-      { headers: chHeaders() }
-    );
-    if (!searchRes.ok) return [];
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const searchData = await searchRes.json() as any;
-    if (!searchData.items?.length) return [];
-
-    const officer = searchData.items[0];
-    const appointmentsPath: string | undefined = officer.links?.officer?.appointments;
-    if (!appointmentsPath) return [];
-
-    // 2. Fetch all appointments for that officer
-    const appRes = await fetch(
-      `${CH_BASE}${appointmentsPath}?items_per_page=50`,
-      { headers: chHeaders() }
-    );
-    if (!appRes.ok) return [];
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const appData = await appRes.json() as any;
-    if (!appData.items?.length) return [];
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    return appData.items.filter((item: any) => item.appointed_to).map((item: any): Directorship => ({
-      companyName:  String(item.appointed_to.company_name  || ''),
-      companyNumber: String(item.appointed_to.company_number || ''),
-      role:          String(item.officer_role || 'director'),
-      appointedOn:   item.appointed_on  as string | undefined,
-      resignedOn:    item.resigned_on   as string | undefined,
-      active:        !item.resigned_on,
-    }));
-  } catch {
-    return [];
-  }
+export interface OfficerCandidate {
+  /** Name as registered at Companies House */
+  name: string;
+  /** API path to their appointments list, e.g. /officers/ABC123/appointments */
+  appointmentsPath: string;
+  birthMonth?: number;
+  birthYear?: number;
+  /** First line of address + locality */
+  address: string;
+  appointmentCount: number;
 }
 
-// ── Higher-level helpers ──────────────────────────────────────────────────────
+export function formatCandidateMeta(c: OfficerCandidate): string {
+  const parts: string[] = [];
+  if (c.birthYear) {
+    const m = c.birthMonth ? MONTHS[(c.birthMonth - 1) % 12] + ' ' : '';
+    parts.push(`Born ${m}${c.birthYear}`);
+  } else {
+    parts.push('DOB not recorded');
+  }
+  parts.push(`${c.appointmentCount} appointment${c.appointmentCount !== 1 ? 's' : ''}`);
+  if (c.address) parts.push(c.address);
+  return parts.join(' · ');
+}
+
+// ── Step 1: Search for officer candidates ────────────────────────────────────
 
 /**
- * Fetch + store directorships for one node, then cross-link shared boards.
- * Calls onDone when complete (pass a React re-render callback).
+ * Search Companies House for officers matching `name`.
+ * Returns up to 10 candidates with enough info to identify the right person.
+ * The user picks one; pass the chosen candidate to fetchAndStoreForCandidate().
  */
-export async function fetchAndStoreDirectorships(
+export async function searchOfficers(name: string): Promise<OfficerCandidate[]> {
+  if (!getCHApiKey()) return [];
+
+  const res = await fetch(
+    `${CH_BASE}/search/officers?q=${encodeURIComponent(name)}&items_per_page=10`,
+    { headers: chHeaders() }
+  );
+  if (!res.ok) throw new Error(`Companies House search failed: ${res.status} ${res.statusText}`);
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const data = await res.json() as any;
+  if (!data.items?.length) return [];
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return data.items
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    .filter((item: any) => item.links?.officer?.appointments)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    .map((item: any): OfficerCandidate => ({
+      name:             String(item.title || item.description || name),
+      appointmentsPath: String(item.links.officer.appointments),
+      birthMonth:       item.date_of_birth?.month  as number | undefined,
+      birthYear:        item.date_of_birth?.year   as number | undefined,
+      address:          [item.address?.address_line_1, item.address?.locality]
+                          .filter(Boolean).join(', '),
+      appointmentCount: Number(item.appointment_count) || 0,
+    }));
+}
+
+// ── Step 2: Fetch appointments for the chosen candidate ──────────────────────
+
+/**
+ * Fetch all board appointments for the chosen candidate, store them on the
+ * node, then run crossLinkBoards() to auto-create shared board connections.
+ */
+export async function fetchAndStoreForCandidate(
   nodeId: string,
+  candidate: OfficerCandidate,
   onDone?: () => void
 ): Promise<void> {
   const node = appState.simulation.nodes.get(nodeId);
-  if (!node || node.type === 'organisation') { onDone?.(); return; }
+  if (!node) { onDone?.(); return; }
 
-  const results = await searchDirectorships(node.name);
-  node.directorships = results;
+  const res = await fetch(
+    `${CH_BASE}${candidate.appointmentsPath}?items_per_page=50`,
+    { headers: chHeaders() }
+  );
+  if (!res.ok) throw new Error(`Appointments fetch failed: ${res.status} ${res.statusText}`);
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const data = await res.json() as any;
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  node.directorships = (data.items ?? []).filter((item: any) => item.appointed_to).map((item: any): Directorship => ({
+    companyName:   String(item.appointed_to.company_name   || ''),
+    companyNumber: String(item.appointed_to.company_number || ''),
+    role:          String(item.officer_role || 'director'),
+    appointedOn:   item.appointed_on  as string | undefined,
+    resignedOn:    item.resigned_on   as string | undefined,
+    active:        !item.resigned_on,
+  }));
   node.directorshipsUpdatedAt = new Date().toISOString();
 
   crossLinkBoards();
   markDirty();
-
-  // Trigger a React re-render so the sidebar and graph update
   useStore.getState().bumpGraph();
   useStore.getState().bumpDetail();
-
   onDone?.();
 }
 
-/**
- * Batch-fetch directorships for a list of node IDs, staggered to stay
- * within Companies House rate limits (600 req / 5 min = 2 req/500ms).
- */
-export function batchFetchDirectorships(nodeIds: string[]): void {
-  nodeIds.forEach((id, i) => {
-    setTimeout(() => fetchAndStoreDirectorships(id), i * 500);
-  });
-}
+// ── Cross-link shared boards ─────────────────────────────────────────────────
 
 /**
- * Scan every node that has directorships and create a 'board' edge between
- * any two contacts who are both currently active on the same board.
- * Safe to call repeatedly — duplicate-checks by company number.
+ * Scan every contact with directorships and create a 'board' edge between
+ * any two who are both currently active on the same company board.
+ * Safe to call repeatedly — deduplicates by company number.
  */
 export function crossLinkBoards(): void {
   const nodes = Array.from(appState.simulation.nodes.values()).filter(
@@ -139,29 +152,24 @@ export function crossLinkBoards(): void {
       const a = nodes[i];
       const b = nodes[j];
 
-      // Map of company number → company name for a's active directorships
-      const aActiveMap = new Map<string, string>(
+      const aActive = new Map<string, string>(
         (a.directorships ?? [])
           .filter((d) => d.active && d.companyNumber)
           .map((d) => [d.companyNumber, d.companyName])
       );
 
-      // Check b's active directorships for overlap
       for (const d of (b.directorships ?? [])) {
-        if (!d.active || !d.companyNumber || !aActiveMap.has(d.companyNumber)) continue;
+        if (!d.active || !d.companyNumber || !aActive.has(d.companyNumber)) continue;
 
-        const companyName = aActiveMap.get(d.companyNumber) || d.companyName;
-
-        // Avoid duplicates — check by company number in the edge notes
-        const exists = Array.from(appState.simulation.edges.values()).some(
+        const already = Array.from(appState.simulation.edges.values()).some(
           (e) =>
             e.relationshipType === 'board' &&
             e.notes.includes(d.companyNumber) &&
             ((e.sourceId === a.id && e.targetId === b.id) ||
-              (e.sourceId === b.id && e.targetId === a.id))
+             (e.sourceId === b.id && e.targetId === a.id))
         );
 
-        if (!exists) {
+        if (!already) {
           const eid = generateUUID();
           appState.simulation.edges.set(eid, {
             id: eid,
@@ -169,7 +177,7 @@ export function crossLinkBoards(): void {
             targetId: b.id,
             relationshipType: 'board',
             strength: 2,
-            notes: `${companyName} (${d.companyNumber})`,
+            notes: `${aActive.get(d.companyNumber)} (${d.companyNumber})`,
             bendOffset: 0,
             lastContact: '',
           });
