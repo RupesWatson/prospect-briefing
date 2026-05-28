@@ -2,7 +2,6 @@ import * as XLSX from 'xlsx';
 import { appState } from './appState';
 import { markDirty } from './persistence';
 import { researchFirm } from './research';
-import { batchFetchDirectorships, getCHApiKey } from './companiesHouse';
 import { generateUUID, getTypeBreakdown } from './utils';
 import { gentleRestart } from './simulation';
 import type { GraphNode } from './types';
@@ -273,14 +272,6 @@ export function importFromXLSX(file: File, onDone: () => void) {
       markDirty();
       gentleRestart();
       onDone();
-
-      // Background directorship fetch for all imported people (staggered to respect rate limits)
-      if (getCHApiKey()) {
-        const peopleIds = batch
-          .filter((b) => b.node.type !== 'organisation')
-          .map((b) => b.node.id);
-        batchFetchDirectorships(peopleIds);
-      }
 
       const apiKey = localStorage.getItem('anthropicApiKey');
       if (apiKey && newOrgs.length > 0) {

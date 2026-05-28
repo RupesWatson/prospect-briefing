@@ -3,7 +3,6 @@ import { useStore } from '../store';
 import { appState } from '../appState';
 import { markDirty, clearAllData } from '../persistence';
 import { checkJPMorganCoverage } from '../research';
-import { fetchAndStoreDirectorships, getCHApiKey } from '../companiesHouse';
 import { generateUUID, getTypeColor, getInitials } from '../utils';
 import { gentleRestart } from '../simulation';
 import type { GraphNode, PriorityLevel } from '../types';
@@ -88,11 +87,6 @@ export default function LeftSidebar() {
     appState.simulation.nodes.set(person.id, person);
 
     if (type === 'jpmorgan') checkJPMorganCoverage(person);
-
-    // Auto-fetch Companies House directorships in the background
-    if (type !== 'organisation' && getCHApiKey()) {
-      fetchAndStoreDirectorships(person.id, () => { bumpGraph(); bumpDetail(); });
-    }
 
     // Auto-connect JPM contacts (or anyone whose organisation is JPM) to the JPM org node — silent, no prompt
     const isJPMRelated = type === 'jpmorgan' ||
