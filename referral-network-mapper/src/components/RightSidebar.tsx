@@ -394,6 +394,13 @@ function NodeDetail({ node, onDelete, onResearch }: { node: GraphNode; onDelete:
                 )}
               </div>
 
+              {/* Error shown even before picker opens (e.g. CORS / network / bad key) */}
+              {chError && chCandidates === null && (
+                <div className="ch-error" style={{ marginBottom: 8 }}>
+                  ⚠ {chError}
+                </div>
+              )}
+
               {/* Candidate picker — shown after a search */}
               {chCandidates !== null && (
                 <div className="ch-picker">
