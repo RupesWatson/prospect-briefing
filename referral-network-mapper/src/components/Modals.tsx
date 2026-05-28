@@ -293,13 +293,35 @@ function ApiKeyModal({ active, onClose }: { active: boolean; onClose: () => void
     const val = (document.getElementById('chApiKeyInput') as HTMLInputElement)?.value.trim();
     if (!val || val.startsWith('•')) { alert('Enter a valid Companies House API key.'); return; }
     localStorage.setItem('chApiKey', val);
-    setChStatus('Key saved. Directorship lookup is now active.');
+    setChStatus('✅ Key saved — click "Test Key" to verify it works.');
   }
 
   function handleChClear() {
     if (!confirm('Remove the Companies House API key?')) return;
     localStorage.removeItem('chApiKey');
     setChStatus('No key saved yet.');
+  }
+
+  async function handleChTest() {
+    const stored = localStorage.getItem('chApiKey');
+    if (!stored) { setChStatus('⚠ No key saved — save a key first.'); return; }
+    setChStatus('⏳ Testing key against Companies House…');
+    try {
+      const res = await fetch(`/api/ch?chPath=${encodeURIComponent('/search/officers?q=smith&items_per_page=1')}`, {
+        headers: { 'x-ch-key': stored },
+      });
+      if (res.ok) {
+        const data = await res.json() as { total_results?: number };
+        setChStatus(`✅ Key works! Companies House returned ${data.total_results ?? '?'} total results for a test search.`);
+      } else if (res.status === 401) {
+        setChStatus('❌ 401 — Key rejected. Make sure you copied a REST API key from "Manage REST API keys", not a Client ID from "My Applications".');
+      } else {
+        const text = await res.text().catch(() => '');
+        setChStatus(`❌ Error ${res.status}: ${text || res.statusText}`);
+      }
+    } catch (err) {
+      setChStatus(`❌ Network error: ${(err as Error).message}`);
+    }
   }
 
   return (
@@ -331,22 +353,27 @@ function ApiKeyModal({ active, onClose }: { active: boolean; onClose: () => void
         <div className="api-keys-section">
           <div className="api-keys-section-title">🏛 Companies House</div>
           <div className="modal-subtitle" style={{ marginBottom: '8px' }}>
-            Automatically looks up board directorships when contacts are added or imported.
-            If two contacts sit on the same board, a <strong>Board</strong> connection is created
-            between them automatically.<br /><br />
-            Get a free key at{' '}
+            Looks up board directorships for contacts. If two contacts share a board,
+            a <strong>Board</strong> connection is created automatically.<br /><br />
+            <strong>How to get a free key:</strong><br />
+            1. Register at{' '}
             <a href="https://developer.company-information.service.gov.uk/" target="_blank" rel="noopener noreferrer">
               developer.company-information.service.gov.uk
-            </a>
-            {' '}(register → create an application → copy the key).
+            </a><br />
+            2. Once logged in, click <strong>"Manage REST API keys"</strong> (top menu)<br />
+            3. Click <strong>"Create a new key"</strong>, give it any name, copy the key<br />
+            <span style={{ color: '#f87171' }}>
+              ⚠ Do NOT use "My Applications" → that gives an OAuth Client ID which won't work here.
+            </span>
           </div>
           <div className="modal-form-group">
-            <label>API Key</label>
+            <label>REST API Key (UUID format)</label>
             <input type="password" id="chApiKeyInput" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" autoComplete="off" defaultValue={existingCH ? '••••••••••••••••' : ''} />
           </div>
-          <div style={{ fontSize: '12px', color: '#666', marginBottom: '8px' }}>{chStatus}</div>
+          <div style={{ fontSize: '12px', color: chStatus.startsWith('✅') ? '#4ade80' : chStatus.startsWith('❌') ? '#f87171' : '#888', marginBottom: '8px', lineHeight: '1.4' }}>{chStatus}</div>
           <div className="modal-buttons" style={{ marginBottom: 0 }}>
             <button type="button" className="btn btn-primary" style={{ width: 'auto' }} onClick={handleChSave}>Save</button>
+            <button type="button" className="btn btn-secondary" style={{ width: 'auto' }} onClick={handleChTest}>Test Key</button>
             <button type="button" className="btn btn-secondary" style={{ width: 'auto' }} onClick={handleChClear}>Clear</button>
           </div>
         </div>
