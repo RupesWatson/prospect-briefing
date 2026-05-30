@@ -1,0 +1,232 @@
+[
+  {
+    "name": "University of Warwick",
+    "tier": "One Tier Below",
+    "overallRank": 6,
+    "subjectRank": 1,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "95%",
+    "notes": "Leading econometrics programme with strong City recruitment pipeline."
+  },
+  {
+    "name": "University of Bath",
+    "tier": "One Tier Below",
+    "overallRank": 9,
+    "subjectRank": 2,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "92%",
+    "notes": "Integrated placement year; high graduate employment in financial services."
+  },
+  {
+    "name": "University of Bristol",
+    "tier": "Red Brick",
+    "overallRank": 8,
+    "subjectRank": 3,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "90%",
+    "notes": "Strong economic theory grounding; close links with finance industry employers."
+  },
+  {
+    "name": "University of Exeter",
+    "tier": "One Tier Below",
+    "overallRank": 28,
+    "subjectRank": 4,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "89%",
+    "notes": "Global economics specialism; strong research in environmental and behavioural economics."
+  },
+  {
+    "name": "University of Nottingham",
+    "tier": "Red Brick",
+    "overallRank": 28,
+    "subjectRank": 5,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "86%",
+    "notes": "International economics focus; exchange opportunities across three global campuses."
+  },
+  {
+    "name": "University of Manchester",
+    "tier": "Red Brick",
+    "overallRank": 19,
+    "subjectRank": 6,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "88%",
+    "notes": "Research-led economics with strong quantitative and policy-oriented modules."
+  },
+  {
+    "name": "University of Leeds",
+    "tier": "Red Brick",
+    "overallRank": 18,
+    "subjectRank": 7,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "85%",
+    "notes": "Broad economics curriculum with dedicated finance and investment pathways."
+  },
+  {
+    "name": "Lancaster University",
+    "tier": "One Tier Below",
+    "overallRank": 22,
+    "subjectRank": 8,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "83%",
+    "notes": "AACSB-accredited business school; strong placement record in financial services."
+  },
+  {
+    "name": "Loughborough University",
+    "tier": "One Tier Below",
+    "overallRank": 14,
+    "subjectRank": 9,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "85%",
+    "notes": "Applied economics emphasis; excellent graduate employment across business sectors."
+  },
+  {
+    "name": "University of Southampton",
+    "tier": "One Tier Below",
+    "overallRank": 16,
+    "subjectRank": 10,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "80%",
+    "notes": "Quantitative-heavy programme; links to Southampton Business School research centres."
+  },
+  {
+    "name": "University of Birmingham",
+    "tier": "Red Brick",
+    "overallRank": 20,
+    "subjectRank": 11,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "82%",
+    "notes": "Economics and finance joint honours popular; strong Midlands employer network."
+  },
+  {
+    "name": "University of Sheffield",
+    "tier": "Red Brick",
+    "overallRank": 17,
+    "subjectRank": 12,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "79%",
+    "notes": "Applied economics focus; good public sector and NGO graduate destinations."
+  },
+  {
+    "name": "University of York",
+    "tier": "One Tier Below",
+    "overallRank": 25,
+    "subjectRank": 13,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "81%",
+    "notes": "Strong economics department with research in health and public economics."
+  },
+  {
+    "name": "Cardiff University",
+    "tier": "Red Brick",
+    "overallRank": 30,
+    "subjectRank": 14,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "74%",
+    "notes": "Welsh economic policy expertise; growing links with Cardiff financial sector."
+  },
+  {
+    "name": "University of Liverpool",
+    "tier": "Red Brick",
+    "overallRank": 27,
+    "subjectRank": 15,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "76%",
+    "notes": "Management School accredited; strong international student cohort and network."
+  },
+  {
+    "name": "Newcastle University",
+    "tier": "Red Brick",
+    "overallRank": 34,
+    "subjectRank": 16,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "75%",
+    "notes": "Economics with placement year option; North East regional employer partnerships."
+  },
+  {
+    "name": "University of East Anglia",
+    "tier": "One Tier Below",
+    "overallRank": 32,
+    "subjectRank": 17,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "73%",
+    "notes": "Environmental and development economics strengths; research-active faculty."
+  },
+  {
+    "name": "Aston University",
+    "tier": "One Tier Below",
+    "overallRank": 36,
+    "subjectRank": 18,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "73%",
+    "notes": "Industry-focused economics; integrated placement year with Birmingham employers."
+  },
+  {
+    "name": "University of Sussex",
+    "tier": "One Tier Below",
+    "overallRank": 42,
+    "subjectRank": 19,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "71%",
+    "notes": "Progressive economics curriculum; strong international development research focus."
+  },
+  {
+    "name": "University of Reading",
+    "tier": "Red Brick",
+    "overallRank": 29,
+    "subjectRank": 20,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "74%",
+    "notes": "Henley Business School; ICMA Centre provides global finance industry exposure."
+  },
+  {
+    "name": "University of Leicester",
+    "tier": "Red Brick",
+    "overallRank": 35,
+    "subjectRank": 21,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "72%",
+    "notes": "Accessible entry; economics programme with flexible module choices."
+  },
+  {
+    "name": "University of Kent",
+    "tier": "One Tier Below",
+    "overallRank": 55,
+    "subjectRank": 22,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "67%",
+    "notes": "European economics focus; Brussels campus option for policy-oriented students."
+  },
+  {
+    "name": "University of Hull",
+    "tier": "Red Brick",
+    "overallRank": 71,
+    "subjectRank": 38,
+    "entryGrades": "BCC",
+    "typicalOffer": "BCC",
+    "gradProspects": "61%",
+    "notes": "Smaller economics cohort; accessible entry with regional employer connections."
+  }
+]

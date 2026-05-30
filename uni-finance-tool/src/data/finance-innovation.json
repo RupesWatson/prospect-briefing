@@ -1,0 +1,232 @@
+[
+  {
+    "name": "Loughborough University",
+    "tier": "One Tier Below",
+    "overallRank": 14,
+    "subjectRank": 1,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "88%",
+    "notes": "SETsquared partner; enterprise-focused finance with deep tech and startup links."
+  },
+  {
+    "name": "Aston University",
+    "tier": "One Tier Below",
+    "overallRank": 36,
+    "subjectRank": 2,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "76%",
+    "notes": "Aston Innovation Ecosystem; integrated placement with Birmingham enterprise network."
+  },
+  {
+    "name": "Lancaster University",
+    "tier": "One Tier Below",
+    "overallRank": 22,
+    "subjectRank": 3,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "84%",
+    "notes": "Lancaster University Management School; green finance and innovation specialisms."
+  },
+  {
+    "name": "University of Warwick",
+    "tier": "One Tier Below",
+    "overallRank": 6,
+    "subjectRank": 4,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "93%",
+    "notes": "Warwick Innovation District; fintech and enterprise finance with City outcomes."
+  },
+  {
+    "name": "University of Manchester",
+    "tier": "Red Brick",
+    "overallRank": 19,
+    "subjectRank": 5,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "89%",
+    "notes": "Manchester Innovation District links; strong startup ecosystem and VC connections."
+  },
+  {
+    "name": "University of Exeter",
+    "tier": "One Tier Below",
+    "overallRank": 28,
+    "subjectRank": 6,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "90%",
+    "notes": "Green finance and sustainability innovation specialism; excellent graduate outcomes."
+  },
+  {
+    "name": "University of Bath",
+    "tier": "One Tier Below",
+    "overallRank": 9,
+    "subjectRank": 7,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "91%",
+    "notes": "SETsquared member; placement year in innovation finance with leading tech firms."
+  },
+  {
+    "name": "University of Birmingham",
+    "tier": "Red Brick",
+    "overallRank": 20,
+    "subjectRank": 8,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "82%",
+    "notes": "West Midlands Innovation Corridor; finance and innovation with enterprise modules."
+  },
+  {
+    "name": "University of Leeds",
+    "tier": "Red Brick",
+    "overallRank": 18,
+    "subjectRank": 9,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "85%",
+    "notes": "Leeds Innovation District proximity; entrepreneurial finance with placement year."
+  },
+  {
+    "name": "University of Bristol",
+    "tier": "Red Brick",
+    "overallRank": 8,
+    "subjectRank": 10,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "92%",
+    "notes": "SETsquared Bristol hub; scale-up finance and deep tech investment modules."
+  },
+  {
+    "name": "University of Southampton",
+    "tier": "One Tier Below",
+    "overallRank": 16,
+    "subjectRank": 11,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "80%",
+    "notes": "SETsquared partner; innovation finance with AI and data science applications."
+  },
+  {
+    "name": "University of Nottingham",
+    "tier": "Red Brick",
+    "overallRank": 28,
+    "subjectRank": 12,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "84%",
+    "notes": "Nottingham Innovation Park; sustainable and impact finance specialism options."
+  },
+  {
+    "name": "University of York",
+    "tier": "One Tier Below",
+    "overallRank": 25,
+    "subjectRank": 13,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "80%",
+    "notes": "York Science Park enterprise links; finance innovation with digital economy focus."
+  },
+  {
+    "name": "University of Sheffield",
+    "tier": "Red Brick",
+    "overallRank": 17,
+    "subjectRank": 14,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "80%",
+    "notes": "Advanced Manufacturing Research Centre links; finance meets industrial innovation."
+  },
+  {
+    "name": "Cardiff University",
+    "tier": "Red Brick",
+    "overallRank": 30,
+    "subjectRank": 15,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "74%",
+    "notes": "Cardiff Capital Region innovation economy; green finance and impact investing focus."
+  },
+  {
+    "name": "Newcastle University",
+    "tier": "Red Brick",
+    "overallRank": 34,
+    "subjectRank": 16,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "76%",
+    "notes": "Newcastle Helix innovation quarter; finance and technology entrepreneurship modules."
+  },
+  {
+    "name": "University of East Anglia",
+    "tier": "One Tier Below",
+    "overallRank": 32,
+    "subjectRank": 17,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "74%",
+    "notes": "Norwich Research Park links; sustainable finance and social innovation modules."
+  },
+  {
+    "name": "University of Leicester",
+    "tier": "Red Brick",
+    "overallRank": 35,
+    "subjectRank": 18,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "72%",
+    "notes": "Accessible innovation finance entry; flexible modules with enterprise focus."
+  },
+  {
+    "name": "University of Liverpool",
+    "tier": "Red Brick",
+    "overallRank": 27,
+    "subjectRank": 19,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "77%",
+    "notes": "Liverpool Knowledge Quarter; innovation finance with digital economy modules."
+  },
+  {
+    "name": "University of Reading",
+    "tier": "Red Brick",
+    "overallRank": 29,
+    "subjectRank": 20,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "74%",
+    "notes": "Thames Valley innovation corridor; ICMA Centre fintech and regulatory innovation."
+  },
+  {
+    "name": "University of Sussex",
+    "tier": "One Tier Below",
+    "overallRank": 42,
+    "subjectRank": 21,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "71%",
+    "notes": "Brighton startup scene; social finance and impact innovation curriculum focus."
+  },
+  {
+    "name": "University of Kent",
+    "tier": "One Tier Below",
+    "overallRank": 55,
+    "subjectRank": 22,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "67%",
+    "notes": "European innovation networks; finance and entrepreneurship with Brussels access."
+  },
+  {
+    "name": "University of Hull",
+    "tier": "Red Brick",
+    "overallRank": 71,
+    "subjectRank": 30,
+    "entryGrades": "BCC",
+    "typicalOffer": "BCC",
+    "gradProspects": "63%",
+    "notes": "Humber Freeport innovation zone; accessible entry with regional enterprise links."
+  }
+]

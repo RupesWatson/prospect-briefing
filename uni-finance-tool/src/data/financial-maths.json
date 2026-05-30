@@ -1,0 +1,232 @@
+[
+  {
+    "name": "University of Bath",
+    "tier": "One Tier Below",
+    "overallRank": 9,
+    "subjectRank": 1,
+    "entryGrades": "AAA incl. A Maths",
+    "typicalOffer": "AAA incl. A Maths",
+    "gradProspects": "95%",
+    "notes": "IFoA actuarial exemptions; stochastic calculus and financial modelling core."
+  },
+  {
+    "name": "University of Warwick",
+    "tier": "One Tier Below",
+    "overallRank": 6,
+    "subjectRank": 2,
+    "entryGrades": "AAA incl. A Maths",
+    "typicalOffer": "AAA incl. A Maths",
+    "gradProspects": "97%",
+    "notes": "Top-5 UK maths department; leading quant finance and derivatives modelling programme."
+  },
+  {
+    "name": "University of Bristol",
+    "tier": "Red Brick",
+    "overallRank": 8,
+    "subjectRank": 3,
+    "entryGrades": "AAA incl. A Maths",
+    "typicalOffer": "AAA incl. A Maths",
+    "gradProspects": "94%",
+    "notes": "Rigorous probability theory; strong pipeline to quant hedge funds and investment banks."
+  },
+  {
+    "name": "University of Exeter",
+    "tier": "One Tier Below",
+    "overallRank": 28,
+    "subjectRank": 4,
+    "entryGrades": "AAA incl. A Maths",
+    "typicalOffer": "AAA incl. A Maths",
+    "gradProspects": "91%",
+    "notes": "Financial mathematics with climate risk modelling elective; IFoA progression route."
+  },
+  {
+    "name": "University of Southampton",
+    "tier": "One Tier Below",
+    "overallRank": 16,
+    "subjectRank": 5,
+    "entryGrades": "AAA incl. A Maths",
+    "typicalOffer": "AAA incl. A Maths",
+    "gradProspects": "88%",
+    "notes": "Actuarial science pathways; stochastic methods and statistical finance modules."
+  },
+  {
+    "name": "University of Manchester",
+    "tier": "Red Brick",
+    "overallRank": 19,
+    "subjectRank": 6,
+    "entryGrades": "AAA incl. A Maths",
+    "typicalOffer": "AAA incl. A Maths",
+    "gradProspects": "92%",
+    "notes": "IFoA-accredited actuarial programme; strong Manchester maths REF research power."
+  },
+  {
+    "name": "University of Leeds",
+    "tier": "Red Brick",
+    "overallRank": 18,
+    "subjectRank": 7,
+    "entryGrades": "AAA incl. A Maths",
+    "typicalOffer": "AAA incl. A Maths",
+    "gradProspects": "90%",
+    "notes": "Mathematical finance with computing electives; Leeds actuarial society active."
+  },
+  {
+    "name": "Lancaster University",
+    "tier": "One Tier Below",
+    "overallRank": 22,
+    "subjectRank": 8,
+    "entryGrades": "AAB incl. A Maths",
+    "typicalOffer": "AAB incl. A Maths",
+    "gradProspects": "87%",
+    "notes": "Actuarial science and financial maths pathways; IFoA exemptions available."
+  },
+  {
+    "name": "University of Sheffield",
+    "tier": "Red Brick",
+    "overallRank": 17,
+    "subjectRank": 9,
+    "entryGrades": "ABB incl. B Maths",
+    "typicalOffer": "ABB incl. B Maths",
+    "gradProspects": "83%",
+    "notes": "Financial mathematics with computing options; Sheffield maths ranked top-15 UK."
+  },
+  {
+    "name": "University of Nottingham",
+    "tier": "Red Brick",
+    "overallRank": 28,
+    "subjectRank": 10,
+    "entryGrades": "ABB incl. B Maths",
+    "typicalOffer": "ABB incl. B Maths",
+    "gradProspects": "84%",
+    "notes": "Nottingham BSc Financial Mathematics includes derivatives pricing and risk theory."
+  },
+  {
+    "name": "University of Birmingham",
+    "tier": "Red Brick",
+    "overallRank": 20,
+    "subjectRank": 11,
+    "entryGrades": "ABB incl. B Maths",
+    "typicalOffer": "ABB incl. B Maths",
+    "gradProspects": "85%",
+    "notes": "Joint School of Mathematics; financial modelling and actuarial exemption modules."
+  },
+  {
+    "name": "University of York",
+    "tier": "One Tier Below",
+    "overallRank": 25,
+    "subjectRank": 12,
+    "entryGrades": "AAB incl. A Maths",
+    "typicalOffer": "AAB incl. A Maths",
+    "gradProspects": "83%",
+    "notes": "Mathematical finance BSc; York maths department strong in statistics and probability."
+  },
+  {
+    "name": "Cardiff University",
+    "tier": "Red Brick",
+    "overallRank": 30,
+    "subjectRank": 13,
+    "entryGrades": "ABB incl. B Maths",
+    "typicalOffer": "ABB incl. B Maths",
+    "gradProspects": "76%",
+    "notes": "Cardiff maths school financial stream; actuarial and statistical finance options."
+  },
+  {
+    "name": "Newcastle University",
+    "tier": "Red Brick",
+    "overallRank": 34,
+    "subjectRank": 14,
+    "entryGrades": "ABB incl. B Maths",
+    "typicalOffer": "ABB incl. B Maths",
+    "gradProspects": "78%",
+    "notes": "Financial mathematics pathway; Newcastle maths ranked well for student satisfaction."
+  },
+  {
+    "name": "University of Liverpool",
+    "tier": "Red Brick",
+    "overallRank": 27,
+    "subjectRank": 15,
+    "entryGrades": "ABB incl. B Maths",
+    "typicalOffer": "ABB incl. B Maths",
+    "gradProspects": "79%",
+    "notes": "Mathematical sciences financial stream; IFoA examination preparation support."
+  },
+  {
+    "name": "Loughborough University",
+    "tier": "One Tier Below",
+    "overallRank": 14,
+    "subjectRank": 16,
+    "entryGrades": "ABB incl. B Maths",
+    "typicalOffer": "ABB incl. B Maths",
+    "gradProspects": "86%",
+    "notes": "Placement year integrated; financial mathematics with strong employability record."
+  },
+  {
+    "name": "University of Leicester",
+    "tier": "Red Brick",
+    "overallRank": 35,
+    "subjectRank": 17,
+    "entryGrades": "BBB incl. B Maths",
+    "typicalOffer": "BBB incl. B Maths",
+    "gradProspects": "74%",
+    "notes": "Financial mathematics BSc; accessible entry with actuarial study support available."
+  },
+  {
+    "name": "University of Reading",
+    "tier": "Red Brick",
+    "overallRank": 29,
+    "subjectRank": 18,
+    "entryGrades": "BBB incl. B Maths",
+    "typicalOffer": "BBB incl. B Maths",
+    "gradProspects": "76%",
+    "notes": "ICMA Centre collaboration; financial mathematics with fixed income modelling focus."
+  },
+  {
+    "name": "University of East Anglia",
+    "tier": "One Tier Below",
+    "overallRank": 32,
+    "subjectRank": 19,
+    "entryGrades": "BBB incl. B Maths",
+    "typicalOffer": "BBB incl. B Maths",
+    "gradProspects": "74%",
+    "notes": "Mathematical finance pathway; UEA maths known for probability research strength."
+  },
+  {
+    "name": "University of Sussex",
+    "tier": "One Tier Below",
+    "overallRank": 42,
+    "subjectRank": 20,
+    "entryGrades": "BBB incl. B Maths",
+    "typicalOffer": "BBB incl. B Maths",
+    "gradProspects": "73%",
+    "notes": "Financial mathematics with economics; proximity to London supports City placements."
+  },
+  {
+    "name": "University of Kent",
+    "tier": "One Tier Below",
+    "overallRank": 55,
+    "subjectRank": 21,
+    "entryGrades": "BBB incl. B Maths",
+    "typicalOffer": "BBB incl. B Maths",
+    "gradProspects": "69%",
+    "notes": "Actuarial science specialism; IFoA-recognised with good exemption track record."
+  },
+  {
+    "name": "Aston University",
+    "tier": "One Tier Below",
+    "overallRank": 36,
+    "subjectRank": null,
+    "entryGrades": "BCC",
+    "typicalOffer": "BCC",
+    "gradProspects": null,
+    "notes": "No dedicated financial maths degree; quantitative finance electives within Business School."
+  },
+  {
+    "name": "University of Hull",
+    "tier": "Red Brick",
+    "overallRank": 71,
+    "subjectRank": null,
+    "entryGrades": "BCC",
+    "typicalOffer": "BCC",
+    "gradProspects": null,
+    "notes": "No dedicated financial maths programme; mathematics modules within accounting degrees."
+  }
+]

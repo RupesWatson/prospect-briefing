@@ -2,16 +2,17 @@ import { useState } from 'react';
 import GradeBadge from './GradeBadge';
 import ExpandedRow from './ExpandedRow';
 
-const COLUMNS = [
-  { key: 'name',          label: 'University',         sortable: true  },
-  { key: 'tier',          label: 'Tier',               sortable: true  },
-  { key: 'overallRank',   label: 'UK Rank',            sortable: true  },
-  { key: 'afRank',        label: 'A&F Rank',           sortable: true  },
-  { key: 'bmRank',        label: 'BMS Rank',           sortable: true  },
-  { key: 'aLevelGrades',  label: 'Entry Grades',       sortable: true  },
-  { key: 'gradProspects', label: 'Grad Prospects',     sortable: true  },
-  { key: 'notes',         label: 'Highlights',         sortable: false },
-];
+function buildColumns(rankLabel) {
+  return [
+    { key: 'name',          label: 'University',     sortable: true  },
+    { key: 'tier',          label: 'Tier',           sortable: true  },
+    { key: 'overallRank',   label: 'UK Rank',        sortable: true  },
+    { key: 'subjectRank',   label: rankLabel,        sortable: true  },
+    { key: 'entryGrades',   label: 'Entry Grades',   sortable: true  },
+    { key: 'gradProspects', label: 'Grad Prospects', sortable: true  },
+    { key: 'notes',         label: 'Highlights',     sortable: false },
+  ];
+}
 
 function SortIcon({ direction }) {
   if (!direction) return <span className="ml-1 text-slate-600">↕</span>;
@@ -31,9 +32,9 @@ function gradeOrder(g) {
 
 function compareValues(a, b, key, dir) {
   let va = a[key], vb = b[key];
-  if (key === 'afRank' || key === 'bmRank' || key === 'overallRank') {
+  if (['subjectRank', 'overallRank'].includes(key)) {
     va = rankVal(va); vb = rankVal(vb);
-  } else if (key === 'aLevelGrades') {
+  } else if (key === 'entryGrades') {
     va = gradeOrder(va); vb = gradeOrder(vb);
   } else if (key === 'gradProspects') {
     va = parseInt(va) || 0; vb = parseInt(vb) || 0;
@@ -45,13 +46,15 @@ function compareValues(a, b, key, dir) {
   return 0;
 }
 
-export default function Table({ universities }) {
-  const [sortKey, setSortKey] = useState('overallRank');
+export default function Table({ universities, course }) {
+  const [sortKey, setSortKey] = useState('subjectRank');
   const [sortDir, setSortDir] = useState('asc');
   const [expanded, setExpanded] = useState(null);
 
+  const columns = buildColumns(course?.rankLabel || 'Subject Rank');
+
   function handleSort(key) {
-    if (!COLUMNS.find(c => c.key === key)?.sortable) return;
+    if (!columns.find(c => c.key === key)?.sortable) return;
     if (sortKey === key) {
       setSortDir(d => d === 'asc' ? 'desc' : 'asc');
     } else {
@@ -79,7 +82,7 @@ export default function Table({ universities }) {
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-[#0a1f3a] border-b border-blue-900/50">
-              {COLUMNS.map(col => (
+              {columns.map(col => (
                 <th
                   key={col.key}
                   onClick={() => handleSort(col.key)}
@@ -101,14 +104,11 @@ export default function Table({ universities }) {
                   onClick={() => setExpanded(isExpanded ? null : uni.name)}
                   className={`table-row-hover border-b border-blue-900/20 transition-colors ${idx % 2 === 0 ? 'bg-[#050e1f]' : 'bg-[#07152a]'} ${isExpanded ? 'bg-blue-950/30' : ''}`}
                 >
-                  <td className="px-4 py-3 font-medium text-slate-100 whitespace-nowrap">
-                    {uni.name}
-                  </td>
+                  <td className="px-4 py-3 font-medium text-slate-100 whitespace-nowrap">{uni.name}</td>
                   <td className="px-4 py-3">{tierBadge(uni.tier)}</td>
                   <td className="px-4 py-3 text-center">{rankCell(uni.overallRank)}</td>
-                  <td className="px-4 py-3 text-center">{rankCell(uni.afRank)}</td>
-                  <td className="px-4 py-3 text-center">{rankCell(uni.bmRank)}</td>
-                  <td className="px-4 py-3"><GradeBadge grade={uni.aLevelGrades} /></td>
+                  <td className="px-4 py-3 text-center">{rankCell(uni.subjectRank)}</td>
+                  <td className="px-4 py-3"><GradeBadge grade={uni.entryGrades} /></td>
                   <td className="px-4 py-3 text-center">
                     <span className="font-semibold text-blue-200">{uni.gradProspects}</span>
                   </td>
@@ -118,13 +118,13 @@ export default function Table({ universities }) {
                   </td>
                 </tr>,
                 isExpanded && (
-                  <ExpandedRow key={`${uni.name}-expanded`} university={uni} colSpan={COLUMNS.length + 1} />
-                )
+                  <ExpandedRow key={`${uni.name}-expanded`} university={uni} course={course} colSpan={columns.length + 1} />
+                ),
               ];
             })}
             {sorted.length === 0 && (
               <tr>
-                <td colSpan={COLUMNS.length + 1} className="px-4 py-12 text-center text-slate-500">
+                <td colSpan={columns.length + 1} className="px-4 py-12 text-center text-slate-500">
                   No universities match your filters.
                 </td>
               </tr>

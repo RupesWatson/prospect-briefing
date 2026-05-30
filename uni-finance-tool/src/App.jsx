@@ -1,20 +1,30 @@
 import { useState, useMemo } from 'react';
-import universities from './data/universities.json';
+import { COURSES } from './data/courses';
 import StatsBar from './components/StatsBar';
 import Filters from './components/Filters';
+import CourseTabs from './components/CourseTabs';
 import Table from './components/Table';
 
 export default function App() {
   const [search, setSearch] = useState('');
   const [tier, setTier] = useState('All');
+  const [courseId, setCourseId] = useState(COURSES[0].id);
+
+  const course = COURSES.find(c => c.id === courseId) || COURSES[0];
 
   const filtered = useMemo(() => {
-    return universities.filter(u => {
+    return course.data.filter(u => {
       const matchSearch = u.name.toLowerCase().includes(search.toLowerCase());
       const matchTier = tier === 'All' || u.tier === tier;
       return matchSearch && matchTier;
     });
-  }, [search, tier]);
+  }, [course, search, tier]);
+
+  function handleCourseChange(id) {
+    setCourseId(id);
+    setSearch('');
+    setTier('All');
+  }
 
   return (
     <div className="min-h-screen" style={{ background: 'linear-gradient(180deg, #050e1f 0%, #061428 100%)' }}>
@@ -33,18 +43,19 @@ export default function App() {
             </span>
           </h1>
           <p className="text-center text-slate-400 text-sm max-w-xl mx-auto">
-            Compare Accounting &amp; Finance and Business Management degree courses across Red Brick universities
-            and the tier immediately below — ranked by the Complete University Guide 2026.
+            Compare finance and business degree courses across Red Brick universities and the tier immediately below.
+            Select a subject area to explore rankings, entry requirements, and graduate outcomes.
           </p>
         </header>
 
-        <StatsBar universities={filtered} />
+        <CourseTabs selectedId={courseId} onChange={handleCourseChange} />
+        <StatsBar universities={filtered} course={course} />
         <Filters search={search} setSearch={setSearch} tier={tier} setTier={setTier} />
-        <Table universities={filtered} />
+        <Table universities={filtered} course={course} />
 
         <footer className="mt-10 text-center text-xs text-slate-600">
-          Data sourced from the Complete University Guide 2026, Times Good University Guide 2026, and UCAS.
-          Rankings and entry requirements are indicative — always check individual university pages.
+          Accounting &amp; Finance ranks from the Complete University Guide 2026. All other course ranks are indicative based on
+          programme availability and research standing. Always verify entry requirements on individual university pages.
         </footer>
       </div>
     </div>

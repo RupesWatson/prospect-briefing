@@ -1,0 +1,232 @@
+[
+  {
+    "name": "University of Warwick",
+    "tier": "One Tier Below",
+    "overallRank": 6,
+    "subjectRank": 1,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "94%",
+    "notes": "WBS fintech lab; blockchain and digital assets modules with industry partners."
+  },
+  {
+    "name": "University of Manchester",
+    "tier": "Red Brick",
+    "overallRank": 19,
+    "subjectRank": 2,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "91%",
+    "notes": "Manchester Digital hub access; fintech modules covering open banking regulation."
+  },
+  {
+    "name": "University of Leeds",
+    "tier": "Red Brick",
+    "overallRank": 18,
+    "subjectRank": 3,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "88%",
+    "notes": "Leeds fintech cluster links; digital payments and RegTech curriculum focus."
+  },
+  {
+    "name": "University of Exeter",
+    "tier": "One Tier Below",
+    "overallRank": 28,
+    "subjectRank": 4,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "92%",
+    "notes": "Exeter fintech and green finance integration; strong graduate employment rate."
+  },
+  {
+    "name": "Lancaster University",
+    "tier": "One Tier Below",
+    "overallRank": 22,
+    "subjectRank": 5,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "85%",
+    "notes": "LUMS fintech research centre; AI in finance and digital payment systems."
+  },
+  {
+    "name": "University of Birmingham",
+    "tier": "Red Brick",
+    "overallRank": 20,
+    "subjectRank": 6,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "84%",
+    "notes": "Fintech and financial innovation; Bloomberg terminal access in trading suite."
+  },
+  {
+    "name": "Loughborough University",
+    "tier": "One Tier Below",
+    "overallRank": 14,
+    "subjectRank": 7,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "88%",
+    "notes": "Engineering-finance crossover; fintech projects with placement year standard."
+  },
+  {
+    "name": "University of Southampton",
+    "tier": "One Tier Below",
+    "overallRank": 16,
+    "subjectRank": 8,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "81%",
+    "notes": "Cyber security and fintech convergence; Southampton science park industry links."
+  },
+  {
+    "name": "University of Bath",
+    "tier": "One Tier Below",
+    "overallRank": 9,
+    "subjectRank": 9,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "90%",
+    "notes": "Bath fintech and data analytics pathway; placement year at fintech firms."
+  },
+  {
+    "name": "University of Bristol",
+    "tier": "Red Brick",
+    "overallRank": 8,
+    "subjectRank": 10,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "93%",
+    "notes": "Bristol's Temple Quarter fintech hub; distributed ledger technology modules."
+  },
+  {
+    "name": "Aston University",
+    "tier": "One Tier Below",
+    "overallRank": 36,
+    "subjectRank": 11,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "76%",
+    "notes": "Aston Fintech Innovation Centre; SME digital finance and open banking focus."
+  },
+  {
+    "name": "University of Nottingham",
+    "tier": "Red Brick",
+    "overallRank": 28,
+    "subjectRank": 12,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "84%",
+    "notes": "Nottingham fintech module suite; cryptocurrency and DeFi elective options."
+  },
+  {
+    "name": "University of Sheffield",
+    "tier": "Red Brick",
+    "overallRank": 17,
+    "subjectRank": 13,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "79%",
+    "notes": "Advanced Digital Institute links; fintech and data science combined pathways."
+  },
+  {
+    "name": "University of York",
+    "tier": "One Tier Below",
+    "overallRank": 25,
+    "subjectRank": 14,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "80%",
+    "notes": "York science park tech-finance crossover; cybersecurity elective in fintech track."
+  },
+  {
+    "name": "Cardiff University",
+    "tier": "Red Brick",
+    "overallRank": 30,
+    "subjectRank": 15,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "74%",
+    "notes": "Cardiff Capital Region fintech initiatives; digital finance regulation modules."
+  },
+  {
+    "name": "Newcastle University",
+    "tier": "Red Brick",
+    "overallRank": 34,
+    "subjectRank": 16,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "77%",
+    "notes": "Newcastle fintech cluster; North East digital economy employer partnerships."
+  },
+  {
+    "name": "University of East Anglia",
+    "tier": "One Tier Below",
+    "overallRank": 32,
+    "subjectRank": 17,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "75%",
+    "notes": "UEA fintech and sustainable finance; agri-fintech elective module unique offering."
+  },
+  {
+    "name": "University of Sussex",
+    "tier": "One Tier Below",
+    "overallRank": 42,
+    "subjectRank": 18,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "72%",
+    "notes": "Brighton fintech ecosystem access; digital innovation and impact investing focus."
+  },
+  {
+    "name": "University of Leicester",
+    "tier": "Red Brick",
+    "overallRank": 35,
+    "subjectRank": 19,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "72%",
+    "notes": "Fintech elective modules within finance degrees; flexible year abroad option."
+  },
+  {
+    "name": "University of Reading",
+    "tier": "Red Brick",
+    "overallRank": 29,
+    "subjectRank": 20,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "75%",
+    "notes": "Henley Business School fintech track; ICMA Centre digital finance workshops."
+  },
+  {
+    "name": "University of Kent",
+    "tier": "One Tier Below",
+    "overallRank": 55,
+    "subjectRank": 21,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "68%",
+    "notes": "Kent fintech modules; proximity to London supports City internship access."
+  },
+  {
+    "name": "University of Liverpool",
+    "tier": "Red Brick",
+    "overallRank": 27,
+    "subjectRank": 22,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "76%",
+    "notes": "Liverpool fintech electives; Management School AACSB links to finance sector."
+  },
+  {
+    "name": "University of Hull",
+    "tier": "Red Brick",
+    "overallRank": 71,
+    "subjectRank": null,
+    "entryGrades": "BCC",
+    "typicalOffer": "BCC",
+    "gradProspects": null,
+    "notes": "No dedicated fintech programme; fintech topics available as finance electives."
+  }
+]

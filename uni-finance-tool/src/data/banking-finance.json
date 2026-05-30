@@ -1,0 +1,232 @@
+[
+  {
+    "name": "University of Manchester",
+    "tier": "Red Brick",
+    "overallRank": 19,
+    "subjectRank": 1,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "88%",
+    "notes": "Alliance MBS; strong investment banking recruitment and CFA Society links."
+  },
+  {
+    "name": "University of Reading",
+    "tier": "Red Brick",
+    "overallRank": 29,
+    "subjectRank": 2,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "76%",
+    "notes": "Henley ICMA Centre; leading fixed income, Islamic banking and regulation focus."
+  },
+  {
+    "name": "University of Birmingham",
+    "tier": "Red Brick",
+    "overallRank": 20,
+    "subjectRank": 3,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "84%",
+    "notes": "ACCA and CISI accreditation; Bloomberg terminals and industry guest lectures."
+  },
+  {
+    "name": "University of Leeds",
+    "tier": "Red Brick",
+    "overallRank": 18,
+    "subjectRank": 4,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "87%",
+    "notes": "CFA partnership programme; strong graduate destinations in investment banking."
+  },
+  {
+    "name": "University of Warwick",
+    "tier": "One Tier Below",
+    "overallRank": 6,
+    "subjectRank": 5,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "93%",
+    "notes": "Finance specialism with high City placement rates; CISI-affiliated programme."
+  },
+  {
+    "name": "University of Exeter",
+    "tier": "One Tier Below",
+    "overallRank": 28,
+    "subjectRank": 6,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "89%",
+    "notes": "Xfi Centre for Finance and Investment; strong banking research and placements."
+  },
+  {
+    "name": "University of Nottingham",
+    "tier": "Red Brick",
+    "overallRank": 28,
+    "subjectRank": 7,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "85%",
+    "notes": "Global banking modules; three-campus network supports international career paths."
+  },
+  {
+    "name": "Lancaster University",
+    "tier": "One Tier Below",
+    "overallRank": 22,
+    "subjectRank": 8,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "84%",
+    "notes": "AACSB-accredited; banking and finance with strong industry placement record."
+  },
+  {
+    "name": "University of Bath",
+    "tier": "One Tier Below",
+    "overallRank": 9,
+    "subjectRank": 9,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "92%",
+    "notes": "Mandatory placement year; top-tier graduate outcomes in banking and asset management."
+  },
+  {
+    "name": "Cardiff University",
+    "tier": "Red Brick",
+    "overallRank": 30,
+    "subjectRank": 10,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "75%",
+    "notes": "Islamic banking specialism; strong ties with Cardiff financial district employers."
+  },
+  {
+    "name": "University of Southampton",
+    "tier": "One Tier Below",
+    "overallRank": 16,
+    "subjectRank": 11,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "80%",
+    "notes": "Banking and finance with quantitative emphasis; Southampton Business School links."
+  },
+  {
+    "name": "University of Liverpool",
+    "tier": "Red Brick",
+    "overallRank": 27,
+    "subjectRank": 12,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "78%",
+    "notes": "Management School accredited; banking modules with international finance focus."
+  },
+  {
+    "name": "University of Sheffield",
+    "tier": "Red Brick",
+    "overallRank": 17,
+    "subjectRank": 13,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "80%",
+    "notes": "Banking and finance with applied economics; Sheffield employer network access."
+  },
+  {
+    "name": "University of Bristol",
+    "tier": "Red Brick",
+    "overallRank": 8,
+    "subjectRank": 14,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA",
+    "gradProspects": "91%",
+    "notes": "Research-led banking finance; strong City links and graduate recruitment outcomes."
+  },
+  {
+    "name": "Newcastle University",
+    "tier": "Red Brick",
+    "overallRank": 34,
+    "subjectRank": 15,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "77%",
+    "notes": "Banking and finance with placement year; North East regional banking partnerships."
+  },
+  {
+    "name": "Loughborough University",
+    "tier": "One Tier Below",
+    "overallRank": 14,
+    "subjectRank": 16,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "87%",
+    "notes": "Excellent placement year outcomes; banking focus with strong employer connections."
+  },
+  {
+    "name": "University of York",
+    "tier": "One Tier Below",
+    "overallRank": 25,
+    "subjectRank": 17,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB",
+    "gradProspects": "79%",
+    "notes": "Banking and finance with public policy elements; York financial sector links."
+  },
+  {
+    "name": "University of Leicester",
+    "tier": "Red Brick",
+    "overallRank": 35,
+    "subjectRank": 18,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "73%",
+    "notes": "Accessible banking and finance entry; flexible module structure and ACCA links."
+  },
+  {
+    "name": "University of East Anglia",
+    "tier": "One Tier Below",
+    "overallRank": 32,
+    "subjectRank": 19,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "75%",
+    "notes": "Banking modules with development finance focus; research-active faculty."
+  },
+  {
+    "name": "Aston University",
+    "tier": "One Tier Below",
+    "overallRank": 36,
+    "subjectRank": 20,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB",
+    "gradProspects": "76%",
+    "notes": "Industry-focused banking degree; integrated placement with Midlands finance firms."
+  },
+  {
+    "name": "University of Sussex",
+    "tier": "One Tier Below",
+    "overallRank": 42,
+    "subjectRank": 21,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "72%",
+    "notes": "Banking and finance with international economics perspective; Brighton location."
+  },
+  {
+    "name": "University of Kent",
+    "tier": "One Tier Below",
+    "overallRank": 55,
+    "subjectRank": 22,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB",
+    "gradProspects": "68%",
+    "notes": "European banking focus; Brussels campus option for EU financial sector careers."
+  },
+  {
+    "name": "University of Hull",
+    "tier": "Red Brick",
+    "overallRank": 71,
+    "subjectRank": 32,
+    "entryGrades": "BCC",
+    "typicalOffer": "BCC",
+    "gradProspects": "64%",
+    "notes": "Smaller cohort with accessible entry; regional banking and finance employer links."
+  }
+]

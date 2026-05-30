@@ -1,17 +1,22 @@
 import GradeBadge from './GradeBadge';
 
-export default function ExpandedRow({ university, colSpan }) {
+export default function ExpandedRow({ university, course, colSpan }) {
+  const rankLabel = course?.rankLabel || 'Subject Rank';
+  const entryGrades = university.entryGrades || university.aLevelGrades;
+
   const fields = [
     { label: 'Typical Offer', value: university.typicalOffer },
     {
-      label: 'A&F Subject Rank',
-      value: university.afRank != null ? `#${university.afRank} nationally (CUG 2026)` : 'Not ranked / n/a',
+      label: rankLabel,
+      value: university.subjectRank != null
+        ? `#${university.subjectRank} nationally (indicative 2026)`
+        : 'Not ranked / programme not offered',
     },
-    {
+    ...(university.bmRank != null ? [{
       label: 'BMS Subject Rank',
-      value: university.bmRank != null ? `#${university.bmRank} nationally (CUG 2026)` : 'Not ranked / n/a',
-    },
-    { label: 'Graduate Prospects', value: university.gradProspects + ' in graduate-level employment' },
+      value: `#${university.bmRank} nationally (CUG 2026)`,
+    }] : []),
+    { label: 'Graduate Prospects', value: `${university.gradProspects} in graduate-level employment` },
     { label: 'Key Highlights', value: university.notes },
   ];
 
@@ -28,7 +33,7 @@ export default function ExpandedRow({ university, colSpan }) {
             ))}
             <div className="space-y-1">
               <div className="text-[10px] uppercase tracking-widest font-semibold text-blue-400/60">Entry Grade</div>
-              <GradeBadge grade={university.aLevelGrades} />
+              <GradeBadge grade={entryGrades} />
             </div>
           </div>
         </div>
