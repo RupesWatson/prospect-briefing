@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -L \"https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.min.js\" -o \"C:\\\\Users\\\\rwatk\\\\Claude Code Projects\\\\prospect-network\\\\lib\\\\xlsx.min.js\")",
+      "Bash(curl -L \"https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.min.js\" -o \"C:\\\\Users\\\\rwatk\\\\Claude Code Projects\\\\prospect-network\\\\lib\\\\xlsx.min.js\" --max-time 30)",
+      "PowerShell(Invoke-WebRequest -Uri \"https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js\" -OutFile \"C:\\\\Users\\\\rwatk\\\\Claude Code Projects\\\\prospect-network\\\\lib\\\\xlsx.min.js\" -UseBasicParsing; \\(Get-Item \"C:\\\\Users\\\\rwatk\\\\Claude Code Projects\\\\prospect-network\\\\lib\\\\xlsx.min.js\"\\).Length)",
+      "Bash(python -c ' *)",
+      "Bash(del \"C:\\\\Users\\\\rwatk\\\\Claude Code Projects\\\\seed_data.json\")",
+      "Bash(gh auth *)",
+      "Bash(where git *)",
+      "Bash(where gh *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" -X POST https://api.github.com/user/repos -H \"Authorization: token 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\" -H \"Accept: application/vnd.github+json\" -d \"{\\\\\"name\\\\\":\\\\\"prospect-briefing\\\\\",\\\\\"description\\\\\":\\\\\"Private bank prospect briefing builder — single-file HTML tool using Claude API with web search\\\\\",\\\\\"private\\\\\":false,\\\\\"auto_init\\\\\":false}\")",
+      "Bash(git init *)",
+      "Bash(git config *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git branch *)",
+      "Bash(gh api *)",
+      "Bash(git --version)",
+      "Bash(npm --version)",
+      "PowerShell(node --version)",
+      "PowerShell(npm --version)",
+      "PowerShell(npx --version)",
+      "PowerShell($env:PATH -split ';' | Where-Object { $_ -match 'node|npm|nvm' })",
+      "PowerShell(Get-ChildItem \"C:\\\\Program Files\\\\nodejs\" -ErrorAction SilentlyContinue | Select-Object Name; Get-ChildItem \"$env:APPDATA\\\\npm\" -ErrorAction SilentlyContinue | Select-Object Name -First 5; Get-ChildItem \"$env:ProgramFiles\\\\nodejs\" -ErrorAction SilentlyContinue | Select-Object Name -First 3; Test-Path \"C:\\\\nvm\\\\nodejs\\\\node.exe\")",
+      "Bash(gh repo *)",
+      "PowerShell(gh repo view RupesWatson/referral-network-mapper 2>&1)"
+    ]
+  }
+}
