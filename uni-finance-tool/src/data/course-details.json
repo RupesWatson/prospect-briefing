@@ -1,1 +1,1493 @@
-{}
+{
+  "af": {
+    "id": "af",
+    "title": "Accounting & Finance",
+    "duration": "3 years / 4 years (with placement) / 4 years (integrated Masters)",
+    "overview": "Accounting & Finance is one of the most established and highly regarded business degrees, combining the rigorous measurement and reporting of financial information with broader analysis of capital markets and corporate decision-making. You will learn how organisations record, present and interpret financial data, and how financial markets price risk and allocate capital. The degree suits students who enjoy working with numbers, want a clear professional qualification pathway, and are drawn to a career in practice, industry or investment. Its strength lies in giving graduates a dual skillset — technical accounting competence alongside financial analysis — that is valued across virtually every sector.",
+    "yearByYear": [
+      {
+        "year": 1,
+        "focus": "Foundations",
+        "modules": [
+          "Financial Accounting Fundamentals",
+          "Introduction to Management Accounting",
+          "Quantitative Methods for Finance",
+          "Economics for Business",
+          "Business Law & Ethics"
+        ]
+      },
+      {
+        "year": 2,
+        "focus": "Core specialisation",
+        "modules": [
+          "Intermediate Financial Reporting (IFRS)",
+          "Corporate Finance",
+          "Auditing & Assurance",
+          "Taxation (UK)",
+          "Financial Statement Analysis"
+        ]
+      },
+      {
+        "year": 3,
+        "focus": "Advanced & dissertation",
+        "modules": [
+          "Advanced Financial Reporting",
+          "Strategic Management Accounting",
+          "Investment Analysis & Portfolio Management",
+          "Dissertation/Final Project"
+        ]
+      }
+    ],
+    "skills": [
+      "Preparation and interpretation of financial statements under IFRS and UK GAAP",
+      "Cost analysis, budgeting and management control",
+      "Corporate valuation and investment appraisal",
+      "Critical evaluation of audit evidence and internal controls",
+      "Data-driven financial modelling in Excel and specialist software"
+    ],
+    "professionalBodies": [
+      {
+        "name": "ICAEW (Institute of Chartered Accountants in England & Wales)",
+        "benefit": "Accredited degrees typically provide exemptions from up to 6 of the 15 ACA professional examinations, significantly shortening the route to Chartered Accountant status"
+      },
+      {
+        "name": "ACCA (Association of Chartered Certified Accountants)",
+        "benefit": "Graduates from accredited programmes are normally exempt from all 9 Applied Knowledge and Applied Skills exams, leaving only the 3 Strategic Professional papers to complete"
+      },
+      {
+        "name": "CIMA (Chartered Institute of Management Accountants)",
+        "benefit": "Accredited programmes offer exemptions from the Certificate Level and most Operational Level papers, accelerating the route to CGMA designation"
+      },
+      {
+        "name": "CIPFA (Chartered Institute of Public Finance & Accountancy)",
+        "benefit": "Exemptions available for public-sector-focused elective modules; particularly relevant for students targeting local government or NHS finance roles"
+      }
+    ],
+    "careers": [
+      {
+        "role": "Chartered Accountant (Practice — Audit/Advisory)",
+        "salary": "£28,000–£35,000 starting / £50,000–£75,000 at 5 years",
+        "demand": "Very High"
+      },
+      {
+        "role": "Management Accountant / Financial Controller",
+        "salary": "£26,000–£32,000 starting / £45,000–£65,000 at 5 years",
+        "demand": "Very High"
+      },
+      {
+        "role": "Corporate Finance Analyst",
+        "salary": "£35,000–£50,000 starting / £60,000–£90,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Treasury Analyst",
+        "salary": "£28,000–£38,000 starting / £50,000–£70,000 at 5 years",
+        "demand": "High"
+      }
+    ],
+    "topEmployers": ["PwC", "Deloitte", "KPMG", "EY", "Grant Thornton", "BDO"],
+    "employerPerspective": "The Big Four and mid-tier accounting firms recruit heavily from Accounting & Finance graduates, valuing the combination of technical accounting knowledge and commercial awareness. Employers in industry — from FTSE 100 finance functions to tech companies — prize the analytical rigour and practical grounding in financial reporting. Graduates are seen as 'exam-ready' for professional qualifications, reducing training costs and allowing faster progression to high-responsibility roles.",
+    "entryRequirements": "Typical offer: AAB–ABB at A-level; Mathematics at grade B or above strongly preferred (required at many universities). GCSE: English and Maths at grade 5/C or above typically required. Contextual offers may be one to two grades lower. Some universities accept Business or Economics A-level as a mathematics substitute for applicants with strong quantitative GCSE results.",
+    "furtherStudy": "MSc Accounting & Finance, MSc Financial Management, or MSc Finance at a range of UK and international universities. Professional routes include ACA (ICAEW), ACCA, CIMA and CIPFA. High performers may pursue a PhD in Accounting for an academic career. The CFA Charter is a popular add-on for those moving toward investment analysis.",
+    "isItForYou": [
+      "Study this if you enjoy working methodically with numbers, want a clear professional qualification pathway, and like the idea of understanding how organisations really work financially",
+      "Study this if you want maximum flexibility — accounting skills transfer across every sector from banking to healthcare to creative industries",
+      "Think twice if you find detailed rule-following tedious or if you are primarily drawn to entrepreneurship and innovation; a broader Business or Finance degree might suit you better"
+    ]
+  },
+
+  "econFin": {
+    "id": "econFin",
+    "title": "Economics & Finance",
+    "duration": "3 years / 4 years (with placement) / 4 years (integrated Masters)",
+    "overview": "Economics & Finance combines the analytical power of economic theory — understanding how markets, governments and individuals make decisions — with the technical tools of financial analysis. You will study microeconomics, macroeconomics and econometrics alongside corporate finance, asset pricing and portfolio management, developing a sophisticated understanding of how the global economy and financial system interact. This degree particularly suits students who are curious about the 'big picture' — why interest rates move, what drives inequality, how monetary policy shapes recessions — while also wanting the quantitative and financial skillset demanded by competitive employers. It is one of the most intellectually demanding and highly regarded degrees for entry into investment banking, central banking, policy and financial research.",
+    "yearByYear": [
+      {
+        "year": 1,
+        "focus": "Foundations",
+        "modules": [
+          "Principles of Microeconomics",
+          "Principles of Macroeconomics",
+          "Mathematics for Economics & Finance",
+          "Statistics & Probability",
+          "Introduction to Financial Markets"
+        ]
+      },
+      {
+        "year": 2,
+        "focus": "Core specialisation",
+        "modules": [
+          "Intermediate Microeconomics",
+          "Intermediate Macroeconomics",
+          "Econometrics",
+          "Corporate Finance",
+          "Asset Pricing & Investments"
+        ]
+      },
+      {
+        "year": 3,
+        "focus": "Advanced & dissertation",
+        "modules": [
+          "Advanced Macroeconomics / International Economics",
+          "Financial Derivatives & Risk Management",
+          "Applied Econometrics / Empirical Finance",
+          "Dissertation/Final Project"
+        ]
+      }
+    ],
+    "skills": [
+      "Economic modelling and formal reasoning using calculus and game theory",
+      "Econometric analysis using Stata, R or Python to test financial and economic hypotheses",
+      "Interpretation of macroeconomic data and central bank policy",
+      "Valuation of equities, bonds and derivative instruments",
+      "Critical evaluation of economic research and policy proposals"
+    ],
+    "professionalBodies": [
+      {
+        "name": "CFA Institute",
+        "benefit": "Strong quantitative and investment content means graduates are well prepared for CFA Level 1; some universities are CFA University Affiliates, providing free or subsidised exam registration"
+      },
+      {
+        "name": "ACCA (Association of Chartered Certified Accountants)",
+        "benefit": "Some modules may provide partial exemptions from ACCA Applied Knowledge papers, depending on the specific programme accreditation"
+      },
+      {
+        "name": "Royal Economic Society / Society of Professional Economists",
+        "benefit": "Graduate membership supports networking and access to the professional economics community, particularly useful for policy or central banking careers"
+      }
+    ],
+    "careers": [
+      {
+        "role": "Investment Banking Analyst",
+        "salary": "£45,000–£60,000 starting (plus bonus) / £80,000–£130,000 at 5 years",
+        "demand": "Very High"
+      },
+      {
+        "role": "Economist (Bank of England / Government / Consultancy)",
+        "salary": "£30,000–£42,000 starting / £55,000–£80,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Equity Research Analyst",
+        "salary": "£35,000–£50,000 starting / £65,000–£100,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Economic Consultant (Competition / Regulatory)",
+        "salary": "£32,000–£45,000 starting / £60,000–£90,000 at 5 years",
+        "demand": "Growing"
+      }
+    ],
+    "topEmployers": ["Goldman Sachs", "Morgan Stanley", "Bank of England", "HM Treasury", "Analysis Group", "Frontier Economics"],
+    "employerPerspective": "Economics & Finance graduates are among the most sought-after by investment banks, asset managers and economic consultancies because the degree signals strong analytical and quantitative ability alongside real-world financial intuition. Goldman Sachs, Morgan Stanley and similar firms view the combination as ideal for analyst programmes. The Bank of England and HM Treasury specifically recruit economics graduates for their Research and Analysis functions, valuing the ability to think rigorously about policy trade-offs.",
+    "entryRequirements": "Typical offer: AAA–AAB at A-level; Mathematics at A or A* is required or very strongly preferred at most universities (especially Russell Group). GCSE: English and Maths at grade 6 or above. Some programmes also look for Further Mathematics at A-level for the most quantitative tracks. Contextual offers are typically one grade lower. Economics A-level is welcomed but rarely required.",
+    "furtherStudy": "MSc Economics, MSc Finance, MSc Financial Economics. The CFA Charter is widely pursued by those entering asset management or equity research. Top students may progress to MPhil/PhD Economics at research-intensive universities. Policy-focused graduates often pursue MSc Public Policy or MSc Development Economics.",
+    "isItForYou": [
+      "Study this if you are genuinely curious about how economies and markets work and enjoy mathematical rigour alongside real-world application",
+      "Study this if you want one of the strongest possible platforms for investment banking, central banking, economic consultancy or academic research",
+      "Think twice if you want a more practical, skills-focused degree with strong professional qualification pathways; a dedicated Accounting & Finance or straight Finance degree may serve you better"
+    ]
+  },
+
+  "fintech": {
+    "id": "fintech",
+    "title": "Finance & FinTech",
+    "duration": "3 years / 4 years (with placement) / 4 years (integrated Masters)",
+    "overview": "Finance & FinTech sits at the intersection of traditional financial theory and the rapidly evolving world of financial technology, covering everything from digital payments and blockchain to algorithmic trading and open banking. You will build a solid foundation in corporate finance and investment alongside specialist modules in coding, data analysis, cryptocurrency, regulatory technology (RegTech) and digital business models. This degree is well suited to students who are fascinated by how technology is reshaping financial services — from neobanks and peer-to-peer lending to AI-driven credit scoring — and who want to be builders and innovators within that space rather than passive observers. Graduates are highly attractive to both traditional financial institutions building their digital capabilities and fast-growing FinTech startups.",
+    "yearByYear": [
+      {
+        "year": 1,
+        "focus": "Foundations",
+        "modules": [
+          "Foundations of Finance",
+          "Introduction to FinTech & Digital Financial Services",
+          "Programming for Finance (Python)",
+          "Financial Markets & Institutions",
+          "Business Statistics & Data Literacy"
+        ]
+      },
+      {
+        "year": 2,
+        "focus": "Core specialisation",
+        "modules": [
+          "Blockchain, Cryptocurrency & DeFi",
+          "Corporate Finance",
+          "Digital Payments & Open Banking",
+          "RegTech & Financial Regulation",
+          "Machine Learning Applications in Finance"
+        ]
+      },
+      {
+        "year": 3,
+        "focus": "Advanced & dissertation",
+        "modules": [
+          "Algorithmic Trading & Quantitative Strategies",
+          "Cybersecurity & Financial Data Privacy",
+          "FinTech Venture Design & Scaling",
+          "Dissertation/Final Project"
+        ]
+      }
+    ],
+    "skills": [
+      "Python and SQL programming for financial data analysis and automation",
+      "Understanding of distributed ledger technology, smart contracts and tokenisation",
+      "Financial product design within regulatory frameworks (FCA, PSD2, GDPR)",
+      "Quantitative modelling for credit risk, fraud detection and algorithmic strategies",
+      "Ability to evaluate and pitch FinTech business models to investors or stakeholders"
+    ],
+    "professionalBodies": [
+      {
+        "name": "Chartered Institute for Securities & Investment (CISI)",
+        "benefit": "Some programmes are CISI-accredited; graduates may receive exemptions from CISI Investment Operations Certificate modules and can sit exams at reduced cost"
+      },
+      {
+        "name": "CFA Institute",
+        "benefit": "Corporate finance and investment content prepares graduates for CFA Level 1; CFA University Affiliation common at leading programmes"
+      },
+      {
+        "name": "FinTech Alliance / Innovate Finance",
+        "benefit": "Student membership provides access to industry events, mentorship from FinTech founders, and job board specific to the UK FinTech sector"
+      }
+    ],
+    "careers": [
+      {
+        "role": "FinTech Product Manager",
+        "salary": "£32,000–£45,000 starting / £60,000–£90,000 at 5 years",
+        "demand": "Very High"
+      },
+      {
+        "role": "Quantitative / Algorithmic Trading Analyst",
+        "salary": "£40,000–£60,000 starting / £80,000–£150,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Blockchain / DeFi Developer (Finance-facing)",
+        "salary": "£38,000–£55,000 starting / £70,000–£110,000 at 5 years",
+        "demand": "Growing"
+      },
+      {
+        "role": "Digital Banking / Payments Analyst",
+        "salary": "£28,000–£40,000 starting / £50,000–£75,000 at 5 years",
+        "demand": "Very High"
+      }
+    ],
+    "topEmployers": ["Revolut", "Monzo", "Starling Bank", "Wise", "Stripe", "Mastercard"],
+    "employerPerspective": "FinTech employers prize graduates who can bridge the gap between financial domain knowledge and technical implementation — a relatively rare combination that commands a significant premium. Traditional banks such as Barclays, HSBC and JPMorgan also actively recruit FinTech graduates into their digital transformation and innovation divisions. The ability to speak both 'finance' and 'tech' fluently is seen as one of the most valuable skills in the market, particularly as incumbents race to modernise their platforms.",
+    "entryRequirements": "Typical offer: ABB–BBB at A-level; Mathematics is required or strongly preferred at most universities; Computer Science or Further Mathematics is a strong advantage. GCSE: English and Maths at grade 5 or above. Some programmes require evidence of coding interest (personal projects, bootcamp certificates). Contextual offers typically one grade lower.",
+    "furtherStudy": "MSc FinTech, MSc Financial Technology, MSc Data Science (Finance). Professional options include CFA, FRM (Financial Risk Manager) or specialist qualifications in blockchain (e.g., Certified Blockchain Professional). Some graduates move into accelerator programmes or launch their own FinTech ventures.",
+    "isItForYou": [
+      "Study this if you want to work in the fastest-growing part of financial services and are excited by both coding and financial products",
+      "Study this if you follow developments in crypto, open banking, digital payments or AI in finance with genuine enthusiasm",
+      "Think twice if you want a traditional accounting qualification pathway or if you are not comfortable developing at least basic programming skills — this degree has a meaningful technical component"
+    ]
+  },
+
+  "finMath": {
+    "id": "finMath",
+    "title": "Financial Mathematics",
+    "duration": "3 years / 4 years (with placement) / 4 years (integrated Masters)",
+    "overview": "Financial Mathematics is a rigorous, mathematically intensive degree that applies advanced tools from probability theory, stochastic calculus and statistics to the pricing, hedging and risk management of financial instruments. You will develop deep expertise in derivative pricing models (including Black-Scholes and beyond), interest rate modelling, risk measures like Value-at-Risk, and computational methods for finance. This degree is one of the most demanding undergraduate programmes in the UK and is aimed squarely at students who love mathematics for its own sake and want to apply it to some of the most complex and well-compensated problems in the financial world. Graduates are highly sought after by investment banks, hedge funds and quantitative trading firms for roles that command some of the highest salaries in finance.",
+    "yearByYear": [
+      {
+        "year": 1,
+        "focus": "Foundations",
+        "modules": [
+          "Calculus & Real Analysis",
+          "Linear Algebra & Matrix Methods",
+          "Probability Theory",
+          "Introduction to Financial Mathematics",
+          "Statistics & Regression"
+        ]
+      },
+      {
+        "year": 2,
+        "focus": "Core specialisation",
+        "modules": [
+          "Stochastic Processes",
+          "Derivative Pricing Theory (Black-Scholes)",
+          "Numerical Methods for Finance",
+          "Fixed Income & Interest Rate Modelling",
+          "Financial Risk Management"
+        ]
+      },
+      {
+        "year": 3,
+        "focus": "Advanced & dissertation",
+        "modules": [
+          "Advanced Derivatives & Exotic Options",
+          "Portfolio Optimisation & Factor Models",
+          "Computational Finance (Monte Carlo, PDE methods)",
+          "Dissertation/Final Project"
+        ]
+      }
+    ],
+    "skills": [
+      "Stochastic calculus and Ito's lemma for option pricing",
+      "Implementation of numerical methods (Monte Carlo simulation, finite difference methods) in Python, MATLAB or C++",
+      "Quantitative risk measurement: VaR, CVaR, stress testing and scenario analysis",
+      "Statistical modelling of financial time series including GARCH and factor models",
+      "Clear mathematical communication: proofs, technical reports and presentation of quantitative results"
+    ],
+    "professionalBodies": [
+      {
+        "name": "Institute and Faculty of Actuaries (IFoA)",
+        "benefit": "Programmes with strong probability and statistics content may provide exemptions from CS1 (Actuarial Statistics) and CS2 (Risk Modelling) actuarial examinations"
+      },
+      {
+        "name": "CFA Institute",
+        "benefit": "Quantitative investment content maps closely onto CFA Level 1 and 2 material; graduates typically find CFA exams highly accessible"
+      },
+      {
+        "name": "Financial Risk Manager (FRM) — GARP",
+        "benefit": "The risk management and derivatives content of the degree provides excellent preparation for the FRM Part 1 and Part 2 examinations, the leading global risk qualification"
+      }
+    ],
+    "careers": [
+      {
+        "role": "Quantitative Analyst (Quant — Pricing/Risk)",
+        "salary": "£55,000–£80,000 starting / £100,000–£200,000+ at 5 years",
+        "demand": "Very High"
+      },
+      {
+        "role": "Derivatives Trader",
+        "salary": "£50,000–£75,000 starting (plus bonus) / £100,000–£250,000+ at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Quantitative Risk Analyst",
+        "salary": "£40,000–£60,000 starting / £70,000–£110,000 at 5 years",
+        "demand": "Very High"
+      },
+      {
+        "role": "Algorithmic Trading Researcher",
+        "salary": "£50,000–£80,000 starting / £100,000–£300,000+ at 5 years",
+        "demand": "High"
+      }
+    ],
+    "topEmployers": ["Goldman Sachs (Strats)", "Citadel", "Jane Street", "Man Group", "Barclays (Quantitative Analytics)", "Two Sigma"],
+    "employerPerspective": "Financial Mathematics graduates are among the most aggressively recruited of any degree type for quantitative roles in investment banking, hedge funds and proprietary trading firms. Firms like Jane Street and Citadel run dedicated programmes specifically targeting graduates from mathematically intensive degrees and will often make offers before final examinations. The degree is seen as a direct entry ticket to the highest-paying roles in finance, provided the candidate can demonstrate coding ability alongside mathematical prowess.",
+    "entryRequirements": "Typical offer: A*AA–AAA at A-level; Mathematics at A* is commonly required; Further Mathematics is strongly preferred or required at many universities; Physics or Statistics welcomed. GCSE: Mathematics at grade 8 or 9 (A*). This is one of the most selective programmes in the country — entry at top institutions may require Olympiad or STEP/MAT participation. Contextual offers exist but are less common due to the mathematical threshold.",
+    "furtherStudy": "MSc Mathematical Finance (Oxford, Imperial, LSE), MSc Quantitative Finance, MSc Financial Engineering. The PhD route is common for those targeting elite quantitative research roles at hedge funds. Professional qualifications include CFA, FRM and actuarial (IFoA) qualifications.",
+    "isItForYou": [
+      "Study this if Mathematics is your strongest subject and greatest passion, and you want to apply it to the highest-stakes problems in the financial world",
+      "Study this if you are drawn to quantitative research, derivatives pricing or algorithmic trading and are comfortable with abstract mathematical reasoning",
+      "Think twice if you want a broadly applicable business degree or if you are looking for accounting qualification pathways — this is a highly specialised, heavily mathematical programme"
+    ]
+  },
+
+  "banking": {
+    "id": "banking",
+    "title": "Banking & Finance",
+    "duration": "3 years / 4 years (with placement) / 4 years (integrated Masters)",
+    "overview": "Banking & Finance provides a thorough understanding of how banks and other financial intermediaries operate, how they manage risk, and how they are regulated — alongside a solid grounding in core financial theory. You will study retail and commercial banking, credit analysis, central banking and monetary policy, bank regulation (Basel III/IV), and financial markets, making this degree particularly relevant for students interested in working within banking institutions rather than just analysing markets from the outside. The degree is well suited to those who want to understand the plumbing of the financial system — how deposits become loans, how liquidity crises unfold, why banks fail — and to build a career in banking, risk management or financial regulation.",
+    "yearByYear": [
+      {
+        "year": 1,
+        "focus": "Foundations",
+        "modules": [
+          "Principles of Banking",
+          "Financial Markets & Institutions",
+          "Quantitative Methods",
+          "Macroeconomics",
+          "Introduction to Financial Accounting"
+        ]
+      },
+      {
+        "year": 2,
+        "focus": "Core specialisation",
+        "modules": [
+          "Credit Analysis & Lending",
+          "Bank Risk Management (Credit, Market, Liquidity)",
+          "Corporate Finance",
+          "Monetary Policy & Central Banking",
+          "Bank Regulation & Basel Framework"
+        ]
+      },
+      {
+        "year": 3,
+        "focus": "Advanced & dissertation",
+        "modules": [
+          "Financial Crises & Systemic Risk",
+          "International Banking & Trade Finance",
+          "Fintech Disruption in Banking",
+          "Dissertation/Final Project"
+        ]
+      }
+    ],
+    "skills": [
+      "Credit risk assessment and loan structuring for individuals and corporates",
+      "Analysis of bank balance sheets, capital ratios and liquidity positions",
+      "Understanding of regulatory capital frameworks (Basel III/IV, CRR, PRA requirements)",
+      "Interpretation of monetary policy decisions and their impact on lending and markets",
+      "Financial modelling for bank profitability and stress testing"
+    ],
+    "professionalBodies": [
+      {
+        "name": "Chartered Banker Institute",
+        "benefit": "Many Banking & Finance degrees are recognised by the Chartered Banker Institute; graduates can fast-track to Chartered Banker qualification with reduced examination requirements"
+      },
+      {
+        "name": "ACCA (Association of Chartered Certified Accountants)",
+        "benefit": "Accredited programmes typically offer exemptions from Applied Knowledge papers, useful for graduates moving into bank finance or controllership functions"
+      },
+      {
+        "name": "CFA Institute",
+        "benefit": "Strong investment and risk management content provides a solid base for CFA Level 1; particularly relevant for those targeting treasury or investment banking divisions"
+      }
+    ],
+    "careers": [
+      {
+        "role": "Credit Analyst / Relationship Manager (Commercial Banking)",
+        "salary": "£28,000–£38,000 starting / £50,000–£75,000 at 5 years",
+        "demand": "Very High"
+      },
+      {
+        "role": "Bank Risk Manager (Credit / Market / Operational)",
+        "salary": "£32,000–£45,000 starting / £60,000–£90,000 at 5 years",
+        "demand": "Very High"
+      },
+      {
+        "role": "Regulatory Affairs / Prudential Analyst",
+        "salary": "£30,000–£42,000 starting / £55,000–£80,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Graduate Banker (Retail / Corporate Banking Programme)",
+        "salary": "£27,000–£35,000 starting / £45,000–£65,000 at 5 years",
+        "demand": "High"
+      }
+    ],
+    "topEmployers": ["HSBC", "Barclays", "Lloyds Banking Group", "NatWest Group", "Bank of England", "Standard Chartered"],
+    "employerPerspective": "Major UK retail and commercial banks have well-structured graduate schemes that specifically target Banking & Finance graduates for their credit, risk, treasury and relationship management functions. The Bank of England values the regulatory and monetary policy knowledge that distinguishes this degree from a generic finance programme. Employers consistently note that graduates arrive with a realistic understanding of how banks actually operate — a quality that generic finance or economics graduates often lack — enabling faster contribution to team objectives.",
+    "entryRequirements": "Typical offer: ABB–BBB at A-level; Mathematics at grade B or above is typically required or strongly preferred. GCSE: English and Maths at grade 5 or above. Some programmes accept Economics or Business A-level in lieu of strong quantitative GCSE performance. Contextual offers are one to two grades lower. Industry work experience (e.g., bank internship or shadowing) is welcomed but not required.",
+    "furtherStudy": "MSc Banking & Finance, MSc Risk Management, MSc Financial Regulation. Professional qualifications include CFA, FRM, ACCA, and the Chartered Banker qualification. Some graduates pursue a PhD in Banking for an academic career focusing on bank behaviour, regulation or monetary economics.",
+    "isItForYou": [
+      "Study this if you are fascinated by how banks work — from lending decisions to liquidity crises — and want a career within the banking sector rather than just advising it",
+      "Study this if you want to work in risk management, regulation or central banking, where specialist knowledge of banking systems is highly valued",
+      "Think twice if you are primarily interested in capital markets, investment management or corporate advisory — an Economics & Finance or straight Finance degree may give you a broader platform for those roles"
+    ]
+  },
+
+  "finInn": {
+    "id": "finInn",
+    "title": "Finance & Innovation",
+    "duration": "3 years / 4 years (with placement) / 4 years (integrated Masters)",
+    "overview": "Finance & Innovation explores how new ideas, technologies and business models are financed, developed and scaled — combining financial analysis with entrepreneurship, design thinking and strategy. You will study venture capital, startup ecosystems, innovation management and corporate venturing alongside core finance modules, developing an understanding of how capital flows to new ideas and how organisations can remain competitive through continuous reinvention. This degree is ideal for students who are energised by entrepreneurial thinking, want to work at the intersection of finance and strategy, and aspire to roles in venture capital, corporate innovation, strategy consulting or entrepreneurship itself. It is one of the newer and more distinctive offerings in UK higher education, often taught with significant project-based and experiential learning.",
+    "yearByYear": [
+      {
+        "year": 1,
+        "focus": "Foundations",
+        "modules": [
+          "Foundations of Finance",
+          "Innovation Management & Entrepreneurship",
+          "Business Strategy",
+          "Quantitative Methods",
+          "Design Thinking for Business"
+        ]
+      },
+      {
+        "year": 2,
+        "focus": "Core specialisation",
+        "modules": [
+          "Venture Finance & Startup Valuation",
+          "Corporate Finance",
+          "Technology & Platform Business Models",
+          "Open Innovation & Corporate Venturing",
+          "Behavioural Economics in Innovation"
+        ]
+      },
+      {
+        "year": 3,
+        "focus": "Advanced & dissertation",
+        "modules": [
+          "Scaling Ventures: Growth Finance & International Expansion",
+          "Social Innovation & Impact Investing",
+          "Strategic Foresight & Futures Thinking",
+          "Dissertation/Final Project"
+        ]
+      }
+    ],
+    "skills": [
+      "Financial modelling and valuation of early-stage and growth companies",
+      "Evaluation of innovation strategies and technology roadmaps",
+      "Pitch deck construction and investor communication",
+      "Design thinking and lean startup methodologies",
+      "Stakeholder mapping and ecosystem analysis"
+    ],
+    "professionalBodies": [
+      {
+        "name": "CFA Institute",
+        "benefit": "Core finance modules provide a foundation for CFA Level 1; particularly relevant for graduates targeting VC or corporate development roles"
+      },
+      {
+        "name": "Chartered Management Institute (CMI)",
+        "benefit": "Some programmes carry CMI accreditation, providing Chartered Manager status on completion and recognition for management-track careers"
+      },
+      {
+        "name": "Innovate Finance / BVCA (British Private Equity & Venture Capital Association)",
+        "benefit": "Associate membership available to students; provides access to VC and PE industry events, mentorship and a strong alumni network"
+      }
+    ],
+    "careers": [
+      {
+        "role": "Venture Capital Analyst / Associate",
+        "salary": "£30,000–£45,000 starting / £60,000–£100,000 at 5 years",
+        "demand": "Growing"
+      },
+      {
+        "role": "Corporate Strategy / Innovation Manager",
+        "salary": "£30,000–£42,000 starting / £55,000–£85,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Strategy Consultant",
+        "salary": "£32,000–£50,000 starting / £60,000–£100,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Startup Founder / Entrepreneur",
+        "salary": "Variable / £40,000–£120,000+ at 5 years (equity-dependent)",
+        "demand": "Growing"
+      }
+    ],
+    "topEmployers": ["McKinsey & Company", "BCG", "Seedcamp", "Balderton Capital", "Google", "Unilever Ventures"],
+    "employerPerspective": "Strategy consultancies value Finance & Innovation graduates for their ability to combine quantitative financial rigour with creative, entrepreneurial thinking — a blend that is rare and highly valued in transformation and growth strategy projects. Venture capital firms look for graduates who can understand both the financial structure of deals and the qualitative assessment of founders and markets. Corporate innovation teams at large companies increasingly recruit from this type of programme to drive internal change agendas.",
+    "entryRequirements": "Typical offer: ABB–BBB at A-level; Mathematics at B or above preferred but not always required; Business Studies, Economics or Computer Science are complementary subjects. GCSE: English and Maths at grade 5 or above. Evidence of entrepreneurial activity (founding a club, launching a side project, participating in hackathons) is viewed positively by admissions teams. Contextual offers are typically one grade lower.",
+    "furtherStudy": "MBA (particularly for those who want to found or scale companies post-experience), MSc Innovation Management, MSc Entrepreneurship, MSc Finance. Some graduates pursue accelerator programmes (Y Combinator, Entrepreneur First) rather than further academic study.",
+    "isItForYou": [
+      "Study this if you are passionate about entrepreneurship and startups but want a rigorous financial foundation alongside the creative and strategic dimensions of building new ventures",
+      "Study this if you want to work in venture capital, corporate strategy or consulting and appreciate learning through real projects and case studies",
+      "Think twice if you want a direct pathway to a professional accounting qualification or a highly technical quantitative finance role — this degree trades some of that depth for breadth and entrepreneurial content"
+    ]
+  },
+
+  "investmentBanking": {
+    "id": "investmentBanking",
+    "title": "Finance & Investment Banking",
+    "duration": "3 years / 4 years (with placement) / 4 years (integrated Masters)",
+    "overview": "Finance & Investment Banking is an applied finance degree specifically designed to prepare students for careers in investment banking, capital markets and corporate advisory. You will study financial modelling, M&A (mergers and acquisitions), equity and debt capital markets, LBO (leveraged buyout) analysis and deal structuring — the very tools used by analysts at Goldman Sachs, Morgan Stanley and Rothschild on a daily basis. The degree typically incorporates significant amounts of technical financial modelling practice, Bloomberg terminal training and case study-based teaching, making it one of the most vocationally focused finance programmes available. It suits highly motivated students with clear ambitions in investment banking who want to enter the job market with skills that are immediately deployable.",
+    "yearByYear": [
+      {
+        "year": 1,
+        "focus": "Foundations",
+        "modules": [
+          "Financial Accounting & Reporting",
+          "Corporate Finance Fundamentals",
+          "Quantitative Methods & Statistics",
+          "Economics for Finance",
+          "Introduction to Capital Markets"
+        ]
+      },
+      {
+        "year": 2,
+        "focus": "Core specialisation",
+        "modules": [
+          "Financial Modelling & Valuation (DCF, Comps, Precedent Transactions)",
+          "Mergers, Acquisitions & Restructuring",
+          "Equity Capital Markets",
+          "Debt Capital Markets & Leveraged Finance",
+          "Investment Analysis & Portfolio Management"
+        ]
+      },
+      {
+        "year": 3,
+        "focus": "Advanced & dissertation",
+        "modules": [
+          "Leveraged Buyouts & Private Equity",
+          "Global Capital Markets & Deal Execution",
+          "Compliance, Ethics & Market Regulation",
+          "Dissertation/Final Project"
+        ]
+      }
+    ],
+    "skills": [
+      "Three-statement financial modelling (income statement, balance sheet, cash flow)",
+      "DCF valuation, comparable company analysis and precedent transaction analysis",
+      "LBO modelling and private equity return analysis",
+      "Bloomberg terminal proficiency for data analysis and market monitoring",
+      "Pitch book construction and client-facing presentation skills"
+    ],
+    "professionalBodies": [
+      {
+        "name": "CFA Institute",
+        "benefit": "Directly aligned degree content means graduates are exceptionally well prepared for CFA Level 1 and 2; many programmes carry CFA University Affiliation status"
+      },
+      {
+        "name": "CISI (Chartered Institute for Securities & Investment)",
+        "benefit": "Accredited programmes provide exemptions from CISI Capital Markets programme modules; the CISI IMC (Investment Management Certificate) is often taken alongside study"
+      },
+      {
+        "name": "Financial Conduct Authority (FCA) — Approved Persons",
+        "benefit": "Technical knowledge of regulation means graduates can quickly meet FCA CF30 and SMF approval requirements for client-facing and controlled function roles"
+      }
+    ],
+    "careers": [
+      {
+        "role": "Investment Banking Analyst (Bulge Bracket / Elite Boutique)",
+        "salary": "£50,000–£70,000 starting (plus bonus of 50–100%) / £100,000–£200,000+ at 5 years",
+        "demand": "Very High"
+      },
+      {
+        "role": "M&A / Corporate Finance Advisor (Mid-Market)",
+        "salary": "£35,000–£50,000 starting / £65,000–£100,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Private Equity Analyst",
+        "salary": "£40,000–£65,000 starting (plus carried interest) / £80,000–£180,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Equity Research Analyst",
+        "salary": "£35,000–£50,000 starting / £65,000–£100,000 at 5 years",
+        "demand": "High"
+      }
+    ],
+    "topEmployers": ["Goldman Sachs", "Morgan Stanley", "JPMorgan", "Rothschild & Co", "Lazard", "Barclays Investment Bank"],
+    "employerPerspective": "Investment banks actively recruit graduates from these programmes because they arrive technically prepared — they can open Excel and build a working DCF model on day one rather than needing to be trained from scratch. Boutique advisory firms particularly value the M&A and valuation focus, which reduces the on-the-job training burden significantly. The degree signals genuine commitment to the industry, which matters in a sector where motivation and resilience are as important as technical aptitude.",
+    "entryRequirements": "Typical offer: AAB–ABB at A-level; Mathematics at B or above required at most universities; Economics is a strong advantage. GCSE: English and Maths at grade 6 or above. Internship experience in finance (spring weeks, summer internships, virtual programmes) is strongly encouraged and may be a differentiator in competitive cohorts. Contextual offers typically one grade lower.",
+    "furtherStudy": "CFA Charter (strongly recommended for investment management roles), MSc Finance or MSc Investment Management. Some graduates pursue an MBA after several years of analyst and associate experience. A minority move into private equity or VC and complete specialist courses such as the BVCA's Investment Management Certificate.",
+    "isItForYou": [
+      "Study this if you have a clear, specific ambition to work in investment banking, M&A advisory or private equity and want to arrive technically prepared on day one",
+      "Study this if you are highly motivated, comfortable with demanding workloads, and want maximum exposure to real financial modelling tools during your degree",
+      "Think twice if you are still exploring your options across finance — a broader Economics & Finance or Accounting & Finance degree may give you more flexibility to pivot, whereas this degree's vocational focus is a strength only if investment banking is genuinely your goal"
+    ]
+  },
+
+  "appliedAI": {
+    "id": "appliedAI",
+    "title": "Finance & Applied AI",
+    "duration": "3 years / 4 years (with placement) / 4 years (integrated Masters)",
+    "overview": "Finance & Applied AI is one of the most forward-looking degree programmes in UK higher education, combining rigorous financial theory with the practical application of artificial intelligence and machine learning to financial problems. You will study core finance — corporate finance, financial markets and risk management — alongside machine learning, natural language processing, neural networks and AI ethics, applying these tools directly to credit scoring, fraud detection, algorithmic trading, robo-advice and financial forecasting. The degree is designed for students who are equally excited by both domains and want to be at the frontier of AI adoption in financial services. Graduates are entering a market that is rapidly transforming and where AI-literate finance professionals command significant salary premiums.",
+    "yearByYear": [
+      {
+        "year": 1,
+        "focus": "Foundations",
+        "modules": [
+          "Foundations of Finance",
+          "Programming for Data Science (Python)",
+          "Statistics & Probability for AI",
+          "Introduction to Machine Learning",
+          "Financial Markets & Institutions"
+        ]
+      },
+      {
+        "year": 2,
+        "focus": "Core specialisation",
+        "modules": [
+          "Corporate Finance & Valuation",
+          "Supervised & Unsupervised Machine Learning for Finance",
+          "Natural Language Processing in Finance (Earnings Calls, Sentiment)",
+          "AI in Risk Management & Fraud Detection",
+          "Algorithmic Trading & Reinforcement Learning"
+        ]
+      },
+      {
+        "year": 3,
+        "focus": "Advanced & dissertation",
+        "modules": [
+          "Deep Learning & Neural Networks for Financial Prediction",
+          "AI Ethics, Explainability & Regulation in Finance",
+          "Robo-Advisory & AI-Driven Wealth Management",
+          "Dissertation/Final Project"
+        ]
+      }
+    ],
+    "skills": [
+      "Machine learning model development and evaluation (scikit-learn, TensorFlow, PyTorch)",
+      "Financial data wrangling, feature engineering and time series modelling",
+      "Natural language processing applied to financial text (news, filings, earnings calls)",
+      "Critical assessment of AI model bias, explainability and regulatory compliance",
+      "Communication of complex AI findings to non-technical financial stakeholders"
+    ],
+    "professionalBodies": [
+      {
+        "name": "CFA Institute",
+        "benefit": "Finance content aligns with CFA Level 1 curriculum; CFA has also introduced dedicated AI and machine learning content into its curriculum reflecting the growing relevance of this combination"
+      },
+      {
+        "name": "BCS (The Chartered Institute for IT)",
+        "benefit": "Some programmes carry BCS accreditation for the computer science component, providing pathway to Chartered IT Professional (CITP) status"
+      },
+      {
+        "name": "Alan Turing Institute / AI-related professional networks",
+        "benefit": "Student membership and conference access; strong for those targeting research or policy roles at the intersection of AI and finance"
+      }
+    ],
+    "careers": [
+      {
+        "role": "Machine Learning Engineer / Data Scientist (Financial Services)",
+        "salary": "£42,000–£60,000 starting / £75,000–£120,000 at 5 years",
+        "demand": "Very High"
+      },
+      {
+        "role": "AI / Quantitative Analyst",
+        "salary": "£50,000–£80,000 starting / £90,000–£180,000 at 5 years",
+        "demand": "Very High"
+      },
+      {
+        "role": "Credit Risk Model Developer",
+        "salary": "£35,000–£50,000 starting / £60,000–£90,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Algorithmic Trading Researcher",
+        "salary": "£50,000–£80,000 starting / £100,000–£300,000+ at 5 years",
+        "demand": "High"
+      }
+    ],
+    "topEmployers": ["JPMorgan AI Research", "BlackRock (Aladdin)", "Two Sigma", "Citadel", "HSBC AI & Innovation", "Palantir"],
+    "employerPerspective": "Financial institutions are investing billions in AI adoption and face a significant talent shortage of people who understand both the finance domain and the technical implementation. JPMorgan, Goldman Sachs and BlackRock have all built large internal AI research teams and recruit specifically for this dual competence. Employers consistently report that pure data scientists without finance knowledge make systematic errors in financial applications, while pure finance graduates cannot implement solutions — graduates who bridge both are exceptionally valuable.",
+    "entryRequirements": "Typical offer: AAB–ABB at A-level; Mathematics at A is typically required; Further Mathematics, Computer Science or Physics are very strongly preferred. GCSE: English and Maths at grade 6 or above. Personal projects demonstrating coding ability (GitHub portfolio, Kaggle competitions) are increasingly used to differentiate applicants. Contextual offers exist and are typically one grade lower.",
+    "furtherStudy": "MSc Machine Learning (Finance track), MSc Artificial Intelligence, MSc Quantitative Finance. PhD opportunities exist at the intersection of AI and finance/economics. Professional qualifications include CFA and FRM; specialist AI certifications (AWS Machine Learning, Google Professional Data Engineer) are also valued.",
+    "isItForYou": [
+      "Study this if you love both mathematics and programming and want to work at the most technically sophisticated frontier of financial services",
+      "Study this if you are excited by the specific applications of AI in finance — fraud detection, algorithmic trading, credit modelling — rather than AI in general",
+      "Think twice if you do not enjoy coding or if your mathematics is not strong at A-level — the quantitative and technical demands are significant and the degree will be very challenging without solid foundations in both"
+    ]
+  },
+
+  "dataScience": {
+    "id": "dataScience",
+    "title": "Finance & Data Science",
+    "duration": "3 years / 4 years (with placement) / 4 years (integrated Masters)",
+    "overview": "Finance & Data Science equips students with the quantitative and computational skills to extract insight from large and complex financial datasets, combining financial theory with data engineering, statistical analysis and visualisation. You will develop proficiency in Python, SQL and R alongside financial modelling, risk analysis and investment theory, working with real-world datasets from market data providers, credit bureaus and financial statements. The degree is well suited to students who love working with data and want to understand financial markets, but who may prefer analysis and insight generation over the more engineering-focused path of computer science. Graduates enter a market with exceptionally high demand across financial services, insurance, consulting and technology.",
+    "yearByYear": [
+      {
+        "year": 1,
+        "focus": "Foundations",
+        "modules": [
+          "Foundations of Finance",
+          "Data Science Fundamentals (Python & SQL)",
+          "Statistics & Probability",
+          "Financial Markets & Instruments",
+          "Database Design & Data Engineering"
+        ]
+      },
+      {
+        "year": 2,
+        "focus": "Core specialisation",
+        "modules": [
+          "Corporate Finance & Valuation",
+          "Financial Econometrics & Time Series Analysis",
+          "Machine Learning for Finance",
+          "Data Visualisation & Storytelling",
+          "Risk Analytics & Quantitative Risk"
+        ]
+      },
+      {
+        "year": 3,
+        "focus": "Advanced & dissertation",
+        "modules": [
+          "Big Data Technologies in Finance (Spark, Cloud Platforms)",
+          "Alternative Data & Investment Strategies",
+          "Regulatory Reporting & Data Governance",
+          "Dissertation/Final Project"
+        ]
+      }
+    ],
+    "skills": [
+      "Data wrangling and analysis in Python (pandas, NumPy) and R",
+      "SQL database querying and financial data pipeline construction",
+      "Statistical and machine learning modelling for financial applications",
+      "Data visualisation using Tableau, Power BI or Python libraries (Matplotlib, Plotly)",
+      "Interpretation and communication of data-driven insights to financial decision-makers"
+    ],
+    "professionalBodies": [
+      {
+        "name": "CFA Institute",
+        "benefit": "Finance and investment content maps onto CFA Level 1; the CFA has integrated significant data science content into its curriculum, making this degree an excellent preparation"
+      },
+      {
+        "name": "Royal Statistical Society (RSS)",
+        "benefit": "Strong statistics content may qualify for RSS Graduate Statistician status; accredited programmes provide a pathway to Chartered Statistician"
+      },
+      {
+        "name": "ACCA / CIMA",
+        "benefit": "Depending on accreditation, some exemptions from Applied Knowledge papers may be available for graduates entering finance and accounting functions"
+      }
+    ],
+    "careers": [
+      {
+        "role": "Financial Data Analyst / Data Scientist",
+        "salary": "£32,000–£48,000 starting / £60,000–£95,000 at 5 years",
+        "demand": "Very High"
+      },
+      {
+        "role": "Quantitative Analyst (Risk / Compliance / Investment)",
+        "salary": "£40,000–£60,000 starting / £70,000–£110,000 at 5 years",
+        "demand": "Very High"
+      },
+      {
+        "role": "Business Intelligence / Reporting Analyst (Financial Services)",
+        "salary": "£28,000–£40,000 starting / £50,000–£75,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Insurance / Actuarial Data Analyst",
+        "salary": "£30,000–£42,000 starting / £55,000–£80,000 at 5 years",
+        "demand": "High"
+      }
+    ],
+    "topEmployers": ["BlackRock", "Lloyds Banking Group", "Accenture", "KPMG Data & Analytics", "Aviva", "Refinitiv (LSEG)"],
+    "employerPerspective": "Financial services firms are drowning in data and starving for people who can turn it into decisions. Employers report that Finance & Data Science graduates are able to operate across teams — they understand the finance domain so they know which questions matter, and they have the technical skills to answer them. KPMG, Accenture and Deloitte specifically recruit from these programmes for their data analytics practice, while asset managers such as BlackRock value the combination for investment and risk analytics roles.",
+    "entryRequirements": "Typical offer: ABB–BBB at A-level; Mathematics at B or above is typically required; Computer Science or Statistics is a strong advantage. GCSE: English and Maths at grade 5 or above. Demonstrated interest in data (Kaggle participation, personal projects, relevant online courses) is increasingly considered. Contextual offers are typically one grade lower.",
+    "furtherStudy": "MSc Data Science, MSc Financial Data Science, MSc Business Analytics. Professional qualifications include CFA, FRM, and data-specific certifications (AWS Certified Data Analytics, Google Professional Data Engineer). Some graduates pursue a PhD in computational finance, financial econometrics or machine learning.",
+    "isItForYou": [
+      "Study this if you enjoy working with data, are comfortable with coding and statistics, and want to understand the financial markets that generate the data you will be analysing",
+      "Study this if you want to work in a high-demand field that spans financial services, insurance, consulting and technology companies",
+      "Think twice if you have no interest in programming — coding is integral to this degree and will be a requirement in virtually every graduate role it leads to"
+    ]
+  },
+
+  "esgFinance": {
+    "id": "esgFinance",
+    "title": "ESG & Sustainable Finance",
+    "duration": "3 years / 4 years (with placement) / 4 years (integrated Masters)",
+    "overview": "ESG & Sustainable Finance is a rapidly growing discipline that examines how environmental, social and governance (ESG) factors reshape investment decisions, corporate strategy and financial regulation. You will study sustainable investment frameworks, green bonds, climate risk modelling, impact measurement and the evolving regulatory landscape (EU Taxonomy, TCFD, SFDR) alongside core corporate finance and financial markets. This degree is ideal for students motivated by the intersection of finance and purpose — understanding how capital can be directed toward sustainable outcomes while still generating returns. It is one of the most strategically relevant degrees for the coming decade, as ESG integration becomes mandatory across most major financial institutions.",
+    "yearByYear": [
+      {
+        "year": 1,
+        "focus": "Foundations",
+        "modules": [
+          "Foundations of Finance",
+          "Introduction to Sustainability & ESG",
+          "Environmental Economics",
+          "Financial Markets & Institutions",
+          "Quantitative Methods"
+        ]
+      },
+      {
+        "year": 2,
+        "focus": "Core specialisation",
+        "modules": [
+          "Corporate Finance & Capital Structure",
+          "Sustainable Investment & ESG Analysis",
+          "Green Bonds, Sustainability-Linked Loans & Green Finance Instruments",
+          "Climate Risk & Scenario Analysis (TCFD Framework)",
+          "Corporate Governance & Stakeholder Management"
+        ]
+      },
+      {
+        "year": 3,
+        "focus": "Advanced & dissertation",
+        "modules": [
+          "Impact Investing & Blended Finance",
+          "Regulatory Frameworks for Sustainable Finance (EU Taxonomy, SFDR, UK SDR)",
+          "Carbon Markets & Net Zero Finance",
+          "Dissertation/Final Project"
+        ]
+      }
+    ],
+    "skills": [
+      "ESG data analysis using providers such as MSCI ESG, Sustainalytics and Bloomberg ESG",
+      "Climate scenario analysis and physical/transition risk assessment aligned with TCFD",
+      "Green finance instrument structuring: green bonds, sustainability-linked bonds and loans",
+      "Corporate sustainability report analysis and ESG rating interpretation",
+      "Impact measurement frameworks (IRIS+, SDG mapping, Theory of Change)"
+    ],
+    "professionalBodies": [
+      {
+        "name": "CFA Institute",
+        "benefit": "CFA now incorporates ESG into its curriculum with the dedicated CFA Certificate in ESG Investing; Finance & ESG graduates are highly prepared for this qualification"
+      },
+      {
+        "name": "GARP (Global Association of Risk Professionals) — Sustainability & Climate Risk (SCR)",
+        "benefit": "The SCR certificate is directly aligned with the climate risk content of this degree and is increasingly required in bank climate risk functions"
+      },
+      {
+        "name": "PRI (Principles for Responsible Investment) Academy",
+        "benefit": "Student access to PRI Academy training resources; recognised by asset managers and institutional investors as a mark of ESG competence"
+      }
+    ],
+    "careers": [
+      {
+        "role": "ESG Analyst / Sustainability Research Analyst",
+        "salary": "£28,000–£42,000 starting / £50,000–£80,000 at 5 years",
+        "demand": "Very High"
+      },
+      {
+        "role": "Sustainable Finance / Green Bond Analyst",
+        "salary": "£32,000–£45,000 starting / £55,000–£85,000 at 5 years",
+        "demand": "Very High"
+      },
+      {
+        "role": "Climate Risk Analyst (Bank / Insurer)",
+        "salary": "£30,000–£45,000 starting / £55,000–£85,000 at 5 years",
+        "demand": "Growing"
+      },
+      {
+        "role": "Impact Investment Analyst",
+        "salary": "£28,000–£40,000 starting / £50,000–£75,000 at 5 years",
+        "demand": "Growing"
+      }
+    ],
+    "topEmployers": ["BlackRock (Sustainable Investing)", "LGIM", "Schroders", "NatWest Sustainable Finance", "Triodos Bank", "Fitch Ratings (ESG)"],
+    "employerPerspective": "Asset managers, banks and rating agencies are under enormous regulatory and client pressure to integrate ESG into every aspect of their business, creating a skills gap that graduates from this degree are uniquely positioned to fill. BlackRock and Legal & General Investment Management have significantly expanded their sustainable investing teams and recruit directly from ESG-focused programmes. Employers note that they need analysts who understand both the financial mechanics of markets and the substance of ESG frameworks — generic finance graduates rarely have the latter.",
+    "entryRequirements": "Typical offer: ABB–BBB at A-level; Mathematics at B or above is typically preferred; Geography, Environmental Science, Economics or Business are complementary subjects. GCSE: English and Maths at grade 5 or above. Voluntary work, activism or projects related to sustainability and climate are viewed positively. Contextual offers typically one grade lower.",
+    "furtherStudy": "MSc Sustainable Finance, MSc Environmental Finance, MSc Climate Change & Finance. Professional qualifications include CFA with ESG Certificate, GARP Sustainability & Climate Risk (SCR), and the PRI Academy suite. Some graduates pursue a PhD or policy career in climate economics or sustainable development.",
+    "isItForYou": [
+      "Study this if you are genuinely passionate about sustainability and climate and want to direct that passion into a financially rigorous career that can have real-world impact at scale",
+      "Study this if you want to be on the right side of the most significant structural shift in investment and corporate governance of the 21st century",
+      "Think twice if you are primarily motivated by maximising earnings potential — while the sector is growing fast and salaries are rising, it tends to pay somewhat below traditional investment banking or quant finance at the most senior levels"
+    ]
+  },
+
+  "financeLaw": {
+    "id": "financeLaw",
+    "title": "Finance & Law",
+    "duration": "3 years / 4 years (with placement) / 4 years (integrated Masters)",
+    "overview": "Finance & Law is an intellectually demanding joint honours degree that equips students with deep expertise in both financial analysis and legal reasoning, with a particular focus on areas where finance and law intersect most powerfully: commercial contracts, M&A transactions, financial regulation, securities law and insolvency. You will develop the ability to think analytically in two distinct disciplines — the quantitative, market-focused world of finance, and the precedent-driven, interpretive world of law — a combination that is exceptionally rare and highly valued by top law firms, investment banks and regulators. This degree is suited to students who are intellectually versatile, enjoy both numbers and argument, and want access to careers that blend financial and legal complexity.",
+    "yearByYear": [
+      {
+        "year": 1,
+        "focus": "Foundations",
+        "modules": [
+          "Contract Law",
+          "Foundations of Finance & Financial Markets",
+          "Criminal Law or Tort Law",
+          "Quantitative Methods for Finance",
+          "Introduction to Financial Regulation"
+        ]
+      },
+      {
+        "year": 2,
+        "focus": "Core specialisation",
+        "modules": [
+          "Corporate Law & Company Act",
+          "Corporate Finance & Valuation",
+          "Financial Services Regulation (FCA Framework)",
+          "Banking Law & Credit",
+          "Equity & Trusts"
+        ]
+      },
+      {
+        "year": 3,
+        "focus": "Advanced & dissertation",
+        "modules": [
+          "Mergers, Acquisitions & Takeover Law",
+          "Insolvency & Restructuring Law",
+          "Securities Law & Capital Markets Regulation",
+          "Dissertation/Final Project"
+        ]
+      }
+    ],
+    "skills": [
+      "Legal drafting, contract interpretation and case analysis",
+      "Corporate finance modelling and transaction structuring",
+      "Regulatory analysis: FCA, PRA, EU financial services law and international frameworks",
+      "Due diligence and risk assessment in M&A and lending transactions",
+      "Persuasive written and oral advocacy applicable to both legal and commercial contexts"
+    ],
+    "professionalBodies": [
+      {
+        "name": "Solicitors Regulation Authority (SRA) — Qualifying Law Degree (QLD)",
+        "benefit": "Many Finance & Law programmes are SRA-approved, meaning the law component counts as a Qualifying Law Degree (or equivalent), enabling progression to the SQE route to solicitor qualification without a separate GDL conversion"
+      },
+      {
+        "name": "Bar Standards Board (BSB)",
+        "benefit": "A qualifying law component may provide exemptions from Bar Training; relevant for the minority of graduates pursuing a career at the Bar in commercial or chancery chambers"
+      },
+      {
+        "name": "CFA Institute",
+        "benefit": "Finance modules provide preparation for CFA Level 1; particularly useful for those entering financial regulation, compliance or investment banking rather than legal practice"
+      }
+    ],
+    "careers": [
+      {
+        "role": "Trainee Solicitor (Magic Circle / Silver Circle Law Firm)",
+        "salary": "£50,000–£60,000 (training contract) / £100,000–£165,000 qualified at 5 years",
+        "demand": "Very High"
+      },
+      {
+        "role": "Regulatory / Compliance Analyst (FCA / PRA / Bank)",
+        "salary": "£30,000–£42,000 starting / £55,000–£85,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Investment Banking Analyst (Legal & Regulatory Focus)",
+        "salary": "£45,000–£65,000 starting / £80,000–£130,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Insolvency & Restructuring Advisor",
+        "salary": "£28,000–£40,000 starting / £55,000–£90,000 at 5 years",
+        "demand": "Growing"
+      }
+    ],
+    "topEmployers": ["Clifford Chance", "Linklaters", "Allen & Overy", "Freshfields", "Goldman Sachs Legal", "FCA (Financial Conduct Authority)"],
+    "employerPerspective": "Magic Circle law firms specifically seek Finance & Law graduates for their corporate, banking and capital markets practice groups, valuing the ability to understand transaction economics rather than just the legal documentation. The FCA and PRA recruit Finance & Law graduates into supervisory and policy roles where legal interpretation and financial analysis are equally important. Investment banks' legal and compliance departments increasingly prefer graduates who have genuine finance knowledge alongside legal training.",
+    "entryRequirements": "Typical offer: AAB–AAA at A-level; Mathematics at B or above preferred; English Literature or History at B or above preferred for the law component. GCSE: English and Maths at grade 6 or above. This is a competitive programme — many universities require a strong personal statement demonstrating genuine interest in both law and finance. No specific A-level in Law is required or expected. Contextual offers are typically one grade lower.",
+    "furtherStudy": "Solicitors Qualifying Examination (SQE1 and SQE2) for qualification as a solicitor. LPC (Legal Practice Course — now being phased out). Bar Practice Course (BPC) for the Bar. MSc Finance or MSc Financial Law for those wanting further academic specialisation. CFA or FRM for those moving toward financial roles.",
+    "isItForYou": [
+      "Study this if you are genuinely excellent at both analytical and verbal reasoning, enjoy essay writing and quantitative problem-solving equally, and want access to the highest-value careers at the intersection of finance and law",
+      "Study this if you are drawn to transactions, regulation or compliance — areas where legal and financial expertise are both essential and where the combination commands a significant premium",
+      "Think twice if you have a strong preference for one discipline over the other — a joint honours degree is genuinely demanding in breadth; students who secretly prefer law (or finance) will find one half of every term frustrating"
+    ]
+  },
+
+  "intlFinance": {
+    "id": "intlFinance",
+    "title": "International Finance",
+    "duration": "3 years / 4 years (with placement) / 4 years (integrated Masters)",
+    "overview": "International Finance focuses on how financial decisions are made and how capital flows across borders in a globalised economy, covering foreign exchange markets, international investment, cross-border M&A, sovereign debt, multinational corporate finance and trade finance. You will develop a sophisticated understanding of how exchange rate risk, political risk, regulatory divergence and cultural differences shape financial outcomes for companies, investors and governments operating internationally. Many programmes include a compulsory or optional year abroad or exchange semester, developing the global perspective and cross-cultural competence that multinational employers value highly. This degree suits students with a genuinely international outlook who want to work across borders — either in global financial centres or within the international operations of multinational corporations.",
+    "yearByYear": [
+      {
+        "year": 1,
+        "focus": "Foundations",
+        "modules": [
+          "Foundations of Finance",
+          "International Economics & Trade",
+          "Financial Markets & Instruments",
+          "Quantitative Methods",
+          "Cross-Cultural Business Communication"
+        ]
+      },
+      {
+        "year": 2,
+        "focus": "Core specialisation",
+        "modules": [
+          "Corporate Finance (Domestic & International)",
+          "International Financial Management (FX, Hedging, Transfer Pricing)",
+          "Emerging Markets Finance",
+          "Sovereign Debt & International Capital Markets",
+          "Global Portfolio Management"
+        ]
+      },
+      {
+        "year": 3,
+        "focus": "Advanced & dissertation",
+        "modules": [
+          "Multinational Corporate Finance & Cross-Border M&A",
+          "Political Risk & Country Risk Analysis",
+          "International Trade Finance & Export Credit",
+          "Dissertation/Final Project"
+        ]
+      }
+    ],
+    "skills": [
+      "Foreign exchange risk analysis and hedging using forwards, futures and options",
+      "Country risk and political risk assessment for investment and lending decisions",
+      "Cross-border financial modelling incorporating currency, tax and regulatory differences",
+      "International portfolio construction and global asset allocation",
+      "Intercultural communication and negotiation in international business contexts"
+    ],
+    "professionalBodies": [
+      {
+        "name": "CFA Institute",
+        "benefit": "Global investment and portfolio management content aligns closely with CFA Level 1 and 2 curriculum; CFA University Affiliation common"
+      },
+      {
+        "name": "Association of Corporate Treasurers (ACT)",
+        "benefit": "International financial management and treasury content provides a strong foundation for the ACT Certificate in Treasury (CertT) and Certified Treasury Professional (CTP) qualifications"
+      },
+      {
+        "name": "Institute of Export & International Trade",
+        "benefit": "Trade finance content supports pathway to professional membership and qualifications in international trade and export finance"
+      }
+    ],
+    "careers": [
+      {
+        "role": "FX / Treasury Analyst (Multinational Corporation)",
+        "salary": "£28,000–£40,000 starting / £50,000–£80,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Emerging Markets Analyst (Investment Bank / Asset Manager)",
+        "salary": "£35,000–£55,000 starting / £65,000–£100,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "International Trade Finance Analyst",
+        "salary": "£27,000–£38,000 starting / £48,000–£70,000 at 5 years",
+        "demand": "Growing"
+      },
+      {
+        "role": "Global Markets / Sales & Trading Analyst",
+        "salary": "£45,000–£65,000 starting / £80,000–£140,000 at 5 years",
+        "demand": "High"
+      }
+    ],
+    "topEmployers": ["HSBC Global Banking & Markets", "Standard Chartered", "Citigroup", "World Bank / IMF", "Unilever Treasury", "Airbus Finance"],
+    "employerPerspective": "Multinational corporations and global banks particularly value International Finance graduates because they arrive with not just financial skills but a genuine international perspective that is increasingly rare. HSBC and Standard Chartered specifically design their global graduate programmes to attract graduates with cross-cultural competence and knowledge of emerging markets — two areas where International Finance degrees deliver. The IMF and World Bank also draw on this talent pool for their financial sector development and economic surveillance functions.",
+    "entryRequirements": "Typical offer: ABB–BBB at A-level; Mathematics at B or above preferred; a modern foreign language is a significant advantage at many programmes and may be required for language pathways. GCSE: English and Maths at grade 5 or above. International experience (living abroad, language study, international travel with substantive engagement) is viewed very positively. Contextual offers typically one grade lower.",
+    "furtherStudy": "MSc International Finance, MSc Finance (International track), MSc Global Business. CFA is widely pursued; ACT treasury qualification relevant for treasury-focused careers. Some graduates pursue postgraduate study at internationally recognised institutions abroad (Insead, HEC Paris, WHU). The IMF and World Bank have their own analyst programmes that are accessible post-graduation.",
+    "isItForYou": [
+      "Study this if you have a genuine passion for how the global economy works, are excited by international cultures and markets, and want to work across borders in your career",
+      "Study this if you want to work for a multinational company, global bank or international institution rather than primarily in the domestic UK market",
+      "Think twice if you want a strong professional accounting qualification pathway or highly technical quantitative finance role — this degree's breadth is its strength, but it may not offer the depth of specialisation those careers require"
+    ]
+  },
+
+  "actuarial": {
+    "id": "actuarial",
+    "title": "Actuarial Science",
+    "duration": "3 years / 4 years (with placement) / 4 years (integrated Masters)",
+    "overview": "Actuarial Science is one of the most mathematically rigorous undergraduate degrees available, applying advanced probability, statistics and financial mathematics to the measurement and management of financial risk — particularly in insurance, pensions and long-term financial planning. You will study life and non-life insurance mathematics, stochastic modelling, survival analysis, financial derivatives and regulatory frameworks, developing an understanding of how organisations price and reserve for uncertain future events. The degree is closely integrated with the professional qualification pathway of the Institute and Faculty of Actuaries (IFoA), and accredited programmes typically provide exemptions from several demanding professional examinations. Actuaries are consistently listed among the highest-paid and most in-demand professionals in the UK, and the qualification is globally respected.",
+    "yearByYear": [
+      {
+        "year": 1,
+        "focus": "Foundations",
+        "modules": [
+          "Calculus & Mathematical Analysis",
+          "Probability & Statistics",
+          "Financial Mathematics (Interest Theory)",
+          "Linear Algebra",
+          "Introduction to Actuarial Practice"
+        ]
+      },
+      {
+        "year": 2,
+        "focus": "Core specialisation",
+        "modules": [
+          "Actuarial Statistics (CS1/CS2 content)",
+          "Life Insurance Mathematics (CM1)",
+          "Financial Economics & Derivatives",
+          "Stochastic Modelling",
+          "Business Economics & Finance"
+        ]
+      },
+      {
+        "year": 3,
+        "focus": "Advanced & dissertation",
+        "modules": [
+          "Actuarial Risk Management (SP2/SP7 introduction)",
+          "General Insurance Mathematics",
+          "Pensions & Employee Benefits",
+          "Dissertation/Final Project"
+        ]
+      }
+    ],
+    "skills": [
+      "Actuarial modelling of mortality, morbidity, longevity and lapse rates",
+      "Pricing and reserving for life and non-life insurance products",
+      "Stochastic simulation and risk modelling in R, Excel/VBA or specialist actuarial software (MoSes, Prophet)",
+      "Regulatory solvency assessment under Solvency II and IFRS 17",
+      "Communication of complex probabilistic risk concepts to non-technical audiences"
+    ],
+    "professionalBodies": [
+      {
+        "name": "Institute and Faculty of Actuaries (IFoA)",
+        "benefit": "Accredited degrees provide exemptions from multiple IFoA examinations — typically CS1, CS2, CM1 and CB1/CB2 — significantly reducing the time to Fellowship (FIA), which typically takes 4–6 years post-graduation without exemptions"
+      },
+      {
+        "name": "Casualty Actuarial Society (CAS)",
+        "benefit": "Relevant for those targeting general insurance / P&C actuarial roles in North America; some IFoA exemptions are recognised by CAS under a mutual recognition agreement"
+      },
+      {
+        "name": "Society of Actuaries (SOA — USA)",
+        "benefit": "Some IFoA examinations are mutually recognised by the SOA; useful for graduates targeting roles in US-owned insurance groups operating in the UK"
+      }
+    ],
+    "careers": [
+      {
+        "role": "Actuarial Analyst (Life Insurance / Reinsurance)",
+        "salary": "£28,000–£38,000 starting / £55,000–£90,000 at 5 years (qualified FIA: £70,000–£120,000)",
+        "demand": "Very High"
+      },
+      {
+        "role": "Pensions Actuarial Consultant",
+        "salary": "£26,000–£36,000 starting / £50,000–£85,000 at 5 years",
+        "demand": "Very High"
+      },
+      {
+        "role": "General Insurance Pricing Actuary",
+        "salary": "£28,000–£38,000 starting / £55,000–£90,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Investment / Financial Risk Actuary",
+        "salary": "£32,000–£45,000 starting / £65,000–£100,000 at 5 years",
+        "demand": "High"
+      }
+    ],
+    "topEmployers": ["Aviva", "Legal & General", "PwC Actuarial", "Hymans Robertson", "Swiss Re", "Aon"],
+    "employerPerspective": "Actuarial employers regard this degree as the gold standard entry route into the profession, and virtually all major UK insurers, consultancies and reinsurers run structured actuarial trainee programmes specifically targeting Actuarial Science graduates. The IFoA examination exemptions accelerate qualification significantly, which directly benefits employers by reducing training costs and enabling faster contribution to technical teams. Employers consistently note that Actuarial Science graduates have unparalleled mathematical resilience — the degree's demands effectively pre-select for the intellectual stamina required to complete the full professional qualification.",
+    "entryRequirements": "Typical offer: A*AA–AAA at A-level; Mathematics at A or A* is required; Further Mathematics is strongly preferred and often required at top programmes; Statistics is a useful complement. GCSE: Mathematics at grade 8 or 9. This is one of the most competitive programmes in the UK — entry requirements are high and the degree itself has a significant dropout rate. Contextual offers exist but the mathematical threshold means they are less prevalent than in other subjects.",
+    "furtherStudy": "The primary further study route is completion of IFoA examinations toward Fellowship (FIA). A minority pursue MSc Actuarial Science or MSc Financial Mathematics. Some qualified actuaries pursue an MBA or CFA to transition into investment banking or asset management. The PhD route exists for those interested in academic actuarial research.",
+    "isItForYou": [
+      "Study this if Mathematics is your strongest and favourite subject, you enjoy applying it to real-world risk problems, and you are prepared to commit to several years of professional examinations after graduation",
+      "Study this if you want a clearly structured, highly respected career path with excellent salaries, job security and global mobility — actuaries are needed everywhere insurance exists",
+      "Think twice if you are not genuinely passionate about mathematics — the degree and the professional examinations are exceptionally demanding, and motivation beyond salary is essential for completing the Fellowship pathway"
+    ]
+  },
+
+  "ventureCapital": {
+    "id": "ventureCapital",
+    "title": "Venture Capital & Private Equity",
+    "duration": "3 years / 4 years (with placement) / 4 years (integrated Masters)",
+    "overview": "Venture Capital & Private Equity is a specialist degree that examines how funds are raised, managed and deployed to invest in privately held companies — from early-stage startups seeking seed funding to mature businesses undergoing leveraged buyouts. You will study fund structures, deal sourcing, due diligence, portfolio management, fund returns (IRR, MOIC, DPI) and exit strategies including IPOs, trade sales and secondary transactions, alongside core corporate finance and financial modelling. This degree is one of the most distinctive and specialised in UK higher education and is ideal for students who want to work as investors rather than operators — evaluating companies, structuring deals and driving value creation. The degree has strong links to the UK venture capital and private equity ecosystem through industry partnerships, guest lectures and placement opportunities.",
+    "yearByYear": [
+      {
+        "year": 1,
+        "focus": "Foundations",
+        "modules": [
+          "Foundations of Finance",
+          "Entrepreneurship & Startup Ecosystems",
+          "Financial Accounting & Analysis",
+          "Quantitative Methods",
+          "Business Strategy & Competitive Analysis"
+        ]
+      },
+      {
+        "year": 2,
+        "focus": "Core specialisation",
+        "modules": [
+          "Venture Capital: Fund Structures, Term Sheets & Deal Mechanics",
+          "Corporate Finance & Valuation (DCF, LBO, Venture Valuation Methods)",
+          "Private Equity: Leveraged Buyout Analysis",
+          "Due Diligence & Investment Memo Writing",
+          "Portfolio Company Management & Value Creation"
+        ]
+      },
+      {
+        "year": 3,
+        "focus": "Advanced & dissertation",
+        "modules": [
+          "Fund of Funds, Secondaries & Co-Investment",
+          "Fundraising, LP Relations & Fund Economics",
+          "Exit Strategies: IPOs, Trade Sales & Secondary Buyouts",
+          "Dissertation/Final Project"
+        ]
+      }
+    ],
+    "skills": [
+      "LBO modelling and private equity return analysis (IRR, cash-on-cash, MOIC)",
+      "Venture capital valuation methods: pre-money/post-money, Berkus method, scorecard approach",
+      "Investment memo drafting and structured deal analysis",
+      "Due diligence: commercial, financial and management team assessment",
+      "Portfolio monitoring: KPI tracking, board reporting and value creation planning"
+    ],
+    "professionalBodies": [
+      {
+        "name": "BVCA (British Private Equity & Venture Capital Association)",
+        "benefit": "Student and associate membership; access to BVCA events, training programmes and the most comprehensive network in the UK private equity and VC industry"
+      },
+      {
+        "name": "CFA Institute",
+        "benefit": "Corporate finance and investment content prepares graduates for CFA Level 1; the CFA alternative investments curriculum covers private equity directly"
+      },
+      {
+        "name": "Invest Europe",
+        "benefit": "Pan-European PE and VC body; associate access provides exposure to deal data, industry reports and networking events across European markets"
+      }
+    ],
+    "careers": [
+      {
+        "role": "Venture Capital Analyst / Associate",
+        "salary": "£30,000–£50,000 starting (plus carry) / £65,000–£120,000 at 5 years",
+        "demand": "Growing"
+      },
+      {
+        "role": "Private Equity Analyst / Associate",
+        "salary": "£40,000–£65,000 starting (plus carry) / £80,000–£180,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Corporate Development Analyst (M&A In-House)",
+        "salary": "£35,000–£50,000 starting / £60,000–£95,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Investment Banking Analyst (Sponsor Coverage / LevFin)",
+        "salary": "£50,000–£70,000 starting (plus bonus) / £90,000–£160,000 at 5 years",
+        "demand": "High"
+      }
+    ],
+    "topEmployers": ["Balderton Capital", "Octopus Ventures", "Advent International", "CVC Capital Partners", "Permira", "Hg Capital"],
+    "employerPerspective": "Private equity and venture capital firms are typically very small and rarely recruit graduates directly in large numbers — most entry-level analysts come via investment banking. However, firms are increasingly creating dedicated analyst programmes and this degree's specialist content (particularly LBO modelling and investment memo skills) provides a meaningful edge. VC firms, which tend to be more open to direct graduate recruitment than large PE buyout houses, value candidates who can combine financial rigour with an intuitive understanding of startup dynamics.",
+    "entryRequirements": "Typical offer: ABB–BBB at A-level; Mathematics at B or above preferred; Business Studies, Economics or Computer Science are relevant subjects. GCSE: English and Maths at grade 5 or above. Extracurricular evidence of investment interest — running an investment society, managing a paper portfolio, writing a blog about startups — is very positively received. Placement year is strongly recommended for direct entry into VC/PE. Contextual offers typically one grade lower.",
+    "furtherStudy": "MSc Finance (with private equity modules), CFA Charter (highly recommended for asset management credibility), MBA (frequently pursued post-analyst/associate experience to access partner-track roles). Some graduates pursue the BVCA's advanced programmes. A small number complete an MSc Entrepreneurship to move to the founding side.",
+    "isItForYou": [
+      "Study this if you are genuinely fascinated by the business of investing — understanding what makes a company valuable, how deals are structured and how investors generate returns — and want that to be the focus of your career",
+      "Study this if you follow startup and private equity news with real enthusiasm and can articulate why a particular company or sector is an interesting investment opportunity",
+      "Think twice if you expect direct entry into a top PE or VC fund upon graduation — most senior roles come after several years in investment banking or consulting; this degree maximises your preparation but the path still requires building experience"
+    ]
+  },
+
+  "techManagement": {
+    "id": "techManagement",
+    "title": "Finance & Technology Management",
+    "duration": "3 years / 4 years (with placement) / 4 years (integrated Masters)",
+    "overview": "Finance & Technology Management sits at the intersection of financial management and the strategic management of technology-intensive businesses, preparing graduates to lead or advise organisations navigating digital transformation, technology investment decisions and the financial management of tech companies. You will study corporate finance, project finance and valuation alongside IT governance, digital strategy, technology project management and the economics of platform businesses. This degree is ideal for students who want to work in financial roles within technology companies (Amazon, Google, Microsoft), manage large technology investment programmes within banks or corporates, or advise tech companies as consultants or analysts. It combines the analytical framework of finance with the operational and strategic understanding of how technology creates and destroys value.",
+    "yearByYear": [
+      {
+        "year": 1,
+        "focus": "Foundations",
+        "modules": [
+          "Foundations of Finance",
+          "Introduction to Information Systems & Technology Management",
+          "Business Strategy",
+          "Quantitative Methods",
+          "Accounting for Decision-Making"
+        ]
+      },
+      {
+        "year": 2,
+        "focus": "Core specialisation",
+        "modules": [
+          "Corporate Finance & Capital Budgeting",
+          "Technology Investment & IT Governance (COBIT, ITIL)",
+          "Platform Economics & Digital Business Models",
+          "Project Finance & Infrastructure Financing",
+          "Financial Analysis of Technology Companies"
+        ]
+      },
+      {
+        "year": 3,
+        "focus": "Advanced & dissertation",
+        "modules": [
+          "Digital Transformation Finance: Cost-Benefit Analysis & Business Cases",
+          "Cybersecurity Risk & Financial Implications",
+          "Technology M&A & Valuation of Intangible Assets",
+          "Dissertation/Final Project"
+        ]
+      }
+    ],
+    "skills": [
+      "Capital budgeting and financial evaluation of technology investments and IT projects",
+      "Understanding of IT governance frameworks (COBIT, ITIL) and their financial implications",
+      "Valuation of software companies, platform businesses and intangible-asset-heavy firms",
+      "Business case construction for digital transformation programmes",
+      "Stakeholder management across financial and technical teams"
+    ],
+    "professionalBodies": [
+      {
+        "name": "BCS (The Chartered Institute for IT)",
+        "benefit": "Programmes with strong IT management content may carry BCS accreditation, providing a pathway to Chartered IT Professional (CITP) status alongside financial qualifications"
+      },
+      {
+        "name": "CIMA (Chartered Institute of Management Accountants)",
+        "benefit": "Management accounting and strategic finance content supports CIMA CGMA pathway; exemptions from Certificate Level papers typically available"
+      },
+      {
+        "name": "APM (Association for Project Management)",
+        "benefit": "Project finance and technology project management content provides a foundation for the APM Project Management Qualification (PMQ), relevant for programme management roles"
+      }
+    ],
+    "careers": [
+      {
+        "role": "Finance Manager / FP&A Analyst (Technology Company)",
+        "salary": "£30,000–£45,000 starting / £55,000–£85,000 at 5 years",
+        "demand": "Very High"
+      },
+      {
+        "role": "Technology Sector Equity Analyst",
+        "salary": "£35,000–£55,000 starting / £65,000–£100,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "IT Finance Business Partner (Large Corporate / Bank)",
+        "salary": "£30,000–£42,000 starting / £55,000–£80,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Technology Strategy Consultant",
+        "salary": "£32,000–£50,000 starting / £60,000–£100,000 at 5 years",
+        "demand": "Very High"
+      }
+    ],
+    "topEmployers": ["Amazon (Finance Rotation)", "Google (Finance)", "Microsoft (Finance Leadership Programme)", "Accenture Technology Strategy", "Deloitte Technology Consulting", "IBM"],
+    "employerPerspective": "Technology giants such as Amazon, Google and Microsoft run highly competitive finance graduate programmes specifically designed for people who understand both financial management and technology strategy. They consistently report that pure finance graduates struggle to engage credibly with engineering and product teams, while pure technology graduates cannot perform financial rigour — Finance & Technology Management graduates bridge this gap. Consulting firms also prize this combination for their technology strategy and digital transformation practices, where financial analysis of technology investments is a core deliverable.",
+    "entryRequirements": "Typical offer: ABB–BBB at A-level; Mathematics at B or above preferred; Computer Science, Business or Economics are valuable complements. GCSE: English and Maths at grade 5 or above. Interest in technology — demonstrated through side projects, computing courses or relevant work experience — is viewed positively. Contextual offers typically one grade lower.",
+    "furtherStudy": "MBA with technology management specialisation, MSc Technology Management, MSc Finance. CIMA qualification is popular for those in corporate finance functions. Professional certifications in project management (PMP, PRINCE2) and IT governance (CISA, CISSP) are valued for specific career paths.",
+    "isItForYou": [
+      "Study this if you are interested in both finance and technology and want to work in or advise technology companies, or manage large technology investments within major organisations",
+      "Study this if you want to be the person in the room who can translate between finance teams and technology teams — a skill that commands a growing premium as digital transformation accelerates",
+      "Think twice if you want deep technical coding or engineering skills alongside finance — this degree focuses on technology management and strategy rather than technology implementation; a FinTech or Finance & Applied AI degree would be more appropriate"
+    ]
+  },
+
+  "behaviouralFinance": {
+    "id": "behaviouralFinance",
+    "title": "Behavioural Finance",
+    "duration": "3 years / 4 years (with placement) / 4 years (integrated Masters)",
+    "overview": "Behavioural Finance is a fascinating and increasingly influential discipline that combines psychology and cognitive science with financial theory to understand why investors and financial decision-makers so often behave irrationally — and what the consequences of that irrationality are for markets, firms and individuals. You will study classical finance theory (efficient markets, portfolio theory, rational expectations) alongside psychology (cognitive biases, heuristics, emotional decision-making, social influence) and then explore how these insights reshape our understanding of market anomalies, financial crises, consumer financial behaviour and regulatory design. This degree is ideal for students who love asking 'why do people really make financial decisions?' rather than accepting the textbook assumption that everyone is rational. Graduates find careers in investment management, financial advisory, consumer finance, public policy and behavioural research.",
+    "yearByYear": [
+      {
+        "year": 1,
+        "focus": "Foundations",
+        "modules": [
+          "Foundations of Finance & Financial Markets",
+          "Introduction to Psychology",
+          "Behavioural Economics (Kahneman, Thaler, Ariely)",
+          "Quantitative Methods & Statistics",
+          "Consumer Financial Behaviour"
+        ]
+      },
+      {
+        "year": 2,
+        "focus": "Core specialisation",
+        "modules": [
+          "Corporate Finance",
+          "Investment Psychology & Investor Behaviour",
+          "Cognitive Biases in Financial Decision-Making",
+          "Market Anomalies & Limits to Arbitrage",
+          "Experimental Methods in Finance & Economics"
+        ]
+      },
+      {
+        "year": 3,
+        "focus": "Advanced & dissertation",
+        "modules": [
+          "Nudge Theory & Behavioural Public Policy",
+          "Household Finance: Saving, Debt & Retirement Decisions",
+          "Behavioural Corporate Finance (Managerial Biases)",
+          "Dissertation/Final Project"
+        ]
+      }
+    ],
+    "skills": [
+      "Design and analysis of behavioural experiments and surveys",
+      "Statistical analysis using R or SPSS to test behavioural hypotheses with financial data",
+      "Application of nudge interventions and choice architecture to financial product design",
+      "Critical evaluation of classical versus behavioural finance models",
+      "Communication of nuanced psychological and financial concepts to policy, business and public audiences"
+    ],
+    "professionalBodies": [
+      {
+        "name": "CFA Institute",
+        "benefit": "Behavioural finance is an explicit and growing component of the CFA curriculum at Levels 2 and 3; graduates from this degree will find the behavioural sections particularly natural, and finance content provides a solid base for CFA Level 1"
+      },
+      {
+        "name": "British Psychological Society (BPS)",
+        "benefit": "Programmes with a substantive psychology component may be eligible for BPS Graduate Basis for Chartered Membership (GBC), enabling progression to Chartered Psychologist status — valuable for those moving into consumer research or organisational psychology"
+      },
+      {
+        "name": "FCA (Financial Conduct Authority) — Behavioural Economics Unit",
+        "benefit": "The FCA has its own behavioural economics team; graduates with this degree profile are directly competitive for analyst roles where behavioural insight shapes consumer protection regulation"
+      }
+    ],
+    "careers": [
+      {
+        "role": "Behavioural Insights Analyst (Government / Consultancy)",
+        "salary": "£26,000–£38,000 starting / £45,000–£70,000 at 5 years",
+        "demand": "Growing"
+      },
+      {
+        "role": "Investment / Wealth Management Analyst",
+        "salary": "£28,000–£42,000 starting / £50,000–£80,000 at 5 years",
+        "demand": "High"
+      },
+      {
+        "role": "Consumer Financial Research Analyst (Regulator / Fintech)",
+        "salary": "£27,000–£38,000 starting / £45,000–£70,000 at 5 years",
+        "demand": "Growing"
+      },
+      {
+        "role": "Financial Planner / Behavioural Coach (Wealth Management)",
+        "salary": "£25,000–£35,000 starting / £45,000–£80,000 at 5 years (fee-dependent)",
+        "demand": "High"
+      }
+    ],
+    "topEmployers": ["Behavioural Insights Team (BIT)", "FCA (Behavioural Economics)", "Vanguard", "Hargreaves Lansdown", "Aviva (Consumer Research)", "Nest Corporation"],
+    "employerPerspective": "Asset managers and financial planning firms are increasingly integrating behavioural insights into their client communication, product design and risk profiling processes, and graduates who understand the psychological dimensions of financial decision-making provide a genuine competitive advantage. The Behavioural Insights Team and the FCA's Consumer and Retail Conduct division specifically recruit candidates with this profile. Wealth managers such as Vanguard are incorporating behavioural coaching into their advisory model and find graduates from this degree among the most effective at helping clients stay the course during volatile markets.",
+    "entryRequirements": "Typical offer: ABB–BBB at A-level; Mathematics at B or above is typically preferred; Psychology or Economics at A-level is a strong advantage. GCSE: English and Maths at grade 5 or above. A genuine and demonstrable interest in psychology, behavioural science or human decision-making — through reading, projects or work experience — is highly valued. Contextual offers typically one grade lower.",
+    "furtherStudy": "MSc Behavioural Finance, MSc Behavioural Economics, MSc Finance. Some graduates pursue an MSc Occupational Psychology or MSc Consumer Psychology for people-focused careers. CFA is valuable for investment-focused roles. A PhD in Behavioural Finance or Experimental Economics is the academic route, with several UK universities having strong research groups in this field.",
+    "isItForYou": [
+      "Study this if you are as fascinated by human psychology as by financial markets and want to understand the real reasons markets crash, bubbles form and people make poor financial decisions",
+      "Study this if you want to work in a growing and differentiated area of finance that spans investment management, regulation, public policy and consumer finance",
+      "Think twice if you want the highest-paying front-office finance career straight out of university — investment banking, quant finance or private equity will be more accessible from a more technically focused degree; behavioural finance is a powerful specialisation but tends to lead to advisory, research and policy roles rather than trading or deal-making"
+    ]
+  }
+}

@@ -1,232 +1,25 @@
 [
-  {
-    "name": "University of Manchester",
-    "tier": "Red Brick",
-    "overallRank": 19,
-    "subjectRank": 6,
-    "entryGrades": "AAB",
-    "typicalOffer": "AAB including Mathematics",
-    "gradProspects": "89%",
-    "notes": "Behavioural finance modules with prospect theory, cognitive biases and policy advisory focus."
-  },
-  {
-    "name": "University of Birmingham",
-    "tier": "Red Brick",
-    "overallRank": 20,
-    "subjectRank": 11,
-    "entryGrades": "ABB",
-    "typicalOffer": "ABB including Mathematics",
-    "gradProspects": "82%",
-    "notes": "Behavioural economics and finance electives with cognitive biases and consumer finance focus."
-  },
-  {
-    "name": "University of Leeds",
-    "tier": "Red Brick",
-    "overallRank": 18,
-    "subjectRank": 7,
-    "entryGrades": "AAB",
-    "typicalOffer": "AAB including Mathematics",
-    "gradProspects": "85%",
-    "notes": "Behavioural finance pathway with market anomalies and decision science elective modules."
-  },
-  {
-    "name": "University of Liverpool",
-    "tier": "Red Brick",
-    "overallRank": 27,
-    "subjectRank": 21,
-    "entryGrades": "BBB",
-    "typicalOffer": "BBB including Mathematics",
-    "gradProspects": "75%",
-    "notes": "Finance with behavioural economics electives and consumer finance module coverage."
-  },
-  {
-    "name": "University of Sheffield",
-    "tier": "Red Brick",
-    "overallRank": 17,
-    "subjectRank": 12,
-    "entryGrades": "ABB",
-    "typicalOffer": "ABB including Mathematics",
-    "gradProspects": "79%",
-    "notes": "Behavioural finance electives with cognitive bias and market anomalies curriculum focus."
-  },
-  {
-    "name": "University of Bristol",
-    "tier": "Red Brick",
-    "overallRank": 8,
-    "subjectRank": 3,
-    "entryGrades": "AAA",
-    "typicalOffer": "AAA including Mathematics",
-    "gradProspects": "93%",
-    "notes": "Top behavioural finance programme with prospect theory, market anomalies and policy advisory."
-  },
-  {
-    "name": "University of Reading",
-    "tier": "Red Brick",
-    "overallRank": 29,
-    "subjectRank": 19,
-    "entryGrades": "BBB",
-    "typicalOffer": "BBB including Mathematics",
-    "gradProspects": "73%",
-    "notes": "Finance with behavioural economics electives; ICMA Centre covers investor psychology basics."
-  },
-  {
-    "name": "University of Nottingham",
-    "tier": "Red Brick",
-    "overallRank": 28,
-    "subjectRank": 5,
-    "entryGrades": "AAB",
-    "typicalOffer": "AAB including Mathematics",
-    "gradProspects": "85%",
-    "notes": "Behavioural finance with cognitive bias, prospect theory and consumer finance career pathway."
-  },
-  {
-    "name": "Newcastle University",
-    "tier": "Red Brick",
-    "overallRank": 34,
-    "subjectRank": 18,
-    "entryGrades": "BBB",
-    "typicalOffer": "BBB including Mathematics",
-    "gradProspects": "75%",
-    "notes": "Finance with behavioural economics electives and decision science module pathway."
-  },
-  {
-    "name": "Cardiff University",
-    "tier": "Red Brick",
-    "overallRank": 30,
-    "subjectRank": 14,
-    "entryGrades": "BBB",
-    "typicalOffer": "BBB including Mathematics",
-    "gradProspects": "74%",
-    "notes": "Behavioural finance electives with consumer finance and policy advisory focus available."
-  },
-  {
-    "name": "University of Leicester",
-    "tier": "Red Brick",
-    "overallRank": 35,
-    "subjectRank": 20,
-    "entryGrades": "BBB",
-    "typicalOffer": "BBB including Mathematics",
-    "gradProspects": "70%",
-    "notes": "Finance with behavioural economics electives and consumer decision-making module coverage."
-  },
-  {
-    "name": "University of Hull",
-    "tier": "Red Brick",
-    "overallRank": 71,
-    "subjectRank": null,
-    "entryGrades": "BCC",
-    "typicalOffer": "BCC including Mathematics",
-    "gradProspects": "60%",
-    "notes": "No dedicated behavioural finance specialism; general finance degree pathway only."
-  },
-  {
-    "name": "University of Warwick",
-    "tier": "One Tier Below",
-    "overallRank": 6,
-    "subjectRank": 2,
-    "entryGrades": "AAA",
-    "typicalOffer": "AAA including Mathematics",
-    "gradProspects": "94%",
-    "notes": "WBS behavioural finance, prospect theory, market anomalies and policy advisory pathway."
-  },
-  {
-    "name": "University of Bath",
-    "tier": "One Tier Below",
-    "overallRank": 9,
-    "subjectRank": 4,
-    "entryGrades": "AAA",
-    "typicalOffer": "AAA including Mathematics",
-    "gradProspects": "91%",
-    "notes": "Behavioural finance and decision science with placement year and strong employer outcomes."
-  },
-  {
-    "name": "University of Exeter",
-    "tier": "One Tier Below",
-    "overallRank": 28,
-    "subjectRank": 1,
-    "entryGrades": "AAA",
-    "typicalOffer": "AAA including Mathematics",
-    "gradProspects": "91%",
-    "notes": "UK's leading behavioural finance research, cognitive biases and market anomalies deeply embedded."
-  },
-  {
-    "name": "Lancaster University",
-    "tier": "One Tier Below",
-    "overallRank": 22,
-    "subjectRank": 8,
-    "entryGrades": "AAB",
-    "typicalOffer": "AAB including Mathematics",
-    "gradProspects": "82%",
-    "notes": "Behavioural finance with prospect theory, consumer finance and policy advisory modules."
-  },
-  {
-    "name": "Loughborough University",
-    "tier": "One Tier Below",
-    "overallRank": 14,
-    "subjectRank": 15,
-    "entryGrades": "BBB",
-    "typicalOffer": "BBB including Mathematics",
-    "gradProspects": "84%",
-    "notes": "Finance with behavioural electives and decision science pathway through business faculty."
-  },
-  {
-    "name": "University of Southampton",
-    "tier": "One Tier Below",
-    "overallRank": 16,
-    "subjectRank": 10,
-    "entryGrades": "ABB",
-    "typicalOffer": "ABB including Mathematics",
-    "gradProspects": "79%",
-    "notes": "Behavioural finance with decision science electives and consumer finance placement pathway."
-  },
-  {
-    "name": "University of York",
-    "tier": "One Tier Below",
-    "overallRank": 25,
-    "subjectRank": 9,
-    "entryGrades": "ABB",
-    "typicalOffer": "ABB including Mathematics",
-    "gradProspects": "80%",
-    "notes": "Behavioural finance modules with cognitive bias and York's strong economics research base."
-  },
-  {
-    "name": "Aston University",
-    "tier": "One Tier Below",
-    "overallRank": 36,
-    "subjectRank": 17,
-    "entryGrades": "BBB",
-    "typicalOffer": "BBB including Mathematics",
-    "gradProspects": "74%",
-    "notes": "Finance with behavioural economics electives and consumer finance module in curriculum."
-  },
-  {
-    "name": "University of East Anglia",
-    "tier": "One Tier Below",
-    "overallRank": 32,
-    "subjectRank": 16,
-    "entryGrades": "BBB",
-    "typicalOffer": "BBB including Mathematics",
-    "gradProspects": "73%",
-    "notes": "Behavioural finance electives drawing on UEA's strong economics and psychology research."
-  },
-  {
-    "name": "University of Sussex",
-    "tier": "One Tier Below",
-    "overallRank": 42,
-    "subjectRank": 13,
-    "entryGrades": "BBB",
-    "typicalOffer": "BBB including Mathematics",
-    "gradProspects": "73%",
-    "notes": "Psychology heritage strengthens behavioural finance and decision science elective pathway."
-  },
-  {
-    "name": "University of Kent",
-    "tier": "One Tier Below",
-    "overallRank": 55,
-    "subjectRank": 22,
-    "entryGrades": "BBB",
-    "typicalOffer": "BBB including Mathematics",
-    "gradProspects": "66%",
-    "notes": "Finance with behavioural economics electives and developing decision science pathway."
-  }
+  {"name":"University of Exeter","tier":"One Tier Below","overallRank":28,"subjectRank":1,"entryGrades":"AAA","typicalOffer":"AAA including Mathematics","gradProspects":"91%","notes":"Prospect theory, cognitive biases, market anomalies, consumer finance, policy advisory."},
+  {"name":"University of Warwick","tier":"One Tier Below","overallRank":6,"subjectRank":2,"entryGrades":"AAA","typicalOffer":"AAA including Mathematics","gradProspects":"94%","notes":"Behavioural economics, cognitive biases, market anomalies, policy advisory focus."},
+  {"name":"University of Bristol","tier":"Red Brick","overallRank":8,"subjectRank":3,"entryGrades":"AAA","typicalOffer":"AAA including Mathematics","gradProspects":"93%","notes":"Prospect theory, behavioural economics, consumer finance, market anomalies research."},
+  {"name":"University of Bath","tier":"One Tier Below","overallRank":9,"subjectRank":4,"entryGrades":"AAA","typicalOffer":"AAA including Mathematics","gradProspects":"91%","notes":"Cognitive biases, prospect theory, consumer finance, behavioural economics specialism."},
+  {"name":"University of Nottingham","tier":"Red Brick","overallRank":28,"subjectRank":5,"entryGrades":"AAB","typicalOffer":"AAB including Mathematics","gradProspects":"85%","notes":"Market anomalies, prospect theory, behavioural economics, consumer finance pathway."},
+  {"name":"University of Manchester","tier":"Red Brick","overallRank":19,"subjectRank":6,"entryGrades":"AAB","typicalOffer":"AAB including Mathematics","gradProspects":"89%","notes":"Cognitive biases, behavioural economics, market anomalies, policy advisory links."},
+  {"name":"University of Leeds","tier":"Red Brick","overallRank":18,"subjectRank":7,"entryGrades":"AAB","typicalOffer":"AAB including Mathematics","gradProspects":"85%","notes":"Behavioural finance, prospect theory, consumer finance, market anomalies modules."},
+  {"name":"Lancaster University","tier":"One Tier Below","overallRank":22,"subjectRank":8,"entryGrades":"AAB","typicalOffer":"AAB including Mathematics","gradProspects":"82%","notes":"LUMS; cognitive biases, prospect theory, policy advisory, behavioural economics."},
+  {"name":"University of York","tier":"One Tier Below","overallRank":25,"subjectRank":9,"entryGrades":"ABB","typicalOffer":"ABB including Mathematics","gradProspects":"80%","notes":"Behavioural economics, market anomalies, consumer finance, cognitive biases pathway."},
+  {"name":"University of Southampton","tier":"One Tier Below","overallRank":16,"subjectRank":10,"entryGrades":"ABB","typicalOffer":"ABB including Mathematics","gradProspects":"79%","notes":"Prospect theory, cognitive biases, consumer finance, policy advisory specialism."},
+  {"name":"University of Birmingham","tier":"Red Brick","overallRank":20,"subjectRank":11,"entryGrades":"ABB","typicalOffer":"ABB including Mathematics","gradProspects":"82%","notes":"Behavioural finance, cognitive biases, market anomalies, consumer finance modules."},
+  {"name":"University of Sheffield","tier":"Red Brick","overallRank":17,"subjectRank":12,"entryGrades":"ABB","typicalOffer":"ABB including Mathematics","gradProspects":"79%","notes":"Behavioural economics, prospect theory, market anomalies, consumer finance electives."},
+  {"name":"University of Sussex","tier":"One Tier Below","overallRank":42,"subjectRank":13,"entryGrades":"BBB","typicalOffer":"BBB including Mathematics","gradProspects":"73%","notes":"Cognitive biases, behavioural economics, consumer finance, policy advisory focus."},
+  {"name":"Cardiff University","tier":"Red Brick","overallRank":30,"subjectRank":14,"entryGrades":"BBB","typicalOffer":"BBB including Mathematics","gradProspects":"74%","notes":"Prospect theory, market anomalies, behavioural economics, consumer finance modules."},
+  {"name":"Loughborough University","tier":"One Tier Below","overallRank":14,"subjectRank":15,"entryGrades":"BBB","typicalOffer":"BBB including Mathematics","gradProspects":"84%","notes":"Behavioural finance modules, cognitive biases, consumer finance, employer placement links."},
+  {"name":"University of East Anglia","tier":"One Tier Below","overallRank":32,"subjectRank":16,"entryGrades":"BBB","typicalOffer":"BBB including Mathematics","gradProspects":"73%","notes":"Cognitive biases, prospect theory, behavioural economics, policy advisory electives."},
+  {"name":"Aston University","tier":"One Tier Below","overallRank":36,"subjectRank":17,"entryGrades":"BBB","typicalOffer":"BBB including Mathematics","gradProspects":"74%","notes":"Behavioural economics, consumer finance, cognitive biases, placement year embedded."},
+  {"name":"Newcastle University","tier":"Red Brick","overallRank":34,"subjectRank":18,"entryGrades":"BBB","typicalOffer":"BBB including Mathematics","gradProspects":"75%","notes":"Prospect theory, market anomalies, behavioural finance electives, consumer finance."},
+  {"name":"University of Reading","tier":"Red Brick","overallRank":29,"subjectRank":19,"entryGrades":"BBB","typicalOffer":"BBB including Mathematics","gradProspects":"73%","notes":"ICMA Centre; behavioural economics, cognitive biases, consumer finance modules."},
+  {"name":"University of Leicester","tier":"Red Brick","overallRank":35,"subjectRank":20,"entryGrades":"BBB","typicalOffer":"BBB including Mathematics","gradProspects":"70%","notes":"Behavioural finance electives, cognitive biases, market anomalies, consumer finance."},
+  {"name":"University of Liverpool","tier":"Red Brick","overallRank":27,"subjectRank":21,"entryGrades":"BBB","typicalOffer":"BBB including Mathematics","gradProspects":"75%","notes":"Prospect theory, behavioural economics electives, consumer finance, policy advisory."},
+  {"name":"University of Kent","tier":"One Tier Below","overallRank":55,"subjectRank":22,"entryGrades":"BBB","typicalOffer":"BBB including Mathematics","gradProspects":"66%","notes":"Behavioural finance modules, cognitive biases, consumer finance, developing employer links."},
+  {"name":"University of Hull","tier":"Red Brick","overallRank":71,"subjectRank":null,"entryGrades":"BCC","typicalOffer":"BCC including Mathematics","gradProspects":"60%","notes":"No dedicated behavioural finance specialism; general finance only available."}
 ]
