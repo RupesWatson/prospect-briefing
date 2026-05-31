@@ -1,1 +1,232 @@
-[]
+[
+  {
+    "name": "University of Manchester",
+    "tier": "Red Brick",
+    "overallRank": 19,
+    "subjectRank": 2,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "90%",
+    "notes": "VC and PE pathway with startup valuation, deal structuring and accelerator programme links."
+  },
+  {
+    "name": "University of Birmingham",
+    "tier": "Red Brick",
+    "overallRank": 20,
+    "subjectRank": 9,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "83%",
+    "notes": "Finance with VC electives, fund management and LP/GP dynamics modules available."
+  },
+  {
+    "name": "University of Leeds",
+    "tier": "Red Brick",
+    "overallRank": 18,
+    "subjectRank": 6,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "87%",
+    "notes": "VC and private equity electives with pitch competition programme and accelerator links."
+  },
+  {
+    "name": "University of Liverpool",
+    "tier": "Red Brick",
+    "overallRank": 27,
+    "subjectRank": null,
+    "entryGrades": "BCC",
+    "typicalOffer": "BCC including Mathematics",
+    "gradProspects": "75%",
+    "notes": "No dedicated VC or private equity specialism; general finance degree pathway available."
+  },
+  {
+    "name": "University of Sheffield",
+    "tier": "Red Brick",
+    "overallRank": 17,
+    "subjectRank": 13,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "80%",
+    "notes": "VC electives with startup valuation and Sheffield's growing enterprise ecosystem support."
+  },
+  {
+    "name": "University of Bristol",
+    "tier": "Red Brick",
+    "overallRank": 8,
+    "subjectRank": 3,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "93%",
+    "notes": "Strong VC and PE programme with deal structuring, fund management and pitch competitions."
+  },
+  {
+    "name": "University of Reading",
+    "tier": "Red Brick",
+    "overallRank": 29,
+    "subjectRank": 19,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "74%",
+    "notes": "Finance with VC electives; ICMA Centre provides private markets and fund analysis modules."
+  },
+  {
+    "name": "University of Nottingham",
+    "tier": "Red Brick",
+    "overallRank": 28,
+    "subjectRank": 10,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "84%",
+    "notes": "VC and PE pathway with Nottingham enterprise centre, startup valuation and LP/GP focus."
+  },
+  {
+    "name": "Newcastle University",
+    "tier": "Red Brick",
+    "overallRank": 34,
+    "subjectRank": 16,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "76%",
+    "notes": "Finance with VC electives, growing regional startup ecosystem and deal structuring modules."
+  },
+  {
+    "name": "Cardiff University",
+    "tier": "Red Brick",
+    "overallRank": 30,
+    "subjectRank": 15,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "74%",
+    "notes": "VC electives with Welsh startup ecosystem links and enterprise finance module access."
+  },
+  {
+    "name": "University of Leicester",
+    "tier": "Red Brick",
+    "overallRank": 35,
+    "subjectRank": null,
+    "entryGrades": "BCC",
+    "typicalOffer": "BCC including Mathematics",
+    "gradProspects": "70%",
+    "notes": "No dedicated VC specialism; general finance with enterprise electives available."
+  },
+  {
+    "name": "University of Hull",
+    "tier": "Red Brick",
+    "overallRank": 71,
+    "subjectRank": null,
+    "entryGrades": "BCC",
+    "typicalOffer": "BCC including Mathematics",
+    "gradProspects": "60%",
+    "notes": "No VC or private equity programme; general finance degree only currently offered."
+  },
+  {
+    "name": "University of Warwick",
+    "tier": "One Tier Below",
+    "overallRank": 6,
+    "subjectRank": 1,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "94%",
+    "notes": "WBS Entrepreneurship Centre leads UK VC, fund management and accelerator partnership access."
+  },
+  {
+    "name": "University of Bath",
+    "tier": "One Tier Below",
+    "overallRank": 9,
+    "subjectRank": 5,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "91%",
+    "notes": "VC and PE with placement year, deal structuring and strong London investor network access."
+  },
+  {
+    "name": "University of Exeter",
+    "tier": "One Tier Below",
+    "overallRank": 28,
+    "subjectRank": 4,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "91%",
+    "notes": "VC specialism with startup valuation, pitch competitions and accelerator employer links."
+  },
+  {
+    "name": "Lancaster University",
+    "tier": "One Tier Below",
+    "overallRank": 22,
+    "subjectRank": 8,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "84%",
+    "notes": "LUMS VC pathway with fund management, LP/GP dynamics and startup valuation curriculum."
+  },
+  {
+    "name": "Loughborough University",
+    "tier": "One Tier Below",
+    "overallRank": 14,
+    "subjectRank": 7,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "87%",
+    "notes": "VC and enterprise finance with placement year and strong Loughborough accelerator links."
+  },
+  {
+    "name": "University of Southampton",
+    "tier": "One Tier Below",
+    "overallRank": 16,
+    "subjectRank": 11,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "80%",
+    "notes": "VC electives with deal structuring, fund analysis and Southampton enterprise hub access."
+  },
+  {
+    "name": "University of York",
+    "tier": "One Tier Below",
+    "overallRank": 25,
+    "subjectRank": 14,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "79%",
+    "notes": "Finance with VC electives and York's growing science park startup ecosystem access."
+  },
+  {
+    "name": "Aston University",
+    "tier": "One Tier Below",
+    "overallRank": 36,
+    "subjectRank": 12,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "77%",
+    "notes": "Strong enterprise culture with VC electives, Birmingham startup ecosystem and accelerator links."
+  },
+  {
+    "name": "University of East Anglia",
+    "tier": "One Tier Below",
+    "overallRank": 32,
+    "subjectRank": 17,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "74%",
+    "notes": "Finance with VC electives and enterprise modules through UEA business faculty."
+  },
+  {
+    "name": "University of Sussex",
+    "tier": "One Tier Below",
+    "overallRank": 42,
+    "subjectRank": 18,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "72%",
+    "notes": "VC electives with Brighton startup ecosystem and proximity to London investor network."
+  },
+  {
+    "name": "University of Kent",
+    "tier": "One Tier Below",
+    "overallRank": 55,
+    "subjectRank": null,
+    "entryGrades": "BCC",
+    "typicalOffer": "BCC including Mathematics",
+    "gradProspects": "66%",
+    "notes": "No dedicated VC specialism; general finance with enterprise elective modules available."
+  }
+]
