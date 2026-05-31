@@ -3,281 +3,1495 @@
     "slug": "manchester",
     "name": "University of Manchester",
     "city": "Manchester",
-    "overview": "The University of Manchester is a world-leading Russell Group institution with a proud history of research excellence, having produced more Nobel laureates than almost any other UK university. Its Alliance Manchester Business School is one of the largest and most prestigious in Europe, offering finance and accounting programmes with deep industry links. The university combines academic rigour with a vibrant, diverse campus life at the heart of one of the UK's most exciting cities.",
+    "overview": "The University of Manchester is a world-leading research institution and member of the prestigious Russell Group, consistently ranked among the UK's top universities. Home to more Nobel laureates than any other UK university outside Oxbridge, it offers an exceptional academic environment across its three faculties. Its Alliance Manchester Business School is triple-accredited and renowned globally for finance and business programmes.",
     "founded": 1824,
     "totalStudents": 45000,
-    "internationalStudents": "30%",
+    "internationalStudents": "31%",
     "campusType": "City campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "All first-years who apply by the deadline are guaranteed a place in university accommodation. Halls are clustered in the lively Fallowfield and Victoria Park areas, 2–3 miles from campus with regular night buses.", "avgWeeklyCost": "£140–£200", "halls": ["Owens Park", "Whitworth Park", "Fallowfield Campus"], "privateRentAreas": "Fallowfield, Withington, Didsbury and Chorlton — popular student areas 2–4 miles south of campus" },
-    "openDays": [{ "date": "14 June 2025", "type": "Undergraduate Open Day" }, { "date": "20 September 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": true, "interviewRequired": false, "personalStatementTips": ["Reference specific financial events or books (e.g. Liar's Poker, The Intelligent Investor) to show genuine intellectual interest", "Mention involvement in school investment clubs, trading simulations or any finance-adjacent work experience", "Show awareness of Manchester's role as the UK's second financial centre and how you'd exploit the city's employer network"], "typicalTimeline": "UCAS opens Sept; 29 Jan UCAS deadline; offers typically by March; firm deadline late April" },
-    "studentLife": { "union": "Manchester Students' Union — one of Europe's largest, with a dedicated building on Oxford Road and over 400 societies", "societiesCount": "400+", "sportsTeams": "80+", "highlights": ["Investment & Finance Society runs Bloomberg workshops, CFA study groups and employer speaker evenings", "Manchester is consistently ranked the UK's best student city outside London", "The Northern Quarter offers Europe-quality independent culture minutes from campus"] },
-    "cityLife": { "description": "Manchester is the UK's third-largest economy and a genuine international city — home to global media (BBC, ITV), two Premier League clubs, and a financial district growing rapidly post-Brexit. The student cost of living is moderate: much cheaper than London with far more to do than most university towns.", "avgRentPerMonth": "£600–£800", "costOfLiving": "Moderate", "transport": "Metrolink tram plus extensive buses; Manchester Piccadilly to London Euston in 2hrs 8mins", "highlights": ["Spinningfields: Manchester's answer to Canary Wharf, home to HSBC, Barclays and Deloitte", "MediaCityUK in Salford — BBC, ITV and major tech employers 15 mins from campus", "Cultural quarter with Whitworth Art Gallery, HOME cinema and the award-winning Manchester International Festival"], "nightlife": "Warehouse Project, Albert Hall, and the city's Gay Village make Manchester's nightlife some of the best in Europe" },
-    "notableAlumni": ["Sir Terry Leahy — former CEO of Tesco, transformed UK retail", "Riz Ahmed — Oscar-winning actor and producer", "Sir John Sulston — Nobel Prize in Physiology, Human Genome Project lead"],
-    "keyFacts": ["Russell Group member — elite research university", "25 Nobel Prize winners associated with Manchester", "Alliance Manchester Business School: AACSB, AMBA and EQUIS triple-accredited"]
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Manchester guarantees accommodation to all first-year undergraduates who apply by the deadline. A wide range of halls are available across the Oxford Road corridor, from budget-friendly to premium en-suite options.",
+      "avgWeeklyCost": "£140–£195",
+      "halls": ["Oak House", "Whitworth Park", "Victoria Hall"],
+      "privateRentAreas": "Fallowfield, Withington, Rusholme, Didsbury"
+    },
+    "openDays": [
+      { "date": "14 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "20 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "11 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": true,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Demonstrate awareness of current financial markets and global economic events",
+        "Highlight any relevant work experience, internships or shadowing in finance or accounting",
+        "Show genuine enthusiasm for the quantitative and analytical aspects of the degree"
+      ],
+      "typicalTimeline": "UCAS opens September; apply by 29 January deadline; decisions typically by March-April; Clearing opens July"
+    },
+    "studentLife": {
+      "union": "Manchester Students' Union (one of the largest in the UK)",
+      "societiesCount": "400+",
+      "sportsTeams": "80+",
+      "highlights": [
+        "Award-winning students' union with dedicated finance and investment societies",
+        "Manchester Finance and Investment Group runs stock-picking competitions and speaker events",
+        "Strong alumni network with direct links to Big Four and investment banking graduate schemes"
+      ]
+    },
+    "cityLife": {
+      "description": "Manchester is a vibrant, cosmopolitan city with a thriving cultural scene, world-class music venues, and a passionate sporting culture. It is one of the most affordable major UK cities for students, with excellent public transport links and a booming professional services sector.",
+      "avgRentPerMonth": "£600–£800",
+      "costOfLiving": "Moderate",
+      "transport": "Extensive Metrolink tram network and bus services; Manchester Piccadilly connects to London in just over 2 hours",
+      "highlights": [
+        "Northern Quarter's independent cafes, bars, and arts scene",
+        "Spinningfields financial district home to major banks and professional services firms",
+        "World-famous music venues including Band on the Wall and Albert Hall"
+      ],
+      "nightlife": "Manchester has one of the UK's most celebrated nightlife scenes, with the Gay Village, Deansgate Locks, and Ancoats offering diverse options for every taste."
+    },
+    "notableAlumni": [
+      "Sir Mick Hucknall — musician and entrepreneur",
+      "Sir Terry Leahy — former CEO of Tesco",
+      "Benedict Cumberbatch — actor and producer"
+    ],
+    "keyFacts": [
+      "Russell Group member with over 25 Nobel Prize-winning staff and alumni",
+      "Alliance Manchester Business School is triple-accredited (AACSB, AMBA, EQUIS)",
+      "Ranked consistently in the global top 30 for Accounting and Finance"
+    ]
   },
   "birmingham": {
-    "slug": "birmingham", "name": "University of Birmingham", "city": "Birmingham",
-    "overview": "A founding member of the Russell Group, Birmingham combines research excellence with a beautiful redbrick campus and genuine civic pride in the UK's second city. Birmingham Business School is well-regarded for its accounting, finance and management programmes, with strong City links.",
-    "founded": 1900, "totalStudents": 35000, "internationalStudents": "32%", "campusType": "Suburban campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "Birmingham guarantees accommodation for all first-year students who hold a firm offer. The main halls are on the Edgbaston campus or in the Vale Village complex nearby.", "avgWeeklyCost": "£130–£185", "halls": ["The Vale Village", "Mason Hall", "Shackleton Hall"], "privateRentAreas": "Selly Oak, Bournbrook and Harborne — all within 20 minutes of campus by bus or bike" },
-    "openDays": [{ "date": "21 June 2025", "type": "Undergraduate Open Day" }, { "date": "27 September 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": true, "interviewRequired": false, "personalStatementTips": ["Demonstrate awareness of current accounting standards (IFRS) or financial news to show genuine subject interest", "Reference any relevant experience — work shadowing at accountancy firms, participation in enterprise programmes", "Show knowledge of Birmingham's financial sector and how proximity to a major UK city enhances your career prospects"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; offers usually within 6 weeks; Clearing available August" },
-    "studentLife": { "union": "University of Birmingham Guild of Students — over 300 societies, voted one of the UK's best student unions", "societiesCount": "300+", "sportsTeams": "60+", "highlights": ["Finance and Investment Society hosts annual trading competitions and City employer evenings", "The Guild Boat Club is one of the largest in the UK", "Excellent sports facilities including a 50m swimming pool on campus"] },
-    "cityLife": { "description": "Birmingham is the UK's youngest major city with more Michelin-starred restaurants than any other outside London. As the UK's second city it offers a vibrant cultural scene, a growing tech and finance sector, and significantly lower living costs than the capital.", "avgRentPerMonth": "£550–£750", "costOfLiving": "Moderate", "transport": "Excellent metro and bus network; Birmingham New Street to London Euston in 1hr 20mins", "highlights": ["Brindleyplace and Colmore Row: Birmingham's finance and legal districts", "Bullring and Grand Central: world-class shopping 10 minutes from campus by tram", "Digbeth creative quarter — street art, independent venues and a growing tech scene"], "nightlife": "Broad Street remains the main nightlife hub; Digbeth is rapidly becoming the city's coolest area for live music and club nights" },
-    "notableAlumni": ["Sir Tim Berners-Lee — inventor of the World Wide Web (honorary degree)", "Malala Yousafzai — Nobel Peace Prize laureate", "J.R.R. Tolkien — author of The Lord of the Rings"],
-    "keyFacts": ["Russell Group founding member", "Ranked in the global top 100 for Business & Economics", "Birmingham Business School: AACSB and AMBA accredited"]
+    "slug": "birmingham",
+    "name": "University of Birmingham",
+    "city": "Birmingham",
+    "overview": "The University of Birmingham is a founding member of the Russell Group and one of the UK's most prestigious civic universities, with a beautiful redbrick campus in Edgbaston. Its Birmingham Business School offers highly regarded Accounting and Finance degrees with strong industry connections across the Midlands and beyond. The university has a long tradition of excellence in research and graduate employability.",
+    "founded": 1900,
+    "totalStudents": 38000,
+    "internationalStudents": "28%",
+    "campusType": "Suburban campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Birmingham guarantees university accommodation to all first-year undergraduates who hold the university as their firm choice and apply by the deadline. Halls range from traditional catered options to modern self-catered en-suites on or near campus.",
+      "avgWeeklyCost": "£130–£185",
+      "halls": ["Shackleton Hall", "Mason Hall", "Jarratt Hall"],
+      "privateRentAreas": "Selly Oak, Harborne, Edgbaston, Bournbrook"
+    },
+    "openDays": [
+      { "date": "21 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "27 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "18 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": true,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Reference specific modules or research areas that align with your career interests in finance",
+        "Demonstrate numerical aptitude through A-level choices and any relevant experience",
+        "Show understanding of Birmingham Business School's industry partnerships and placement opportunities"
+      ],
+      "typicalTimeline": "Apply via UCAS by 29 January; offers typically made February-April; firm/insurance deadline May; results and Clearing in August"
+    },
+    "studentLife": {
+      "union": "Guild of Students",
+      "societiesCount": "350+",
+      "sportsTeams": "60+",
+      "highlights": [
+        "Birmingham Finance and Investment Society hosts annual trading competitions",
+        "Strong links to KPMG, Deloitte and PwC Midlands graduate programmes",
+        "Redbrick Media group gives students broadcast and journalism experience"
+      ]
+    },
+    "cityLife": {
+      "description": "Birmingham is the UK's second-largest city and a major financial and professional services hub, with a rapidly developing city centre that hosted the 2022 Commonwealth Games. Students benefit from affordable living costs relative to other major UK cities, alongside excellent connectivity and a diverse cultural offering.",
+      "avgRentPerMonth": "£550–£750",
+      "costOfLiving": "Moderate",
+      "transport": "Cross-City railway line, extensive bus network, and West Midlands Metro tram; London Euston under 1.5 hours by train",
+      "highlights": [
+        "Bullring and Grand Central for shopping; Brindleyplace for bars and restaurants",
+        "Cadbury World and the Jewellery Quarter showcase Birmingham's heritage",
+        "Thriving Balti Triangle internationally recognised food destination"
+      ],
+      "nightlife": "Birmingham offers a diverse nightlife centred on Broad Street, Digbeth's creative quarter, and Arcadian, catering to all musical tastes and budgets."
+    },
+    "notableAlumni": [
+      "J.R.R. Tolkien — author of The Lord of the Rings",
+      "Chris Tarrant — broadcaster and TV presenter",
+      "Malala Yousafzai — Nobel Peace Prize laureate (honorary)"
+    ],
+    "keyFacts": [
+      "Russell Group founder member; ranked in the global top 100 universities",
+      "Birmingham Business School holds triple accreditation (AACSB, AMBA, EQUIS)",
+      "Over 90% of graduates are in employment or further study within 15 months"
+    ]
   },
   "leeds": {
-    "slug": "leeds", "name": "University of Leeds", "city": "Leeds",
-    "overview": "A Russell Group university with a vibrant campus right next to the city centre, Leeds is consistently ranked among the UK's top universities for student experience. Leeds University Business School is ranked in the UK's top 10 for Accounting & Finance and holds triple international accreditation.",
-    "founded": 1904, "totalStudents": 38000, "internationalStudents": "33%", "campusType": "City campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "Leeds guarantees accommodation for all first-year students. Most halls are within walking distance of campus or a short bus ride away in the Hyde Park or Headingley areas.", "avgWeeklyCost": "£130–£180", "halls": ["Charles Morris Hall", "Bodington Hall", "Devonshire Hall"], "privateRentAreas": "Hyde Park, Headingley, Burley and Woodhouse — traditional student areas 1–3 miles from campus" },
-    "openDays": [{ "date": "28 June 2025", "type": "Undergraduate Open Day" }, { "date": "13 September 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": true, "interviewRequired": false, "personalStatementTips": ["Show engagement with financial media (FT, The Economist) and ability to discuss current financial issues critically", "Reference Leeds's strong A&F ranking and how you intend to leverage the university's industry partnerships", "Mention any quantitative interests or A-level Maths/Economics performance to demonstrate suitability for the programme"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; offers by March; firm/insurance choices due May" },
-    "studentLife": { "union": "Leeds University Union (LUU) — one of the UK's biggest student unions, running over 300 societies and clubs", "societiesCount": "300+", "sportsTeams": "70+", "highlights": ["Leeds Finance & Investment Society runs Bloomberg training and CFA preparation sessions", "LUU is a hub of student enterprise with its own business incubator", "The Clothworkers' Court is a stunning Grade II listed social space on campus"] },
-    "cityLife": { "description": "Leeds is one of the UK's most vibrant cities — a financial centre in its own right, home to KPMG, PwC, HSBC and a rapidly growing tech and creative economy. Student living costs are notably lower than London while the cultural offering rivals much bigger cities.", "avgRentPerMonth": "£550–£750", "costOfLiving": "Moderate", "transport": "Comprehensive bus network across the city; Leeds to London King's Cross in 2hrs 10mins by train", "highlights": ["Leeds city centre is a 10-minute walk from campus — one of the UK's best student locations", "Kirkgate Market: Europe's largest covered market", "First Direct Arena: major music and events venue right in the city centre"], "nightlife": "Call Lane and Merrion Street offer everything from indie bars to major clubs; Hyde Park has a thriving student pub scene" },
-    "notableAlumni": ["Barbara Taylor Bradford — novelist, author of A Woman of Substance", "Jeremy Paxman — journalist and broadcaster", "Keith Waterhouse — playwright and author of Billy Liar"],
-    "keyFacts": ["Russell Group member", "Leeds University Business School: AACSB, AMBA and EQUIS triple-accredited", "Top 10 UK for Accounting & Finance (CUG 2026)"]
+    "slug": "leeds",
+    "name": "University of Leeds",
+    "city": "Leeds",
+    "overview": "The University of Leeds is a Russell Group research university renowned for its vibrant campus, wide-ranging degree programmes, and strong graduate employability record. Leeds University Business School offers highly respected Accounting and Finance degrees with excellent links to the financial services sector in Leeds, which is the UK's largest financial centre outside London. The university consistently features in national top-ten rankings.",
+    "founded": 1904,
+    "totalStudents": 40000,
+    "internationalStudents": "30%",
+    "campusType": "City campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Leeds guarantees accommodation to all first-year students who firm the university and apply before the deadline. Halls are located on and around the main campus with a variety of catered and self-catered options at different price points.",
+      "avgWeeklyCost": "£135–£190",
+      "halls": ["Charles Morris Hall", "Henry Price House", "Devonshire Hall"],
+      "privateRentAreas": "Headingley, Hyde Park, Burley, Woodhouse"
+    },
+    "openDays": [
+      { "date": "14 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "20 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "11 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": true,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Highlight any reading or engagement with financial news such as the FT or Economist",
+        "Mention any relevant work experience in banking, retail finance, or accountancy",
+        "Demonstrate why Leeds's industry partnerships and year-in-industry option appeal to you"
+      ],
+      "typicalTimeline": "UCAS opens September; 29 January application deadline; offers sent February-April; Clearing opens August"
+    },
+    "studentLife": {
+      "union": "Leeds University Union (LUU)",
+      "societiesCount": "300+",
+      "sportsTeams": "70+",
+      "highlights": [
+        "Leeds Finance and Investment Society runs one of the North's largest annual finance conferences",
+        "LUU is consistently voted one of the best students' unions in the UK",
+        "Active mentoring programme connecting students with Leeds-based finance professionals"
+      ]
+    },
+    "cityLife": {
+      "description": "Leeds is a dynamic, youthful city with a booming financial and legal services sector and one of the fastest-growing economies outside London. Students enjoy a lively cultural scene, excellent shopping, and a well-connected transport network at costs well below the national average.",
+      "avgRentPerMonth": "£600–£800",
+      "costOfLiving": "Moderate",
+      "transport": "Extensive bus network and direct rail links; Leeds to London King's Cross in around 2 hours 10 minutes",
+      "highlights": [
+        "Trinity Leeds and Victoria Gate shopping centres",
+        "Kirkstall Abbey and Golden Acre Park for outdoor escapes",
+        "Award-winning food and drink scene in the Calls and Meanwood Road"
+      ],
+      "nightlife": "Leeds is famous for its student-friendly nightlife, with Call Lane, the Headrow, and Headingley offering venues for every taste from indie clubs to live jazz."
+    },
+    "notableAlumni": [
+      "Erwin James — author and journalist",
+      "Jeremy Paxman — broadcaster and journalist",
+      "Barbara Taylor Bradford — novelist and author of A Woman of Substance"
+    ],
+    "keyFacts": [
+      "Russell Group member; top 10 in the UK for Accounting and Finance in multiple league tables",
+      "Leeds University Business School is AACSB, AMBA, and EQUIS accredited",
+      "Leeds is home to over 30 major financial institutions, creating strong local graduate demand"
+    ]
   },
   "liverpool": {
-    "slug": "liverpool", "name": "University of Liverpool", "city": "Liverpool",
-    "overview": "A Russell Group university with a beautiful Victorian campus, Liverpool offers an accessible Russell Group experience in one of the UK's most culturally rich cities. The Management School holds triple accreditation and is noted for its strong accounting and finance programmes with no A* requirement.",
-    "founded": 1881, "totalStudents": 22000, "internationalStudents": "30%", "campusType": "City campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "Liverpool guarantees accommodation to all first-year students who apply by the deadline. Most halls are on or adjacent to the main campus in the Georgian Quarter.", "avgWeeklyCost": "£120–£165", "halls": ["Greenbank Student Village", "Carnatic Halls", "Crown Place"], "privateRentAreas": "Wavertree, Kensington and Smithdown Road — popular student areas 2–3 miles from campus" },
-    "openDays": [{ "date": "7 June 2025", "type": "Undergraduate Open Day" }, { "date": "4 October 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": true, "interviewRequired": false, "personalStatementTips": ["Demonstrate interest in the broader business landscape — Liverpool's maritime and commercial history makes for compelling personal statement angles", "Reference specific modules or research areas in Liverpool's Management School that align with your interests", "Highlight any enterprise or leadership experience — Liverpool Management School values initiative"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; rolling offers from November onwards" },
-    "studentLife": { "union": "Liverpool Guild of Students — one of the oldest student unions in the world, with 200+ societies", "societiesCount": "200+", "sportsTeams": "50+", "highlights": ["Finance Society with links to Liverpool's growing financial services sector", "Liverpool is the only UK city to have won the European Capital of Culture title", "The Guild building is a Grade II listed landmark on the main campus"] },
-    "cityLife": { "description": "Liverpool has been transformed over the past two decades into one of the UK's most exciting cities — a UNESCO World Heritage waterfront, two Premier League clubs, and a cost of living that makes it one of the cheapest major UK cities for students. The city's creative and cultural scene is unmatched outside London.", "avgRentPerMonth": "£450–£650", "costOfLiving": "Low", "transport": "Merseyrail network across the city region; Liverpool Lime Street to London Euston in 2hrs 10mins", "highlights": ["Albert Dock: thriving waterfront with galleries, restaurants and the Museum of Liverpool", "Baltic Triangle: Liverpool's creative quarter with studios, indie venues and startup offices", "Two Premier League clubs — Anfield and Goodison Park both within 3 miles of campus"], "nightlife": "Bold Street, Concert Square and Cavern Quarter offer legendary nightlife; Cream at Nation is iconic UK clubbing history" },
-    "notableAlumni": ["Sir Simon Rattle — conductor of the Berlin Philharmonic", "Kim Cattrall — actress", "Les Dennis — entertainer"],
-    "keyFacts": ["Russell Group member", "Management School: AACSB, AMBA and EQUIS triple-accredited", "No A* required for entry — accessible Russell Group"]
+    "slug": "liverpool",
+    "name": "University of Liverpool",
+    "city": "Liverpool",
+    "overview": "The University of Liverpool is a prestigious Russell Group institution with a rich history of research excellence and strong community ties to one of the UK's most culturally vibrant cities. The Management School offers well-regarded Accounting and Finance programmes with professional accreditations and active placement schemes. Liverpool consistently ranks among the top 30 UK universities for student satisfaction.",
+    "founded": 1881,
+    "totalStudents": 25000,
+    "internationalStudents": "27%",
+    "campusType": "City campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "The university guarantees accommodation to all new undergraduates who accept Liverpool as their firm choice. On-campus residences range from traditional en-suite rooms to more spacious studio apartments, all within walking distance of lectures.",
+      "avgWeeklyCost": "£125–£175",
+      "halls": ["Vine Court", "Crown Place", "Greenbank Student Village"],
+      "privateRentAreas": "Smithdown Road, Wavertree, Kensington, Edge Hill"
+    },
+    "openDays": [
+      { "date": "28 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "20 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "18 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": true,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Show awareness of the Management School's research themes such as financial markets and corporate governance",
+        "Reference any engagement with accounting or finance outside the classroom",
+        "Explain your motivation for studying in Liverpool and how the city's business environment interests you"
+      ],
+      "typicalTimeline": "Apply via UCAS by 29 January; decisions typically March-April; confirm by May deadline; August results and Clearing"
+    },
+    "studentLife": {
+      "union": "Liverpool Guild of Students",
+      "societiesCount": "250+",
+      "sportsTeams": "50+",
+      "highlights": [
+        "Liverpool Finance Society hosts regular networking events with local and national employers",
+        "Strong community volunteering culture tied to Liverpool's charity sector",
+        "Student newspaper Sphinx and award-winning student radio station LSRN"
+      ]
+    },
+    "cityLife": {
+      "description": "Liverpool is a UNESCO World Heritage-listed city celebrated for its music, art, sport, and maritime heritage, offering students an unrivalled cultural experience. The city is one of the most affordable for students in England, with a thriving independent business scene and improving graduate employment prospects.",
+      "avgRentPerMonth": "£550–£750",
+      "costOfLiving": "Moderate",
+      "transport": "Merseyrail network, extensive Merseytravel bus services, and Liverpool Lime Street to London Euston in around 2 hours",
+      "highlights": [
+        "The Albert Dock and waterfront with bars, galleries, and the Tate Liverpool",
+        "LIPA events and Baltic Triangle arts quarter",
+        "Two Premier League football clubs and Aintree Racecourse nearby"
+      ],
+      "nightlife": "Liverpool's nightlife is legendary, with Concert Square, Mathew Street birthplace of The Beatles, and the Baltic Triangle hosting clubs, live music, and bars to suit all tastes."
+    },
+    "notableAlumni": [
+      "Sir Simon Rattle — conductor of the Berlin Philharmonic",
+      "Kim Cattrall — actress",
+      "Stuart Hall — cultural theorist and broadcaster"
+    ],
+    "keyFacts": [
+      "Russell Group member founded in 1881, one of the UK's original civic universities",
+      "Liverpool Management School holds AACSB, AMBA, and EQUIS triple accreditation",
+      "Ranked in the global top 200 by QS and Times Higher Education"
+    ]
   },
   "sheffield": {
-    "slug": "sheffield", "name": "University of Sheffield", "city": "Sheffield",
-    "overview": "A Russell Group university with exceptionally high student satisfaction scores, Sheffield combines strong academic programmes with a genuinely welcoming campus community. The Management School is well-regarded for finance and employability, and Sheffield consistently tops league tables for student experience.",
-    "founded": 1905, "totalStudents": 30000, "internationalStudents": "26%", "campusType": "City campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "Sheffield guarantees accommodation for all first-year students. The main residence areas are on Endcliffe Village and Ranmoor, both close to the university's main campus.", "avgWeeklyCost": "£120–£170", "halls": ["Endcliffe Village", "Ranmoor House", "Tapton Hall"], "privateRentAreas": "Broomhill, Crookesmoor and Crookes — popular student areas within walking distance of campus" },
-    "openDays": [{ "date": "28 June 2025", "type": "Undergraduate Open Day" }, { "date": "20 September 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": true, "interviewRequired": false, "personalStatementTips": ["Show awareness of Sheffield's employability focus — reference specific careers you're targeting and why the Management School is a strong springboard", "Demonstrate interest in real-world financial issues rather than just academic content", "Any experience in business, finance clubs or even running events will strengthen your application"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; offers usually within 4–6 weeks" },
-    "studentLife": { "union": "Sheffield Students' Union — voted the UK's best student union six times, with over 250 societies", "societiesCount": "250+", "sportsTeams": "60+", "highlights": ["Sheffield Finance Society runs CFA prep and employer networking events", "The Students' Union is consistently ranked #1 in the UK for student satisfaction", "Outdoor activities society is one of the largest in the country — Peak District is 20 minutes away"] },
-    "cityLife": { "description": "Sheffield is consistently voted one of the UK's best cities to live in — affordable, green (more trees per person than almost any other European city), and with a thriving independent scene. The cost of living for students is very low compared to other major UK cities.", "avgRentPerMonth": "£500–£700", "costOfLiving": "Low", "transport": "Stagecoach trams and buses across the city; Sheffield to London St Pancras in 2hrs 5mins", "highlights": ["Kelham Island: Sheffield's industrial heritage turned into a thriving quarter of craft breweries and restaurants", "Peak District National Park: world-class hiking and climbing 20 minutes from the city centre", "Devonshire Quarter: independent shops, cafes and music venues"], "nightlife": "Corporation, Leadmill and Yellow Arch Studios make Sheffield's live music scene one of the best in the UK outside London" },
-    "notableAlumni": ["Jessica Ennis-Hill — Olympic heptathlon gold medallist", "Richard Hawley — musician", "Michael Palin — writer, comedian and traveller"],
-    "keyFacts": ["Russell Group member", "Voted UK's best student union six times by Whatuni", "Sheffield Management School: AACSB accredited"]
+    "slug": "sheffield",
+    "name": "University of Sheffield",
+    "city": "Sheffield",
+    "overview": "The University of Sheffield is a leading Russell Group university consistently praised for its outstanding student experience and strong research output. Sheffield University Management School provides excellent Accounting and Finance degrees with solid links to the regional and national financial services sector. The university has been ranked the number-one students' union in the UK on multiple occasions.",
+    "founded": 1905,
+    "totalStudents": 30000,
+    "internationalStudents": "26%",
+    "campusType": "City campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Sheffield guarantees accommodation to all first-year undergraduates who hold Sheffield as their firm choice and meet the application deadline. Halls are spread across the city, including purpose-built residences on campus and village-style complexes nearby.",
+      "avgWeeklyCost": "£125–£180",
+      "halls": ["Endcliffe Village", "Halifax Hall", "Ranmoor Village"],
+      "privateRentAreas": "Broomhill, Crookes, Ecclesall Road, Sharrow"
+    },
+    "openDays": [
+      { "date": "21 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "27 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "11 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": true,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Highlight your interest in Sheffield Management School's professionally accredited programmes",
+        "Mention any relevant work experience, voluntary roles, or extracurricular activities in a business or finance context",
+        "Demonstrate mathematical ability and a logical, analytical approach to problem-solving"
+      ],
+      "typicalTimeline": "UCAS opens September; apply by 29 January; offers February-April; confirm by May; results and Clearing August"
+    },
+    "studentLife": {
+      "union": "Sheffield Students' Union (SSU) multiple-award winner for best UK students' union",
+      "societiesCount": "300+",
+      "sportsTeams": "60+",
+      "highlights": [
+        "Sheffield Finance and Investment Club with links to leading City employers",
+        "SSU's Volunteering Centre one of the most active in the UK",
+        "Sheffield Model United Nations conference draws delegates from across Europe"
+      ]
+    },
+    "cityLife": {
+      "description": "Sheffield is a compact, walkable city with a strong independent culture, stunning Peak District access, and a thriving student community that makes up a significant share of the local population. It consistently ranks among the cheapest major UK cities for student living, without sacrificing cultural richness.",
+      "avgRentPerMonth": "£550–£750",
+      "costOfLiving": "Moderate",
+      "transport": "Supertram network, extensive bus services, and Sheffield to London St Pancras in just over 2 hours by train",
+      "highlights": [
+        "Peak District National Park accessible by bus within 30 minutes",
+        "Kelham Island industrial museum and thriving independent bar and restaurant scene",
+        "Crucible Theatre and Sheffield Arena for world-class events including the World Snooker Championship"
+      ],
+      "nightlife": "West Street, Division Street, and the Ecclesall Road corridor offer students an excellent range of bars, clubs, and live music venues at very competitive prices."
+    },
+    "notableAlumni": [
+      "Jessica Ennis-Hill — Olympic heptathlon gold medallist",
+      "Eddie Izzard — comedian and actor",
+      "Michael Palin — writer, comedian, and traveller"
+    ],
+    "keyFacts": [
+      "Russell Group member; Sheffield Management School is AACSB and AMBA accredited",
+      "Ranked first in the UK for student satisfaction multiple times in the National Student Survey",
+      "Located within easy reach of both Manchester and Leeds financial hubs"
+    ]
   },
   "bristol": {
-    "slug": "bristol", "name": "University of Bristol", "city": "Bristol",
-    "overview": "One of the UK's most prestigious Russell Group universities, Bristol consistently ranks in the top 10 nationally and top 100 globally. It attracts some of the highest-achieving students in the country, with strong employer recognition particularly in finance, consulting and technology.",
-    "founded": 1909, "totalStudents": 28000, "internationalStudents": "30%", "campusType": "City campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "Bristol guarantees accommodation for all first-year undergraduates who apply by the deadline. Halls range from the historic Wills Hall to modern en-suite residences across the city.", "avgWeeklyCost": "£150–£220", "halls": ["Wills Hall", "Churchill Hall", "Badock Hall"], "privateRentAreas": "Clifton, Redland, Cotham and Stokes Croft — Bristol's most popular student neighbourhoods" },
-    "openDays": [{ "date": "21 June 2025", "type": "Undergraduate Open Day" }, { "date": "6 September 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": true, "interviewRequired": false, "personalStatementTips": ["Bristol is highly competitive — your personal statement must show genuine intellectual curiosity beyond the A-level syllabus", "Reference specific areas of finance you want to pursue (e.g. corporate valuation, behavioural finance) and why Bristol's research agenda aligns", "Contextual offers are available — if you qualify, ensure your application references any relevant contextual factors"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; offers typically within 6 weeks; AAA standard offer" },
-    "studentLife": { "union": "University of Bristol Students' Union — 250+ societies, strong focus on wellbeing and student representation", "societiesCount": "250+", "sportsTeams": "70+", "highlights": ["Bristol Finance Society connects students with graduate recruiter events and CFA study groups", "Bristol is the UK's #1 city for ethical and sustainable living — excellent for ESG-focused students", "The Suspension Bridge walk and Clifton Village are quintessential Bristol student experiences"] },
-    "cityLife": { "description": "Bristol is consistently ranked the UK's best city to live in overall — it combines genuine cultural diversity, a world-class food scene, and the UK's most dynamic fintech and creative industries. Costs are higher than northern cities but still significantly below London.", "avgRentPerMonth": "£700–£950", "costOfLiving": "High", "transport": "Good bus network; Bristol Temple Meads to London Paddington in 1hr 45mins; airport for international travel", "highlights": ["Harbourside: restaurants, galleries and the M Shed museum right on Bristol's historic dockside", "Clifton: one of the UK's most beautiful neighbourhoods, home to the Brunel Suspension Bridge", "Cabot Circus and Broadmead for shopping; Bristol Old Vic for world-class theatre"], "nightlife": "Stokes Croft, Clifton and the Harbourside offer an eclectic mix from quiet wine bars to some of the UK's best underground clubs" },
-    "notableAlumni": ["Cary Grant — Hollywood legend (Bristol-born)", "Paul Dirac — Nobel Prize-winning physicist", "Tony Benn — politician and diarist"],
-    "keyFacts": ["Russell Group member, consistently top 10 UK", "£300m in research grants awarded 2023–24", "Strong employer recognition in banking, consulting and technology"]
+    "slug": "bristol",
+    "name": "University of Bristol",
+    "city": "Bristol",
+    "overview": "The University of Bristol is one of the UK's most selective and highly regarded Russell Group universities, with a distinguished record in research and graduate outcomes. Its School of Accounting and Finance within the Business School is internationally recognised, offering rigorous programmes with strong links to Bristol's growing fintech and financial services sector. Bristol consistently features in the top 10 of UK university rankings.",
+    "founded": 1909,
+    "totalStudents": 28000,
+    "internationalStudents": "33%",
+    "campusType": "City campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Bristol guarantees university accommodation to all first-year undergraduates who meet the application deadline and hold Bristol as their firm choice. Halls range from Victorian houses converted into student residences to modern purpose-built blocks, mostly within 15 minutes of campus.",
+      "avgWeeklyCost": "£165–£220",
+      "halls": ["Wills Hall", "Hiatt Baker Hall", "Churchill Hall"],
+      "privateRentAreas": "Clifton, Stokes Croft, Bedminster, Redland, Cotham"
+    },
+    "openDays": [
+      { "date": "14 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "20 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "18 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": true,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Demonstrate a genuine passion for financial theory and its real-world applications",
+        "Reference Bristol's research strengths in areas such as behavioural finance or corporate governance",
+        "Show strong academic achievement in mathematics and/or economics at A-level"
+      ],
+      "typicalTimeline": "Apply by 29 January; Bristol typically responds February-April; confirm by mid-May; results in August with Clearing available"
+    },
+    "studentLife": {
+      "union": "Bristol Students' Union",
+      "societiesCount": "350+",
+      "sportsTeams": "60+",
+      "highlights": [
+        "Bristol Finance Society hosts termly speaker events with City banks and Bristol-based firms",
+        "Strong culture of entrepreneurship as Bristol has one of the UK's fastest-growing startup ecosystems",
+        "Annual RAG charity fundraising events consistently raise among the most per student in the UK"
+      ]
+    },
+    "cityLife": {
+      "description": "Bristol is a vibrant, creative city with a world-renowned street art scene, independent food markets, and a rapidly expanding tech and finance sector. Its higher cost of living reflects its desirability, but students are rewarded with an outstanding quality of life and excellent graduate employment prospects in the South West and London.",
+      "avgRentPerMonth": "£750–£950",
+      "costOfLiving": "High",
+      "transport": "Extensive First Bus network; Temple Meads to London Paddington in under 1.5 hours; Bristol MetroBus routes",
+      "highlights": [
+        "Clifton Suspension Bridge and the Avon Gorge as iconic city landmarks",
+        "Stokes Croft with Europe's largest outdoor gallery of street art",
+        "St Nicholas Market and Wapping Wharf for independent food and drink"
+      ],
+      "nightlife": "Bristol's nightlife spans Stokes Croft's underground clubs, Corn Street's cocktail bars, and the harbourside's waterfront venues, earning it a reputation as one of the UK's best cities for music and nightlife."
+    },
+    "notableAlumni": [
+      "Cary Grant — Hollywood actor",
+      "Paul Dirac — Nobel Prize-winning physicist",
+      "Tony Benn — politician and diarist"
+    ],
+    "keyFacts": [
+      "Consistently top 10 in the UK; Bristol Business School holds AACSB and EQUIS accreditation",
+      "One of the most targeted universities by leading graduate employers",
+      "Bristol's fintech cluster is one of the fastest-growing in Europe"
+    ]
   },
   "reading": {
-    "slug": "reading", "name": "University of Reading", "city": "Reading",
-    "overview": "Home to Henley Business School — one of the world's most famous triple-accredited business schools — Reading offers exceptional finance education especially in investment management and banking. The ICMA Centre within Henley is a globally recognised specialist in capital markets education.",
-    "founded": 1892, "totalStudents": 19000, "internationalStudents": "29%", "campusType": "Suburban campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "Reading guarantees accommodation for all first-year students in purpose-built halls on the Whiteknights campus. Most halls are catered or self-catered in the Bridges area.", "avgWeeklyCost": "£120–£170", "halls": ["Bridges Halls", "Childs Hall", "Sherfield Hall"], "privateRentAreas": "Earley, Shinfield and the town centre — 15–30 minutes from campus by bus" },
-    "openDays": [{ "date": "14 June 2025", "type": "Undergraduate Open Day" }, { "date": "11 October 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": false, "interviewRequired": false, "personalStatementTips": ["Show awareness of Henley Business School's reputation and the ICMA Centre's specific focus on capital markets", "Reading suits students interested in investment management — reference any interest in portfolio theory or fixed income markets", "Demonstrate ambition: Henley alumni work at the world's top investment banks and asset managers"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; offers typically within 8 weeks" },
-    "studentLife": { "union": "University of Reading Students' Union — 150+ societies, strong sporting tradition", "societiesCount": "150+", "sportsTeams": "40+", "highlights": ["Henley Business School Finance Society — runs Bloomberg training and ICMA Centre workshops", "Reading University Boat Club is one of the most successful in the UK", "Whiteknights campus has beautiful lakeside grounds — great for wellbeing"] },
-    "cityLife": { "description": "Reading sits in the Thames Valley corridor — the UK's Silicon Valley — with Microsoft, Oracle, PwC and dozens of major financial employers all within 30 minutes. London is just 25 minutes by train, giving students unparalleled access to City internships while avoiding London rents.", "avgRentPerMonth": "£700–£900", "costOfLiving": "High", "transport": "Reading to London Paddington in 25 minutes by fast train — the best commute of any university outside London", "highlights": ["Oracle's European HQ and Microsoft's UK campus are in Reading — exceptional placement opportunities", "The Thames Path and Caversham are beautiful for outdoor activities", "Reading Festival — one of the UK's most famous music festivals, right next to the university"], "nightlife": "Oracle entertainment complex, Friar Street and the town centre offer a solid if compact nightlife scene" },
-    "notableAlumni": ["Kate Middleton — Princess of Wales (studied Art History at St Andrews but Henley is a sister institution)", "Mike Leigh — BAFTA-winning film director", "Jimmy Page — Led Zeppelin guitarist"],
-    "keyFacts": ["Henley Business School: AACSB, AMBA and EQUIS triple-accredited", "ICMA Centre: world's leading capital markets education centre", "25 minutes to London Paddington — unrivalled City access"]
+    "slug": "reading",
+    "name": "University of Reading",
+    "city": "Reading",
+    "overview": "The University of Reading is a research-intensive university with a strong international reputation, located just 25 minutes from London Paddington. Its Henley Business School, one of only around 100 worldwide to hold triple accreditation, offers outstanding Accounting and Finance degrees with exceptional industry connections and placement opportunities. Reading consistently scores highly for graduate employability and has particularly strong links to the investment management and capital markets industries.",
+    "founded": 1892,
+    "totalStudents": 19000,
+    "internationalStudents": "29%",
+    "campusType": "Suburban campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Reading guarantees accommodation to all first-year students who firmly accept their offer by the required date. The campus has a wide range of on-site halls, from budget-friendly standard rooms to premium en-suite and studio apartments.",
+      "avgWeeklyCost": "£145–£200",
+      "halls": ["Bridges Hall", "Childs Hall", "Sherfield Hall"],
+      "privateRentAreas": "Earley, Whitley, Caversham, Tilehurst"
+    },
+    "openDays": [
+      { "date": "21 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "27 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "25 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": false,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Reference Henley Business School's triple accreditation and what that means for your professional development",
+        "Highlight any exposure to financial markets, accountancy, or business through work experience or independent study",
+        "Mention Reading's proximity to London and how you plan to take advantage of City networking opportunities"
+      ],
+      "typicalTimeline": "Apply via UCAS by 29 January; offers typically February-March; confirm by May; Clearing opens August"
+    },
+    "studentLife": {
+      "union": "University of Reading Students' Union (RUSU)",
+      "societiesCount": "150+",
+      "sportsTeams": "40+",
+      "highlights": [
+        "Henley Finance and Investment Society with regular City speaker events and trading simulations",
+        "Close proximity to London enables students to attend external finance networking events easily",
+        "Active Enactus team with award-winning social enterprise projects"
+      ]
+    },
+    "cityLife": {
+      "description": "Reading is a prosperous Thames Valley town with one of the strongest local economies in the UK, home to the European headquarters of companies like Microsoft, Oracle, and Vodafone. Its proximity to London makes it ideal for students seeking finance internships and graduate roles in the City, with a manageable cost of living compared to the capital.",
+      "avgRentPerMonth": "£650–£850",
+      "costOfLiving": "Moderate",
+      "transport": "Elizabeth line direct to London Paddington in under 30 minutes; excellent bus network across town and to campus",
+      "highlights": [
+        "Reading Festival one of the UK's most iconic annual music festivals held in August",
+        "Thames riverside walks and boat trips to Henley-on-Thames",
+        "The Oracle shopping and entertainment complex in the town centre"
+      ],
+      "nightlife": "Reading has a lively town centre nightlife along Friar Street and Kings Road, with cocktail bars, live music venues, and student-friendly clubs."
+    },
+    "notableAlumni": [
+      "Mike Sherwood — former co-CEO of Goldman Sachs Europe",
+      "Ricky Gervais — comedian, actor, and writer",
+      "Jimmy Page — Led Zeppelin guitarist"
+    ],
+    "keyFacts": [
+      "Henley Business School is one of around 100 globally triple-accredited business schools (AACSB, AMBA, EQUIS)",
+      "Reading is 25 minutes from London Paddington by Elizabeth line, enabling easy City access",
+      "Ranked top 25 in the UK and in the global top 200 by QS World University Rankings"
+    ]
   },
   "nottingham": {
-    "slug": "nottingham", "name": "University of Nottingham", "city": "Nottingham",
-    "overview": "Frequently cited as one of the UK's most beautiful campuses, Nottingham is a Russell Group university consistently ranked 3rd most targeted by graduate employers. Nottingham University Business School is internationally recognised and has strong connections with major financial services firms.",
-    "founded": 1948, "totalStudents": 33000, "internationalStudents": "34%", "campusType": "Suburban campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "Nottingham guarantees accommodation for all first-year students who accept a place by the required deadline. There are halls across the University Park and Jubilee campuses, as well as student villages in the surrounding area.", "avgWeeklyCost": "£120–£175", "halls": ["Broadgate Park", "Cripps Hall", "Sherwood Hall"], "privateRentAreas": "Lenton and Dunkirk — the classic student areas just off campus, plus areas near Jubilee Campus" },
-    "openDays": [{ "date": "21 June 2025", "type": "Undergraduate Open Day" }, { "date": "27 September 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": true, "interviewRequired": false, "personalStatementTips": ["Nottingham receives very high numbers of applications — differentiate yourself with specific knowledge of NUBS's research agenda or employer partnerships", "Show awareness of Nottingham's global campus network (Malaysia, China) as a differentiator for international finance careers", "Reference your ambition for graduate-level employment and why Nottingham's employer relationships align with your goals"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; early offers from November for strong applicants" },
-    "studentLife": { "union": "Nottingham Students' Union — over 300 societies and clubs, strong arts and sports provision", "societiesCount": "300+", "sportsTeams": "70+", "highlights": ["Nottingham Finance and Investment Society hosts graduate recruitment events with top-30 employers", "University Park is one of the most beautiful campuses in the UK — a regular feature in landscape photography books", "Nottingham is the social capital of the East Midlands with a thriving student culture"] },
-    "cityLife": { "description": "Nottingham is an energetic, compact city with two universities giving it an outsized student culture for its size. Living costs are very reasonable — you can rent a room in a house share close to campus for well under £500/month — and the city has a genuinely diverse food and arts scene.", "avgRentPerMonth": "£500–£700", "costOfLiving": "Low", "transport": "NET tram system across the city; Nottingham to London St Pancras in 1hr 50mins", "highlights": ["Hockley Village: Nottingham's hipster quarter with independent shops, cafes and galleries", "Nottingham Castle and the Lace Market district — historic city centre", "Experian, Boots and Capital One all have major offices in Nottingham — great placement access"], "nightlife": "Market Square, the Lace Market and Rock City are Nottingham nightlife institutions — a genuinely great student night out" },
-    "notableAlumni": ["Graham Greene — novelist (author of The Third Man)", "Jesse Boot — founder of Boots (whose generosity built the university)", "Sir Peter Mansfield — Nobel Prize in Medicine for MRI development"],
-    "keyFacts": ["Russell Group member", "3rd most targeted by top UK graduate employers", "Nottingham University Business School: AACSB accredited"]
+    "slug": "nottingham",
+    "name": "University of Nottingham",
+    "city": "Nottingham",
+    "overview": "The University of Nottingham is a distinguished Russell Group university with a stunning parkland campus and a genuinely global outlook, operating campuses in China and Malaysia as well as the UK. Its Business School offers highly regarded Accounting and Finance degrees with strong professional links and a long track record of graduate employment with major firms. Nottingham is consistently placed in the global top 100.",
+    "founded": 1881,
+    "totalStudents": 35000,
+    "internationalStudents": "29%",
+    "campusType": "Suburban campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Nottingham guarantees a place in university accommodation to all first-year undergraduates who apply by the deadline and hold Nottingham as their firm choice. Halls span the beautiful parkland campus and nearby sites, with options from catered traditional halls to modern self-catered flats.",
+      "avgWeeklyCost": "£130–£185",
+      "halls": ["Cripps Hall", "Florence Boot Hall", "Hugh Stewart Hall"],
+      "privateRentAreas": "Lenton, Beeston, Dunkirk, Radford"
+    },
+    "openDays": [
+      { "date": "14 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "20 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "18 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": true,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Reference Nottingham Business School's global campuses and how an international perspective appeals to you",
+        "Highlight your mathematical strengths and any relevant academic or extracurricular finance experience",
+        "Show awareness of the university's strong industry partnerships with firms like PwC and KPMG"
+      ],
+      "typicalTimeline": "Apply by 29 January; decisions typically March-April; firm and insurance by May; results and Clearing August"
+    },
+    "studentLife": {
+      "union": "University of Nottingham Students' Union (UoNSU)",
+      "societiesCount": "300+",
+      "sportsTeams": "60+",
+      "highlights": [
+        "Nottingham Finance and Investment Society runs annual trading competitions and CV workshops",
+        "Beautiful 330-acre parkland campus with outstanding sports facilities",
+        "Strong international student community with diverse cultural events throughout the year"
+      ]
+    },
+    "cityLife": {
+      "description": "Nottingham is a lively East Midlands city with a rich history, strong retail and hospitality sector, and one of the best value-for-money student environments in England. The city offers a full range of cultural, sporting, and social activities at costs well below the national average.",
+      "avgRentPerMonth": "£500–£700",
+      "costOfLiving": "Low",
+      "transport": "Nottingham Express Transit tram network and city buses; East Midlands Railway to London St Pancras in under 2 hours",
+      "highlights": [
+        "Nottingham Castle and the Lace Market heritage quarter",
+        "Vibrant independent food scene in Hockley and the Sneinton Market",
+        "Motorpoint Arena and Rock City for major concerts and events"
+      ],
+      "nightlife": "Nottingham's nightlife is nationally recognised, with Rock City, the Old Market Square, and Hockley offering diverse venues from indie nights to commercial clubs."
+    },
+    "notableAlumni": [
+      "Sir Jesse Boot — founder of Boots the Chemist",
+      "Graham Greene — novelist, author of The Third Man",
+      "Sir Peter Mansfield — Nobel Prize in Medicine for MRI development"
+    ],
+    "keyFacts": [
+      "Russell Group member with campuses in China and Malaysia",
+      "Nottingham University Business School holds AACSB, AMBA, and EQUIS triple accreditation",
+      "Ranked consistently in the global top 100 by QS World University Rankings"
+    ]
   },
   "newcastle": {
-    "slug": "newcastle", "name": "Newcastle University", "city": "Newcastle upon Tyne",
-    "overview": "A Russell Group university in the heart of one of the UK's most vibrant student cities, Newcastle combines accessible entry requirements with strong academic standards and an exceptional student experience. Newcastle University Business School is well-regarded for finance and offers a contextual offer scheme.",
-    "founded": 1834, "totalStudents": 27000, "internationalStudents": "25%", "campusType": "City campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "Newcastle guarantees accommodation for all first-year students who make it their firm choice. Leazes Terrace and Windsor Terrace provide iconic accommodation right next to the city centre.", "avgWeeklyCost": "£120–£170", "halls": ["Leazes Terrace", "Park View Student Village", "Castle Leazes"], "privateRentAreas": "Jesmond, Heaton and Sandyford — the most popular student suburbs, 1–2 miles from campus" },
-    "openDays": [{ "date": "14 June 2025", "type": "Undergraduate Open Day" }, { "date": "4 October 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": true, "interviewRequired": false, "personalStatementTips": ["Show awareness of the Northern Powerhouse financial sector and how Newcastle's location gives unique access to regional finance employers", "Reference the contextual offer scheme if applicable — Newcastle is committed to widening participation in finance careers", "Demonstrate interest in real-world financial applications rather than just theoretical economics"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; offers typically by February" },
-    "studentLife": { "union": "Newcastle University Students' Union — 200+ societies, home to one of the UK's most active sporting cultures", "societiesCount": "200+", "sportsTeams": "60+", "highlights": ["Newcastle Finance Society runs regional employer events and Bloomberg workshops", "Newcastle is consistently rated one of the UK's top 3 cities for nightlife and social life", "Close proximity to Northumberland National Park and the Northumberland coast"] },
-    "cityLife": { "description": "Newcastle is famous for being one of the friendliest and most social cities in the UK — with the Quayside, Baltic Quarter and Ouseburn all offering world-class cultural experiences at a fraction of southern prices. The Geordies are famous for their warmth toward students.", "avgRentPerMonth": "£500–£700", "costOfLiving": "Low", "transport": "Metro system across the city and to the coast; Newcastle to London King's Cross in 2hrs 50mins", "highlights": ["The Quayside: Newcastle's stunning riverfront with BALTIC Centre for Contemporary Art", "Grainger Town: beautiful Victorian architecture housing independent restaurants and bars", "Northumberland coast — an Area of Outstanding Natural Beauty — accessible in under an hour"], "nightlife": "The Gate, Times Square and Osborne Road in Jesmond offer Newcastle's legendary Friday-and-Saturday social scene — genuinely exceptional for a UK city" },
-    "notableAlumni": ["Ridley Scott — director of Alien, Blade Runner, Gladiator", "Rowan Atkinson — comedian and actor", "Brian Johnson — lead singer of AC/DC"],
-    "keyFacts": ["Russell Group member", "Contextual offer scheme for eligible students", "Newcastle University Business School: AACSB accredited"]
+    "slug": "newcastle",
+    "name": "Newcastle University",
+    "city": "Newcastle upon Tyne",
+    "overview": "Newcastle University is a prestigious Russell Group institution based in the heart of one of the UK's most vibrant cities, with a strong reputation for research and professional education. Newcastle University Business School offers well-regarded Accounting and Finance programmes with AACSB accreditation and close links to the regional professional services sector. The university consistently achieves high scores for student satisfaction and graduate employment.",
+    "founded": 1834,
+    "totalStudents": 28000,
+    "internationalStudents": "26%",
+    "campusType": "City centre",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Newcastle guarantees accommodation for all first-year students who firmly accept their place and apply before the deadline. Halls range from traditional student houses near campus to modern purpose-built residences in the city centre.",
+      "avgWeeklyCost": "£120–£175",
+      "halls": ["Park View Student Village", "Leazes Terrace", "Castle Leazes"],
+      "privateRentAreas": "Jesmond, Heaton, Sandyford, Fenham"
+    },
+    "openDays": [
+      { "date": "21 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "27 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "11 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": true,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Demonstrate awareness of Newcastle University Business School's research themes and accreditations",
+        "Highlight any work experience in accounting, finance, or business environments",
+        "Show enthusiasm for Newcastle's strong regional financial services community"
+      ],
+      "typicalTimeline": "Apply via UCAS by 29 January; offers sent March-April; confirm by mid-May; Clearing opens August"
+    },
+    "studentLife": {
+      "union": "Newcastle University Students' Union (NUSU)",
+      "societiesCount": "250+",
+      "sportsTeams": "55+",
+      "highlights": [
+        "Newcastle Finance and Consulting Society hosts Big Four and boutique firm recruitment events",
+        "Thriving student media scene including NU:Sync student radio",
+        "Active RAG and Volunteering society with strong community engagement"
+      ]
+    },
+    "cityLife": {
+      "description": "Newcastle upon Tyne is a friendly, energetic city celebrated for its Geordie culture, striking architecture, and legendary nightlife along the Quayside. Students enjoy affordable living costs, a tight-knit community atmosphere, and excellent graduate prospects in the growing North East professional services sector.",
+      "avgRentPerMonth": "£550–£750",
+      "costOfLiving": "Moderate",
+      "transport": "Tyne and Wear Metro rapid transit system; frequent East Coast Main Line services to London King's Cross in under 3 hours",
+      "highlights": [
+        "Quayside and Gateshead with BALTIC Centre for Contemporary Art, Sage Gateshead, and Millennium Bridge",
+        "Grainger Market and Grey Street featuring some of the finest Victorian architecture in England",
+        "Northumberland coast and countryside accessible within 45 minutes"
+      ],
+      "nightlife": "Newcastle is world-famous for its nightlife — the Bigg Market, Collingwood Street, and the Quayside offer an electrifying range of bars, clubs, and live venues."
+    },
+    "notableAlumni": [
+      "Ridley Scott — Oscar-nominated film director",
+      "Rowan Atkinson — actor and comedian",
+      "Brian Johnson — lead singer of AC/DC"
+    ],
+    "keyFacts": [
+      "Russell Group member; Newcastle University Business School holds AACSB accreditation",
+      "Ranked in the top 30 UK universities in multiple major league tables",
+      "Newcastle has seen significant investment in its financial and professional services sector in recent years"
+    ]
   },
   "cardiff": {
-    "slug": "cardiff", "name": "Cardiff University", "city": "Cardiff",
-    "overview": "The only Russell Group university in Wales, Cardiff offers a compelling combination of Russell Group prestige, relatively accessible entry requirements (no A* for most courses), and the unique opportunity to study in a bilingual, internationally-connected capital city. Cardiff Business School is well-regarded across Europe.",
-    "founded": 1883, "totalStudents": 30000, "internationalStudents": "22%", "campusType": "City campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "Cardiff guarantees accommodation for all first-year students who apply by the deadline. Halls of residence are located across the Cathays and Roath areas close to the main university campus.", "avgWeeklyCost": "£110–£160", "halls": ["Senghennydd Court", "Talybont", "Cartwright Court"], "privateRentAreas": "Cathays, Roath and Canton — the three classic Cardiff student areas all within 2 miles of campus" },
-    "openDays": [{ "date": "14 June 2025", "type": "Undergraduate Open Day" }, { "date": "27 September 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": true, "interviewRequired": false, "personalStatementTips": ["Cardiff values students who understand the Welsh economy and the opportunities it presents for financial services careers", "No A* required — but show genuine academic ambition and interest in finance beyond the classroom", "Reference Cardiff's position as a growing UK financial centre (home to major legal and professional services firms)"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; offers typically within 6 weeks; contextual offer for eligible students" },
-    "studentLife": { "union": "Cardiff University Students' Union — over 200 societies including a large Welsh Language Society", "societiesCount": "200+", "sportsTeams": "50+", "highlights": ["Cardiff Finance and Economics Society with links to Welsh Government financial institutions", "Cardiff is a truly bilingual city — a unique and enriching cultural experience", "Bute Park and Cardiff Castle are iconic landmarks right next to the campus"] },
-    "cityLife": { "description": "Cardiff is one of the UK's most affordable and liveable cities — a compact, beautiful capital with an extraordinary sports culture (Principality Stadium is a 5-minute walk from campus), world-class museums and a rapidly growing restaurant scene. Student rents are among the lowest of any UK capital city.", "avgRentPerMonth": "£500–£700", "costOfLiving": "Low", "transport": "Cardiff Central is a major rail hub; Cardiff to London Paddington in 2hrs; good bus network across the city", "highlights": ["Cardiff Bay: waterfront development home to the Welsh Parliament (Senedd) and outstanding restaurants", "Cardiff Castle and the National Museum of Wales — free and world-class", "Brecon Beacons National Park — 40 minutes from the city centre for hiking and outdoor activities"], "nightlife": "Cardiff's Millennium Stadium area and the city centre offer a busy and affordable nightlife scene — especially on international rugby match days" },
-    "notableAlumni": ["Roald Dahl — novelist (grew up in Cardiff)", "Neil Kinnock — former Leader of the Labour Party", "Lucy Worsley — historian and TV presenter"],
-    "keyFacts": ["Wales's only Russell Group university", "No A* required for most finance programmes", "Cardiff Business School: AACSB accredited"]
+    "slug": "cardiff",
+    "name": "Cardiff University",
+    "city": "Cardiff",
+    "overview": "Cardiff University is Wales's leading research university and a prestigious member of the Russell Group, located in the capital of Wales just minutes from the city centre. Cardiff Business School offers highly regarded Accounting and Finance degrees with strong professional connections and an active placement programme. The university regularly features in the top 25 of UK university rankings.",
+    "founded": 1883,
+    "totalStudents": 33000,
+    "internationalStudents": "25%",
+    "campusType": "City centre",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Cardiff guarantees a place in university accommodation to all first-year students who hold Cardiff as their firm choice and apply before the deadline. Halls vary from budget en-suite rooms to larger self-catered flats located across the city and on campus.",
+      "avgWeeklyCost": "£120–£170",
+      "halls": ["Talybont Court", "Senghennydd Court", "Cartwright Court"],
+      "privateRentAreas": "Cathays, Roath, Llandaff, Heath"
+    },
+    "openDays": [
+      { "date": "14 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "27 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "25 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": true,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Reference Cardiff Business School's research strengths in accounting and corporate governance",
+        "Discuss any relevant work experience or independent study in business or finance",
+        "Show interest in Cardiff's bilingual environment and Wales's unique business landscape"
+      ],
+      "typicalTimeline": "Apply by 29 January; offers usually issued February-April; confirm by May; Clearing opens August"
+    },
+    "studentLife": {
+      "union": "Cardiff University Students' Union",
+      "societiesCount": "200+",
+      "sportsTeams": "50+",
+      "highlights": [
+        "Cardiff Finance and Investment Society with links to the Big Four and Welsh Government",
+        "Thriving Welsh language and culture scene alongside international student communities",
+        "Strong alumni network in the Welsh public sector, banking, and professional services"
+      ]
+    },
+    "cityLife": {
+      "description": "Cardiff is a compact, walkable capital city with outstanding value for money, a growing financial services sector, and a passionate rugby and music culture. Students benefit from one of the lowest costs of living among UK capital cities while enjoying everything a modern capital has to offer.",
+      "avgRentPerMonth": "£500–£700",
+      "costOfLiving": "Low",
+      "transport": "Cardiff Bus and train services across the region; Cardiff Central to London Paddington in under 2 hours by Great Western Railway",
+      "highlights": [
+        "Cardiff Bay waterfront with Mermaid Quay, the Senedd, and Wales Millennium Centre",
+        "Cardiff Castle and Bute Park in the city centre",
+        "St David's Shopping Centre one of the largest in Wales"
+      ],
+      "nightlife": "Cardiff's nightlife is centred on Greyfriars Road, St Mary Street, and the city centre, with a lively mix of Welsh pubs, sports bars, and student clubs."
+    },
+    "notableAlumni": [
+      "Neil Kinnock — former Leader of the Labour Party and EU Commissioner",
+      "Terry Jones — Monty Python comedian and film director",
+      "Lucy Worsley — historian and TV presenter"
+    ],
+    "keyFacts": [
+      "Russell Group member and the leading research university in Wales",
+      "Cardiff Business School is AACSB and EQUIS accredited",
+      "Cardiff is one of the most affordable capital cities in Europe for students"
+    ]
   },
   "leicester": {
-    "slug": "leicester", "name": "University of Leicester", "city": "Leicester",
-    "overview": "A well-regarded research university with an unusually strong reputation in certain specialisms including actuarial science. Leicester is accessible, genuinely student-focused, and located in the heart of the UK — well-placed for Midlands finance employers.",
-    "founded": 1921, "totalStudents": 16000, "internationalStudents": "26%", "campusType": "Suburban campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "Leicester guarantees accommodation for all first-year students who accept a firm offer by the required date. Most halls are within walking distance of the main Victoria Park campus.", "avgWeeklyCost": "£100–£150", "halls": ["Stamford Court", "Garden Court", "Opal Court"], "privateRentAreas": "Clarendon Park, Stoneygate and the Highfields area — within 1–2 miles of campus" },
-    "openDays": [{ "date": "21 June 2025", "type": "Undergraduate Open Day" }, { "date": "20 September 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": true, "interviewRequired": false, "personalStatementTips": ["Leicester values genuine motivation — show why you've chosen finance as a career path and what you hope to achieve", "Reference Leicester's strong actuarial science tradition if you're interested in that specialism", "Show that you've researched the East Midlands finance sector and understand the local employment landscape"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; offers typically within 4 weeks — Leicester processes applications quickly" },
-    "studentLife": { "union": "Leicester Students' Union — 150+ societies, friendly and welcoming atmosphere", "societiesCount": "150+", "sportsTeams": "40+", "highlights": ["Leicester Finance Society with links to Midlands employers", "Leicester is a genuinely multicultural city — one of the most diverse in the UK", "Victoria Park is the green heart of the student experience — home to the famous 'Big Fry' student event"] },
-    "cityLife": { "description": "Leicester is one of the UK's most affordable cities and one of its most culturally diverse — with outstanding South Asian food, a thriving arts scene and an increasingly dynamic economy following the global success of Leicester City FC. It's compact, easy to navigate, and very student-friendly.", "avgRentPerMonth": "£450–£620", "costOfLiving": "Low", "transport": "Good bus network; Leicester to London St Pancras in 1hr 10mins — the fastest rail connection of any Midlands university", "highlights": ["The Golden Mile (Belgrave Road): the UK's best South Asian food and cultural experience outside of London", "National Space Centre: world-class science museum right on the city's doorstep", "Leicester Market — the largest covered outdoor market in Europe"], "nightlife": "De Montfort Hall, Curve Theatre and the Lanes area provide Leicester's social and cultural entertainment" },
-    "notableAlumni": ["David Attenborough — naturalist and broadcaster", "Peter Stringfellow — entrepreneur and nightclub owner", "Sheila Hancock — actress and writer"],
-    "keyFacts": ["Strong actuarial science tradition with IFoA accreditation", "London St Pancras in 1hr 10mins — fastest Midlands rail link", "Genuinely diverse and inclusive student community"]
+    "slug": "leicester",
+    "name": "University of Leicester",
+    "city": "Leicester",
+    "overview": "The University of Leicester is a research-led university with a strong international reputation and a commitment to widening participation, making it one of the most diverse universities in the UK. Its School of Business offers well-structured Accounting and Finance programmes with professional accreditations and close ties to Leicester's manufacturing, retail, and financial services sectors. Leicester is consistently praised for its friendly, inclusive student community.",
+    "founded": 1921,
+    "totalStudents": 18000,
+    "internationalStudents": "32%",
+    "campusType": "Suburban campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Leicester guarantees accommodation to all first-year undergraduate students who accept an offer and apply by the deadline. The university's residences are clustered around the Victoria Park area close to campus, offering a range of room types to suit different budgets.",
+      "avgWeeklyCost": "£115–£165",
+      "halls": ["John Foster Hall", "Stamford Court", "Oadby Student Village"],
+      "privateRentAreas": "Clarendon Park, Evington, Highfields, Stoneygate"
+    },
+    "openDays": [
+      { "date": "28 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "20 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "18 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": true,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Highlight Leicester's diverse, supportive academic community as a strength that appeals to you",
+        "Show awareness of professional accreditations such as ACCA and CIMA and how they align with your career goals",
+        "Demonstrate a genuine interest in how accounting and finance operate in global organisations"
+      ],
+      "typicalTimeline": "Apply via UCAS by 29 January; offers typically February-April; firm choice by May; results and Clearing August"
+    },
+    "studentLife": {
+      "union": "University of Leicester Students' Union (ULSU)",
+      "societiesCount": "150+",
+      "sportsTeams": "40+",
+      "highlights": [
+        "Leicester Business Society provides networking events with local employers",
+        "One of the UK's most ethnically diverse student populations with vibrant cultural societies",
+        "Annual Leicester Business Challenge competition for entrepreneurial students"
+      ]
+    },
+    "cityLife": {
+      "description": "Leicester is one of the UK's most culturally diverse cities, with a rich food scene, vibrant festivals, and a proud sporting heritage as home to Leicester City FC and the Leicester Tigers rugby club. It offers one of the lowest costs of living of any major English city, making it ideal for students on a budget.",
+      "avgRentPerMonth": "£475–£650",
+      "costOfLiving": "Low",
+      "transport": "Leicester City Bus network; East Midlands Railway to London St Pancras in around 1 hour 15 minutes",
+      "highlights": [
+        "Golden Mile one of the UK's best South Asian food and cultural destinations",
+        "King Richard III Visitor Centre world-renowned heritage attraction",
+        "Victoria Park central green space hosting major events including Diwali celebrations"
+      ],
+      "nightlife": "Leicester's nightlife is concentrated around Highcross Street, St Peter's Square, and De Montfort Street, with a good mix of student bars, clubs, and live music venues."
+    },
+    "notableAlumni": [
+      "David Attenborough — naturalist and broadcaster",
+      "C.P. Snow — physicist, novelist, and government adviser",
+      "Peter Stringfellow — entrepreneur"
+    ],
+    "keyFacts": [
+      "School of Business holds AACSB accreditation and ACCA-recognised programme status",
+      "One of the most ethnically diverse research universities in the UK",
+      "Ranked in the top 30 UK universities in the Guardian University Guide"
+    ]
   },
   "hull": {
-    "slug": "hull", "name": "University of Hull", "city": "Hull",
-    "overview": "The UK's most accessible Red Brick university, Hull offers a welcoming, student-first environment with genuinely low living costs. Hull University Business School has recently modernised its curriculum and the city itself is undergoing significant economic regeneration.",
-    "founded": 1927, "totalStudents": 12000, "internationalStudents": "18%", "campusType": "Suburban campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "Hull guarantees accommodation for all first-year students. The main residence areas are on and adjacent to the Cottingham Road campus, with affordable self-catered and catered options.", "avgWeeklyCost": "£90–£130", "halls": ["Lawns Student Village", "Thwaite Hall", "Hardy Crowe"], "privateRentAreas": "Newland Avenue and Beverley Road — the main student areas with cheap private rents" },
-    "openDays": [{ "date": "7 June 2025", "type": "Undergraduate Open Day" }, { "date": "11 October 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": true, "interviewRequired": false, "personalStatementTips": ["Hull values students who are genuinely motivated despite perhaps not having the perfect academic record", "Show awareness of Hull's economic regeneration and the Humber region's role in the energy transition (offshore wind)", "Reference any work experience or entrepreneurial activity — Hull Business School values practical initiative"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; Hull processes applications quickly and often makes offers within 2 weeks" },
-    "studentLife": { "union": "Hull University Students' Union — 100+ societies, very active social calendar", "societiesCount": "100+", "sportsTeams": "30+", "highlights": ["Hull Finance and Business Society with links to Humber region employers", "Hull was UK City of Culture 2017 — the arts and culture scene has been transformed", "The Deep: one of the world's most spectacular aquariums is right in Hull"] },
-    "cityLife": { "description": "Hull is the most affordable university city in England — students can rent a room in a house share for under £400/month and enjoy a city that punched far above its weight during its City of Culture year. The economic regeneration of the Humber region, driven by offshore wind energy, is creating new graduate opportunities.", "avgRentPerMonth": "£350–£500", "costOfLiving": "Low", "transport": "Good local bus network; Hull to London King's Cross in 2hrs 15mins; Humber Bridge nearby", "highlights": ["Beverley: one of England's most beautiful small towns, 10 minutes from campus", "Humber Bridge: a stunning engineering landmark", "Hull's Old Town and the Maritime Museum trace the city's rich seafaring history"], "nightlife": "Newland Avenue and the city centre offer an unpretentious, affordable social scene" },
-    "notableAlumni": ["Philip Larkin — poet (was librarian at Hull for 30 years)", "Tom Courtenay — Oscar-nominated actor", "John Alderton — actor"],
-    "keyFacts": ["Lowest cost of living of any UK Red Brick university", "Hull was UK City of Culture 2017", "University of Hull Business School: recently modernised curriculum"]
+    "slug": "hull",
+    "name": "University of Hull",
+    "city": "Hull",
+    "overview": "The University of Hull is a civic university with a strong tradition of social purpose and community engagement, situated in the East Riding of Yorkshire. Hull University Business School provides professionally accredited Accounting and Finance programmes at very competitive tuition and living costs, with good links to the region's port, energy, and financial services industries. The university was named UK City of Culture host in 2017, reflecting its vibrant creative environment.",
+    "founded": 1927,
+    "totalStudents": 15000,
+    "internationalStudents": "18%",
+    "campusType": "Suburban campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Hull guarantees university accommodation to all first-year students who accept Hull as their firm choice before the closing date. The university's halls are mostly on or adjacent to the main campus, with affordable standard and en-suite options available.",
+      "avgWeeklyCost": "£100–£145",
+      "halls": ["Lawns Student Village", "Thwaite Hall", "Hardy Crowe Hall"],
+      "privateRentAreas": "Newland Avenue, Beverley Road, Spring Bank, Princes Avenue"
+    },
+    "openDays": [
+      { "date": "14 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "27 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "25 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": true,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Highlight your interest in Hull's professionally accredited programmes and links to ICAEW and ACCA",
+        "Demonstrate relevant skills such as numeracy, IT proficiency, and communication",
+        "Show awareness of Hull's growing role in the renewable energy and logistics sectors"
+      ],
+      "typicalTimeline": "Apply via UCAS by 29 January; offers often within weeks; firm/insurance by May; results and Clearing August"
+    },
+    "studentLife": {
+      "union": "Hull University Union (HUU)",
+      "societiesCount": "100+",
+      "sportsTeams": "35+",
+      "highlights": [
+        "Hull Business and Finance Society with employer engagement events",
+        "HUU Sanctuary nightclub one of the most affordable student nights in the UK",
+        "Strong culture of volunteering and community outreach programmes"
+      ]
+    },
+    "cityLife": {
+      "description": "Hull is a proudly independent city with a rich maritime heritage, a vibrant independent arts scene, and some of the lowest student living costs in the UK. The Fruit Market waterfront quarter and Princes Avenue provide a lively social scene that belies the city's relatively small size.",
+      "avgRentPerMonth": "£400–£550",
+      "costOfLiving": "Low",
+      "transport": "Hull Trains direct to London King's Cross in under 2.5 hours; East Riding bus services throughout the region",
+      "highlights": [
+        "The Deep one of the world's most spectacular aquariums",
+        "Fruit Market waterfront arts and food quarter",
+        "Beverley Minster and the Yorkshire Wolds beautiful countryside within 20 minutes"
+      ],
+      "nightlife": "Hull's nightlife centres on Princes Avenue and the Fruit Market, with affordable bars, live music venues, and indie clubs making it one of the best-value student cities in the north."
+    },
+    "notableAlumni": [
+      "Philip Larkin — poet and librarian at the University of Hull",
+      "Tom Courtenay — Oscar-nominated actor",
+      "John Alderton — actor"
+    ],
+    "keyFacts": [
+      "Hull University Business School holds AACSB accreditation",
+      "One of the most affordable university cities in England for students",
+      "Hull is at the centre of the Humber's renewable energy industry, offering unique placement opportunities"
+    ]
   },
   "warwick": {
-    "slug": "warwick", "name": "University of Warwick", "city": "Coventry",
-    "overview": "Despite being officially in Coventry, Warwick is one of the UK's elite universities — ranked 6th nationally and in the global top 100. Warwick Business School is globally recognised, rated among the world's top 10 business schools for finance, and attracts extremely high-calibre students and recruiters.",
-    "founded": 1965, "totalStudents": 26000, "internationalStudents": "40%", "campusType": "Suburban campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "Warwick guarantees accommodation for all first-year undergraduate students in its campus-based halls. The campus is largely self-contained with extensive on-site amenities.", "avgWeeklyCost": "£140–£200", "halls": ["Bluebell", "Rootes Social Building", "Arthur Vick"], "privateRentAreas": "Canley, Tile Hill and Kenilworth — popular off-campus areas accessible by university bus" },
-    "openDays": [{ "date": "21 June 2025", "type": "Undergraduate Open Day" }, { "date": "4 October 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": true, "interviewRequired": false, "personalStatementTips": ["Warwick is extremely competitive — A/A* at GCSE and predicted AAA at A-level is the baseline; your personal statement needs to demonstrate exceptional intellectual curiosity", "Reference specific Warwick Business School research, faculty members or programmes that attract you", "Show awareness of WBS's global reputation and how you plan to use the school's alumni network and employer relationships"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline (earlier is better); AAA standard offer; contextual ABB possible" },
-    "studentLife": { "union": "Warwick Students' Union — 250+ societies, one of the most active campus unions in the UK", "societiesCount": "250+", "sportsTeams": "60+", "highlights": ["Warwick Finance Society and WBS Investment Club are among the most active and well-connected in UK higher education", "The Warwick Arts Centre is the largest arts centre outside London — world-class theatre, cinema and galleries", "Warwick is a campus university — almost everything you need is on site"] },
-    "cityLife": { "description": "Warwick's campus is between Coventry and Leamington Spa — close to both without being part of either. Leamington Spa is a beautiful Regency town 5 miles away; Birmingham city centre and its financial district are 30 minutes by train. This location gives Warwick students the best of both worlds: campus tranquillity and city access.", "avgRentPerMonth": "£550–£750", "costOfLiving": "Moderate", "transport": "University bus to Coventry rail station; Birmingham in 20 mins by train; London Euston in 1hr 20mins", "highlights": ["Leamington Spa: one of England's most beautiful Regency towns, 10 minutes by bus", "Warwick town and castle: stunning medieval architecture 5 miles from campus", "Birmingham's Bullring and financial district: 20 minutes by train"], "nightlife": "Campus bar and events are excellent; Leamington Spa has a thriving independent bar scene; Birmingham for serious nights out" },
-    "notableAlumni": ["Bim Afolami — politician", "Jack Whitehall — comedian", "Meera Syal — writer and actress"],
-    "keyFacts": ["Consistently top 10 UK, top 100 globally", "Warwick Business School: top 10 globally for Finance (FT ranking)", "40% international students — truly global campus community"]
+    "slug": "warwick",
+    "name": "University of Warwick",
+    "city": "Coventry",
+    "overview": "The University of Warwick is one of the UK's highest-ranked and most internationally respected universities, with a reputation for world-leading research and exceptional graduate outcomes. Warwick Business School is globally renowned and its Accounting and Finance degrees are among the most sought-after in the UK, with outstanding links to the City of London and top-tier professional services firms. Warwick appears in the global top 100 in every major ranking.",
+    "founded": 1965,
+    "totalStudents": 28000,
+    "internationalStudents": "36%",
+    "campusType": "Suburban campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Warwick guarantees accommodation in on-campus residences to all first-year undergraduates who accept an offer by the required date. The self-contained campus has a full range of halls from budget standard rooms to premium studios, with most students living on campus in their first year.",
+      "avgWeeklyCost": "£140–£195",
+      "halls": ["Rootes Residences", "Bluebell Residences", "Arthur Vick"],
+      "privateRentAreas": "Canley, Earlsdon, Tile Hill, Coventry city centre"
+    },
+    "openDays": [
+      { "date": "21 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "20 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "11 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": true,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Demonstrate exceptional academic ability and intellectual curiosity in financial and economic topics",
+        "Show awareness of Warwick Business School's global reputation and what distinguishes it from peers",
+        "Reference any high-level achievements such as finance competitions, extended projects, or published work"
+      ],
+      "typicalTimeline": "Apply by 29 January; Warwick is competitive and decisions may come February-April; confirm by May; results in August"
+    },
+    "studentLife": {
+      "union": "Warwick Students' Union (WSU)",
+      "societiesCount": "300+",
+      "sportsTeams": "60+",
+      "highlights": [
+        "Warwick Finance Societies one of the UK's most active student finance groups with City employer links",
+        "Self-contained campus with arts centre, cinema, and shops creating a vibrant community",
+        "Annual Warwick Economics Summit attracts world-leading speakers"
+      ]
+    },
+    "cityLife": {
+      "description": "Warwick's campus is located between Coventry and Leamington Spa, giving students access to two very different environments — Coventry's multicultural city life and Leamington's elegant Regency town centre. Both cities offer good value for money and are well connected to Birmingham and London.",
+      "avgRentPerMonth": "£550–£750",
+      "costOfLiving": "Moderate",
+      "transport": "Direct buses from campus to Coventry and Leamington Spa; Coventry to London Euston in under an hour by Avanti West Coast",
+      "highlights": [
+        "Leamington Spa's beautiful Pump Rooms and Jephson Gardens",
+        "Coventry Cathedral and the Herbert Art Gallery",
+        "Warwick Castle one of England's finest medieval fortresses"
+      ],
+      "nightlife": "Leamington Spa's Parade and Coventry's Fargo Village and city centre offer students a range of bars, indie clubs, and live music venues at reasonable prices."
+    },
+    "notableAlumni": [
+      "Meera Syal — actress, comedian, and writer",
+      "Sir Clive Granger — Nobel Prize-winning economist",
+      "Jack Whitehall — comedian and actor"
+    ],
+    "keyFacts": [
+      "Warwick Business School is ranked in the Financial Times top 5 UK business schools consistently",
+      "Ranked in the top 10 in the UK by the QS World University Rankings",
+      "WBS graduates are among the most recruited by Goldman Sachs, JP Morgan, and McKinsey in the UK"
+    ]
   },
   "bath": {
-    "slug": "bath", "name": "University of Bath", "city": "Bath",
-    "overview": "Consistently ranked in the UK's top 10, the University of Bath has an extraordinary reputation for graduate employment — particularly in finance, engineering and management. The School of Management is #2 in the UK for Accounting & Finance and #1 for Financial Mathematics, with a mandatory placement year that gives students real professional experience.",
-    "founded": 1966, "totalStudents": 19000, "internationalStudents": "34%", "campusType": "Suburban campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "Bath guarantees accommodation for all first-year students. Halls are on the Claverton Down campus or in the city centre, with regular buses connecting them. Costs are higher than most universities but Bath placement salaries typically offset this.", "avgWeeklyCost": "£150–£220", "halls": ["Eastwood", "Westwood", "Brendon Court"], "privateRentAreas": "Oldfield Park, Twerton and Larkhall — city suburbs with good bus links to campus" },
-    "openDays": [{ "date": "14 June 2025", "type": "Undergraduate Open Day" }, { "date": "27 September 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": false, "interviewRequired": false, "personalStatementTips": ["Bath receives exceptionally high numbers of well-qualified applicants — you need to stand out with genuine passion and real-world awareness", "Show commitment to a finance career path — Bath's placement year means they want to see you can handle professional environments", "Reference Bath's placement record and how you plan to use your year in industry to build specific career skills"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; AAA standard offer; very high demand so apply early" },
-    "studentLife": { "union": "Bath University Students' Union (BUSU) — 200+ societies, excellent sporting facilities", "societiesCount": "200+", "sportsTeams": "60+", "highlights": ["Bath Investment Society and Management Society have strong corporate sponsor relationships", "University of Bath Sports Training Village — Olympic-standard facilities used by Team GB", "Bath is a compact, safe, beautiful city — very popular with students who value quality of life"] },
-    "cityLife": { "description": "Bath is one of England's most beautiful cities — a UNESCO World Heritage Site with stunning Georgian architecture, Roman Baths, and an extraordinary restaurant and cultural scene. Costs are higher than most university cities, but the quality of life is exceptional and the city's small scale makes it very safe and accessible.", "avgRentPerMonth": "£750–£1000", "costOfLiving": "High", "transport": "Good bus network; Bath Spa to London Paddington in 1hr 25mins — one of the UK's most scenic rail journeys", "highlights": ["The Roman Baths and Thermae Bath Spa — world-class heritage and wellness", "Pulteney Bridge: one of only four bridges in the world lined with shops", "Bristol is just 12 minutes away by train — doubles your cultural and nightlife options"], "nightlife": "Compact but lively — Kingsmead Square, the Tap & Barrel, and several rooftop bars; Bristol provides the bigger nights out" },
-    "notableAlumni": ["Nick Clegg — former Deputy Prime Minister (honorary degree)", "James Dyson — inventor and entrepreneur (honorary degree)", "Sam Mendes — Oscar-winning director (honorary degree)"],
-    "keyFacts": ["Consistently top 10 UK", "#2 for A&F, #1 for Financial Mathematics (CUG 2026)", "Mandatory placement year — 100% of students gain professional experience"]
+    "slug": "bath",
+    "name": "University of Bath",
+    "city": "Bath",
+    "overview": "The University of Bath is a highly selective, research-intensive university renowned for its close industry links, exceptional placement year programme, and outstanding graduate employment record. The School of Management offers rigorous Accounting and Finance degrees with a mandatory year in industry, consistently producing graduates highly sought by the Big Four, investment banks, and FTSE 100 companies. Bath regularly features in the top 10 of UK university rankings.",
+    "founded": 1966,
+    "totalStudents": 18000,
+    "internationalStudents": "30%",
+    "campusType": "Suburban campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Bath guarantees accommodation on Claverton Down campus to all first-year undergraduates who firmly accept their place by the deadline. All halls are within easy walking distance of lectures, with a mix of catered, self-catered, and en-suite options.",
+      "avgWeeklyCost": "£160–£215",
+      "halls": ["Eastwood House", "Westwood House", "Brendon Hall"],
+      "privateRentAreas": "Oldfield Park, Twerton, Combe Down, Bear Flat"
+    },
+    "openDays": [
+      { "date": "28 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "20 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "25 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": false,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Emphasise enthusiasm for Bath's mandatory placement year and explain the type of industry experience you are seeking",
+        "Demonstrate strong analytical and quantitative ability as Bath values mathematical rigour",
+        "Reference the School of Management's industry partnerships and how they align with your career goals"
+      ],
+      "typicalTimeline": "Apply by 29 January; Bath is competitive; decisions issued March-April; confirm by May; results and Clearing August"
+    },
+    "studentLife": {
+      "union": "University of Bath Students' Union (BUSU)",
+      "societiesCount": "180+",
+      "sportsTeams": "50+",
+      "highlights": [
+        "Bath Finance and Investment Club hosts annual charity trading day with real brokerage accounts",
+        "Exceptional sports culture as Bath is a recognised centre of excellence for elite student athletes",
+        "Strong ties to Bath Rugby Club and Team Bath the university's elite sports programme"
+      ]
+    },
+    "cityLife": {
+      "description": "Bath is a UNESCO World Heritage city of extraordinary beauty, famous for its Georgian architecture, Roman baths, and vibrant cultural scene. While it is one of the more expensive cities for students in the UK, its unique atmosphere, proximity to Bristol, and outstanding quality of life make it a highly desirable place to study.",
+      "avgRentPerMonth": "£750–£950",
+      "costOfLiving": "High",
+      "transport": "Frequent buses between campus and city centre taking 10 to 15 minutes; Bath Spa to London Paddington in around 1.5 hours by GWR",
+      "highlights": [
+        "Roman Baths and the Thermae Bath Spa iconic landmarks",
+        "Pulteney Bridge and the Great Pulteney Street quintessential Georgian architecture",
+        "Milsom Street and SouthGate shopping districts"
+      ],
+      "nightlife": "Bath's nightlife is more intimate than larger cities, centred on the Kingsmead Square area and Green Park Station, with a mix of cocktail bars, comedy clubs, and live music venues."
+    },
+    "notableAlumni": [
+      "Jeremy Hunt — Chancellor of the Exchequer",
+      "Nick Clegg — former Deputy Prime Minister (honorary degree)",
+      "James Dyson — inventor and entrepreneur (honorary degree)"
+    ],
+    "keyFacts": [
+      "Bath School of Management is AACSB and EQUIS accredited",
+      "Mandatory placement year means over 90% of graduates have professional work experience before graduating",
+      "Ranked consistently in the top 10 UK universities by The Times and Guardian"
+    ]
   },
   "exeter": {
-    "slug": "exeter", "name": "University of Exeter", "city": "Exeter",
-    "overview": "A Russell Group university with the highest graduate employment rate outside Oxford, Cambridge and London, Exeter offers an exceptional combination of academic rigour and an outstanding student experience in one of England's most beautiful cities. Exeter Business School is strong across all finance disciplines and has a particular strength in sustainable and behavioural finance.",
-    "founded": 1955, "totalStudents": 22000, "internationalStudents": "25%", "campusType": "Suburban campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "Exeter guarantees accommodation for all first-year students who have Exeter as their firm choice. Halls are on the Streatham and St Luke's campuses with good bus links to the city centre.", "avgWeeklyCost": "£140–£195", "halls": ["Holland Hall", "Duryard", "Birks Grange"], "privateRentAreas": "St Thomas, Heavitree and Pennsylvania — popular student areas 15–30 minutes from campus by bus" },
-    "openDays": [{ "date": "21 June 2025", "type": "Undergraduate Open Day" }, { "date": "20 September 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": true, "interviewRequired": false, "personalStatementTips": ["Reference Exeter's specific strengths: Green Finance Innovation Centre, Behavioural Finance Group, and Global Finance Research Centre", "Exeter is highly competitive for finance — show genuine intellectual depth beyond A-level content", "Reference the Year Abroad option if you're interested — Exeter has exchange agreements with leading universities on every continent"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; AAA standard offer; contextual offer possible" },
-    "studentLife": { "union": "University of Exeter Students' Guild — 200+ societies, strong sporting culture", "societiesCount": "200+", "sportsTeams": "50+", "highlights": ["Exeter Finance Society and the Business School's student-run investment fund", "Exeter is on the doorstep of both Dartmoor National Park and the Jurassic Coast", "Very strong student wellbeing provision — consistently highly rated by students"] },
-    "cityLife": { "description": "Exeter is a compact, beautiful city — an ancient Roman settlement with a stunning cathedral, thriving independent food and drink scene, and a genuine sense of community. Graduate employment in Devon and the South West is strong in financial services and digital industries.", "avgRentPerMonth": "£650–£850", "costOfLiving": "High", "transport": "Good bus network; Exeter St Davids to London Paddington in 2hrs; close to Dartmoor and the coast", "highlights": ["Exeter Cathedral Close: one of England's most atmospheric medieval squares", "Quay area: waterside bars and independent restaurants in a beautiful setting", "Dartmoor National Park: 30 minutes from campus for hiking, cycling and wild swimming"], "nightlife": "Gandy Street and the Quay are Exeter's social hubs — relaxed, quality-focused rather than mass nightclub culture" },
-    "notableAlumni": ["J.K. Rowling — author of Harry Potter", "Martin Clunes — actor", "Robert Bolt — playwright (A Man for All Seasons)"],
-    "keyFacts": ["Russell Group member", "Highest graduate employment outside Oxbridge and London (92%)", "Green Finance Innovation Centre — UK leader in sustainable finance research"]
+    "slug": "exeter",
+    "name": "University of Exeter",
+    "city": "Exeter",
+    "overview": "The University of Exeter is a prestigious Russell Group university with a beautiful campus, excellent academic reputation, and strong career outcomes. Exeter Business School offers well-regarded Accounting and Finance degrees with a growing reputation for sustainability-focused finance and strong links to professional services firms in the South West and London. Exeter is consistently placed in the top 15 of UK university rankings.",
+    "founded": 1955,
+    "totalStudents": 26000,
+    "internationalStudents": "27%",
+    "campusType": "Suburban campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Exeter guarantees accommodation to all first-year undergraduates who accept Exeter as their firm choice and meet the application deadline. Halls are spread across the beautiful hillside campus with stunning views over the city, offering a range of catered and self-catered options.",
+      "avgWeeklyCost": "£155–£210",
+      "halls": ["Holland Hall", "James Owen Court", "Birks Grange Village"],
+      "privateRentAreas": "St Thomas, Heavitree, Newtown, Polsloe"
+    },
+    "openDays": [
+      { "date": "21 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "27 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "18 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": true,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Highlight interest in Exeter Business School's focus on sustainable finance and responsible business",
+        "Show awareness of the Exeter campus's strong academic community and collaborative culture",
+        "Demonstrate relevant academic achievement especially in mathematics and economics"
+      ],
+      "typicalTimeline": "Apply via UCAS by 29 January; decisions typically February-April; confirm by May; Clearing opens August"
+    },
+    "studentLife": {
+      "union": "Exeter Students' Guild",
+      "societiesCount": "200+",
+      "sportsTeams": "50+",
+      "highlights": [
+        "Exeter Finance Society hosts annual careers fair with Big Four and regional firms",
+        "Outstanding outdoor and sports facilities with access to Dartmoor and the Jurassic Coast",
+        "Active Student Enterprise network supporting entrepreneurship"
+      ]
+    },
+    "cityLife": {
+      "description": "Exeter is a compact, charming cathedral city with a strong independent retail and food scene, gateway to Dartmoor National Park and the Devon coast. It has a higher cost of living than many comparable university cities, but students benefit from an exceptional quality of life and strong local graduate employment prospects in professional services.",
+      "avgRentPerMonth": "£700–£950",
+      "costOfLiving": "High",
+      "transport": "Exeter St Davids to London Paddington in around 2 hours by GWR; local bus services between campus and city centre",
+      "highlights": [
+        "Exeter Cathedral and the medieval Cathedral Close",
+        "Quayside and the River Exe with cafes, bars, and kayaking",
+        "Dartmoor National Park and the Jurassic Coast within an hour"
+      ],
+      "nightlife": "Exeter's nightlife is centred on Fore Street, South Street, and the Quayside, with a good mix of student bars, live music, and clubs despite the city's relatively small size."
+    },
+    "notableAlumni": [
+      "J.K. Rowling — author of the Harry Potter series",
+      "Martin Clunes — actor known for Doc Martin",
+      "Robert Bolt — screenwriter and playwright"
+    ],
+    "keyFacts": [
+      "Russell Group member; Exeter Business School holds AACSB and EQUIS accreditation",
+      "Ranked in the top 15 UK universities by the Complete University Guide",
+      "Exeter's Green Finance Innovation Centre is internationally recognised"
+    ]
   },
   "lancaster": {
-    "slug": "lancaster", "name": "Lancaster University", "city": "Lancaster",
-    "overview": "Consistently ranked in the UK's top 15 and globally in the top 200, Lancaster has a reputation for punching well above its size. Lancaster University Management School (LUMS) is triple-accredited and consistently ranked among the world's top business schools, with a particularly strong culture of student enterprise.",
-    "founded": 1964, "totalStudents": 13000, "internationalStudents": "30%", "campusType": "Suburban campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "Lancaster's campus is self-contained with a collegiate system — all first-year students live in one of the nine colleges on campus. This creates a very strong community feel.", "avgWeeklyCost": "£120–£165", "halls": ["County College", "Bowland College", "Pendle College"], "privateRentAreas": "City of Lancaster itself — 2 miles from campus — with affordable Victorian terraced housing and good bus links" },
-    "openDays": [{ "date": "28 June 2025", "type": "Undergraduate Open Day" }, { "date": "11 October 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": false, "interviewRequired": false, "personalStatementTips": ["Lancaster values intellectual ambition — show you've read beyond your A-level syllabi and engaged with real-world finance", "Reference LUMS's specific research strengths: Islamic banking, behavioural finance, and financial innovation", "Show awareness of Lancaster's collegiate system and how you'd contribute to your college community"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; AAB standard offer; offers typically within 6 weeks" },
-    "studentLife": { "union": "Lancaster University Students' Union — 150+ societies, strong collegiate social structure", "societiesCount": "150+", "sportsTeams": "40+", "highlights": ["LUMS Finance Society with CISI accreditation and employer networking events", "Lancaster's collegiate system means you always have a ready-made social community", "The Lake District is 30 minutes away — some of England's most spectacular walking country"] },
-    "cityLife": { "description": "Lancaster is a compact, characterful city — a medieval castle, a maritime heritage, and a growing arts and independent food scene. It's genuinely affordable: room rents in the city are among the lowest of any university in the UK, and the quality of life is high.", "avgRentPerMonth": "£450–£600", "costOfLiving": "Low", "transport": "Lancaster to London Euston in 2hrs 20mins by Avanti West Coast fast trains; good local buses", "highlights": ["Lancaster Castle: a working crown court with guided tours of its historic prison", "The Storey Creative Industries Centre: Lancaster's arts and culture hub", "Lake District: Windermere and Bowness are 30 minutes away for incredible scenery"], "nightlife": "Lancaster city has a compact but lively student scene; Manchester and Liverpool are accessible for bigger nights out" },
-    "notableAlumni": ["Sara Sherif — Olympic boxing champion (honorary graduate)", "Tim Berners-Lee — inventor of the World Wide Web (honorary degree)", "Robert Powell — actor"],
-    "keyFacts": ["Consistently top 15 UK, top 200 globally", "LUMS: AACSB, AMBA and EQUIS triple-accredited", "Collegiate system — one of the few remaining in UK higher education"]
+    "slug": "lancaster",
+    "name": "Lancaster University",
+    "city": "Lancaster",
+    "overview": "Lancaster University is one of the UK's top-ranked universities, consistently placed in the global top 150 and recognised for its collegiate campus, research excellence, and outstanding student experience. Lancaster University Management School is one of the world's most prestigious business schools, with triple accreditation and internationally leading Accounting and Finance programmes. Lancaster offers an unusually intimate collegiate environment for a research-intensive university.",
+    "founded": 1964,
+    "totalStudents": 14000,
+    "internationalStudents": "30%",
+    "campusType": "Suburban campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Lancaster guarantees accommodation within its collegiate system to all first-year undergraduates. Every student is assigned to one of eight colleges, each with its own social spaces, bar, and sense of community, creating a uniquely collegiate experience.",
+      "avgWeeklyCost": "£130–£175",
+      "halls": ["Bowland College", "Fylde College", "Pendle College"],
+      "privateRentAreas": "Lancaster city centre, Skerton, Scotforth, Galgate"
+    },
+    "openDays": [
+      { "date": "28 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "20 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "11 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": false,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Reference Lancaster University Management School's global ranking and triple accreditation",
+        "Demonstrate awareness of LUMS's research-led teaching especially in accounting and finance theory",
+        "Show enthusiasm for Lancaster's collegiate system and the community it creates"
+      ],
+      "typicalTimeline": "Apply by 29 January; offers typically issued February-March; confirm by May; results and Clearing August"
+    },
+    "studentLife": {
+      "union": "Lancaster University Students' Union (LUSU)",
+      "societiesCount": "150+",
+      "sportsTeams": "45+",
+      "highlights": [
+        "LUMS Finance Society runs highly regarded annual careers forum with City employers",
+        "Collegiate competitions and inter-college events create a strong campus community",
+        "Proximity to the Lake District and Yorkshire Dales for outstanding outdoor activities"
+      ]
+    },
+    "cityLife": {
+      "description": "Lancaster is a historic market town in Lancashire with a relaxed pace of life, an independent shopping scene, and outstanding natural surroundings including the Lake District and the Lancashire coast. Students benefit from lower living costs than major cities, and the campus's collegiate community means social life centres largely on campus.",
+      "avgRentPerMonth": "£550–£750",
+      "costOfLiving": "Moderate",
+      "transport": "Campus to Lancaster city centre by bus in 10 minutes; Lancaster to London Euston in around 2 hours 20 minutes by Avanti West Coast",
+      "highlights": [
+        "Lancaster Castle one of the most complete medieval castles in England",
+        "Morecambe Bay and the Lake District with stunning natural scenery within an hour",
+        "Independent market town centre with cafes, galleries, and restaurants"
+      ],
+      "nightlife": "Lancaster's nightlife is modest but friendly, with student-favourite venues on Penny Street and in the campus colleges providing affordable evenings out."
+    },
+    "notableAlumni": [
+      "Rebecca Ferguson — actress known for the Mission: Impossible franchise",
+      "John Whittingdale — former Secretary of State for Culture",
+      "Robert Powell — actor"
+    ],
+    "keyFacts": [
+      "Lancaster University Management School is consistently ranked in the global top 50 business schools by the Financial Times",
+      "Triple accreditation: AACSB, AMBA, EQUIS — one of fewer than 100 globally",
+      "Lancaster ranks in the global top 150 in QS and Times Higher Education rankings"
+    ]
   },
   "loughborough": {
-    "slug": "loughborough", "name": "Loughborough University", "city": "Loughborough",
-    "overview": "Loughborough has an extraordinary record of producing highly employable graduates — consistently #1 in the UK for career prospects across all subjects. The School of Business and Economics has a particular strength in Finance & Innovation and Technology Management, with an embedded culture of industry placement.",
-    "founded": 1909, "totalStudents": 18000, "internationalStudents": "22%", "campusType": "Suburban campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "Loughborough guarantees accommodation for all first-year students. The campus has extensive halls and the town of Loughborough is small enough that off-campus living is easy.", "avgWeeklyCost": "£110–£160", "halls": ["Elvyn Richards Hall", "Cayley Hall", "Royce Hall"], "privateRentAreas": "Loughborough town centre and Ashby Road — very close to campus and affordable" },
-    "openDays": [{ "date": "28 June 2025", "type": "Undergraduate Open Day" }, { "date": "27 September 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": false, "interviewRequired": false, "personalStatementTips": ["Loughborough values industry-readiness — show that you understand the placement year and how you plan to use it", "Reference Loughborough's employer relationships and how you plan to access their industry network", "Show evidence of leadership, initiative and extra-curricular achievement — Loughborough students are known for being well-rounded"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; AAB standard offer for most finance courses" },
-    "studentLife": { "union": "Loughborough Students' Union — one of the best campus unions in the UK, with 100+ societies and world-class sporting facilities", "societiesCount": "100+", "sportsTeams": "80+", "highlights": ["Finance and Investment Society with industry sponsor relationships and Bloomberg workshops", "Loughborough has produced more Olympic and Paralympic medallists than any other UK university", "Campus-based life is extremely social — the union is the hub of everything"] },
-    "cityLife": { "description": "Loughborough is a small East Midlands market town — not glamorous, but safe, affordable and very student-friendly. The real draw is the campus: world-class sporting facilities, a compact community, and excellent value for money. Leicester and Nottingham are both under 30 minutes away for city-level activities.", "avgRentPerMonth": "£450–£600", "costOfLiving": "Low", "transport": "Loughborough to London St Pancras in 1hr 30mins (fast train); Leicester 12 mins; Nottingham 20 mins", "highlights": ["The National Forest: one of England's great environmental success stories, close to Loughborough", "Charnwood Forest and Bradgate Park — superb walking country on the campus doorstep", "Great Central Railway: heritage steam railway with a station in Loughborough"], "nightlife": "Campus union is the social hub — Nottingham and Leicester provide bigger nights out within 30 minutes" },
-    "notableAlumni": ["Sebastian Coe — double Olympic champion and World Athletics President", "Nick Skelton — Olympic equestrian gold medallist", "Nick Gillingham — Commonwealth champion swimmer"],
-    "keyFacts": ["#1 in UK for career prospects for multiple years running", "More Olympic/Paralympic medallists than any other UK university", "School of Business & Economics: AACSB accredited"]
+    "slug": "loughborough",
+    "name": "Loughborough University",
+    "city": "Loughborough",
+    "overview": "Loughborough University is a research university with a world-leading reputation for sports, engineering, and business, set on a large self-contained campus in Leicestershire. The School of Business and Economics offers well-structured Accounting and Finance degrees with mandatory placement year options and strong links to professional services employers across the Midlands and nationally. Loughborough has been voted best UK university for student experience multiple times.",
+    "founded": 1909,
+    "totalStudents": 18000,
+    "internationalStudents": "22%",
+    "campusType": "Suburban campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Loughborough guarantees on-campus accommodation to all first-year undergraduates who meet the application deadline. The self-contained campus has a wide variety of halls from traditional catered accommodation to modern self-catered en-suite blocks.",
+      "avgWeeklyCost": "£120–£165",
+      "halls": ["Elvyn Richards Hall", "Cayley Hall", "Royce Hall"],
+      "privateRentAreas": "Loughborough town centre, Shelthorpe, Nanpantan, Quorn"
+    },
+    "openDays": [
+      { "date": "14 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "27 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "25 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": false,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Highlight your interest in Loughborough's placement year and industry-connected curriculum",
+        "Demonstrate strong numerical skills and an interest in business and financial analysis",
+        "Reference Loughborough's excellent student experience and campus community"
+      ],
+      "typicalTimeline": "Apply via UCAS by 29 January; decisions typically February-March; confirm by May; results and Clearing August"
+    },
+    "studentLife": {
+      "union": "Loughborough Students' Union (LSU)",
+      "societiesCount": "200+",
+      "sportsTeams": "60+",
+      "highlights": [
+        "LSU Finance and Investment Society with regular employer talks and trading simulations",
+        "Unparalleled on-campus sports facilities including an Olympic-standard swimming pool",
+        "LSU frequently voted best students' union in the UK"
+      ]
+    },
+    "cityLife": {
+      "description": "Loughborough is a small East Midlands market town with a large student population relative to its size, creating a strong campus-centred community feel. Living costs are low, and the town is well connected to Leicester, Nottingham, and Derby for those seeking a larger city experience.",
+      "avgRentPerMonth": "£500–£700",
+      "costOfLiving": "Low",
+      "transport": "East Midlands Railway services to Leicester in 10 minutes and Nottingham in 25 minutes; East Midlands Airport nearby",
+      "highlights": [
+        "Charnwood Forest and Bradgate Park with beautiful countryside within 20 minutes",
+        "Loughborough market town centre with independent shops and cafes",
+        "Easy day trips to Leicester, Nottingham, and Derby"
+      ],
+      "nightlife": "Loughborough's nightlife revolves around the students' union, the town centre bars, offering an affordable and friendly atmosphere especially during sports nights."
+    },
+    "notableAlumni": [
+      "Sebastian Coe — Olympic gold medallist and World Athletics President",
+      "Gary Lineker — footballer and broadcaster",
+      "Nick Skelton — Olympic show jumping gold medallist"
+    ],
+    "keyFacts": [
+      "Consistently voted best UK university for student experience in the Times Higher Education Student Experience Survey",
+      "School of Business and Economics holds AACSB and EQUIS accreditation",
+      "Loughborough has one of the highest rates of graduate employment in the UK"
+    ]
   },
   "southampton": {
-    "slug": "southampton", "name": "University of Southampton", "city": "Southampton",
-    "overview": "A Russell Group university with particular strengths in quantitative subjects, Southampton's Business School offers solid finance programmes with a quantitative emphasis. Its location on the South Coast gives it strong links to financial services firms in London and the Channel Islands.",
-    "founded": 1952, "totalStudents": 25000, "internationalStudents": "29%", "campusType": "Suburban campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "Southampton guarantees accommodation for all first-year students. Halls are concentrated in the Highfield campus area, with some newer residences in the city centre.", "avgWeeklyCost": "£130–£185", "halls": ["Glen Eyre", "Wessex Lane", "City Gateway"], "privateRentAreas": "Portswood, Bevois Valley and Highfield — student-dominated areas within 1–2 miles of campus" },
-    "openDays": [{ "date": "14 June 2025", "type": "Undergraduate Open Day" }, { "date": "20 September 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": true, "interviewRequired": false, "personalStatementTips": ["Show awareness of Southampton's quantitative finance strand and how it aligns with careers in risk, derivatives or actuarial work", "Reference the university's Russell Group status and how you plan to use the alumni network", "Southampton suits students who combine strong analytical ability with commercial awareness — demonstrate both"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; ABB–AAB standard offer depending on programme" },
-    "studentLife": { "union": "University of Southampton Students' Union — 150+ societies, good sporting provision", "societiesCount": "150+", "sportsTeams": "50+", "highlights": ["Southampton Finance Society with links to regional financial services employers", "Southampton Boat Club and sailing club — the harbour is minutes from campus", "The New Forest is 20 minutes away — beautiful for cycling and walking"] },
-    "cityLife": { "description": "Southampton is a major port city with a growing creative and digital economy and excellent transport links to London. The maritime heritage is palpable — the Titanic departed from Southampton — and the city's waterfront is being rapidly regenerated. Living costs are moderate for the South.", "avgRentPerMonth": "£650–£850", "costOfLiving": "Moderate", "transport": "Southampton Central to London Waterloo in 1hr 20mins; good local bus network; ferry to Isle of Wight", "highlights": ["Southampton's waterfront and Ocean Village marina — world-class sailing facilities", "The New Forest National Park: 20 minutes from the city centre", "Winchester: one of England's most beautiful cathedral cities, 15 minutes by train"], "nightlife": "Bedford Place and the Bargate area offer Southampton's student nightlife; Oceana and several clubs plus independent bars" },
-    "notableAlumni": ["Craig David — musician", "Benny Hill — comedian", "Shirley Williams — politician"],
-    "keyFacts": ["Russell Group member", "Strong quantitative finance strand", "Southampton Boat Club: one of the most successful in UK higher education"]
+    "slug": "southampton",
+    "name": "University of Southampton",
+    "city": "Southampton",
+    "overview": "The University of Southampton is a prestigious Russell Group university with particular strengths in engineering, science, and business. Southampton Business School offers well-regarded Accounting and Finance degrees with strong links to the financial services sector in London and the South East. Southampton is consistently placed in the global top 100 universities.",
+    "founded": 1862,
+    "totalStudents": 27000,
+    "internationalStudents": "31%",
+    "campusType": "Suburban campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Southampton guarantees university accommodation to all first-year undergraduates who firmly accept their place and apply before the deadline. Halls are spread across the main Highfield campus and nearby sites, offering a range of standard, en-suite, and studio rooms.",
+      "avgWeeklyCost": "£150–£205",
+      "halls": ["Glen Eyre Halls", "Wessex Lane Halls", "Mayflower Halls"],
+      "privateRentAreas": "Portswood, Shirley, Swaythling, Highfield"
+    },
+    "openDays": [
+      { "date": "28 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "20 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "11 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": true,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Reference Southampton Business School's industry connections and placement opportunities",
+        "Demonstrate your analytical and numerical ability and passion for finance",
+        "Show awareness of Southampton's location and proximity to London and the South East's financial centres"
+      ],
+      "typicalTimeline": "Apply by 29 January; decisions typically February-April; confirm by May; Clearing opens August"
+    },
+    "studentLife": {
+      "union": "University of Southampton Students' Union (SUSU)",
+      "societiesCount": "200+",
+      "sportsTeams": "50+",
+      "highlights": [
+        "Southampton Finance Society hosts annual careers fair with regional and national employers",
+        "Strong engineering and entrepreneurship culture creating diverse interdisciplinary events",
+        "Active Enactus team with award-winning social enterprise projects"
+      ]
+    },
+    "cityLife": {
+      "description": "Southampton is a vibrant port city with a rich maritime heritage, a growing waterfront development, and one of the South's most diverse student communities. Its cost of living is high by non-London standards but reasonable for the South East, and the city offers excellent transport links to London and the Continent.",
+      "avgRentPerMonth": "£700–£900",
+      "costOfLiving": "High",
+      "transport": "South Western Railway to London Waterloo in around 1 hour; CrossCountry services to Bristol and Birmingham; Red Funnel ferries to Isle of Wight",
+      "highlights": [
+        "Ocean Village marina and the historic waterfront",
+        "Southampton Common large urban park in the heart of the city",
+        "Mayflower Theatre and Turner Sims Concert Hall for arts and culture"
+      ],
+      "nightlife": "Southampton's nightlife spans Bedford Place, Oxford Street, and the Waterfront, with a wide range of clubs, live music venues, and student-friendly bars."
+    },
+    "notableAlumni": [
+      "Craig David — singer and songwriter",
+      "Benny Hill — comedian",
+      "Shirley Williams — politician and co-founder of the SDP"
+    ],
+    "keyFacts": [
+      "Russell Group member; globally top 100 in QS World University Rankings",
+      "Southampton Business School holds AACSB and EQUIS accreditation",
+      "Southampton is a major hub for the maritime and logistics industries, offering unique placement opportunities"
+    ]
   },
   "york": {
-    "slug": "york", "name": "University of York", "city": "York",
-    "overview": "Consistently ranked in the UK's top 20, York is a campus university set around a beautiful artificial lake within walking distance of one of England's most stunning cities. York Management School offers solid finance and economics programmes with a growing reputation in sustainable finance and decision science.",
-    "founded": 1963, "totalStudents": 20000, "internationalStudents": "26%", "campusType": "Suburban campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "York guarantees accommodation for all first-year students in one of its collegiate halls on the two campuses. The collegiate system creates an inclusive community atmosphere.", "avgWeeklyCost": "£120–£170", "halls": ["Derwent College", "Langwith College", "Constantine College"], "privateRentAreas": "Heslington, Hull Road and Fulford — student-friendly areas 1–3 miles from campus" },
-    "openDays": [{ "date": "7 June 2025", "type": "Undergraduate Open Day" }, { "date": "4 October 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": true, "interviewRequired": false, "personalStatementTips": ["York suits students who combine genuine academic curiosity with an appreciation of history, culture and community — reflect this in your statement", "Reference York's strength in behavioural economics or sustainable finance if these are areas of interest", "Show awareness of the Bank of England's academic connections with York — it's a pathway into monetary policy careers"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; AAB standard offer; contextual offer possible" },
-    "studentLife": { "union": "University of York Students' Union (YUSU) — 200+ societies, strong collegiate social structure", "societiesCount": "200+", "sportsTeams": "50+", "highlights": ["York Finance Society with links to the Bank of England academic research panel", "The lake at the centre of campus is used by the rowing and sailing clubs", "York is a UNESCO Creative City of Media Arts — rich cultural life on the doorstep"] },
-    "cityLife": { "description": "York is one of England's most beautiful and historic cities — medieval walls, the Minster, the Shambles, and a food and drink scene that's punching far above its weight. It's compact, safe, and beloved by students for its quality of life, even if costs are slightly above average for a northern city.", "avgRentPerMonth": "£550–£750", "costOfLiving": "Moderate", "transport": "York to London King's Cross in 1hr 55mins; excellent local bus network; cycling is realistic across the flat city", "highlights": ["York Minster: one of Europe's greatest Gothic cathedrals", "The Shambles: one of the world's best-preserved medieval streets", "Yorkshire Dales and North York Moors: world-class walking country within 30–45 minutes"], "nightlife": "Gillygate, Goodramgate and Micklegate are York's student pub and bar areas — relaxed, quality-focused, and very sociable" },
-    "notableAlumni": ["Mary Beard — classicist and TV presenter", "Andrew Marr — journalist and political broadcaster", "Judi Dench — Dame, Oscar-winning actress (honorary degree)"],
-    "keyFacts": ["Consistently top 20 UK", "Collegiate system with 9 colleges on two campuses", "Bank of England academic liaison university — pathway into monetary policy careers"]
+    "slug": "york",
+    "name": "University of York",
+    "city": "York",
+    "overview": "The University of York is a distinguished research university and member of the Russell Group, celebrated for its collegiate campus on the outskirts of one of England's most beautiful historic cities. The York Management School offers well-regarded Accounting and Finance degrees with a focus on rigorous analytical training and strong links to professional services employers. York consistently ranks in the top 20 of UK university tables.",
+    "founded": 1963,
+    "totalStudents": 20000,
+    "internationalStudents": "28%",
+    "campusType": "Suburban campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "York guarantees accommodation within its collegiate system to all first-year undergraduates who firmly accept their place by the required date. Each of York's colleges has its own halls, bar, and social spaces, providing a strong sense of identity and community from day one.",
+      "avgWeeklyCost": "£135–£180",
+      "halls": ["Derwent College", "Langwith College", "Constantine College"],
+      "privateRentAreas": "Heslington, Fishergate, Tang Hall, Fulford"
+    },
+    "openDays": [
+      { "date": "21 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "20 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "18 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": true,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Reference York Management School's research-led teaching and small-group seminar culture",
+        "Demonstrate strong quantitative skills and academic achievement",
+        "Show appreciation for York's collegiate environment and the city's exceptional quality of life"
+      ],
+      "typicalTimeline": "Apply via UCAS by 29 January; decisions issued February-April; confirm by May; results and Clearing August"
+    },
+    "studentLife": {
+      "union": "University of York Students' Union (YUSU)",
+      "societiesCount": "200+",
+      "sportsTeams": "50+",
+      "highlights": [
+        "York Finance and Economics Society with employer events and trading simulations",
+        "Collegiate system creates vibrant inter-college sporting and social competitions",
+        "York's proximity to Leeds and Manchester gives students access to major Northern finance hubs"
+      ]
+    },
+    "cityLife": {
+      "description": "York is one of England's most beautiful and historic cities, with Viking heritage, a stunning medieval centre, and a world-famous Minster. The cost of living is moderate by southern standards, and the city's compact size means everything is accessible on foot or by bike.",
+      "avgRentPerMonth": "£600–£800",
+      "costOfLiving": "Moderate",
+      "transport": "York to London King's Cross in under 2 hours by LNER; frequent services to Leeds in 25 minutes and Manchester in 1.5 hours",
+      "highlights": [
+        "York Minster and the medieval city walls some of the best-preserved in Europe",
+        "The Shambles a perfectly preserved medieval street and one of England's most visited attractions",
+        "National Railway Museum the world's largest railway museum with free entry"
+      ],
+      "nightlife": "York's nightlife is centred on Micklegate, Goodramgate, and the riverfront, offering a mixture of traditional pubs, cocktail bars, and student clubs in a uniquely historic setting."
+    },
+    "notableAlumni": [
+      "Mary Beard — classicist and TV presenter",
+      "Andrew Marr — journalist and political broadcaster",
+      "Judi Dench — Oscar-winning actress (honorary degree)"
+    ],
+    "keyFacts": [
+      "Russell Group member consistently ranked top 20 in the UK",
+      "York Management School holds AACSB accreditation",
+      "York was the first UK university outside Oxbridge to adopt a collegiate system at foundation"
+    ]
   },
   "aston": {
-    "slug": "aston", "name": "Aston University", "city": "Birmingham",
-    "overview": "Aston is a specialist university with an exceptional record for graduate employment — ranked #2 in the UK for graduate prospects by some measures. Aston Business School's mandatory sandwich year placement gives every student 12 months of professional experience, making Aston graduates unusually well-prepared for the job market.",
-    "founded": 1895, "totalStudents": 17000, "internationalStudents": "28%", "campusType": "City centre",
-    "accommodation": { "firstYearGuarantee": true, "description": "Aston guarantees accommodation for all first-year students in its campus residences in Birmingham's Newtown area, within 10 minutes' walk of the city centre.", "avgWeeklyCost": "£120–£165", "halls": ["Lakeside Student Village", "Aston Student Village", "Mason Hall"], "privateRentAreas": "Newtown, Handsworth and Lozells — close to campus; Edgbaston for students wanting quieter suburban living" },
-    "openDays": [{ "date": "14 June 2025", "type": "Undergraduate Open Day" }, { "date": "20 September 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": true, "interviewRequired": false, "personalStatementTips": ["Show understanding of Aston's sandwich year model and that you're genuinely committed to doing a placement year", "Reference the FinTech or Technology Management specialisms if these align with your interests", "Aston values practical ambition — show evidence of enterprise, leadership or industry engagement"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; ABB standard offer; rolling offers from November" },
-    "studentLife": { "union": "Aston Students' Union — 100+ societies, city-centre location means excellent access to Birmingham's culture", "societiesCount": "100+", "sportsTeams": "30+", "highlights": ["Aston Finance and FinTech Society with CISI partnership and Birmingham employer links", "City-centre location means the whole of Birmingham is your campus", "Aston has exceptional diversity — one of the UK's most inclusive universities"] },
-    "cityLife": { "description": "Aston's city-centre campus means students are right in the heart of Birmingham — the UK's second city and a growing financial powerhouse. HSBC's UK HQ is in Birmingham, alongside KPMG, Deloitte, PwC, Goldman Sachs and dozens of financial employers within walking distance.", "avgRentPerMonth": "£550–£750", "costOfLiving": "Moderate", "transport": "Aston campus is a 10-minute walk from Birmingham New Street (London in 1hr 20mins); Metro and bus network across the city", "highlights": ["Brindleyplace and Colmore Row: Birmingham's financial district is walking distance from campus", "Bullring and Grand Central: world-class retail a short walk from Aston", "Digbeth: Birmingham's creative quarter is a 15-minute walk from campus"], "nightlife": "Birmingham's Broad Street and Digbeth are minutes from campus — exceptional nightlife for a city-centre university" },
-    "notableAlumni": ["Lenny Henry — comedian and actor", "Pauline Black — singer (The Selecter)", "Tim Campbell — entrepreneur"],
-    "keyFacts": ["Mandatory placement year for all Business School students", "#2 in UK for graduate prospects (multiple rankings)", "CISI University of the Year — award-winning financial services education"]
+    "slug": "aston",
+    "name": "Aston University",
+    "city": "Birmingham",
+    "overview": "Aston University is a focused, career-oriented university in the heart of Birmingham, with a long tradition of applied research and outstanding graduate employability. Aston Business School is triple-accredited and well-known for its mandatory placement year, consistently producing graduates with strong employment outcomes in accounting, finance, and professional services. Aston is regularly named the best modern university for graduate employment in the UK.",
+    "founded": 1895,
+    "totalStudents": 13000,
+    "internationalStudents": "28%",
+    "campusType": "City campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Aston guarantees accommodation on its compact city centre campus to all first-year undergraduates who firmly accept their place by the deadline. Halls are modern and well-maintained, and all are within a short walk of lecture theatres and student facilities.",
+      "avgWeeklyCost": "£120–£165",
+      "halls": ["Mary Sturge Court", "William Murdoch Court", "James Watt Court"],
+      "privateRentAreas": "Selly Oak, Edgbaston, Erdington, Digbeth"
+    },
+    "openDays": [
+      { "date": "14 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "27 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "25 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": true,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Highlight your enthusiasm for Aston's mandatory placement year and how it aligns with your career goals",
+        "Demonstrate awareness of Aston Business School's triple accreditation and industry reputation",
+        "Show how Birmingham's financial and professional services sector offers you opportunities"
+      ],
+      "typicalTimeline": "Apply via UCAS by 29 January; offers typically within weeks; confirm by May; results and Clearing August"
+    },
+    "studentLife": {
+      "union": "Aston Students' Union (ASU)",
+      "societiesCount": "100+",
+      "sportsTeams": "35+",
+      "highlights": [
+        "Aston Finance and Investment Society with strong Big Four employer relationships",
+        "Compact campus creates close-knit student community despite city centre location",
+        "Strong alumni network in Midlands professional services and manufacturing sectors"
+      ]
+    },
+    "cityLife": {
+      "description": "Aston's campus sits in central Birmingham, giving students immediate access to the UK's second-largest city's financial district, cultural venues, and employment market. Birmingham offers excellent value for money compared to London while providing comparable professional opportunities.",
+      "avgRentPerMonth": "£550–£750",
+      "costOfLiving": "Moderate",
+      "transport": "Aston campus is walkable from Birmingham New Street, with excellent Midlands rail and road connections; London Euston under 1.5 hours",
+      "highlights": [
+        "Spinningfields and Brindleyplace financial and hospitality districts",
+        "Birmingham's internationally celebrated restaurant and bar scene",
+        "Bullring, Grand Central, and Mailbox shopping destinations"
+      ],
+      "nightlife": "Students enjoy all of Birmingham's nightlife including Broad Street, Digbeth, and the Gay Village, all accessible within 15 minutes of the Aston campus."
+    },
+    "notableAlumni": [
+      "Tim Campbell — entrepreneur and The Apprentice winner",
+      "Lenny Henry — comedian and actor",
+      "Pauline Black — singer with The Selecter"
+    ],
+    "keyFacts": [
+      "Aston Business School holds AACSB, AMBA, and EQUIS triple accreditation",
+      "Consistently ranked the best modern university in the UK for graduate employment outcomes",
+      "Mandatory placement year means all Accounting and Finance students gain professional work experience"
+    ]
   },
   "east-anglia": {
-    "slug": "east-anglia", "name": "University of East Anglia", "city": "Norwich",
-    "overview": "A research-intensive university with a beautiful lakeside campus on the outskirts of Norwich, UEA is particularly renowned for creative writing, environmental sciences, and international development. Norwich Business School is AACSB-accredited and offers strong finance programmes in a supportive academic environment.",
-    "founded": 1963, "totalStudents": 15000, "internationalStudents": "25%", "campusType": "Suburban campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "UEA guarantees accommodation for all first-year students in its campus residences. Village and Constable Terrace are particularly popular. The campus is largely self-contained with excellent on-site facilities.", "avgWeeklyCost": "£110–£155", "halls": ["Village", "Constable Terrace", "Jacob Court"], "privateRentAreas": "Golden Triangle (NR4 area) and Earlham — the classic UEA student areas just off campus" },
-    "openDays": [{ "date": "28 June 2025", "type": "Undergraduate Open Day" }, { "date": "11 October 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": true, "interviewRequired": false, "personalStatementTips": ["UEA suits students who value a research-led environment — reference specific areas of financial research you want to explore", "Norwich is the only major city in England not directly connected to the London rail network — show you're comfortable with a more independent location", "Show interest in UEA's international development finance research if this area appeals to you"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; BBB standard offer; rolling offers from November" },
-    "studentLife": { "union": "Union of UEA Students (UUEAS) — 150+ societies, very strong creative and political culture", "societiesCount": "150+", "sportsTeams": "40+", "highlights": ["Norwich Business School Finance Society with AACSB-linked employer events", "The Hive: UEA's legendary student bar and events space", "UEA's creative writing programme has produced more Booker Prize winners than any other university — rich cultural atmosphere"] },
-    "cityLife": { "description": "Norwich is an extraordinary city — medieval, compact, ambitious, and with a food and drink scene that's won national acclaim. It has more medieval churches than Rome within the city walls, and the Norfolk Broads National Park is on its doorstep. For students who want somewhere genuinely different, Norwich delivers.", "avgRentPerMonth": "£500–£680", "costOfLiving": "Low", "transport": "Norwich to London Liverpool Street in 1hr 50mins; limited local rail but good bus network; campus is easily cycleable", "highlights": ["Norwich Market: one of England's oldest and largest open-air markets, right in the city centre", "Norfolk Broads: a unique network of navigable waterways, 30 minutes from the city", "Norwich Cathedral and the Castle Museum: world-class heritage sites in the city centre"], "nightlife": "Prince of Wales Road and the riverside area are Norwich's nightlife hubs — relaxed, independent and affordable" },
-    "notableAlumni": ["Ian McEwan — Booker Prize-winning novelist", "Kazuo Ishiguro — Nobel Prize-winning novelist", "Paul Weller — musician (honorary degree)"],
-    "keyFacts": ["Norwich Business School: AACSB accredited", "Research-led environment with strong creative and social science traditions", "Norfolk Broads National Park on the doorstep — unique outdoor lifestyle"]
+    "slug": "east-anglia",
+    "name": "University of East Anglia",
+    "city": "Norwich",
+    "overview": "The University of East Anglia is a research-intensive university set on a distinctive modernist campus on the outskirts of Norwich, celebrated for its creative writing programme, environmental sciences, and social sciences. Norwich Business School offers professionally recognised Accounting and Finance degrees in a supportive, research-active environment. UEA is consistently praised for its student satisfaction and sense of campus community.",
+    "founded": 1963,
+    "totalStudents": 17000,
+    "internationalStudents": "24%",
+    "campusType": "Suburban campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "UEA guarantees accommodation in one of its campus villages to all first-year undergraduates who accept an offer by the required deadline. The campus is entirely self-contained with all halls within a 10-minute walk of the main university buildings.",
+      "avgWeeklyCost": "£125–£170",
+      "halls": ["Norfolk Terrace", "Suffolk Terrace", "Mary Chapman Court"],
+      "privateRentAreas": "Golden Triangle, Earlham, Unthank Road, Bowthorpe"
+    },
+    "openDays": [
+      { "date": "28 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "20 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "11 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": true,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Reference Norwich Business School's AACSB accreditation and its significance for your professional development",
+        "Show how UEA's research strengths particularly in social sciences and economics interest you",
+        "Demonstrate awareness of Norwich's growing tech and financial services startup ecosystem"
+      ],
+      "typicalTimeline": "Apply via UCAS by 29 January; decisions typically February-April; confirm by May; Clearing opens August"
+    },
+    "studentLife": {
+      "union": "University of East Anglia Students' Union (UUEAS)",
+      "societiesCount": "150+",
+      "sportsTeams": "40+",
+      "highlights": [
+        "UEA Finance and Economics Society with employer talks and city visits",
+        "LCR (Lower Common Room) one of the UK's most renowned student music venues",
+        "Strong culture of sustainability activism and environmental awareness"
+      ]
+    },
+    "cityLife": {
+      "description": "Norwich is a compact, historic city with a flourishing arts and food scene, a growing technology sector, and one of the most intact medieval city centres in England. It offers affordable student living in a city that punches well above its weight culturally, with easy access to the Norfolk Broads and coast.",
+      "avgRentPerMonth": "£575–£750",
+      "costOfLiving": "Moderate",
+      "transport": "Greater Anglia trains to London Liverpool Street in around 2 hours; good local bus network between campus and city centre",
+      "highlights": [
+        "Norwich Market one of the largest and oldest outdoor markets in England",
+        "Norfolk Broads accessible within 30 minutes for boating, cycling, and wildlife",
+        "Elm Hill and Norwich Cathedral beautifully preserved medieval and Tudor heritage"
+      ],
+      "nightlife": "Norwich's nightlife is concentrated around Prince of Wales Road, Tombland, and Magdalen Street, with a strong independent bar and live music culture."
+    },
+    "notableAlumni": [
+      "Ian McEwan — Booker Prize-winning novelist",
+      "Kazuo Ishiguro — Nobel Prize-winning author",
+      "Rose Tremain — Whitbread Prize-winning novelist"
+    ],
+    "keyFacts": [
+      "Norwich Business School holds AACSB accreditation",
+      "UEA's creative writing programme has produced more published novelists per graduate than almost any other in the world",
+      "Norfolk's growing tech and professional services sector provides strong local placement opportunities"
+    ]
   },
   "sussex": {
-    "slug": "sussex", "name": "University of Sussex", "city": "Brighton",
-    "overview": "Set in the stunning Sussex Downs on the outskirts of Brighton, Sussex combines a research-led academic culture with proximity to one of the UK's most vibrant cities. The Business and Management School offers solid finance programmes in a progressive, international environment.",
-    "founded": 1961, "totalStudents": 19000, "internationalStudents": "35%", "campusType": "Suburban campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "Sussex guarantees accommodation for all first-year students in its campus residences. Most halls are on the leafy Falmer campus, with some options in Brighton itself.", "avgWeeklyCost": "£130–£190", "halls": ["Park Village", "East Slope", "Brighthelm"], "privateRentAreas": "Lewes Road, Hanover and Preston Park — popular student areas in Brighton, 3–5 miles from campus" },
-    "openDays": [{ "date": "14 June 2025", "type": "Undergraduate Open Day" }, { "date": "4 October 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": true, "interviewRequired": false, "personalStatementTips": ["Sussex suits students with an international outlook — reference global financial issues or development economics if these interest you", "Brighton's growing digital and creative economy is relevant — show how you might engage with it", "Sussex values diversity and independent thinking — your personal statement should reflect a genuine perspective on finance"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; BBB standard offer; contextual offer possible" },
-    "studentLife": { "union": "University of Sussex Students' Union — 150+ societies, strong political and arts culture", "societiesCount": "150+", "sportsTeams": "40+", "highlights": ["Sussex Finance Society with links to Brighton's growing digital finance sector", "The Sussex campus is in an Area of Outstanding Natural Beauty — the South Downs are your backyard", "Brighton is literally minutes away by train or bus — one of the UK's best cities for students"] },
-    "cityLife": { "description": "Brighton is arguably the UK's most exciting city for young people — diverse, creative, LGBTQ+-inclusive, and with a beach. The city's independent culture, food scene and arts offering are exceptional. Costs are higher than northern cities but the lifestyle is genuinely unique.", "avgRentPerMonth": "£700–£950", "costOfLiving": "High", "transport": "Falmer (campus station) to Brighton in 7 minutes; Brighton to London Victoria in 55 minutes — the best London connection of any Sussex campus", "highlights": ["Brighton beach and the seafront: iconic and lively even in winter", "The Lanes and North Laine: Brighton's famous independent shopping and cafe culture", "South Downs National Park: world-class walking and cycling immediately behind the campus"], "nightlife": "Brighton's nightlife is legendary — Kemptown, West Street and dozens of independent venues make it one of the UK's best cities for going out" },
-    "notableAlumni": ["Nick Cave — musician", "Des Lynam — sports broadcaster", "Zac Goldsmith — politician"],
-    "keyFacts": ["Campus set in Area of Outstanding Natural Beauty — South Downs National Park", "55 minutes to London Victoria — excellent capital city access", "Progressive, international and diverse academic community"]
+    "slug": "sussex",
+    "name": "University of Sussex",
+    "city": "Brighton",
+    "overview": "The University of Sussex is a leading research university set in a beautiful campus on the South Downs, just minutes from Brighton's vibrant city centre. Sussex Business School offers well-regarded Accounting and Finance degrees in an intellectually rigorous environment with strong links to Brighton's growing digital and financial services sector. Sussex has a distinguished tradition of progressive research and a diverse, international student community.",
+    "founded": 1961,
+    "totalStudents": 20000,
+    "internationalStudents": "35%",
+    "campusType": "Suburban campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Sussex guarantees accommodation in one of its campus residences to all first-year undergraduates who hold Sussex as their firm choice and apply by the deadline. Halls are located on the beautiful parkland campus, with a mix of en-suite and shared bathroom options.",
+      "avgWeeklyCost": "£155–£210",
+      "halls": ["East Slope", "Park Village", "Brighthelm"],
+      "privateRentAreas": "Lewes Road, Moulsecoomb, Hanover, Preston Park"
+    },
+    "openDays": [
+      { "date": "21 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "27 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "18 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": true,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Reference Sussex Business School's interdisciplinary approach and how it appeals to your interests",
+        "Highlight Brighton's digital and creative economy and how you plan to engage with local industry",
+        "Demonstrate your analytical and critical thinking skills alongside numerical ability"
+      ],
+      "typicalTimeline": "Apply by 29 January; decisions typically February-April; confirm by May; Clearing opens August"
+    },
+    "studentLife": {
+      "union": "University of Sussex Students' Union",
+      "societiesCount": "200+",
+      "sportsTeams": "45+",
+      "highlights": [
+        "Sussex Finance and Investment Society with employer events and alumni networking",
+        "Thriving arts, music, and activism culture reflecting Brighton's unique character",
+        "Strong international student community with vibrant cultural societies"
+      ]
+    },
+    "cityLife": {
+      "description": "Brighton is one of the UK's most exciting and unconventional cities, famous for its Regency seafront, independent food and arts scene, and progressive, inclusive culture. The cost of living is relatively high compared to the North, but Brighton's lifestyle, beach, and proximity to London make it a uniquely desirable student city.",
+      "avgRentPerMonth": "£750–£950",
+      "costOfLiving": "High",
+      "transport": "Brighton to London Victoria in around 55 minutes by Southern Rail; campus connected to Brighton city centre by frequent bus",
+      "highlights": [
+        "Brighton seafront, the Lanes, and the North Laine for shopping, food, and culture",
+        "The Royal Pavilion one of England's most extraordinary Regency buildings",
+        "South Downs National Park for walking and cycling within minutes of campus"
+      ],
+      "nightlife": "Brighton's nightlife is legendary, from the LGBTQ+ clubs of St James's Street to live music on the North Laine and seafront bars, with something for everyone."
+    },
+    "notableAlumni": [
+      "Nick Cave — musician and songwriter",
+      "Des Lynam — sports broadcaster",
+      "Zac Goldsmith — politician and environmentalist"
+    ],
+    "keyFacts": [
+      "Sussex Business School is AACSB accredited",
+      "Brighton is 55 minutes from London, making City internships and networking events very accessible",
+      "Sussex has one of the highest proportions of international students of any UK university"
+    ]
   },
   "kent": {
-    "slug": "kent", "name": "University of Kent", "city": "Canterbury",
-    "overview": "Known as 'the UK's European university', Kent has an exceptional international outlook with campuses in Brussels and Paris in addition to its main Canterbury campus. Kent Business School has a growing reputation and offers a distinctive European perspective on finance, including EU regulatory and banking law specialisms.",
-    "founded": 1965, "totalStudents": 17000, "internationalStudents": "26%", "campusType": "Suburban campus",
-    "accommodation": { "firstYearGuarantee": true, "description": "Kent guarantees accommodation for all first-year students on its Canterbury campus. The park-like setting provides a self-contained community on the hill overlooking the city.", "avgWeeklyCost": "£110–£155", "halls": ["Keynes College", "Darwin College", "Woolf College"], "privateRentAreas": "Hales Place, Wincheap and St Dunstan's — student areas 1–2 miles from campus in Canterbury" },
-    "openDays": [{ "date": "21 June 2025", "type": "Undergraduate Open Day" }, { "date": "27 September 2025", "type": "Undergraduate Open Day" }],
-    "application": { "ucasCode": "N300", "contextualOffers": true, "interviewRequired": false, "personalStatementTips": ["Reference Kent's European campus options if you're interested in studying abroad for a semester or year", "Show awareness of EU financial regulation and international banking law — these are Kent's distinctive strengths", "Kent suits students who want a genuinely international perspective on finance — demonstrate this orientation"], "typicalTimeline": "UCAS opens Sept; 29 Jan deadline; BBB standard offer; rolling offers from November" },
-    "studentLife": { "union": "Kent Union — 150+ societies, collegiate social structure with strong bar and events programme", "societiesCount": "150+", "sportsTeams": "40+", "highlights": ["Kent Business School Finance Society with European angle and Brussels campus student exchange", "Canterbury is one of England's most historically rich cities — an extraordinary place to spend three years", "The campus has beautiful parkland views over the city and cathedral"] },
-    "cityLife": { "description": "Canterbury is a UNESCO World Heritage city — the Cathedral, the Roman walls, and the medieval streets make it an extraordinary place to live as a student. It's small, safe, affordable, and charming. London is an hour away by high-speed train.", "avgRentPerMonth": "£550–£750", "costOfLiving": "Moderate", "transport": "Canterbury West to London St Pancras in 56 minutes by high-speed train — excellent London access; good local buses", "highlights": ["Canterbury Cathedral: a UNESCO World Heritage Site and one of England's greatest buildings", "The Westgate Towers and city walls: beautiful medieval heritage right in the city centre", "Whitstable: England's oyster capital and a beautiful seaside town just 7 miles away"], "nightlife": "Canterbury has a compact but lively student nightlife scene — Stour Street and the City Centre offer bars and clubs for a city of its size" },
-    "notableAlumni": ["Joseph Conrad — novelist (lived near Canterbury)", "David Baddiel — comedian and writer", "Tracey Emin — artist (grew up in Margate, nearby)"],
-    "keyFacts": ["'The UK's European university' — campuses in Brussels and Paris", "London St Pancras in 56 minutes by high-speed train", "Kent Business School: AACSB accredited"]
+    "slug": "kent",
+    "name": "University of Kent",
+    "city": "Canterbury",
+    "overview": "The University of Kent is a plate-glass university with a beautiful campus overlooking the medieval city of Canterbury, known for its strong social sciences, humanities, and business programmes. Kent Business School offers professionally accredited Accounting and Finance degrees with a distinctive European outlook, reflecting Kent's unique position as a university with campuses in Brussels and Paris. Kent consistently scores highly for student satisfaction and pastoral support.",
+    "founded": 1965,
+    "totalStudents": 20000,
+    "internationalStudents": "26%",
+    "campusType": "Suburban campus",
+    "accommodation": {
+      "firstYearGuarantee": true,
+      "description": "Kent guarantees accommodation on its Canterbury Hill campus to all first-year undergraduates who firmly accept their place by the required date. The university operates a collegiate system with halls spread across the campus, each with its own bar and social spaces.",
+      "avgWeeklyCost": "£130–£175",
+      "halls": ["Keynes College", "Darwin College", "Woolf College"],
+      "privateRentAreas": "Hales Place, St Stephens, Sturry Road, South Canterbury"
+    },
+    "openDays": [
+      { "date": "14 June 2025", "type": "Undergraduate Open Day" },
+      { "date": "27 September 2025", "type": "Undergraduate Open Day" },
+      { "date": "11 October 2025", "type": "Undergraduate Open Day" }
+    ],
+    "application": {
+      "ucasCode": "N300",
+      "contextualOffers": true,
+      "interviewRequired": false,
+      "personalStatementTips": [
+        "Reference Kent Business School's ACCA and CIMA accreditations and what they mean for your professional trajectory",
+        "Highlight interest in Kent's European campuses and global outlook",
+        "Demonstrate your analytical skills and awareness of contemporary financial issues"
+      ],
+      "typicalTimeline": "Apply via UCAS by 29 January; decisions typically February-March; confirm by May; results and Clearing August"
+    },
+    "studentLife": {
+      "union": "Kent Union",
+      "societiesCount": "150+",
+      "sportsTeams": "40+",
+      "highlights": [
+        "Kent Finance Society with employer talks and study support for professional qualifications",
+        "Collegiate system with inter-college competitions and events",
+        "Close links to Brussels campus for students interested in European policy and finance"
+      ]
+    },
+    "cityLife": {
+      "description": "Canterbury is a compact cathedral city with UNESCO World Heritage status, a strong student population, and a charming mix of historic heritage and modern independent businesses. Its proximity to London and the Kent coast, combined with lower living costs than the capital, makes it an attractive student destination.",
+      "avgRentPerMonth": "£600–£800",
+      "costOfLiving": "Moderate",
+      "transport": "High Speed 1 service from Canterbury West to London St Pancras in 56 minutes; campus served by local bus routes",
+      "highlights": [
+        "Canterbury Cathedral a UNESCO World Heritage Site and one of England's most iconic buildings",
+        "The Marlowe Theatre the South East's leading producing theatre",
+        "Whitstable and the Kent coast famous for oysters and seaside culture just 15 minutes away"
+      ],
+      "nightlife": "Canterbury's nightlife centres on St Margaret's Street, the Westgate area, and the city centre, with student-friendly bars and clubs in a historic setting."
+    },
+    "notableAlumni": [
+      "David Baddiel — comedian and writer",
+      "Tracey Crouch — former Minister for Sport and Civil Society",
+      "Kevin Macdonald — BAFTA-winning film director"
+    ],
+    "keyFacts": [
+      "Kent Business School holds AACSB accreditation with ACCA and CIMA recognised programmes",
+      "Kent's European campuses in Brussels and Paris offer unparalleled international study options",
+      "High Speed 1 rail service puts Canterbury under 1 hour from central London"
+    ]
   }
 }
