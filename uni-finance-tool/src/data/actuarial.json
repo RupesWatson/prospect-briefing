@@ -1,0 +1,232 @@
+[
+  {
+    "name": "University of Manchester",
+    "tier": "Red Brick",
+    "overallRank": 19,
+    "subjectRank": 6,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "93%",
+    "notes": "IFoA-accredited with CT exam exemptions, insurance and longevity risk career pathways."
+  },
+  {
+    "name": "University of Birmingham",
+    "tier": "Red Brick",
+    "overallRank": 20,
+    "subjectRank": 13,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics at grade B or above",
+    "gradProspects": "83%",
+    "notes": "Actuarial science with IFoA partial exemptions, pensions and insurance career focus."
+  },
+  {
+    "name": "University of Leeds",
+    "tier": "Red Brick",
+    "overallRank": 18,
+    "subjectRank": 7,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "91%",
+    "notes": "IFoA-accredited programme with strong CT exemptions and reinsurance employer links."
+  },
+  {
+    "name": "University of Liverpool",
+    "tier": "Red Brick",
+    "overallRank": 27,
+    "subjectRank": 14,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics at grade B or above",
+    "gradProspects": "80%",
+    "notes": "Actuarial programme with IFoA exemptions and insurance sector employer engagement."
+  },
+  {
+    "name": "University of Sheffield",
+    "tier": "Red Brick",
+    "overallRank": 17,
+    "subjectRank": 11,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics at grade B or above",
+    "gradProspects": "84%",
+    "notes": "Actuarial science with IFoA accreditation, pensions and longevity risk career pathway."
+  },
+  {
+    "name": "University of Bristol",
+    "tier": "Red Brick",
+    "overallRank": 8,
+    "subjectRank": 3,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "95%",
+    "notes": "IFoA-accredited, high graduate premium, strong links to reinsurance and pensions sector."
+  },
+  {
+    "name": "University of Reading",
+    "tier": "Red Brick",
+    "overallRank": 29,
+    "subjectRank": null,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "74%",
+    "notes": "No dedicated actuarial science degree; ICMA Centre covers quantitative finance instead."
+  },
+  {
+    "name": "University of Nottingham",
+    "tier": "Red Brick",
+    "overallRank": 28,
+    "subjectRank": 12,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics at grade B or above",
+    "gradProspects": "85%",
+    "notes": "Actuarial science with IFoA CT exemptions, insurance and reinsurance employer links."
+  },
+  {
+    "name": "Newcastle University",
+    "tier": "Red Brick",
+    "overallRank": 34,
+    "subjectRank": null,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "76%",
+    "notes": "No dedicated actuarial degree; mathematics and statistics modules support IFoA self-study."
+  },
+  {
+    "name": "Cardiff University",
+    "tier": "Red Brick",
+    "overallRank": 30,
+    "subjectRank": 15,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics at grade B or above",
+    "gradProspects": "77%",
+    "notes": "Actuarial science with IFoA partial exemptions and Welsh insurance sector employer links."
+  },
+  {
+    "name": "University of Leicester",
+    "tier": "Red Brick",
+    "overallRank": 35,
+    "subjectRank": 8,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "85%",
+    "notes": "Strong actuarial tradition, IFoA-accredited with CT exemptions and pensions specialism."
+  },
+  {
+    "name": "University of Hull",
+    "tier": "Red Brick",
+    "overallRank": 71,
+    "subjectRank": null,
+    "entryGrades": "BCC",
+    "typicalOffer": "BCC including Mathematics",
+    "gradProspects": "63%",
+    "notes": "No IFoA-accredited actuarial programme; general finance degree only available."
+  },
+  {
+    "name": "University of Warwick",
+    "tier": "One Tier Below",
+    "overallRank": 6,
+    "subjectRank": 2,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics and Further Mathematics",
+    "gradProspects": "97%",
+    "notes": "IFoA-accredited, highest UK actuarial graduate premium, longevity risk and pensions focus."
+  },
+  {
+    "name": "University of Bath",
+    "tier": "One Tier Below",
+    "overallRank": 9,
+    "subjectRank": 1,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics and Further Mathematics",
+    "gradProspects": "96%",
+    "notes": "UK's top actuarial programme, IFoA full accreditation, pensions and reinsurance placement."
+  },
+  {
+    "name": "University of Exeter",
+    "tier": "One Tier Below",
+    "overallRank": 28,
+    "subjectRank": 4,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "93%",
+    "notes": "IFoA-accredited actuarial programme with insurance and climate risk career pathways."
+  },
+  {
+    "name": "Lancaster University",
+    "tier": "One Tier Below",
+    "overallRank": 22,
+    "subjectRank": 9,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "88%",
+    "notes": "IFoA-accredited with CT exemptions and strong statistics department supporting curriculum."
+  },
+  {
+    "name": "Loughborough University",
+    "tier": "One Tier Below",
+    "overallRank": 14,
+    "subjectRank": null,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "82%",
+    "notes": "No dedicated IFoA-accredited actuarial degree; finance and mathematics available separately."
+  },
+  {
+    "name": "University of Southampton",
+    "tier": "One Tier Below",
+    "overallRank": 16,
+    "subjectRank": 5,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "90%",
+    "notes": "IFoA-accredited actuarial science with strong statistics research backing and CT exemptions."
+  },
+  {
+    "name": "University of York",
+    "tier": "One Tier Below",
+    "overallRank": 25,
+    "subjectRank": 10,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "85%",
+    "notes": "IFoA-accredited with CT exemptions, pensions and insurance career pathway well supported."
+  },
+  {
+    "name": "Aston University",
+    "tier": "One Tier Below",
+    "overallRank": 36,
+    "subjectRank": null,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "73%",
+    "notes": "No dedicated actuarial programme; actuarial mathematics modules within general finance degree."
+  },
+  {
+    "name": "University of East Anglia",
+    "tier": "One Tier Below",
+    "overallRank": 32,
+    "subjectRank": 16,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "75%",
+    "notes": "Actuarial science with partial IFoA exemptions and insurance employer recruitment access."
+  },
+  {
+    "name": "University of Sussex",
+    "tier": "One Tier Below",
+    "overallRank": 42,
+    "subjectRank": null,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "71%",
+    "notes": "No IFoA-accredited actuarial programme; mathematics and finance studied separately."
+  },
+  {
+    "name": "University of Kent",
+    "tier": "One Tier Below",
+    "overallRank": 55,
+    "subjectRank": null,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "68%",
+    "notes": "No dedicated IFoA-accredited actuarial degree at Kent currently available."
+  }
+]

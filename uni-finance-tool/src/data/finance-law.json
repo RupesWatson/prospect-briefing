@@ -1,0 +1,232 @@
+[
+  {
+    "name": "University of Manchester",
+    "tier": "Red Brick",
+    "overallRank": 19,
+    "subjectRank": 5,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including strong performance in humanities or social sciences",
+    "gradProspects": "89%",
+    "notes": "Finance and law dual degree with City law firm recruitment and banking law modules."
+  },
+  {
+    "name": "University of Birmingham",
+    "tier": "Red Brick",
+    "overallRank": 20,
+    "subjectRank": 6,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB across core subjects",
+    "gradProspects": "84%",
+    "notes": "Finance and law combined with financial regulation and LPC route preparation embedded."
+  },
+  {
+    "name": "University of Leeds",
+    "tier": "Red Brick",
+    "overallRank": 18,
+    "subjectRank": 4,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA across core subjects",
+    "gradProspects": "87%",
+    "notes": "Strong finance and law dual degree with City firm links and compliance career pathway."
+  },
+  {
+    "name": "University of Liverpool",
+    "tier": "Red Brick",
+    "overallRank": 27,
+    "subjectRank": 12,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB across core subjects",
+    "gradProspects": "78%",
+    "notes": "Finance with law electives, financial regulation and banking law modules available."
+  },
+  {
+    "name": "University of Sheffield",
+    "tier": "Red Brick",
+    "overallRank": 17,
+    "subjectRank": 11,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB across core subjects",
+    "gradProspects": "80%",
+    "notes": "Finance and law programme with compliance focus and financial regulation career pathway."
+  },
+  {
+    "name": "University of Bristol",
+    "tier": "Red Brick",
+    "overallRank": 8,
+    "subjectRank": 3,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA across core subjects",
+    "gradProspects": "91%",
+    "notes": "Highly rated finance and law dual degree, City law firm and banking compliance recruitment."
+  },
+  {
+    "name": "University of Reading",
+    "tier": "Red Brick",
+    "overallRank": 29,
+    "subjectRank": 18,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB across core subjects",
+    "gradProspects": "74%",
+    "notes": "Finance with law electives; ICMA Centre covers financial regulation and compliance basics."
+  },
+  {
+    "name": "University of Nottingham",
+    "tier": "Red Brick",
+    "overallRank": 28,
+    "subjectRank": 2,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA across core subjects",
+    "gradProspects": "87%",
+    "notes": "Top-ranked finance and law combined, strong banking law and City solicitor firm recruitment."
+  },
+  {
+    "name": "Newcastle University",
+    "tier": "Red Brick",
+    "overallRank": 34,
+    "subjectRank": 13,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB across core subjects",
+    "gradProspects": "76%",
+    "notes": "Finance and law pathway with financial regulation electives and placement year option."
+  },
+  {
+    "name": "Cardiff University",
+    "tier": "Red Brick",
+    "overallRank": 30,
+    "subjectRank": 10,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB across core subjects",
+    "gradProspects": "75%",
+    "notes": "Finance and law combined with Welsh legal system context and compliance career support."
+  },
+  {
+    "name": "University of Leicester",
+    "tier": "Red Brick",
+    "overallRank": 35,
+    "subjectRank": 14,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB across core subjects",
+    "gradProspects": "72%",
+    "notes": "Finance and law pathway with financial regulation and LPC preparation modules available."
+  },
+  {
+    "name": "University of Hull",
+    "tier": "Red Brick",
+    "overallRank": 71,
+    "subjectRank": null,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB across core subjects",
+    "gradProspects": "62%",
+    "notes": "General finance with some law electives; no dedicated finance and law combined degree."
+  },
+  {
+    "name": "University of Warwick",
+    "tier": "One Tier Below",
+    "overallRank": 6,
+    "subjectRank": 1,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA across core subjects",
+    "gradProspects": "93%",
+    "notes": "UK's leading finance and law combined, banking law, City firm recruitment and LPC route."
+  },
+  {
+    "name": "University of Bath",
+    "tier": "One Tier Below",
+    "overallRank": 9,
+    "subjectRank": 20,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA across core subjects",
+    "gradProspects": "91%",
+    "notes": "Finance with law electives and placement year; financial regulation modules supplementing core."
+  },
+  {
+    "name": "University of Exeter",
+    "tier": "One Tier Below",
+    "overallRank": 28,
+    "subjectRank": 7,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB across core subjects",
+    "gradProspects": "89%",
+    "notes": "Finance and law specialism with strong City law firm links and compliance career pathway."
+  },
+  {
+    "name": "Lancaster University",
+    "tier": "One Tier Below",
+    "overallRank": 22,
+    "subjectRank": 9,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB across core subjects",
+    "gradProspects": "82%",
+    "notes": "Finance and law combined at LUMS with financial regulation and banking law modules."
+  },
+  {
+    "name": "Loughborough University",
+    "tier": "One Tier Below",
+    "overallRank": 14,
+    "subjectRank": null,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB across core subjects",
+    "gradProspects": "82%",
+    "notes": "No dedicated finance and law combined; general finance with compliance elective available."
+  },
+  {
+    "name": "University of Southampton",
+    "tier": "One Tier Below",
+    "overallRank": 16,
+    "subjectRank": 8,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB across core subjects",
+    "gradProspects": "80%",
+    "notes": "Finance and law pathway with financial regulation, LPC support and City employer access."
+  },
+  {
+    "name": "University of York",
+    "tier": "One Tier Below",
+    "overallRank": 25,
+    "subjectRank": 15,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB across core subjects",
+    "gradProspects": "79%",
+    "notes": "Finance with law electives; financial regulation and compliance modules available to students."
+  },
+  {
+    "name": "Aston University",
+    "tier": "One Tier Below",
+    "overallRank": 36,
+    "subjectRank": null,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB across core subjects",
+    "gradProspects": "74%",
+    "notes": "No dedicated combined degree; finance with legal environment module in core curriculum."
+  },
+  {
+    "name": "University of East Anglia",
+    "tier": "One Tier Below",
+    "overallRank": 32,
+    "subjectRank": 19,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB across core subjects",
+    "gradProspects": "72%",
+    "notes": "Finance with law electives; UEA Law School contributes financial regulation module access."
+  },
+  {
+    "name": "University of Sussex",
+    "tier": "One Tier Below",
+    "overallRank": 42,
+    "subjectRank": 17,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB across core subjects",
+    "gradProspects": "72%",
+    "notes": "Finance and law pathway with financial regulation and compliance career preparation modules."
+  },
+  {
+    "name": "University of Kent",
+    "tier": "One Tier Below",
+    "overallRank": 55,
+    "subjectRank": 16,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB across core subjects",
+    "gradProspects": "70%",
+    "notes": "Strong Kent Law School supports finance and law combined with Brussels campus option."
+  }
+]

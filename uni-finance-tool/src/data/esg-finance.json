@@ -1,0 +1,232 @@
+[
+  {
+    "name": "University of Manchester",
+    "tier": "Red Brick",
+    "overallRank": 19,
+    "subjectRank": 5,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "89%",
+    "notes": "Sustainable finance modules with UN PRI signatory status and green bond curriculum."
+  },
+  {
+    "name": "University of Birmingham",
+    "tier": "Red Brick",
+    "overallRank": 20,
+    "subjectRank": 10,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "82%",
+    "notes": "ESG and responsible finance electives with TCFD reporting and climate risk modules."
+  },
+  {
+    "name": "University of Leeds",
+    "tier": "Red Brick",
+    "overallRank": 18,
+    "subjectRank": 7,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "86%",
+    "notes": "Sustainability finance pathway with net-zero strategy and green bond issuance focus."
+  },
+  {
+    "name": "University of Liverpool",
+    "tier": "Red Brick",
+    "overallRank": 27,
+    "subjectRank": 21,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "76%",
+    "notes": "Finance with ESG electives; developing sustainable finance module offering underway."
+  },
+  {
+    "name": "University of Sheffield",
+    "tier": "Red Brick",
+    "overallRank": 17,
+    "subjectRank": 13,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "79%",
+    "notes": "ESG finance modules backed by strong sustainability research across Sheffield faculties."
+  },
+  {
+    "name": "University of Bristol",
+    "tier": "Red Brick",
+    "overallRank": 8,
+    "subjectRank": 2,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "93%",
+    "notes": "Top ESG finance, climate risk and UN PRI signatory, strong green finance employer links."
+  },
+  {
+    "name": "University of Reading",
+    "tier": "Red Brick",
+    "overallRank": 29,
+    "subjectRank": 18,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "74%",
+    "notes": "ICMA Centre covers green bond markets and ESG integration in fixed income portfolios."
+  },
+  {
+    "name": "University of Nottingham",
+    "tier": "Red Brick",
+    "overallRank": 28,
+    "subjectRank": 11,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "84%",
+    "notes": "Sustainable finance electives with net-zero strategy and ESG ratings analysis modules."
+  },
+  {
+    "name": "Newcastle University",
+    "tier": "Red Brick",
+    "overallRank": 34,
+    "subjectRank": 17,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "76%",
+    "notes": "ESG finance pathway with growing climate risk research and green infrastructure projects."
+  },
+  {
+    "name": "Cardiff University",
+    "tier": "Red Brick",
+    "overallRank": 30,
+    "subjectRank": 15,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "75%",
+    "notes": "Sustainable finance modules aligned with Welsh Government net-zero policy priorities."
+  },
+  {
+    "name": "University of Leicester",
+    "tier": "Red Brick",
+    "overallRank": 35,
+    "subjectRank": 20,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "71%",
+    "notes": "Finance with responsible investment electives and ESG integration basics in curriculum."
+  },
+  {
+    "name": "University of Hull",
+    "tier": "Red Brick",
+    "overallRank": 71,
+    "subjectRank": null,
+    "entryGrades": "BCC",
+    "typicalOffer": "BCC including Mathematics",
+    "gradProspects": "60%",
+    "notes": "General finance degree without a dedicated ESG or sustainable finance specialism."
+  },
+  {
+    "name": "University of Warwick",
+    "tier": "One Tier Below",
+    "overallRank": 6,
+    "subjectRank": 4,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "94%",
+    "notes": "WBS ESG specialism, TCFD reporting, climate risk and net-zero strategy modules embedded."
+  },
+  {
+    "name": "University of Bath",
+    "tier": "One Tier Below",
+    "overallRank": 9,
+    "subjectRank": 3,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "92%",
+    "notes": "Sustainable finance with green bonds, ESG ratings, and strong UN PRI employer network."
+  },
+  {
+    "name": "University of Exeter",
+    "tier": "One Tier Below",
+    "overallRank": 28,
+    "subjectRank": 1,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "92%",
+    "notes": "Green Finance Centre leads UK, climate risk, TCFD and net-zero finance deeply embedded."
+  },
+  {
+    "name": "Lancaster University",
+    "tier": "One Tier Below",
+    "overallRank": 22,
+    "subjectRank": 6,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "84%",
+    "notes": "LUMS sustainable finance with ESG integration and strong environmental economics research."
+  },
+  {
+    "name": "Loughborough University",
+    "tier": "One Tier Below",
+    "overallRank": 14,
+    "subjectRank": 8,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "87%",
+    "notes": "Finance and sustainability specialism with green infrastructure and ESG reporting curriculum."
+  },
+  {
+    "name": "University of Southampton",
+    "tier": "One Tier Below",
+    "overallRank": 16,
+    "subjectRank": 9,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "80%",
+    "notes": "Sustainable finance electives with climate risk and responsible investment placement pathways."
+  },
+  {
+    "name": "University of York",
+    "tier": "One Tier Below",
+    "overallRank": 25,
+    "subjectRank": 14,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "80%",
+    "notes": "ESG finance modules with York's strong environment department cross-disciplinary input."
+  },
+  {
+    "name": "Aston University",
+    "tier": "One Tier Below",
+    "overallRank": 36,
+    "subjectRank": 19,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "75%",
+    "notes": "Finance with ESG electives, responsible investment modules and Midlands employer partnerships."
+  },
+  {
+    "name": "University of East Anglia",
+    "tier": "One Tier Below",
+    "overallRank": 32,
+    "subjectRank": 12,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "76%",
+    "notes": "Environmental economics heritage strengthens ESG finance and sustainability reporting modules."
+  },
+  {
+    "name": "University of Sussex",
+    "tier": "One Tier Below",
+    "overallRank": 42,
+    "subjectRank": 16,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "73%",
+    "notes": "Research-led sustainability focus integrates into ESG finance and green investment modules."
+  },
+  {
+    "name": "University of Kent",
+    "tier": "One Tier Below",
+    "overallRank": 55,
+    "subjectRank": 22,
+    "entryGrades": "BCC",
+    "typicalOffer": "BCC including Mathematics",
+    "gradProspects": "67%",
+    "notes": "Finance with developing ESG electives; sustainable finance pathway building in scope."
+  }
+]

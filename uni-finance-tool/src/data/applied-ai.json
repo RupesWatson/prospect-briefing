@@ -1,0 +1,232 @@
+[
+  {
+    "name": "University of Manchester",
+    "tier": "Red Brick",
+    "overallRank": 19,
+    "subjectRank": 1,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics and one of Further Maths/Computer Science",
+    "gradProspects": "92%",
+    "notes": "Leading ML for trading research, Python and TensorFlow integrated throughout curriculum."
+  },
+  {
+    "name": "University of Birmingham",
+    "tier": "Red Brick",
+    "overallRank": 20,
+    "subjectRank": 8,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "85%",
+    "notes": "Finance AI programme combining algorithmic strategies with strong CS department resources."
+  },
+  {
+    "name": "University of Leeds",
+    "tier": "Red Brick",
+    "overallRank": 18,
+    "subjectRank": 5,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "89%",
+    "notes": "Applied AI in finance track, NLP sentiment analysis and quant research pathways."
+  },
+  {
+    "name": "University of Liverpool",
+    "tier": "Red Brick",
+    "overallRank": 27,
+    "subjectRank": 19,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "77%",
+    "notes": "Finance with data analytics, developing applied AI modules backed by CS department."
+  },
+  {
+    "name": "University of Sheffield",
+    "tier": "Red Brick",
+    "overallRank": 17,
+    "subjectRank": 12,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "81%",
+    "notes": "Strong AI research base supporting finance AI electives and algorithmic trading modules."
+  },
+  {
+    "name": "University of Bristol",
+    "tier": "Red Brick",
+    "overallRank": 8,
+    "subjectRank": 2,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics and Computer Science or Further Mathematics",
+    "gradProspects": "95%",
+    "notes": "World-class AI research applied to finance, quant research and TensorFlow curriculum embedded."
+  },
+  {
+    "name": "University of Reading",
+    "tier": "Red Brick",
+    "overallRank": 29,
+    "subjectRank": 20,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "75%",
+    "notes": "ICMA Centre offers data-driven finance modules with emerging AI applications."
+  },
+  {
+    "name": "University of Nottingham",
+    "tier": "Red Brick",
+    "overallRank": 28,
+    "subjectRank": 11,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "85%",
+    "notes": "Applied AI finance electives with Horizon Institute backing and Python quant curriculum."
+  },
+  {
+    "name": "Newcastle University",
+    "tier": "Red Brick",
+    "overallRank": 34,
+    "subjectRank": 17,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "78%",
+    "notes": "Finance with AI modules, growing data science and algorithmic finance research output."
+  },
+  {
+    "name": "Cardiff University",
+    "tier": "Red Brick",
+    "overallRank": 30,
+    "subjectRank": 14,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "76%",
+    "notes": "Finance and AI electives supported by Cardiff's expanding data science research cluster."
+  },
+  {
+    "name": "University of Leicester",
+    "tier": "Red Brick",
+    "overallRank": 35,
+    "subjectRank": null,
+    "entryGrades": "BCC",
+    "typicalOffer": "BCC including Mathematics",
+    "gradProspects": "70%",
+    "notes": "General finance degree; limited dedicated AI in finance programme currently available."
+  },
+  {
+    "name": "University of Hull",
+    "tier": "Red Brick",
+    "overallRank": 71,
+    "subjectRank": null,
+    "entryGrades": "BCC",
+    "typicalOffer": "BCC including Mathematics",
+    "gradProspects": "61%",
+    "notes": "No dedicated finance AI programme; general finance pathway with basic data modules."
+  },
+  {
+    "name": "University of Warwick",
+    "tier": "One Tier Below",
+    "overallRank": 6,
+    "subjectRank": 3,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics and Computer Science or Further Mathematics",
+    "gradProspects": "94%",
+    "notes": "WBS and Computer Science combine for elite ML trading and quant research programmes."
+  },
+  {
+    "name": "University of Bath",
+    "tier": "One Tier Below",
+    "overallRank": 9,
+    "subjectRank": 7,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "93%",
+    "notes": "Applied AI finance pathway with placement year and strong industry fintech partnerships."
+  },
+  {
+    "name": "University of Exeter",
+    "tier": "One Tier Below",
+    "overallRank": 28,
+    "subjectRank": 6,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "91%",
+    "notes": "Finance AI specialism combining algorithmic strategies with strong employer partnerships."
+  },
+  {
+    "name": "Lancaster University",
+    "tier": "One Tier Below",
+    "overallRank": 22,
+    "subjectRank": 9,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "84%",
+    "notes": "LUMS finance and AI programme with strong research ties to Data Science Institute."
+  },
+  {
+    "name": "Loughborough University",
+    "tier": "One Tier Below",
+    "overallRank": 14,
+    "subjectRank": 10,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "87%",
+    "notes": "Finance with applied technology, strong employer links and fintech AI placement record."
+  },
+  {
+    "name": "University of Southampton",
+    "tier": "One Tier Below",
+    "overallRank": 16,
+    "subjectRank": 4,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics and Computer Science or Further Mathematics",
+    "gradProspects": "91%",
+    "notes": "Top-ranked AI research department feeds directly into finance AI curriculum and placements."
+  },
+  {
+    "name": "University of York",
+    "tier": "One Tier Below",
+    "overallRank": 25,
+    "subjectRank": 13,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "82%",
+    "notes": "Finance with data science electives, growing AI applications in finance module offering."
+  },
+  {
+    "name": "Aston University",
+    "tier": "One Tier Below",
+    "overallRank": 36,
+    "subjectRank": 16,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "78%",
+    "notes": "Finance and technology management with AI modules, strong Midlands fintech employer network."
+  },
+  {
+    "name": "University of East Anglia",
+    "tier": "One Tier Below",
+    "overallRank": 32,
+    "subjectRank": 15,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "75%",
+    "notes": "Finance with data analytics modules and emerging AI in finance elective pathway."
+  },
+  {
+    "name": "University of Sussex",
+    "tier": "One Tier Below",
+    "overallRank": 42,
+    "subjectRank": 18,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "73%",
+    "notes": "Finance AI electives drawing on Sussex's strong cognitive science and AI research base."
+  },
+  {
+    "name": "University of Kent",
+    "tier": "One Tier Below",
+    "overallRank": 55,
+    "subjectRank": null,
+    "entryGrades": "BCC",
+    "typicalOffer": "BCC including Mathematics",
+    "gradProspects": "67%",
+    "notes": "Finance degree with limited AI specialism; general analytics modules available."
+  }
+]

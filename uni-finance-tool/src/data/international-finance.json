@@ -1,0 +1,232 @@
+[
+  {
+    "name": "University of Manchester",
+    "tier": "Red Brick",
+    "overallRank": 19,
+    "subjectRank": 2,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "91%",
+    "notes": "International finance with FX markets, cross-border M&A, and Year Abroad opportunity."
+  },
+  {
+    "name": "University of Birmingham",
+    "tier": "Red Brick",
+    "overallRank": 20,
+    "subjectRank": 8,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "83%",
+    "notes": "International finance pathway with emerging markets and cross-border investment modules."
+  },
+  {
+    "name": "University of Leeds",
+    "tier": "Red Brick",
+    "overallRank": 18,
+    "subjectRank": 3,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "88%",
+    "notes": "Strong international finance with FX markets, Year Abroad and emerging markets focus."
+  },
+  {
+    "name": "University of Liverpool",
+    "tier": "Red Brick",
+    "overallRank": 27,
+    "subjectRank": 16,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "77%",
+    "notes": "International finance electives with FX and global markets modules in core curriculum."
+  },
+  {
+    "name": "University of Sheffield",
+    "tier": "Red Brick",
+    "overallRank": 17,
+    "subjectRank": 13,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "79%",
+    "notes": "International finance with exchange programme options and cross-border corporate finance."
+  },
+  {
+    "name": "University of Bristol",
+    "tier": "Red Brick",
+    "overallRank": 8,
+    "subjectRank": 4,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "92%",
+    "notes": "Excellent international finance, Year Abroad option, IMF and World Bank career pathways."
+  },
+  {
+    "name": "University of Reading",
+    "tier": "Red Brick",
+    "overallRank": 29,
+    "subjectRank": 9,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "78%",
+    "notes": "ICMA Centre global reputation for FX, SWIFT and international capital markets programmes."
+  },
+  {
+    "name": "University of Nottingham",
+    "tier": "Red Brick",
+    "overallRank": 28,
+    "subjectRank": 7,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "86%",
+    "notes": "International finance with Malaysia and China campuses enabling unique global study routes."
+  },
+  {
+    "name": "Newcastle University",
+    "tier": "Red Brick",
+    "overallRank": 34,
+    "subjectRank": 17,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "76%",
+    "notes": "International finance pathway with exchange opportunities and emerging markets electives."
+  },
+  {
+    "name": "Cardiff University",
+    "tier": "Red Brick",
+    "overallRank": 30,
+    "subjectRank": 12,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "74%",
+    "notes": "International finance with cross-border M&A focus and European exchange programme access."
+  },
+  {
+    "name": "University of Leicester",
+    "tier": "Red Brick",
+    "overallRank": 35,
+    "subjectRank": 21,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "71%",
+    "notes": "International finance electives with FX fundamentals and global markets module coverage."
+  },
+  {
+    "name": "University of Hull",
+    "tier": "Red Brick",
+    "overallRank": 71,
+    "subjectRank": 35,
+    "entryGrades": "BCC",
+    "typicalOffer": "BCC including Mathematics",
+    "gradProspects": "62%",
+    "notes": "International finance modules available within general finance degree programme."
+  },
+  {
+    "name": "University of Warwick",
+    "tier": "One Tier Below",
+    "overallRank": 6,
+    "subjectRank": 1,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "94%",
+    "notes": "UK's top international finance, FX markets, cross-border M&A and IMF career pathways."
+  },
+  {
+    "name": "University of Bath",
+    "tier": "One Tier Below",
+    "overallRank": 9,
+    "subjectRank": 6,
+    "entryGrades": "AAA",
+    "typicalOffer": "AAA including Mathematics",
+    "gradProspects": "92%",
+    "notes": "International finance with placement year, Year Abroad and strong global employer links."
+  },
+  {
+    "name": "University of Exeter",
+    "tier": "One Tier Below",
+    "overallRank": 28,
+    "subjectRank": 5,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "90%",
+    "notes": "International finance specialism with emerging markets, Year Abroad and SWIFT curriculum."
+  },
+  {
+    "name": "Lancaster University",
+    "tier": "One Tier Below",
+    "overallRank": 22,
+    "subjectRank": 10,
+    "entryGrades": "AAB",
+    "typicalOffer": "AAB including Mathematics",
+    "gradProspects": "83%",
+    "notes": "LUMS international finance with FX, emerging markets and Year Abroad integrated pathway."
+  },
+  {
+    "name": "Loughborough University",
+    "tier": "One Tier Below",
+    "overallRank": 14,
+    "subjectRank": 15,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "86%",
+    "notes": "International finance with placement year and cross-border corporate finance electives."
+  },
+  {
+    "name": "University of Southampton",
+    "tier": "One Tier Below",
+    "overallRank": 16,
+    "subjectRank": 11,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "80%",
+    "notes": "International finance pathway with exchange opportunities and emerging markets research."
+  },
+  {
+    "name": "University of York",
+    "tier": "One Tier Below",
+    "overallRank": 25,
+    "subjectRank": 14,
+    "entryGrades": "ABB",
+    "typicalOffer": "ABB including Mathematics",
+    "gradProspects": "80%",
+    "notes": "International finance modules with FX markets and study abroad semester option."
+  },
+  {
+    "name": "Aston University",
+    "tier": "One Tier Below",
+    "overallRank": 36,
+    "subjectRank": 18,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "75%",
+    "notes": "International finance with placement year and Midlands global business employer network."
+  },
+  {
+    "name": "University of East Anglia",
+    "tier": "One Tier Below",
+    "overallRank": 32,
+    "subjectRank": 19,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "74%",
+    "notes": "International finance electives with FX and cross-border trade finance module coverage."
+  },
+  {
+    "name": "University of Sussex",
+    "tier": "One Tier Below",
+    "overallRank": 42,
+    "subjectRank": 20,
+    "entryGrades": "BBB",
+    "typicalOffer": "BBB including Mathematics",
+    "gradProspects": "72%",
+    "notes": "International finance with proximity to London and European exchange programme access."
+  },
+  {
+    "name": "University of Kent",
+    "tier": "One Tier Below",
+    "overallRank": 55,
+    "subjectRank": 22,
+    "entryGrades": "BCC",
+    "typicalOffer": "BCC including Mathematics",
+    "gradProspects": "67%",
+    "notes": "International finance with Brussels campus providing unique European banking market access."
+  }
+]

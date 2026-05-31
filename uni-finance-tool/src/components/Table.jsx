@@ -1,6 +1,16 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import GradeBadge from './GradeBadge';
 import ExpandedRow from './ExpandedRow';
+
+function toSlug(name) {
+  return name
+    .toLowerCase()
+    .replace(/^university of /, '')
+    .replace(/ university$/, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
 
 function buildColumns(rankLabel) {
   return [
@@ -92,12 +102,13 @@ export default function Table({ universities, course }) {
                   {col.sortable && <SortIcon direction={sortKey === col.key ? sortDir : null} />}
                 </th>
               ))}
-              <th className="px-4 py-3 w-8" />
+              <th className="px-4 py-3 w-24 text-[11px] font-semibold uppercase tracking-wider text-blue-300/80 text-center">Details</th>
             </tr>
           </thead>
           <tbody>
             {sorted.map((uni, idx) => {
               const isExpanded = expanded === uni.name;
+              const slug = toSlug(uni.name);
               return [
                 <tr
                   key={uni.name}
@@ -113,8 +124,13 @@ export default function Table({ universities, course }) {
                     <span className="font-semibold text-blue-200">{uni.gradProspects}</span>
                   </td>
                   <td className="px-4 py-3 text-slate-400 text-xs max-w-xs">{uni.notes}</td>
-                  <td className="px-4 py-3 text-center text-blue-400/50">
-                    <span className={`inline-block transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}>▾</span>
+                  <td className="px-4 py-3 text-center" onClick={e => e.stopPropagation()}>
+                    <Link
+                      to={`/university/${slug}`}
+                      className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-md text-[11px] font-semibold bg-blue-600/15 border border-blue-600/30 text-blue-400 hover:bg-blue-600/25 hover:text-blue-300 transition-all whitespace-nowrap"
+                    >
+                      More info ↗
+                    </Link>
                   </td>
                 </tr>,
                 isExpanded && (
