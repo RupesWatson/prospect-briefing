@@ -1,4 +1,5 @@
 import afRawData from './universities.json';
+import sportSciencesData from './sport-sciences.json';
 import econFinData from './economics-finance.json';
 import fintechData from './fintech.json';
 import finMathData from './financial-maths.json';
@@ -136,5 +137,13 @@ export const COURSES = [
     rankLabel: 'Subject Rank',
     description: 'Indicative 2026',
     data: finInnData,
+  },
+  // ── Sport Sciences ──
+  {
+    id: 'sportSciences',
+    label: 'Sport Sciences',
+    rankLabel: 'Sport Rank',
+    description: 'CUG 2026 Sport Science subject rankings',
+    data: sportSciencesData,
   },
 ];

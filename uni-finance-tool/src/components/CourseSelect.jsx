@@ -14,6 +14,10 @@ const GROUPS = [
     label: 'Specialist & Emerging',
     ids: ['investmentBanking', 'ventureCapital', 'intlFinance', 'esgFinance', 'financeLaw', 'behaviouralFinance', 'finInn'],
   },
+  {
+    label: 'Sport Sciences',
+    ids: ['sportSciences'],
+  },
 ];
 
 export default function CourseSelect({ selectedId, onChange }) {

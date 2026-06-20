@@ -1489,5 +1489,80 @@
       "Study this if you want to work in a growing and differentiated area of finance that spans investment management, regulation, public policy and consumer finance",
       "Think twice if you want the highest-paying front-office finance career straight out of university — investment banking, quant finance or private equity will be more accessible from a more technically focused degree; behavioural finance is a powerful specialisation but tends to lead to advisory, research and policy roles rather than trading or deal-making"
     ]
+  },
+  "sportSciences": {
+    "id": "sportSciences",
+    "title": "Sport and Exercise Science",
+    "duration": "3 years / 4 years (with placement)",
+    "overview": "Sport and Exercise Science is an applied science degree combining human physiology, biomechanics, psychology and nutrition to understand how the body responds to exercise and physical activity. Graduates work across elite sport, health and clinical settings, coaching, performance analysis, and public health — or progress to postgraduate medicine, physiotherapy and sports medicine.",
+    "yearByYear": [
+      {
+        "year": 1,
+        "focus": "Foundations of human performance",
+        "modules": [
+          "Exercise Physiology",
+          "Biomechanics and Movement Analysis",
+          "Sport and Exercise Psychology",
+          "Anatomy and Applied Human Biology",
+          "Research Methods and Statistics"
+        ]
+      },
+      {
+        "year": 2,
+        "focus": "Applied performance science",
+        "modules": [
+          "Advanced Exercise Physiology",
+          "Strength and Conditioning Science",
+          "Sport Nutrition",
+          "Performance Analysis and Technology",
+          "Laboratory Skills and Testing Protocols"
+        ]
+      },
+      {
+        "year": 3,
+        "focus": "Specialism and independent research",
+        "modules": [
+          "Clinical Exercise Science or Elite Performance specialism",
+          "Physical Activity and Public Health",
+          "Applied Sport Psychology",
+          "Dissertation (Sport Science Research Project)"
+        ]
+      }
+    ],
+    "skills": [
+      "Physiological testing and performance profiling",
+      "Biomechanical analysis and motion capture",
+      "Statistical analysis using SPSS / R",
+      "Coaching and athlete communication",
+      "Evidence-based practice and research synthesis"
+    ],
+    "professionalBodies": [
+      {"name": "British Association of Sport and Exercise Sciences (BASES)", "benefit": "Accredited degree pathway; BASES accreditation (Sport and Exercise Scientist) after supervised experience"},
+      {"name": "Chartered Institute for the Management of Sport and Physical Activity (CIMSPA)", "benefit": "Professional membership and practitioner registration available on graduation"},
+      {"name": "UK Coaching", "benefit": "Coaching pathways and CPD framework recognised for graduate coaches"},
+      {"name": "Health and Care Professions Council (HCPC)", "benefit": "Relevant for postgraduate routes into physiotherapy, clinical exercise physiology (via MSc)"}
+    ],
+    "careers": [
+      {"role": "Sport Scientist / Performance Analyst", "salary": "£24,000–£55,000", "demand": "High"},
+      {"role": "Strength & Conditioning Coach", "salary": "£22,000–£60,000", "demand": "High"},
+      {"role": "Exercise Physiologist (Clinical)", "salary": "£25,000–£48,000", "demand": "Growing"},
+      {"role": "Health & Wellbeing Consultant", "salary": "£28,000–£50,000", "demand": "Growing"}
+    ],
+    "topEmployers": [
+      "Premier League & professional sports clubs",
+      "English Institute of Sport (EIS)",
+      "NHS Exercise Referral Services",
+      "British Army / Royal Marines",
+      "Health and fitness industry (Nuffield, David Lloyd)",
+      "Sport England and national governing bodies"
+    ],
+    "employerPerspective": "Employers in elite sport look for graduates with hands-on lab experience, placement experience within professional clubs or performance centres, and BASES accreditation progress. Clinical settings value the physiology and public health modules. Sport technology companies increasingly recruit sport scientists who can combine data analysis with applied performance knowledge.",
+    "entryRequirements": "Typically ABB–BBB including a Science or PE/Physical Education A-level. Biology is strongly preferred or required at most institutions. Mathematics or Statistics at AS or A-level is advantageous for physiological data modules. A personal statement demonstrating practical involvement in sport (coaching, performance, volunteering) strengthens applications significantly.",
+    "furtherStudy": "Popular postgraduate routes include MSc Sports Medicine, MSc Strength and Conditioning, MSc Clinical Exercise Physiology, MSc Performance Analysis, and graduate-entry Medicine or Physiotherapy. Loughborough, Bath, Birmingham and Exeter all offer strong postgraduate provision in the field.",
+    "isItForYou": [
+      "You're passionate about how the human body works under physical stress and want to apply science in a sport or health setting",
+      "You want a practical, lab-heavy degree with real access to athletes, performance testing and fieldwork",
+      "Think twice if you're expecting a straightforward path to high earnings — while rewarding, sport science graduate starting salaries are typically lower than finance or engineering, and elite sport roles are highly competitive"
+    ]
   }
 }
